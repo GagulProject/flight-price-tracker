@@ -8,7 +8,7 @@
       "tripType": "round-trip",
       "adults": 1,
       "cabin": "economy",
-      "lastAttemptAt": "2026-10-17T02:14:24Z",
+      "lastAttemptAt": "2026-10-17T02:18:48Z",
       "providers": [
         {
           "id": "naver", "name": "네이버 항공권", "status": "checked", "priceKrw": 392671,
@@ -16,8 +16,8 @@
           "url": "https://flight.naver.com/flights/international/SEL:city-TYO:city-20261230/TYO:city-SEL:city-20270101?adult=1&isDirect=false&fareType=Y"
         },
         {
-          "id": "trip", "name": "트립닷컴", "status": "unavailable", "priceKrw": null,
-          "checkedAt": null, "note": "해당 왕복 일정의 검색 결과가 0개로 표시되어 가격을 확인하지 못했습니다.",
+          "id": "trip", "name": "트립닷컴", "status": "checked", "priceKrw": 429300,
+          "checkedAt": "2026-10-17T02:18:48Z", "fareNote": "사용자 제공 검색 화면 기준",
           "url": "https://kr.trip.com/flights/showfarefirst?dcity=sel&acity=tyo&dcityid=274&acityid=228&ddate=2026-12-30&rdate=2027-01-01&triptype=rt&class=y&lowpricesource=searchform&quantity=1&searchboxarg=t&nonstoponly=off&locale=ko-KR&curr=KRW"
         },
         {
