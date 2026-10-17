@@ -26,7 +26,7 @@
         {
           "id": "naver",
           "name": "네이버 항공권",
-          "status": "checked",
+          "status": "stale",
           "priceKrw": 392671,
           "checkedAt": "2026-10-17T02:10:34Z",
           "history": [
@@ -37,13 +37,13 @@
           ],
           "url": "https://flight.naver.com/flights/international/SEL:city-TYO:city-20261230/TYO:city-SEL:city-20270101?adult=1&isDirect=false&fareType=Y",
           "note": "이번 갱신에서 해당 여정의 실시간 검색 결과 가격을 검증하지 못했습니다. 표시 가격은 마지막으로 확인한 과거 기록이며 현재 가격이 아닙니다.",
-          "fareNote": "마지막 확인 가격 · 실시간 미검증",
+          "fareNote": "과거 기록 · 검증 근거 없음",
           "lastAttemptAt": "2026-10-17T03:05:08.180Z"
         },
         {
           "id": "trip",
           "name": "트립닷컴",
-          "status": "checked",
+          "status": "stale",
           "priceKrw": 429300,
           "checkedAt": "2026-10-17T02:18:48Z",
           "history": [
@@ -54,16 +54,16 @@
           ],
           "url": "https://kr.trip.com/flights/showfarefirst?dcity=sel&acity=tyo&dcityid=274&acityid=228&ddate=2026-12-30&rdate=2027-01-01&triptype=rt&class=y&lowpricesource=searchform&quantity=1&searchboxarg=t&nonstoponly=off&locale=ko-KR&curr=KRW",
           "note": "이번 갱신에서 해당 여정의 실시간 검색 결과 가격을 검증하지 못했습니다. 표시 가격은 마지막으로 확인한 과거 기록이며 현재 가격이 아닙니다.",
-          "fareNote": "마지막 확인 가격 · 실시간 미검증",
+          "fareNote": "과거 기록 · 검증 근거 없음",
           "lastAttemptAt": "2026-10-17T03:05:08.180Z"
         },
         {
           "id": "google",
           "name": "Google 항공편",
-          "status": "checked",
+          "status": "stale",
           "priceKrw": 388081,
           "checkedAt": "2026-10-17T02:14:24Z",
-          "fareNote": "마지막 확인 가격 · 실시간 미검증",
+          "fareNote": "과거 기록 · 검증 근거 없음",
           "history": [
             {
               "checkedAt": "2026-10-17T02:14:24Z",
@@ -77,10 +77,10 @@
         {
           "id": "skyscanner",
           "name": "스카이스캐너",
-          "status": "checked",
+          "status": "stale",
           "priceKrw": 403100,
           "checkedAt": "2026-10-17T02:14:24Z",
-          "fareNote": "마지막 확인 가격 · 실시간 미검증",
+          "fareNote": "과거 기록 · 검증 근거 없음",
           "history": [
             {
               "checkedAt": "2026-10-17T02:14:24Z",
@@ -99,7 +99,7 @@
           "checkedAt": null,
           "note": "이번 갱신에서 해당 여정의 실시간 검색 결과 가격을 검증하지 못했습니다. 표시 가격은 마지막으로 확인한 과거 기록이며 현재 가격이 아닙니다.",
           "history": [],
-          "url": "https://www.expedia.co.kr/en/lp/flights/sel/tyo/%EC%84%9C%EC%9A%B8-to-%EB%8F%84%EC%BF%84?flightType=ROUND_TRIP",
+          "url": "https://www.expedia.co.kr/Flights-Search?trip=roundtrip&leg1=from%3ASEL%2Cto%3ATYO%2Cdeparture%3A12%2F30%2F2026TANYT&leg2=from%3ATYO%2Cto%3ASEL%2Cdeparture%3A01%2F01%2F2027TANYT&passengers=adults%3A1&options=cabinclass%3Aeconomy&currency=KRW",
           "lastAttemptAt": "2026-10-17T03:05:08.180Z"
         }
       ]

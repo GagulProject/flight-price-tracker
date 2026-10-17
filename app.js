@@ -7,7 +7,7 @@ let routes = [];
 let currentQuery = null;
 
 function checkedPrice(item) {
-  return Number.isInteger(item.priceKrw) && item.priceKrw > 0 && Number.isFinite(Date.parse(item.checkedAt)) && item.status === 'checked';
+  return Number.isInteger(item.priceKrw) && item.priceKrw > 0 && Number.isFinite(Date.parse(item.checkedAt)) && item.status === 'checked' && item.collectionStatus === 'verified' && item.verification?.kind === 'live-round-trip-total';
 }
 
 function safeLink(item) {
@@ -41,8 +41,12 @@ function makeProviderCard(item) {
   const name = makeElement('div', 'provider-name');
   name.append(makeElement('span', `provider-logo ${provider.className}`, provider.mark), document.createTextNode(provider.name));
   top.append(name, makeElement('span', 'arrow', '↗'));
-  const price = makeElement('div', `provider-price${checkedPrice(item) ? '' : ' unavailable'}`, checkedPrice(item) ? `${money.format(item.priceKrw)}원~` : '가격 확인 대기');
+  const price = makeElement('div', `provider-price${checkedPrice(item) ? '' : ' unavailable'}`, checkedPrice(item) ? `${money.format(item.priceKrw)}원` : Number.isInteger(item.priceKrw) ? `${money.format(item.priceKrw)}원 · 과거 기록` : '검증 가격 없음');
   const footer = makeElement('div', 'provider-footer', checkedPrice(item) ? `가격 확인 ${dateTime.format(new Date(item.checkedAt))} KST · ${item.fareNote || '왕복 최저가'}` : (item.note || '해당 날짜의 가격을 확인 중입니다.'));
+  const status = makeElement('p', 'collection-status', `수집 상태: ${item.collectionStatus || '미검증'} · ${item.note || ''}`);
+  const attempt = makeElement('p', 'provider-attempt', item.lastAttemptAt ? `최근 시도 ${dateTime.format(new Date(item.lastAttemptAt))} KST` : '최근 시도 없음');
+  const verified = makeElement('p', 'provider-verified', item.verification ? `마지막 검증 ${dateTime.format(new Date(item.checkedAt))} KST` : '마지막 검증: 없음 · 기존 기록은 검증 근거 없음');
+  link.append(status, attempt, verified);
   link.append(top, makeElement('p', 'provider-kicker', 'ROUND TRIP · 1 ADULT'), price, footer, makeElement('span', 'provider-badge', '검색 결과 보기'));
   return link;
 }
@@ -58,11 +62,14 @@ function makeTrend(route) {
   section.append(makeElement('h3', '', '가격 추이'));
   const series = route.providers.filter(item => providers[item.id]).map(item => ({
     id: item.id,
-    points: (item.history || []).map(sample => ({ time: Date.parse(sample.checkedAt), price: sample.priceKrw })).filter(sample => Number.isFinite(sample.time) && Number.isInteger(sample.price) && sample.price > 0)
+    points: (item.history || []).filter(sample => sample.evidence?.kind === 'live-round-trip-total').map(sample => ({ time: Date.parse(sample.checkedAt), price: sample.priceKrw })).filter(sample => Number.isFinite(sample.time) && Number.isInteger(sample.price) && sample.price > 0)
   })).filter(item => item.points.length);
   const samples = series.flatMap(item => item.points);
   if (!samples.length) {
-    section.append(makeElement('p', 'trend-note', '가격 기록이 쌓이면 여기에 추이가 표시됩니다.'));
+    section.append(makeElement('p', 'trend-note', '검증된 가격 이력이 없습니다. 기존 기록은 아래에 보존합니다.'));
+    const list=makeElement('ul','legacy-history');
+    for (const item of route.providers) for (const sample of item.history || []) list.append(makeElement('li','',`${providers[item.id]?.name || item.id} · ${money.format(sample.priceKrw)}원 · ${dateTime.format(new Date(sample.checkedAt))} KST · ${sample.evidence ? '검증 기록' : '검증 근거 없는 과거 기록'}`));
+    section.append(list);
     return section;
   }
 
@@ -129,7 +136,7 @@ function makeRouteCard(route) {
   heading.append(path, makeElement('span', 'dates', `${route.departureDate} → ${route.returnDate} · 왕복`));
   const valid = route.providers.filter(checkedPrice).sort((a, b) => a.priceKrw - b.priceKrw);
   const summary = makeElement('div', 'price-summary');
-  summary.append(makeElement('span', '', '확인된 최저가'), makeElement('strong', '', valid.length ? `${money.format(valid[0].priceKrw)}원~` : '가격 확인 대기'));
+  summary.append(makeElement('span', '', '이번 수집에서 검증된 최저가'), makeElement('strong', '', valid.length ? `${money.format(valid[0].priceKrw)}원` : '검증 가격 없음'));
   if (valid.length) summary.append(makeElement('small', '', `${providers[valid[0].id].name} 기준`));
   const update = makeElement('p', 'route-updated', route.lastAttemptAt ? `최근 조회 ${dateTime.format(new Date(route.lastAttemptAt))} KST` : '첫 조회 대기');
   const grid = makeElement('div', 'provider-grid');
@@ -140,7 +147,7 @@ function makeRouteCard(route) {
 
 function requestLink(query) {
   const title = `[항공권 추적 요청] ${query.origin} → ${query.destination} ${query.departureDate}~${query.returnDate}`;
-  const body = `출발 도시 또는 공항: ${query.origin}\n도착 도시 또는 공항: ${query.destination}\n가는 날: ${query.departureDate}\n오는 날: ${query.returnDate}\n여정: 왕복\n인원: 성인 1명\n좌석: 일반석\n\n네이버 항공권·트립닷컴·Google 항공편·스카이스캐너 가격을 6시간마다 추적해 주세요.`;
+  const body = `출발 도시 또는 공항: ${query.origin}\n도착 도시 또는 공항: ${query.destination}\n가는 날: ${query.departureDate}\n오는 날: ${query.returnDate}\n여정: 왕복\n인원: 성인 1명\n좌석: 일반석\n\n네이버 항공권·트립닷컴·Google 항공편·스카이스캐너 가격을 추적해 주세요.`;
   const url = new URL('https://github.com/GagulProject/flight-price-tracker/issues/new');
   url.searchParams.set('title', title);
   url.searchParams.set('body', body);
@@ -157,7 +164,7 @@ function showRoutes(items, query) {
     return;
   }
   const empty = makeElement('div', 'empty-state');
-  empty.append(makeElement('h3', '', '아직 추적 중인 일정이 없습니다.'), makeElement('p', '', '새 일정을 요청하면 다음 6시간 갱신 작업에서 확인합니다. 등록되면 이 화면에서 가격을 볼 수 있습니다.'));
+  empty.append(makeElement('h3', '', '아직 추적 중인 일정이 없습니다.'), makeElement('p', '', '새 일정을 요청하면 요청 검토 후 등록합니다. 등록되면 이 화면에서 가격을 볼 수 있습니다.'));
   const link = makeElement('a', 'request-button', '이 일정 추적 요청하기 ↗');
   link.href = requestLink(query);
   link.target = '_blank';
@@ -213,3 +220,4 @@ async function loadPrices() {
 
 document.getElementById('refresh-data').addEventListener('click', loadPrices);
 loadPrices();
+

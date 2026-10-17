@@ -1,44 +1,81 @@
-name: Diagnose flight search loading
+name: Collect and verify flight prices
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths:
-      - 'scripts/diagnose-flight-pages.mjs'
+      - 'scripts/**'
+      - 'app.js'
+      - 'package.json'
       - '.github/workflows/diagnose-flight-pages.yml'
   schedule:
     - cron: '*/15 * * * *'
 permissions:
   contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: flight-price-collection
+  cancel-in-progress: false
 jobs:
   diagnose:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Regression tests and data validation
+        run: npm test && npm run check
       - run: npm install --no-save playwright@1.58.2
       - run: npx playwright install --with-deps chromium
-      - run: node scripts/diagnose-flight-pages.mjs
-      - name: Persist diagnostic results to repository
+      - name: Collect exact itinerary prices
+        id: collection
+        continue-on-error: true
+        run: node scripts/diagnose-flight-pages.mjs
+      - name: Validate preserved and collected data
+        run: npm run check
+      - name: Persist attempts and preserve price history
+        run: |
+          cp diagnostics/results.json data/diagnostics.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/prices.json data/diagnostics.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Record flight collection attempts and verified prices"
+            git pull --rebase origin main
+            git push
+          fi
+      - name: Prepare Pages files
+        run: |
+          mkdir -p public/data
+          cp index.html app.js styles.css .nojekyll public/
+          cp data/prices.json data/diagnostics.json public/data/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - name: Deploy updated status and prices
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Verify published Pages in Chromium
+        run: node scripts/verify-pages.mjs
+      - name: Collection summary
         if: always()
         run: |
-          if [ -f diagnostics/results.json ]; then
-            mkdir -p data
-            cp diagnostics/results.json data/diagnostics.json
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/diagnostics.json
-            if ! git diff --cached --quiet; then
-              git commit -m "Record flight search diagnostics [skip ci]"
-              git push
-            fi
-          fi
+          node -e 'const fs=require("fs"); const p="diagnostics/collection-summary.json"; fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,"## Flight collection\n"+(fs.existsSync(p)?fs.readFileSync(p,"utf8"):"Collection did not complete")+"\nAlert integration: no existing sender was found in this repository. No unverified or historical-price alert is sent.\n")'
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: flight-search-diagnostics
           path: diagnostics/
           retention-days: 7
+      - name: Require at least one verified live quote
+        if: steps.collection.outcome != 'success'
+        run: |
+          echo "No verified live quote collected. Preserved historical prices are not collection success."
+          exit 1
+

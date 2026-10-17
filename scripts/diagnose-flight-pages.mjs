@@ -1,10 +1,11 @@
+import { candidateAmounts, applyAttempt } from './quote-state.mjs';
 import { chromium } from 'playwright';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 const data = JSON.parse(await readFile('data/prices.json','utf8'));
 await mkdir('diagnostics',{recursive:true});
 const browser = await chromium.launch({headless:true});
 const results = [];
-// Trigger a fresh diagnostic run after adding fare-candidate capture.
+// Ordinary browser access only: no stealth, CAPTCHA solving, proxy rotation or retries on blocks.
 const supported = new Set(['naver','trip','google','skyscanner','expedia']);
 const retryableHttp = new Set([408,500,502,503,504]);
 const botPattern=/captcha|robot|로봇이 아닙니다|접근이 제한|access denied|are you a person|verify you are human/i;
@@ -12,6 +13,13 @@ for (const route of data.routes) for (const provider of route.providers) {
   if (!supported.has(provider.id)) continue;
   const context = await browser.newContext({locale:'ko-KR',timezoneId:'Asia/Seoul',viewport:{width:1365,height:900}});
   const page = await context.newPage();
+  const network = [];
+  page.on('requestfailed', request => {
+    if (network.length < 40) network.push({url:request.url().split('?')[0],failure:request.failure()?.errorText});
+  });
+  page.on('response', response => {
+    if (response.status() >= 400 && network.length < 40) network.push({url:response.url().split('?')[0],httpStatus:response.status()});
+  });
   let status='unverified', detail='', elapsedMs=0, fareCandidates=[], pagePreview='';
   const started=Date.now();
   try {
@@ -51,7 +59,7 @@ for (const route of data.routes) for (const provider of route.providers) {
     if (provider.id==='naver' || provider.id==='google') {
       await page.waitForFunction(() => {
         const t=document.body?.innerText||'';
-        return /(?:₩\\s*|KRW\\s*|[0-9,]+\\s*원)|반환된 결과가 없습니다|오류가 발생했습니다|검색 결과가 없습니다|검색 결과 없음|whaleguard block/i.test(t)
+        return /(?:₩\s*|KRW\s*|[0-9,]+\s*원)|반환된 결과가 없습니다|오류가 발생했습니다|검색 결과가 없습니다|검색 결과 없음|whaleguard block/i.test(t)
           && !/항공권 가격 변동 그래프 로딩 중/.test(t);
       },null,{timeout:45000,polling:1500}).catch(()=>{});
     }
@@ -59,25 +67,18 @@ for (const route of data.routes) for (const provider of route.providers) {
     // Collect candidate fares for debugging. Never treat arbitrary prices as a
     // verified round-trip quote without confirming dates and itinerary.
     if (provider.id === 'naver' || provider.id === 'google') {
-      fareCandidates = await page.evaluate(() => {
-        const pricePattern=/(?:₩\s*|KRW\s*|)([1-9]\d{1,2}(?:,\d{3})+|[1-9]\d{4,6})\s*원?/g;
-        const candidates=[];
+      const snippets = await page.evaluate(() => {
+        const out=[];
         for (const el of document.querySelectorAll('main *, [role="main"] *, [class*="flight"] *, [class*="result"] *')) {
-          if (el.children.length > 2) continue;
+          if (el.children.length > 2 || el.closest('footer, [class*="footer"], [class*="Footer"]')) continue;
           const value=(el.innerText||'').trim();
-          if (value.length>90 || value.length<5 || /사업자등록|통신판매|고객센터|전화번호|이메일|개인정보/.test(value)) continue;
-          for (const match of value.matchAll(pricePattern)) {
-            const amount=Number(match[1].replaceAll(',',''));
-            if (amount>=50000 && amount<=3000000 && /₩|KRW|원/.test(value)) {
-              const context=(el.parentElement?.parentElement?.innerText||'').slice(0,400);
-              if (/사업자등록|통신판매|고객센터|전화번호/.test(context)) continue;
-              candidates.push({amount,context});
-            }
-          }
-          if (candidates.length>=25) break;
+          if (value.length < 5 || value.length > 90) continue;
+          out.push({value,context:(el.parentElement?.parentElement?.innerText||'').slice(0,600)});
+          if (out.length >= 1000) break;
         }
-        return candidates;
+        return out;
       });
+      fareCandidates = snippets.flatMap(s => candidateAmounts(s.value,s.context).map(amount=>({amount,context:s.context}))).slice(0,25);
     }
     if (/반환된 결과가 없습니다|오류가 발생했습니다/.test(text)) {
       status='search-error'; detail='Search results page returned no results or an error';
@@ -100,10 +101,17 @@ for (const route of data.routes) for (const provider of route.providers) {
       (await page.locator('body').innerText().catch(()=>'' )).slice(0,12000)).catch(()=>{});
     pagePreview=(await page.locator('body').innerText().catch(()=>'' )).slice(0,1000);
     elapsedMs=Date.now()-started;
-    results.push({provider:provider.id,origin:route.origin.code,destination:route.destination.code,departureDate:route.departureDate,returnDate:route.returnDate,attemptedAt:new Date().toISOString(),elapsedMs,status,detail,fareCandidates,pagePreview});
+    results.push({provider:provider.id,origin:route.origin.code,destination:route.destination.code,departureDate:route.departureDate,returnDate:route.returnDate,attemptedAt:new Date().toISOString(),elapsedMs,status,detail,fareCandidates,pagePreview,network});
+    applyAttempt(route,provider,results.at(-1));
+    await writeFile('data/prices.json',JSON.stringify(data,null,2)+'\n');
+    await writeFile('diagnostics/results.json',JSON.stringify(results,null,2)+'\n');
     await context.close();
   }
 }
 await browser.close();
 await writeFile('diagnostics/results.json',JSON.stringify(results,null,2)+'\n');
 console.log(JSON.stringify(results,null,2));
+const verified=results.filter(r=>r.status==='verified').length;
+await writeFile('diagnostics/collection-summary.json',JSON.stringify({verified,attempted:results.length,completedAt:new Date().toISOString()},null,2)+'\n');
+if (!verified) { console.error('NO_VERIFIED_QUOTES: diagnostic execution is not collection success'); process.exitCode=2; }
+
