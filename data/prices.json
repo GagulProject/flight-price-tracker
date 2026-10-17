@@ -21,14 +21,14 @@
       "tripType": "round-trip",
       "adults": 1,
       "cabin": "economy",
-      "lastAttemptAt": "2026-10-17T07:48:55.550Z",
+      "lastAttemptAt": "2026-10-17T07:53:10.490Z",
       "providers": [
         {
           "id": "naver",
           "name": "네이버 항공권",
           "status": "checked",
-          "priceKrw": 392407,
-          "checkedAt": "2026-10-17T07:47:38.152Z",
+          "priceKrw": 447256,
+          "checkedAt": "2026-10-17T07:51:46.817Z",
           "history": [
             {
               "checkedAt": "2026-10-17T02:10:34Z",
@@ -77,12 +77,34 @@
                   "offerId": "8f47c77543c3c3100d3494b2"
                 }
               }
+            },
+            {
+              "checkedAt": "2026-10-17T07:51:46.817Z",
+              "priceKrw": 447256,
+              "evidence": {
+                "kind": "live-round-trip-total",
+                "origin": "SEL",
+                "destination": "TYO",
+                "departureDate": "2026-12-30",
+                "returnDate": "2027-01-01",
+                "adults": 1,
+                "cabin": "economy",
+                "currency": "KRW",
+                "priceKrw": 447256,
+                "observedAt": "2026-10-17T07:51:46.817Z",
+                "evidence": {
+                  "source": "visible-search-result",
+                  "provider": "naver",
+                  "seller": "mytrip",
+                  "offerId": "e173f1a2e77c8289618cffdc"
+                }
+              }
             }
           ],
           "url": "https://flight.naver.com/flights/international/SEL:city-TYO:city-20261230/TYO:city-SEL:city-20270101?adult=1&isDirect=false&fareType=Y",
           "note": "Exact round-trip total verified from visible naver seller result",
           "fareNote": "검증된 왕복 총액 · 성인 1명 · 일반석 · KRW",
-          "lastAttemptAt": "2026-10-17T07:47:38.254Z",
+          "lastAttemptAt": "2026-10-17T07:51:46.953Z",
           "collectionStatus": "verified",
           "verification": {
             "kind": "live-round-trip-total",
@@ -93,13 +115,13 @@
             "adults": 1,
             "cabin": "economy",
             "currency": "KRW",
-            "priceKrw": 392407,
-            "observedAt": "2026-10-17T07:47:38.152Z",
+            "priceKrw": 447256,
+            "observedAt": "2026-10-17T07:51:46.817Z",
             "evidence": {
               "source": "visible-search-result",
               "provider": "naver",
-              "seller": "부킹닷컴",
-              "offerId": "8f47c77543c3c3100d3494b2"
+              "seller": "mytrip",
+              "offerId": "e173f1a2e77c8289618cffdc"
             }
           }
         },
@@ -160,9 +182,9 @@
             }
           ],
           "url": "https://kr.trip.com/flights/showfarefirst?dcity=sel&acity=tyo&dcityid=274&acityid=228&ddate=2026-12-30&rdate=2027-01-01&triptype=rt&class=y&lowpricesource=searchform&quantity=1&searchboxarg=t&nonstoponly=off&locale=ko-KR&curr=KRW",
-          "note": "Flight content not detected: TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '이 항공편 선택' }).first() to be visible\u001b[22m\n; 메인 콘텐츠로 이동\nTheme Detection\n숙소\n항공권\n투어&티켓\n항공 + 호텔\n기차표\n렌터카·공항픽업\n여행자 보험\n앱\n고객센터\n예약 검색\n로그인/회원가입\n서울 출발 도쿄 도",
+          "note": "Flight content not detected: TimeoutError: page.waitForFunction: Timeout 60000ms exceeded.; 메인 콘텐츠로 이동\nTheme Detection\n숙소\n항공권\n투어&티켓\n항공 + 호텔\n기차표\n렌터카·공항픽업\n여행자 보험\n앱\n고객센터\n예약 검색\n로그인/회원가입\n서울 출발 도쿄 도",
           "fareNote": "마지막 검증 가격 · 이번 수집 실패",
-          "lastAttemptAt": "2026-10-17T07:48:47.312Z",
+          "lastAttemptAt": "2026-10-17T07:53:01.718Z",
           "collectionStatus": "content-not-detected",
           "verification": {
             "kind": "live-round-trip-total",
@@ -449,7 +471,7 @@
             }
           ],
           "url": "https://www.google.com/travel/flights/search?tfs=CBwQAhooEgoyMDI2LTEyLTMwagwIAhIIL20vMGhzcWZyDAgDEggvbS8wN2RmaxooEgoyMDI3LTAxLTAxagwIAxIIL20vMDdkZmtyDAgCEggvbS8waHNxZkABSAFwAYIBCwj___________8BmAEB&hl=ko&curr=KRW&gl=KR",
-          "lastAttemptAt": "2026-10-17T07:48:50.378Z",
+          "lastAttemptAt": "2026-10-17T07:53:04.658Z",
           "note": "Page rendered; 25 candidate fares captured. Round-trip total and exact dates not yet independently verified.",
           "collectionStatus": "rendered-unverified",
           "verification": {
@@ -475,7 +497,7 @@
           "name": "스카이스캐너",
           "status": "checked",
           "priceKrw": 425500,
-          "checkedAt": "2026-10-17T07:48:55.473Z",
+          "checkedAt": "2026-10-17T07:53:10.401Z",
           "fareNote": "검증된 왕복 총액 · 성인 1명 · 일반석 · KRW",
           "history": [
             {
@@ -691,10 +713,31 @@
                   "offerId": "1d3191703d2655a266333822"
                 }
               }
+            },
+            {
+              "checkedAt": "2026-10-17T07:53:10.401Z",
+              "priceKrw": 425500,
+              "evidence": {
+                "kind": "live-round-trip-total",
+                "origin": "SEL",
+                "destination": "TYO",
+                "departureDate": "2026-12-30",
+                "returnDate": "2027-01-01",
+                "adults": 1,
+                "cabin": "economy",
+                "currency": "KRW",
+                "priceKrw": 425500,
+                "observedAt": "2026-10-17T07:53:10.401Z",
+                "evidence": {
+                  "source": "visible-search-result",
+                  "provider": "skyscanner",
+                  "offerId": "7456d500d6e156b98651ce86"
+                }
+              }
             }
           ],
           "url": "https://www.skyscanner.co.kr/transport/flights/sel/tyoa/261230/270101/?adultsv2=1&cabinclass=economy&rtn=1",
-          "lastAttemptAt": "2026-10-17T07:48:55.550Z",
+          "lastAttemptAt": "2026-10-17T07:53:10.490Z",
           "note": "Exact round-trip total verified from visible skyscanner seller result",
           "collectionStatus": "verified",
           "verification": {
@@ -707,11 +750,11 @@
             "cabin": "economy",
             "currency": "KRW",
             "priceKrw": 425500,
-            "observedAt": "2026-10-17T07:48:55.473Z",
+            "observedAt": "2026-10-17T07:53:10.401Z",
             "evidence": {
               "source": "visible-search-result",
               "provider": "skyscanner",
-              "offerId": "1d3191703d2655a266333822"
+              "offerId": "7456d500d6e156b98651ce86"
             }
           }
         }
