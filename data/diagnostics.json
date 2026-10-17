@@ -1,0 +1,57 @@
+[
+  {
+    "provider": "naver",
+    "origin": "SEL",
+    "destination": "TYO",
+    "departureDate": "2026-12-30",
+    "returnDate": "2027-01-01",
+    "attemptedAt": "2026-10-17T04:40:04.935Z",
+    "elapsedMs": 2351,
+    "status": "rendered-unverified",
+    "detail": "Page rendered, but no verified itinerary-specific total fare extractor is configured"
+  },
+  {
+    "provider": "trip",
+    "origin": "SEL",
+    "destination": "TYO",
+    "departureDate": "2026-12-30",
+    "returnDate": "2027-01-01",
+    "attemptedAt": "2026-10-17T04:40:05.543Z",
+    "elapsedMs": 569,
+    "status": "error",
+    "detail": "Error: HTTP 432"
+  },
+  {
+    "provider": "google",
+    "origin": "SEL",
+    "destination": "TYO",
+    "departureDate": "2026-12-30",
+    "returnDate": "2027-01-01",
+    "attemptedAt": "2026-10-17T04:40:07.526Z",
+    "elapsedMs": 1955,
+    "status": "rendered-unverified",
+    "detail": "Page rendered, but no verified itinerary-specific total fare extractor is configured"
+  },
+  {
+    "provider": "skyscanner",
+    "origin": "SEL",
+    "destination": "TYO",
+    "departureDate": "2026-12-30",
+    "returnDate": "2027-01-01",
+    "attemptedAt": "2026-10-17T04:41:38.279Z",
+    "elapsedMs": 90719,
+    "status": "timeout",
+    "detail": "TimeoutError: page.waitForFunction: Timeout 90000ms exceeded."
+  },
+  {
+    "provider": "expedia",
+    "origin": "SEL",
+    "destination": "TYO",
+    "departureDate": "2026-12-30",
+    "returnDate": "2027-01-01",
+    "attemptedAt": "2026-10-17T04:41:39.279Z",
+    "elapsedMs": 967,
+    "status": "error",
+    "detail": "Error: HTTP 429"
+  }
+]
