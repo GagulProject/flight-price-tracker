@@ -1,0 +1,1 @@
+{"name":"flight-price-tracker","private":true,"type":"module","scripts":{"check":"node scripts/validate-data.mjs && node --check app.js"}}

@@ -1,0 +1,16 @@
+{
+  "route": { "origin": "SEL", "destination": "TYO", "departureDate": "2026-12-30", "returnDate": "2027-01-01", "tripType": "round-trip", "adults": 1, "cabin": "economy" },
+  "lastAttemptAt": "2026-10-17T01:44:30Z",
+  "providers": [
+    {
+      "id": "naver", "name": "네이버 항공권", "status": "checked", "priceKrw": 392671,
+      "checkedAt": "2026-10-17T01:44:30Z", "fareNote": "직항 · 모든 결제수단",
+      "url": "https://flight.naver.com/flights/international/SEL:city-TYO:city-20261230/TYO:city-SEL:city-20270101?adult=1&isDirect=true&fareType=Y"
+    },
+    {
+      "id": "trip", "name": "트립닷컴", "status": "unavailable", "priceKrw": null,
+      "checkedAt": null, "note": "해당 왕복 일정의 가격을 확인하지 못했습니다.",
+      "url": "https://kr.trip.com/flights/seoul-to-tokyo/airfares-sel-tyo/"
+    }
+  ]
+}
