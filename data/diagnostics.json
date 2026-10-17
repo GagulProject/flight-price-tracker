@@ -5,8 +5,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T05:45:01.528Z",
-    "elapsedMs": 46737,
+    "attemptedAt": "2026-10-17T05:48:44.473Z",
+    "elapsedMs": 46789,
     "status": "results-loading",
     "detail": "Search shell rendered but fare results did not load",
     "fareCandidates": [],
@@ -180,8 +180,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T05:45:02.190Z",
-    "elapsedMs": 623,
+    "attemptedAt": "2026-10-17T05:48:45.053Z",
+    "elapsedMs": 532,
     "status": "blocked",
     "detail": "HTTP 432; no automated bypass attempted",
     "fareCandidates": [],
@@ -199,13 +199,19 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T05:46:03.198Z",
-    "elapsedMs": 60980,
-    "status": "content-not-detected",
-    "detail": "Flight content not detected: 주요 콘텐츠로 이동\n접근성 관련 의견 보내기\n살펴보기\n항공편\n호텔\n공유숙박\n테마 변경\n로그인\n결과 로드 중\n항공편 검색\n왕복\n1\n이코노미\n서울특별시\n도쿄도\n필터\n모든 필터\n경유\n항공사\n수하물\n가격\n시간대\n탄소 배출량\n경유 공항\n이동 시간\n검색 결과\n반환된 결과가 없습니다.\n\n죄송합니다. 오류가 발생했습니다.\n\n새로고침\n\n",
+    "attemptedAt": "2026-10-17T05:49:07.213Z",
+    "elapsedMs": 22122,
+    "status": "search-error",
+    "detail": "Search results page returned no results or an error",
+    "quote": null,
     "fareCandidates": [],
     "pagePreview": "주요 콘텐츠로 이동\n접근성 관련 의견 보내기\n살펴보기\n항공편\n호텔\n공유숙박\n테마 변경\n로그인\n결과 로드 중\n항공편 검색\n왕복\n1\n이코노미\n서울특별시\n도쿄도\n필터\n모든 필터\n경유\n항공사\n수하물\n가격\n시간대\n탄소 배출량\n경유 공항\n이동 시간\n검색 결과\n반환된 결과가 없습니다.\n\n죄송합니다. 오류가 발생했습니다.\n\n새로고침\n\n언어​한국어\n위치​미국\n통화KRW\n정보\n개인정보처리방침\n서비스 약관\n의견\n고객센터\n\n표시된 통화가 항공편 구매 시 사용하는 통화와 다를 수 있습니다. 자세히 알아보기",
-    "network": []
+    "network": [
+      {
+        "url": "https://www.google.com/log",
+        "httpStatus": 503
+      }
+    ]
   },
   {
     "provider": "skyscanner",
@@ -213,12 +219,12 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T05:46:04.137Z",
-    "elapsedMs": 906,
+    "attemptedAt": "2026-10-17T05:49:08.228Z",
+    "elapsedMs": 974,
     "status": "blocked",
     "detail": "Bot verification page detected before waiting for flight results",
     "fareCandidates": [],
-    "pagePreview": "Are you a person or a robot?\nPlease don’t take this personally - some scripts and bots are remarkably lifelike these days!\nStill having problems accessing the page? Try checking you have JavaScript and cookies turned on and that your browser isn’t blocking them from loading.\n0a46e06a-c9ee-11f1-ad15-01cbb5d0d5ff",
+    "pagePreview": "Are you a person or a robot?\nPlease don’t take this personally - some scripts and bots are remarkably lifelike these days!\nStill having problems accessing the page? Try checking you have JavaScript and cookies turned on and that your browser isn’t blocking them from loading.\n77f2a5fa-c9ee-11f1-9249-36ec9c6d9fe8",
     "network": []
   },
   {
@@ -227,12 +233,12 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T05:46:05.292Z",
-    "elapsedMs": 1126,
+    "attemptedAt": "2026-10-17T05:49:09.189Z",
+    "elapsedMs": 920,
     "status": "blocked",
     "detail": "HTTP 429; no automated bypass attempted",
     "fareCandidates": [],
-    "pagePreview": "인증해 주세요...\n\n로봇이 아닌지 인증이 필요합니다.\n\nbd124200-b1f6-496a-9806-d75c8807fa2a",
+    "pagePreview": "인증해 주세요...\n\n로봇이 아닌지 인증이 필요합니다.\n\n1e4e66e8-c384-49ae-9aed-2496c5d28404",
     "network": [
       {
         "url": "https://www.expedia.co.kr/Flights-Search",
