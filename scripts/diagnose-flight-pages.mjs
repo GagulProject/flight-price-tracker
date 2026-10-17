@@ -1,5 +1,6 @@
 import { candidateAmounts, applyAttempt } from './quote-state.mjs';
 import { collectSkyscanner } from './skyscanner-live.mjs';
+import { readGoogleSnapshot, googleQuoteFromSnapshot } from './google-flights.mjs';
 import { chromium } from 'playwright';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 const data = JSON.parse(await readFile('data/prices.json','utf8'));
@@ -38,7 +39,7 @@ for (const route of data.routes) for (const provider of route.providers) {
   page.on('response', response => {
     if (response.status() >= 400 && network.length < 40) network.push({url:response.url().split('?')[0],httpStatus:response.status()});
   });
-  let status='unverified', detail='', elapsedMs=0, fareCandidates=[], pagePreview='';
+  let status='unverified', detail='', elapsedMs=0, fareCandidates=[], pagePreview='', quote;
   const started=Date.now();
   try {
     let response;
@@ -81,6 +82,14 @@ for (const route of data.routes) for (const provider of route.providers) {
           && !/항공권 가격 변동 그래프 로딩 중/.test(t);
       },null,{timeout:45000,polling:1500}).catch(()=>{});
     }
+    if (provider.id === 'google') {
+      await page.waitForFunction(() => document.querySelector('[role="link"][aria-label^="왕복 총 가격은"]') ||
+        /반환된 결과가 없습니다|죄송합니다\. 오류가 발생했습니다/.test(document.body?.innerText || ''),
+      null, { timeout: 45000, polling: 1000 }).catch(() => {});
+      const snapshot = await readGoogleSnapshot(page);
+      quote = googleQuoteFromSnapshot(route, snapshot, new Date().toISOString());
+      await writeFile('diagnostics/google-snapshot.json', JSON.stringify(snapshot, null, 2) + '\n');
+    }
     const text=(await page.locator('body').innerText()).slice(0,12000);
     // Collect candidate fares for debugging. Never treat arbitrary prices as a
     // verified round-trip quote without confirming dates and itinerary.
@@ -98,7 +107,9 @@ for (const route of data.routes) for (const provider of route.providers) {
       });
       fareCandidates = snippets.flatMap(s => candidateAmounts(s.value,s.context).map(amount=>({amount,context:s.context}))).slice(0,25);
     }
-    if (/반환된 결과가 없습니다|오류가 발생했습니다/.test(text)) {
+    if (quote) {
+      status='verified'; detail='Exact round-trip total verified from visible Google Flights search result';
+    } else if (/반환된 결과가 없습니다|오류가 발생했습니다/.test(text)) {
       status='search-error'; detail='Search results page returned no results or an error';
     } else if (/항공권 가격 변동 그래프 로딩 중/.test(text) && fareCandidates.length===0) {
       status='results-loading'; detail='Search shell rendered but fare results did not load';
@@ -119,7 +130,7 @@ for (const route of data.routes) for (const provider of route.providers) {
       (await page.locator('body').innerText().catch(()=>'' )).slice(0,12000)).catch(()=>{});
     pagePreview=(await page.locator('body').innerText().catch(()=>'' )).slice(0,1000);
     elapsedMs=Date.now()-started;
-    results.push({provider:provider.id,origin:route.origin.code,destination:route.destination.code,departureDate:route.departureDate,returnDate:route.returnDate,attemptedAt:new Date().toISOString(),elapsedMs,status,detail,fareCandidates,pagePreview,network});
+    results.push({provider:provider.id,origin:route.origin.code,destination:route.destination.code,departureDate:route.departureDate,returnDate:route.returnDate,attemptedAt:new Date().toISOString(),elapsedMs,status,detail,quote,fareCandidates,pagePreview,network});
     applyAttempt(route,provider,results.at(-1));
     await writeFile('data/prices.json',JSON.stringify(data,null,2)+'\n');
     await writeFile('diagnostics/results.json',JSON.stringify(results,null,2)+'\n');

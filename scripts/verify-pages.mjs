@@ -24,11 +24,17 @@ try {
   assert.equal(await page.locator('.provider-verified').count(),5);
   assert.equal(await page.locator('.collection-status').count(),5);
   const text=await page.locator('#results').innerText();
+  const verifiedSamples=expected.routes.flatMap(route=>route.providers.flatMap(item=>(item.history||[]).filter(sample=>sample.evidence?.kind==='live-round-trip-total')));
+  assert.equal(await page.locator('.trend circle').count(),verifiedSamples.length,'Trend points must match verified history');
   for (const route of expected.routes) {
     assert.ok(text.includes(route.departureDate) && text.includes(route.returnDate));
     for(const item of route.providers) {
       assert.ok(text.includes(item.collectionStatus || '미검증'));
       if(item.status==='stale') assert.ok(text.includes(new Intl.NumberFormat('ko-KR').format(item.priceKrw)+'원 · 과거 기록'));
+      if(item.status==='checked') {
+        assert.ok(text.includes(new Intl.NumberFormat('ko-KR').format(item.priceKrw)+'원'));
+        assert.ok(text.includes('마지막 검증'));
+      }
     }
   }
   assert.deepEqual(errors,[]);

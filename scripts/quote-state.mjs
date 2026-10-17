@@ -10,7 +10,9 @@ export function validQuote(route, quote, attemptedAt) {
   if (quote.origin !== route.origin.code || quote.destination !== route.destination.code || quote.departureDate !== route.departureDate || quote.returnDate !== route.returnDate) return false;
   const age = Date.parse(attemptedAt) - Date.parse(quote.observedAt);
   return Number.isInteger(quote.priceKrw) && quote.priceKrw > 0 && Number.isFinite(age) && age >= 0 && age < 15 * 60 * 1000
-    && quote.evidence?.source === 'authorized-live-api' && typeof quote.evidence?.offerId === 'string' && quote.evidence.offerId.length > 0;
+    && ((quote.evidence?.source === 'authorized-live-api' && quote.evidence?.provider === 'skyscanner') ||
+      (quote.evidence?.source === 'visible-search-result' && quote.evidence?.provider === 'google')) &&
+    typeof quote.evidence?.offerId === 'string' && quote.evidence.offerId.length > 0;
 }
 
 export function applyAttempt(route, provider, result) {
