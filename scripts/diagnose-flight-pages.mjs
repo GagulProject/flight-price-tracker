@@ -52,7 +52,7 @@ for (const route of data.routes) for (const provider of route.providers) {
     // verified round-trip quote without confirming dates and itinerary.
     if (provider.id === 'naver' || provider.id === 'google') {
       fareCandidates = await page.evaluate(() => {
-        const pricePattern=/(?:₩\\s*|KRW\\s*|)([1-9]\\d{1,2}(?:,\\d{3})+|[1-9]\\d{4,6})\\s*원?/g;
+        const pricePattern=/(?:₩\s*|KRW\s*|)([1-9]\d{1,2}(?:,\d{3})+|[1-9]\d{4,6})\s*원?/g;
         const candidates=[];
         for (const el of document.querySelectorAll('body *')) {
           if (el.children.length > 2) continue;
