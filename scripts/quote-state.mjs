@@ -11,7 +11,7 @@ export function validQuote(route, quote, attemptedAt) {
   const age = Date.parse(attemptedAt) - Date.parse(quote.observedAt);
   return Number.isInteger(quote.priceKrw) && quote.priceKrw > 0 && Number.isFinite(age) && age >= 0 && age < 15 * 60 * 1000
     && ((quote.evidence?.source === 'authorized-live-api' && quote.evidence?.provider === 'skyscanner') ||
-      (quote.evidence?.source === 'visible-search-result' && quote.evidence?.provider === 'google')) &&
+      (quote.evidence?.source === 'visible-search-result' && ['google', 'naver'].includes(quote.evidence?.provider))) &&
     typeof quote.evidence?.offerId === 'string' && quote.evidence.offerId.length > 0;
 }
 

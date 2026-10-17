@@ -1,6 +1,7 @@
 import { candidateAmounts, applyAttempt } from './quote-state.mjs';
 import { collectSkyscanner } from './skyscanner-live.mjs';
 import { readGoogleSnapshot, googleQuoteFromSnapshot } from './google-flights.mjs';
+import { readNaverSnapshot, naverQuoteFromSnapshot } from './naver-flights.mjs';
 import { chromium } from 'playwright';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 const data = JSON.parse(await readFile('data/prices.json','utf8'));
@@ -63,7 +64,29 @@ for (const route of data.routes) for (const provider of route.providers) {
       throw new Error(detail);
     }
     try {
-      if (provider.id === 'google') {
+      if (provider.id === 'naver') {
+        // Naver's deep link initially renders a search shell; its Search button starts the actual fare request.
+        const search = page.getByRole('button', { name: '검색', exact: true });
+        if (await search.isVisible()) await search.click();
+        await page.locator('[class*="combination_ConcurrentItemContainer"] [class*="defaultSummary"]')
+          .first().waitFor({ state: 'visible', timeout: 60000 });
+        const cards = page.locator('[class*="combination_ConcurrentItemContainer"]');
+        let selected = false;
+        for (let index = 0, count = await cards.count(); index < count; index++) {
+          const card = cards.nth(index);
+          const summary = card.locator('[class*="defaultSummary"]');
+          if (!await summary.count()) continue;
+          const label = await summary.innerText();
+          if (!/성인\/모든 결제수단[\s\S]*왕복[\s\S]*[0-9,]+\s*원/.test(label)) continue;
+          await card.locator('[class*="combination_select_schedule"]').click();
+          selected = true;
+          break;
+        }
+        if (!selected) throw new Error('No ordinary all-payment round-trip card available');
+        await page.locator('[class*="international_selected_flights"]').waitFor({ state: 'visible', timeout: 30000 });
+        await page.locator('[class*="detail_row"] [class*="detail_num"]').first()
+          .waitFor({ state: 'visible', timeout: 30000 });
+      } else if (provider.id === 'google') {
         for (let retry = 0; retry < 3; retry++) {
           await page.waitForFunction(() => document.querySelector('[role="link"][aria-label^="왕복 총 가격은"]') ||
             /반환된 결과가 없습니다|죄송합니다\. 오류가 발생했습니다/.test(document.body?.innerText || ''),
@@ -114,6 +137,10 @@ for (const route of data.routes) for (const provider of route.providers) {
       const snapshot = await readGoogleSnapshot(page);
       quote = googleQuoteFromSnapshot(route, snapshot, new Date().toISOString());
       await writeFile('diagnostics/google-snapshot.json', JSON.stringify(snapshot, null, 2) + '\n');
+    } else if (provider.id === 'naver') {
+      const snapshot = await readNaverSnapshot(page);
+      quote = naverQuoteFromSnapshot(route, snapshot, new Date().toISOString());
+      await writeFile('diagnostics/naver-snapshot.json', JSON.stringify(snapshot, null, 2) + '\n');
     }
     const text=(await page.locator('body').innerText()).slice(0,12000);
     // Collect candidate fares for debugging. Never treat arbitrary prices as a
@@ -133,7 +160,7 @@ for (const route of data.routes) for (const provider of route.providers) {
       fareCandidates = snippets.flatMap(s => candidateAmounts(s.value,s.context).map(amount=>({amount,context:s.context}))).slice(0,25);
     }
     if (quote) {
-      status='verified'; detail='Exact round-trip total verified from visible Google Flights search result';
+      status='verified'; detail=`Exact round-trip total verified from visible ${provider.id} seller result`;
     } else if (/반환된 결과가 없습니다|오류가 발생했습니다/.test(text)) {
       status='search-error'; detail='Search results page returned no results or an error';
     } else if (/항공권 가격 변동 그래프 로딩 중/.test(text) && fareCandidates.length===0) {
