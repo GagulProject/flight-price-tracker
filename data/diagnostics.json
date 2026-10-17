@@ -5,8 +5,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T05:55:02.385Z",
-    "elapsedMs": 46689,
+    "attemptedAt": "2026-10-17T06:09:23.459Z",
+    "elapsedMs": 47143,
     "status": "results-loading",
     "detail": "Search shell rendered but fare results did not load",
     "fareCandidates": [],
@@ -17,11 +17,11 @@
         "failure": "net::ERR_FAILED"
       },
       {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
+        "url": "https://flight-api.naver.com/graphql",
         "failure": "net::ERR_FAILED"
       },
       {
-        "url": "https://flight-api.naver.com/graphql",
+        "url": "https://flight-api.naver.com/flight/international/searchFlights",
         "failure": "net::ERR_FAILED"
       },
       {
@@ -180,8 +180,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T05:55:02.713Z",
-    "elapsedMs": 292,
+    "attemptedAt": "2026-10-17T06:09:24.155Z",
+    "elapsedMs": 656,
     "status": "blocked",
     "detail": "HTTP 432; no automated bypass attempted",
     "fareCandidates": [],
@@ -199,8 +199,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T05:55:24.941Z",
-    "elapsedMs": 22196,
+    "attemptedAt": "2026-10-17T06:09:46.181Z",
+    "elapsedMs": 21997,
     "status": "search-error",
     "detail": "Search results page returned no results or an error",
     "quote": null,
@@ -214,12 +214,12 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T05:55:25.824Z",
-    "elapsedMs": 848,
+    "attemptedAt": "2026-10-17T06:09:46.932Z",
+    "elapsedMs": 721,
     "status": "blocked",
     "detail": "Bot verification page detected before waiting for flight results",
     "fareCandidates": [],
-    "pagePreview": "Are you a person or a robot?\nPlease don’t take this personally - some scripts and bots are remarkably lifelike these days!\nStill having problems accessing the page? Try checking you have JavaScript and cookies turned on and that your browser isn’t blocking them from loading.\n59170c85-c9ef-11f1-a3ce-d31950d43841",
+    "pagePreview": "Are you a person or a robot?\nPlease don’t take this personally - some scripts and bots are remarkably lifelike these days!\nStill having problems accessing the page? Try checking you have JavaScript and cookies turned on and that your browser isn’t blocking them from loading.\n5a574431-c9f1-11f1-b058-254a5742bfbb",
     "network": []
   },
   {
@@ -228,12 +228,12 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T05:55:26.750Z",
-    "elapsedMs": 898,
+    "attemptedAt": "2026-10-17T06:09:47.826Z",
+    "elapsedMs": 860,
     "status": "blocked",
     "detail": "HTTP 429; no automated bypass attempted",
     "fareCandidates": [],
-    "pagePreview": "인증해 주세요...\n\n로봇이 아닌지 인증이 필요합니다.\n\nef7b64e6-1c39-41a6-bad5-5d4cce9a2bb2",
+    "pagePreview": "인증해 주세요...\n\n로봇이 아닌지 인증이 필요합니다.\n\n6938edc5-d3d1-4d9f-818f-39d4280ad060",
     "network": [
       {
         "url": "https://www.expedia.co.kr/Flights-Search",
