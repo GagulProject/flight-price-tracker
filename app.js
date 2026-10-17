@@ -1,6 +1,6 @@
 const money = new Intl.NumberFormat('ko-KR');
 const dateTime = new Intl.DateTimeFormat('ko-KR', { timeZone: 'Asia/Seoul', year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' });
-const providers = { naver: { name: '네이버 항공권', mark: 'N', className: 'naver' }, trip: { name: '트립닷컴', mark: 'T', className: 'trip' } };
+const providers = { naver: { name: '네이버 항공권', mark: 'N', className: 'naver' }, trip: { name: '트립닷컴', mark: 'T', className: 'trip' }, google: { name: 'Google 항공편', mark: 'G', className: 'google' }, skyscanner: { name: '스카이스캐너', mark: 'S', className: 'skyscanner' } };
 const form = document.getElementById('route-form');
 const results = document.getElementById('results');
 let routes = [];
@@ -13,7 +13,7 @@ function checkedPrice(item) {
 function safeLink(item) {
   try {
     const url = new URL(item.url);
-    const allowed = item.id === 'naver' ? ['flight.naver.com'] : ['kr.trip.com', 'www.trip.com'];
+    const allowed = { naver: ['flight.naver.com'], trip: ['kr.trip.com', 'www.trip.com'], google: ['www.google.com'], skyscanner: ['www.skyscanner.co.kr'] }[item.id] || [];
     return url.protocol === 'https:' && allowed.includes(url.hostname) ? url.href : '#';
   } catch { return '#'; }
 }
@@ -66,7 +66,7 @@ function makeRouteCard(route) {
 
 function requestLink(query) {
   const title = `[항공권 추적 요청] ${query.origin} → ${query.destination} ${query.departureDate}~${query.returnDate}`;
-  const body = `출발 도시 또는 공항: ${query.origin}\n도착 도시 또는 공항: ${query.destination}\n가는 날: ${query.departureDate}\n오는 날: ${query.returnDate}\n여정: 왕복\n인원: 성인 1명\n좌석: 일반석\n\n네이버 항공권과 트립닷컴 가격을 6시간마다 추적해 주세요.`;
+  const body = `출발 도시 또는 공항: ${query.origin}\n도착 도시 또는 공항: ${query.destination}\n가는 날: ${query.departureDate}\n오는 날: ${query.returnDate}\n여정: 왕복\n인원: 성인 1명\n좌석: 일반석\n\n네이버 항공권·트립닷컴·Google 항공편·스카이스캐너 가격을 6시간마다 추적해 주세요.`;
   const url = new URL('https://github.com/GagulProject/flight-price-tracker/issues/new');
   url.searchParams.set('title', title);
   url.searchParams.set('body', body);

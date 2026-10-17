@@ -16,7 +16,8 @@ for (const route of data.routes) {
   const key = [route.origin.code, route.destination.code, route.departureDate, route.returnDate].join(':');
   if (seen.has(key)) throw new Error(`Duplicate route: ${key}`);
   seen.add(key);
-  if (!Array.isArray(route.providers) || route.providers.length !== 2 || new Set(route.providers.map(x => x.id)).size !== 2) throw new Error('Expected two distinct providers');
+  const requiredProviders = ['naver', 'trip', 'google', 'skyscanner'];
+  if (!Array.isArray(route.providers) || route.providers.length !== requiredProviders.length || new Set(route.providers.map(x => x.id)).size !== requiredProviders.length || requiredProviders.some(id => !route.providers.some(item => item.id === id))) throw new Error('Expected four distinct providers');
   for (const item of route.providers) {
     const url = new URL(item.url);
     if (url.protocol !== 'https:') throw new Error(`Invalid protocol: ${item.id}`);
@@ -28,6 +29,17 @@ for (const route of data.routes) {
     } else if (item.id === 'trip') {
       if (!['kr.trip.com', 'www.trip.com'].includes(url.hostname)) throw new Error('Invalid Trip.com link');
       if (url.searchParams.get('dcity') !== route.origin.code.toLowerCase() || url.searchParams.get('acity') !== route.destination.code.toLowerCase() || url.searchParams.get('ddate') !== route.departureDate || url.searchParams.get('rdate') !== route.returnDate || url.searchParams.get('triptype') !== 'rt') throw new Error('Trip.com itinerary mismatch');
+    } else if (item.id === 'google') {
+      if (url.hostname !== 'www.google.com' || url.pathname !== '/travel/flights' || url.searchParams.get('curr') !== 'KRW') throw new Error('Invalid Google Flights link');
+      const query = url.searchParams.get('q') || '';
+      const dates = [route.departureDate, route.returnDate].map(date => new Intl.DateTimeFormat('en-US', { timeZone: 'UTC', month: 'long', day: 'numeric', year: 'numeric' }).format(new Date(`${date}T00:00:00Z`)).replace(',', ''));
+      if (![route.origin, route.destination].every(city => [city.name, ...city.aliases].some(name => query.toLowerCase().includes(name.toLowerCase()))) || dates.some(date => !query.includes(date))) throw new Error('Google Flights itinerary mismatch');
+    } else if (item.id === 'skyscanner') {
+      if (url.hostname !== 'www.skyscanner.co.kr' || !url.pathname.startsWith('/transport/flights/')) throw new Error('Invalid Skyscanner link');
+      const parts = url.pathname.split('/').filter(Boolean);
+      const dates = [route.departureDate, route.returnDate].map(date => date.slice(2).replaceAll('-', ''));
+      const skyCode = code => code === 'TYO' ? 'tyoa' : code.toLowerCase();
+      if (parts[2] !== skyCode(route.origin.code) || parts[3] !== skyCode(route.destination.code) || parts[4] !== dates[0] || parts[5] !== dates[1] || url.searchParams.get('adultsv2') !== '1' || url.searchParams.get('cabinclass') !== 'economy' || url.searchParams.get('rtn') !== '1') throw new Error('Skyscanner itinerary mismatch');
     } else throw new Error('Unknown provider');
     if (item.status === 'checked') {
       if (!Number.isInteger(item.priceKrw) || item.priceKrw <= 0 || !Number.isFinite(Date.parse(item.checkedAt))) throw new Error(`Invalid checked price: ${item.id}`);
