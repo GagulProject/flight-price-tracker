@@ -1,6 +1,6 @@
 const money = new Intl.NumberFormat('ko-KR');
 const dateTime = new Intl.DateTimeFormat('ko-KR', { timeZone: 'Asia/Seoul', year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' });
-const providers = { naver: { name: '네이버 항공권', mark: 'N', className: 'naver' }, trip: { name: '트립닷컴', mark: 'T', className: 'trip' }, google: { name: 'Google 항공편', mark: 'G', className: 'google' }, skyscanner: { name: '스카이스캐너', mark: 'S', className: 'skyscanner' } };
+const providers = { naver: { name: '네이버 항공권', mark: 'N', className: 'naver', color: '#03a84e' }, trip: { name: '트립닷컴', mark: 'T', className: 'trip', color: '#2874e8' }, google: { name: 'Google 항공편', mark: 'G', className: 'google', color: '#d75b47' }, skyscanner: { name: '스카이스캐너', mark: 'S', className: 'skyscanner', color: '#0770e3' } };
 const form = document.getElementById('route-form');
 const results = document.getElementById('results');
 let routes = [];
@@ -47,6 +47,80 @@ function makeProviderCard(item) {
   return link;
 }
 
+function makeSvgElement(tag, attributes) {
+  const element = document.createElementNS('http://www.w3.org/2000/svg', tag);
+  for (const [name, value] of Object.entries(attributes)) element.setAttribute(name, String(value));
+  return element;
+}
+
+function makeTrend(route) {
+  const section = makeElement('section', 'trend');
+  section.append(makeElement('h3', '', '가격 추이'));
+  const series = route.providers.filter(item => providers[item.id]).map(item => ({
+    id: item.id,
+    points: (item.history || []).map(sample => ({ time: Date.parse(sample.checkedAt), price: sample.priceKrw })).filter(sample => Number.isFinite(sample.time) && Number.isInteger(sample.price) && sample.price > 0)
+  })).filter(item => item.points.length);
+  const samples = series.flatMap(item => item.points);
+  if (!samples.length) {
+    section.append(makeElement('p', 'trend-note', '가격 기록이 쌓이면 여기에 추이가 표시됩니다.'));
+    return section;
+  }
+
+  const times = samples.map(sample => sample.time);
+  const prices = samples.map(sample => sample.price);
+  const minTime = Math.min(...times);
+  const maxTime = Math.max(...times);
+  const minPrice = Math.min(...prices);
+  const maxPrice = Math.max(...prices);
+  const margin = Math.max(5000, Math.round((maxPrice - minPrice) * 0.15));
+  const low = Math.max(0, minPrice - margin);
+  const high = maxPrice + margin;
+  const left = 72;
+  const right = 740;
+  const top = 18;
+  const bottom = 188;
+  const x = time => minTime === maxTime ? (left + right) / 2 : left + (time - minTime) / (maxTime - minTime) * (right - left);
+  const y = price => bottom - (price - low) / (high - low) * (bottom - top);
+  const svg = makeSvgElement('svg', { viewBox: '0 0 760 220', role: 'img', 'aria-label': `${route.origin.name}에서 ${route.destination.name}까지 왕복 항공권의 사이트별 확인 가격 추이` });
+  for (const fraction of [0, 0.5, 1]) {
+    const price = low + (high - low) * fraction;
+    const height = y(price);
+    svg.append(makeSvgElement('line', { x1: left, y1: height, x2: right, y2: height, class: 'trend-grid-line' }));
+    const label = makeSvgElement('text', { x: left - 10, y: height + 4, 'text-anchor': 'end', class: 'trend-axis-label' });
+    label.textContent = `${Math.round(price / 1000)}천`;
+    svg.append(label);
+  }
+  for (const item of series) {
+    const color = providers[item.id].color;
+    if (item.points.length > 1) svg.append(makeSvgElement('polyline', { points: item.points.map(point => `${x(point.time)},${y(point.price)}`).join(' '), fill: 'none', stroke: color, 'stroke-width': 3, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }));
+    for (const point of item.points) {
+      const dot = makeSvgElement('circle', { cx: x(point.time), cy: y(point.price), r: 5, fill: color, stroke: '#fff', 'stroke-width': 2 });
+      const title = makeSvgElement('title', {});
+      title.textContent = `${providers[item.id].name} · ${dateTime.format(new Date(point.time))} KST · ${money.format(point.price)}원`;
+      dot.append(title);
+      svg.append(dot);
+    }
+  }
+  const timeLabel = new Intl.DateTimeFormat('ko-KR', { timeZone: 'Asia/Seoul', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+  for (const [time, anchor, position] of [[minTime, 'start', left], [maxTime, 'end', right]]) {
+    const label = makeSvgElement('text', { x: position, y: 214, 'text-anchor': anchor, class: 'trend-axis-label' });
+    label.textContent = timeLabel.format(new Date(time));
+    svg.append(label);
+  }
+  section.append(svg);
+  const legend = makeElement('div', 'trend-legend');
+  for (const item of series) {
+    const label = makeElement('span', '', `${providers[item.id].name} · ${item.points.length}회`);
+    const swatch = makeElement('i', 'trend-swatch');
+    swatch.style.backgroundColor = providers[item.id].color;
+    label.prepend(swatch);
+    legend.append(label);
+  }
+  section.append(legend);
+  if (series.every(item => item.points.length === 1)) section.append(makeElement('p', 'trend-note', '첫 가격을 기록했습니다. 다음 확인부터 사이트별 변화가 선으로 이어집니다.'));
+  return section;
+}
+
 function makeRouteCard(route) {
   const wrapper = makeElement('article', 'itinerary');
   const heading = makeElement('div', 'itinerary-heading');
@@ -60,7 +134,7 @@ function makeRouteCard(route) {
   const update = makeElement('p', 'route-updated', route.lastAttemptAt ? `최근 조회 ${dateTime.format(new Date(route.lastAttemptAt))} KST` : '첫 조회 대기');
   const grid = makeElement('div', 'provider-grid');
   grid.append(...route.providers.filter(item => providers[item.id]).map(makeProviderCard));
-  wrapper.append(heading, summary, update, grid);
+  wrapper.append(heading, summary, update, grid, makeTrend(route));
   return wrapper;
 }
 

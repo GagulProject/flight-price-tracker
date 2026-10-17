@@ -13,21 +13,25 @@
         {
           "id": "naver", "name": "네이버 항공권", "status": "checked", "priceKrw": 392671,
           "checkedAt": "2026-10-17T02:10:34Z", "fareNote": "모든 결제수단",
+          "history": [{ "checkedAt": "2026-10-17T02:10:34Z", "priceKrw": 392671 }],
           "url": "https://flight.naver.com/flights/international/SEL:city-TYO:city-20261230/TYO:city-SEL:city-20270101?adult=1&isDirect=false&fareType=Y"
         },
         {
           "id": "trip", "name": "트립닷컴", "status": "checked", "priceKrw": 429300,
           "checkedAt": "2026-10-17T02:18:48Z", "fareNote": "사용자 제공 검색 화면 기준",
+          "history": [{ "checkedAt": "2026-10-17T02:18:48Z", "priceKrw": 429300 }],
           "url": "https://kr.trip.com/flights/showfarefirst?dcity=sel&acity=tyo&dcityid=274&acityid=228&ddate=2026-12-30&rdate=2027-01-01&triptype=rt&class=y&lowpricesource=searchform&quantity=1&searchboxarg=t&nonstoponly=off&locale=ko-KR&curr=KRW"
         },
         {
           "id": "google", "name": "Google 항공편", "status": "checked", "priceKrw": 388081,
           "checkedAt": "2026-10-17T02:14:24Z", "fareNote": "왕복 총 가격",
+          "history": [{ "checkedAt": "2026-10-17T02:14:24Z", "priceKrw": 388081 }],
           "url": "https://www.google.com/travel/flights?q=Flights%20from%20Seoul%20to%20Tokyo%20on%20December%2030%202026%20through%20January%201%202027&hl=ko&curr=KRW"
         },
         {
           "id": "skyscanner", "name": "스카이스캐너", "status": "checked", "priceKrw": 403100,
           "checkedAt": "2026-10-17T02:14:24Z", "fareNote": "검색 결과 최저가",
+          "history": [{ "checkedAt": "2026-10-17T02:14:24Z", "priceKrw": 403100 }],
           "url": "https://www.skyscanner.co.kr/transport/flights/sel/tyoa/261230/270101/?adultsv2=1&cabinclass=economy&rtn=1"
         }
       ]

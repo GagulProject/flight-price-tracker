@@ -41,8 +41,18 @@ for (const route of data.routes) {
       const skyCode = code => code === 'TYO' ? 'tyoa' : code.toLowerCase();
       if (parts[2] !== skyCode(route.origin.code) || parts[3] !== skyCode(route.destination.code) || parts[4] !== dates[0] || parts[5] !== dates[1] || url.searchParams.get('adultsv2') !== '1' || url.searchParams.get('cabinclass') !== 'economy' || url.searchParams.get('rtn') !== '1') throw new Error('Skyscanner itinerary mismatch');
     } else throw new Error('Unknown provider');
+    if (!Array.isArray(item.history)) throw new Error(`Missing price history: ${item.id}`);
+    let previousTime = -Infinity;
+    for (const sample of item.history) {
+      const time = Date.parse(sample.checkedAt);
+      if (!Number.isFinite(time) || time <= previousTime || !Number.isInteger(sample.priceKrw) || sample.priceKrw <= 0) throw new Error(`Invalid price history: ${item.id}`);
+      if (route.lastAttemptAt && time > Date.parse(route.lastAttemptAt)) throw new Error(`History is newer than last attempt: ${item.id}`);
+      previousTime = time;
+    }
     if (item.status === 'checked') {
       if (!Number.isInteger(item.priceKrw) || item.priceKrw <= 0 || !Number.isFinite(Date.parse(item.checkedAt))) throw new Error(`Invalid checked price: ${item.id}`);
+      const latest = item.history.at(-1);
+      if (!latest || latest.checkedAt !== item.checkedAt || latest.priceKrw !== item.priceKrw) throw new Error(`Current price must match latest history: ${item.id}`);
     } else if (item.status !== 'unavailable' || item.priceKrw !== null || item.checkedAt !== null) throw new Error(`Unavailable price must not look current: ${item.id}`);
   }
 }
