@@ -21,7 +21,7 @@
       "tripType": "round-trip",
       "adults": 1,
       "cabin": "economy",
-      "lastAttemptAt": "2026-10-17T05:38:04.080Z",
+      "lastAttemptAt": "2026-10-17T05:43:28.190Z",
       "providers": [
         {
           "id": "naver",
@@ -38,7 +38,7 @@
           "url": "https://flight.naver.com/flights/international/SEL:city-TYO:city-20261230/TYO:city-SEL:city-20270101?adult=1&isDirect=false&fareType=Y",
           "note": "Search shell rendered but fare results did not load",
           "fareNote": "과거 기록 · 검증 근거 없음",
-          "lastAttemptAt": "2026-10-17T05:37:28.634Z",
+          "lastAttemptAt": "2026-10-17T05:43:23.318Z",
           "collectionStatus": "results-loading"
         },
         {
@@ -56,7 +56,7 @@
           "url": "https://kr.trip.com/flights/showfarefirst?dcity=sel&acity=tyo&dcityid=274&acityid=228&ddate=2026-12-30&rdate=2027-01-01&triptype=rt&class=y&lowpricesource=searchform&quantity=1&searchboxarg=t&nonstoponly=off&locale=ko-KR&curr=KRW",
           "note": "HTTP 432; no automated bypass attempted",
           "fareNote": "과거 기록 · 검증 근거 없음",
-          "lastAttemptAt": "2026-10-17T05:37:29.162Z",
+          "lastAttemptAt": "2026-10-17T05:43:24.043Z",
           "collectionStatus": "blocked"
         },
         {
@@ -64,7 +64,7 @@
           "name": "Google 항공편",
           "status": "checked",
           "priceKrw": 388001,
-          "checkedAt": "2026-10-17T05:37:31.814Z",
+          "checkedAt": "2026-10-17T05:43:26.312Z",
           "fareNote": "검증된 왕복 총액 · 성인 1명 · 일반석 · KRW",
           "history": [
             {
@@ -91,10 +91,31 @@
                   "offerId": "9bdd1bea05ee8e171d541e87"
                 }
               }
+            },
+            {
+              "checkedAt": "2026-10-17T05:43:26.312Z",
+              "priceKrw": 388001,
+              "evidence": {
+                "kind": "live-round-trip-total",
+                "origin": "SEL",
+                "destination": "TYO",
+                "departureDate": "2026-12-30",
+                "returnDate": "2027-01-01",
+                "adults": 1,
+                "cabin": "economy",
+                "currency": "KRW",
+                "priceKrw": 388001,
+                "observedAt": "2026-10-17T05:43:26.312Z",
+                "evidence": {
+                  "source": "visible-search-result",
+                  "provider": "google",
+                  "offerId": "9bdd1bea05ee8e171d541e87"
+                }
+              }
             }
           ],
           "url": "https://www.google.com/travel/flights?q=Flights%20from%20Seoul%20to%20Tokyo%20on%20December%2030%202026%20through%20January%201%202027&hl=ko&curr=KRW",
-          "lastAttemptAt": "2026-10-17T05:37:31.968Z",
+          "lastAttemptAt": "2026-10-17T05:43:26.594Z",
           "note": "Exact round-trip total verified from visible Google Flights search result",
           "collectionStatus": "verified",
           "verification": {
@@ -107,7 +128,7 @@
             "cabin": "economy",
             "currency": "KRW",
             "priceKrw": 388001,
-            "observedAt": "2026-10-17T05:37:31.814Z",
+            "observedAt": "2026-10-17T05:43:26.312Z",
             "evidence": {
               "source": "visible-search-result",
               "provider": "google",
@@ -129,8 +150,8 @@
             }
           ],
           "url": "https://www.skyscanner.co.kr/transport/flights/sel/tyoa/261230/270101/?adultsv2=1&cabinclass=economy&rtn=1",
-          "lastAttemptAt": "2026-10-17T05:38:02.698Z",
-          "note": "Bot verification page: Are you a person or a robot?\nPlease don’t take this personally - some scripts and bots are remarkably lifelike these days!\nStill having problems accessing the page? Try checking yo",
+          "lastAttemptAt": "2026-10-17T05:43:27.352Z",
+          "note": "Bot verification page detected before waiting for flight results",
           "collectionStatus": "blocked"
         },
         {
@@ -142,7 +163,7 @@
           "note": "HTTP 429; no automated bypass attempted",
           "history": [],
           "url": "https://www.expedia.co.kr/Flights-Search?trip=roundtrip&leg1=from%3ASEL%2Cto%3ATYO%2Cdeparture%3A12%2F30%2F2026TANYT&leg2=from%3ATYO%2Cto%3ASEL%2Cdeparture%3A01%2F01%2F2027TANYT&passengers=adults%3A1&options=cabinclass%3Aeconomy&currency=KRW",
-          "lastAttemptAt": "2026-10-17T05:38:04.080Z",
+          "lastAttemptAt": "2026-10-17T05:43:28.190Z",
           "collectionStatus": "blocked",
           "fareNote": "과거 기록 · 검증 근거 없음"
         }
