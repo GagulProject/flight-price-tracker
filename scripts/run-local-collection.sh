@@ -37,11 +37,13 @@ node scripts/validate-data.mjs
 
 # The credential helper reads the token from this process only; it is never written into the clone.
 export FLIGHT_GITHUB_TOKEN="$(gh auth token -u "$FLIGHT_GH_ACCOUNT")"
-export GIT_CONFIG_COUNT=1
+export GIT_CONFIG_COUNT=2
 export GIT_CONFIG_KEY_0=credential.helper
-export GIT_CONFIG_VALUE_0='!f() { echo username=x-access-token; echo password=$FLIGHT_GITHUB_TOKEN; }; f'
+export GIT_CONFIG_VALUE_0=''
+export GIT_CONFIG_KEY_1=credential.helper
+export GIT_CONFIG_VALUE_1='!f() { echo username=x-access-token; echo password=$FLIGHT_GITHUB_TOKEN; }; f'
 node scripts/persist-results.mjs > "$runtime/publish.log" 2>&1
-unset FLIGHT_GITHUB_TOKEN GIT_CONFIG_COUNT GIT_CONFIG_KEY_0 GIT_CONFIG_VALUE_0
+unset FLIGHT_GITHUB_TOKEN GIT_CONFIG_COUNT GIT_CONFIG_KEY_0 GIT_CONFIG_VALUE_0 GIT_CONFIG_KEY_1 GIT_CONFIG_VALUE_1
 
 cp diagnostics/results.json "$runtime/latest-results.json"
 cp diagnostics/collection-summary.json "$runtime/latest-summary.json"

@@ -1,17 +1,6 @@
 name: Collect and verify flight prices
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'scripts/**'
-      - 'app.js'
-      - 'index.html'
-      - 'styles.css'
-      - 'package.json'
-      - '.github/workflows/diagnose-flight-pages.yml'
-  schedule:
-    - cron: '*/15 * * * *'
 permissions:
   contents: write
   pages: write
