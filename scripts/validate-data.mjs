@@ -33,7 +33,7 @@ for (const route of data.routes) {
     } else if (item.id === 'google') {
       if (url.hostname !== 'www.google.com' || url.pathname !== '/travel/flights/search' ||
           !url.searchParams.get('tfs') || url.searchParams.get('hl') !== 'ko' ||
-          url.searchParams.get('curr') !== 'KRW') throw new Error('Invalid Google Flights link');
+          url.searchParams.get('curr') !== 'KRW' || url.searchParams.get('gl') !== 'KR') throw new Error('Invalid Google Flights link');
     } else if (item.id === 'skyscanner') {
       if (url.hostname !== 'www.skyscanner.co.kr' || !url.pathname.startsWith('/transport/flights/')) throw new Error('Invalid Skyscanner link');
       const parts = url.pathname.split('/').filter(Boolean);
