@@ -1,45 +1,42 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f5f8fc" />
-    <meta name="description" content="서울에서 도쿄까지, 원하는 일정의 항공권 가격을 비교합니다." />
-    <title>Flight Watch · 항공권 가격 추적</title>
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="./app.js" defer></script>
-  </head>
-  <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <a class="brand" href="./" aria-label="Flight Watch 홈"><span class="brand-mark">✳</span> Flight Watch</a>
-        <span class="header-note"><span class="status-dot"></span> 6시간마다 확인</span>
-      </header>
-
-      <main>
-        <section class="hero" aria-labelledby="hero-title">
-          <p class="eyebrow">MY FLIGHT RADAR <span class="eyebrow-line"></span> SEOUL ↔ TOKYO</p>
-          <h1 id="hero-title">좋은 가격을 찾는<br /><em>가장 가벼운 방법.</em></h1>
-          <p class="hero-copy">원하는 여행 일정의 항공권을 한곳에서 비교하세요. 확인된 가격과 실제 검색 페이지를 바로 연결합니다.</p>
-          <div class="hero-bottom"><span class="plane-icon" aria-hidden="true">✈</span><span>가격은 조회 시점의 참고 금액이며 예약 단계에서 달라질 수 있습니다.</span></div>
-        </section>
-
-        <section class="tracker" aria-labelledby="tracker-title">
-          <div class="section-top"><div><p class="section-kicker">TRACKED ROUTE / 01</p><h2 id="tracker-title">추적 중인 여정</h2></div><span class="refresh-label" id="refresh-label">가격 정보를 불러오는 중</span></div>
-          <article class="route-card">
-            <div class="route-main">
-              <div class="route-path"><div><span class="city-code">SEL</span><span class="city-name">서울 · 모든 공항</span></div><div class="route-line"><span></span><span class="route-plane">✈</span><span></span></div><div><span class="city-code">TYO</span><span class="city-name">도쿄 · 모든 공항</span></div></div>
-              <div class="route-meta"><span>왕복</span><span>성인 1명</span><span>일반석</span><span>2026.12.30 수 → 2027.01.01 금</span></div>
-            </div>
-            <div class="route-side"><span class="side-label">확인된 최저가</span><strong id="overall-price">—</strong><span class="side-caption" id="overall-source">가격 확인 전</span></div>
-          </article>
-
-          <div class="providers-heading"><div><h3>사이트별 최저가</h3><p>카드를 누르면 해당 일정의 검색 페이지로 이동합니다.</p></div><span class="provider-count">02 SOURCES</span></div>
-          <div class="provider-grid" id="provider-grid" aria-live="polite"></div>
-          <p class="data-note">카드 혜택, 수하물, 남은 좌석에 따라 최종 결제 금액이 달라질 수 있습니다. 조회에 실패한 사이트는 이전 가격을 최신 가격처럼 표시하지 않습니다.</p>
-        </section>
-      </main>
-      <footer><span>FLIGHT WATCH © 2026</span><span>서울 ↔ 도쿄 · 가격 비교 기록</span></footer>
-    </div>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f5f8fc" />
+  <meta name="description" content="도시와 왕복 날짜를 입력해 항공권 가격 추적 일정을 찾아보거나 추가합니다." />
+  <title>Flight Watch · 항공권 가격 추적</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./app.js" defer></script>
+</head>
+<body>
+<div class="page-shell">
+  <header class="site-header"><a class="brand" href="./" aria-label="Flight Watch 홈"><span class="brand-mark">✳</span> Flight Watch</a><span class="header-note"><span class="status-dot"></span> 6시간마다 확인</span></header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow">MY FLIGHT RADAR</p>
+      <h1 id="hero-title">가고 싶은 도시의<br /><em>항공권 가격을 한눈에.</em></h1>
+      <p class="hero-copy">왕복 일정으로 추적 중인 가격을 찾아보세요. 새 일정을 요청하면 다음 갱신부터 확인합니다.</p>
+    </section>
+    <section class="search-panel" aria-labelledby="search-title">
+      <div class="section-top"><div><p class="section-kicker">FIND A FLIGHT</p><h2 id="search-title">여정 조회</h2></div><span class="refresh-label" id="refresh-label">가격 정보를 불러오는 중</span></div>
+      <form id="route-form" class="route-form">
+        <label>출발 도시 또는 공항 <input id="origin" name="origin" required maxlength="60" placeholder="예: 서울 또는 SEL" value="서울" autocomplete="off" /></label>
+        <label>도착 도시 또는 공항 <input id="destination" name="destination" required maxlength="60" placeholder="예: 도쿄 또는 TYO" value="도쿄" autocomplete="off" /></label>
+        <label>가는 날 <input id="departure-date" name="departureDate" type="date" required value="2026-12-30" /></label>
+        <label>오는 날 <input id="return-date" name="returnDate" type="date" required value="2027-01-01" /></label>
+        <button type="submit">추적 일정 조회</button>
+      </form>
+      <p class="form-hint">왕복 · 성인 1명 · 일반석 기준입니다. 새 일정 요청은 GitHub 로그인 후 제출할 수 있습니다.</p>
+      <p id="form-error" class="form-error" role="alert" hidden></p>
+    </section>
+    <section class="tracker" aria-labelledby="tracker-title">
+      <div class="section-top"><div><p class="section-kicker" id="result-count">TRACKED ROUTES</p><h2 id="tracker-title">추적 중인 여정</h2></div><button id="show-all" class="text-button" type="button" hidden>전체 일정 보기</button></div>
+      <div id="results" class="results" aria-live="polite"></div>
+      <p class="data-note">표시된 가격은 조회 시점의 참고 금액이며 예약 단계에서 달라질 수 있습니다. 가격을 확인하지 못한 사이트는 금액을 표시하지 않습니다.</p>
+    </section>
+  </main>
+  <footer><span>FLIGHT WATCH © 2026</span><span>네이버 항공권 · 트립닷컴</span></footer>
+</div>
+</body>
 </html>

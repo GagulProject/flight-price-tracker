@@ -1,19 +1,37 @@
 import { readFileSync } from 'node:fs';
 const data = JSON.parse(readFileSync(new URL('../data/prices.json', import.meta.url), 'utf8'));
-const expected = { origin: 'SEL', destination: 'TYO', departureDate: '2026-12-30', returnDate: '2027-01-01', tripType: 'round-trip', adults: 1, cabin: 'economy' };
-for (const [key, value] of Object.entries(expected)) if (data.route[key] !== value) throw new Error(`route.${key} does not match tracked itinerary`);
-if (!Number.isFinite(Date.parse(data.lastAttemptAt))) throw new Error('lastAttemptAt must be a timestamp');
-if (data.providers.length !== 2 || new Set(data.providers.map(x => x.id)).size !== 2) throw new Error('Expected two distinct providers');
-for (const item of data.providers) {
-  const url = new URL(item.url);
-  const host = url.hostname;
-  if (url.protocol !== 'https:') throw new Error(`Invalid protocol: ${item.id}`);
-  if (item.id === 'naver' && host !== 'flight.naver.com') throw new Error('Invalid Naver link');
-  if (item.id === 'trip' && !['kr.trip.com', 'www.trip.com'].includes(host)) throw new Error('Invalid Trip.com link');
-  if (item.id === 'naver' && !url.pathname.includes('SEL:city-TYO:city-20261230/TYO:city-SEL:city-20270101')) throw new Error('Naver itinerary mismatch');
-  if (item.id === 'trip' && (url.searchParams.get('ddate') !== '2026-12-30' || url.searchParams.get('rdate') !== '2027-01-01' || url.searchParams.get('triptype') !== 'rt')) throw new Error('Trip.com itinerary mismatch');
-  if (item.status === 'checked') {
-    if (!Number.isInteger(item.priceKrw) || item.priceKrw <= 0 || !Number.isFinite(Date.parse(item.checkedAt))) throw new Error(`Invalid checked price: ${item.id}`);
-  } else if (item.priceKrw !== null || item.checkedAt !== null) throw new Error(`Unavailable price must not look current: ${item.id}`);
+if (!Array.isArray(data.routes) || data.routes.length === 0) throw new Error('At least one route is required');
+const seen = new Set();
+for (const route of data.routes) {
+  for (const city of [route.origin, route.destination]) {
+    if (!/^[A-Z]{3}$/.test(city.code) || !city.name || !Array.isArray(city.aliases)) throw new Error('Invalid city');
+  }
+  if (route.origin.code === route.destination.code) throw new Error('Origin and destination must differ');
+  for (const date of [route.departureDate, route.returnDate]) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || new Date(date).toISOString().slice(0, 10) !== date) throw new Error(`Invalid date: ${date}`);
+  }
+  if (route.returnDate < route.departureDate) throw new Error('Return date precedes departure date');
+  if (route.tripType !== 'round-trip' || route.adults !== 1 || route.cabin !== 'economy') throw new Error('Unsupported itinerary');
+  if (route.lastAttemptAt !== null && !Number.isFinite(Date.parse(route.lastAttemptAt))) throw new Error('Invalid last attempt');
+  const key = [route.origin.code, route.destination.code, route.departureDate, route.returnDate].join(':');
+  if (seen.has(key)) throw new Error(`Duplicate route: ${key}`);
+  seen.add(key);
+  if (!Array.isArray(route.providers) || route.providers.length !== 2 || new Set(route.providers.map(x => x.id)).size !== 2) throw new Error('Expected two distinct providers');
+  for (const item of route.providers) {
+    const url = new URL(item.url);
+    if (url.protocol !== 'https:') throw new Error(`Invalid protocol: ${item.id}`);
+    if (item.id === 'naver') {
+      if (url.hostname !== 'flight.naver.com') throw new Error('Invalid Naver link');
+      const departure = route.departureDate.replaceAll('-', '');
+      const returnDate = route.returnDate.replaceAll('-', '');
+      if (!url.pathname.includes(`${route.origin.code}:city-${route.destination.code}:city-${departure}/${route.destination.code}:city-${route.origin.code}:city-${returnDate}`)) throw new Error('Naver itinerary mismatch');
+    } else if (item.id === 'trip') {
+      if (!['kr.trip.com', 'www.trip.com'].includes(url.hostname)) throw new Error('Invalid Trip.com link');
+      if (url.searchParams.get('dcity') !== route.origin.code.toLowerCase() || url.searchParams.get('acity') !== route.destination.code.toLowerCase() || url.searchParams.get('ddate') !== route.departureDate || url.searchParams.get('rdate') !== route.returnDate || url.searchParams.get('triptype') !== 'rt') throw new Error('Trip.com itinerary mismatch');
+    } else throw new Error('Unknown provider');
+    if (item.status === 'checked') {
+      if (!Number.isInteger(item.priceKrw) || item.priceKrw <= 0 || !Number.isFinite(Date.parse(item.checkedAt))) throw new Error(`Invalid checked price: ${item.id}`);
+    } else if (item.status !== 'unavailable' || item.priceKrw !== null || item.checkedAt !== null) throw new Error(`Unavailable price must not look current: ${item.id}`);
+  }
 }
-console.log('Price data is valid');
+console.log(`Price data is valid (${data.routes.length} routes)`);

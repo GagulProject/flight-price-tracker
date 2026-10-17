@@ -1,7 +1,11 @@
 # Flight Watch
 
-서울(SEL) ↔ 도쿄(TYO), 2026-12-30 출발·2027-01-01 귀국 왕복 항공권 가격을 비교하는 GitHub Pages 사이트입니다.
+GitHub Pages에서 왕복 항공권 가격 추적 일정을 조회하는 사이트입니다. [공개 페이지](https://horace-velmont.github.io/flight-price-tracker/)에서 출발 도시·도착 도시·가는 날·오는 날을 입력하면 등록된 일정의 네이버 항공권·트립닷컴 가격과 최근 조회 시각을 볼 수 있습니다.
 
-`data/prices.json`의 각 가격은 표시된 일정으로 사이트의 실제 검색 결과에서 확인한 값만 기록합니다. 조회 실패 시 `status: "unavailable"`, `priceKrw: null`, `checkedAt: null`로 기록합니다. `lastAttemptAt`은 가격 확인 성공 여부와 관계없이 마지막 조회 시각입니다. `npm run check`로 날짜·가격·링크를 검증합니다.
+조회 결과가 없으면 **이 일정 추적 요청하기**를 눌러 입력값이 채워진 GitHub Issue를 제출합니다. GitHub 로그인이 필요하며, Issue 제출 뒤 다음 6시간 갱신 작업에서 일정을 등록합니다. 페이지의 입력만으로 새 일정이 저장되지는 않습니다. 추적 범위는 왕복·성인 1명·일반석입니다.
 
-정적 페이지는 GitHub Pages가 `main` branch의 root에서 직접 게시합니다. 6시간 주기 조회는 이 저장소의 Codex automation에서 실행하고, 조회 성공 시 가격 데이터를 갱신합니다. 항공권 사이트의 가격은 예약 단계에서 달라질 수 있습니다.
+## 데이터 갱신
+
+`data/prices.json`의 `routes`에 여정별 가격을 저장합니다. 각 가격은 해당 날짜·여정의 실제 검색 결과에서 확인한 값만 기록합니다. 조회 실패 시 `status: "unavailable"`, `priceKrw: null`, `checkedAt: null`로 기록하고 `lastAttemptAt`은 마지막 조회 시각으로 갱신합니다. 출처별 검색 URL에는 같은 여정 조건이 들어가야 합니다. `npm run check`가 모든 일정의 형식·날짜·가격·링크를 검증합니다.
+
+정적 페이지는 `main` branch root에서 게시합니다. 6시간마다 실행하는 Codex automation은 열린 추적 요청 Issue를 먼저 확인하고, 유효한 새 일정을 추가한 뒤 모든 추적 일정의 가격을 갱신합니다. 항공권 사이트의 가격은 예약 단계에서 달라질 수 있습니다.
