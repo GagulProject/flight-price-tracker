@@ -17,3 +17,7 @@ GitHub Actions는 15분 간격으로 실행을 요청합니다. GitHub의 예약
 Skyscanner의 공식 Flights Live Prices API를 사용하려면 제휴 승인 후 저장소 Actions secret `SKYSCANNER_API_KEY`를 설정해야 합니다. 키가 없으면 공개 검색 페이지의 접근 가능 여부만 진단하며, 로봇 확인을 우회하지 않습니다. API 응답에서도 왕복 두 구간의 도시·날짜, 성인 1명, 일반석, KRW 가격을 확인한 경우에만 새 이력을 기록합니다. 현재 이 저장소에는 알림 전송 연동이 없으므로 330,000원 이하 가격도 별도 알림으로 전송되지 않습니다.
 
 Google 항공편은 공개 검색 결과가 정상 표시될 때 화면에서 선택된 왕복·성인 1명·일반석·두 날짜·도시·KRW와 각 결과의 `왕복 총 가격` 표시를 함께 확인합니다. 결과가 로딩 중이거나 오류 화면이면 후보 금액을 새 가격으로 저장하지 않습니다.
+
+## PC 브라우저 수집
+
+PC에서 화면 Chromium으로 한 번 수집하려면 `npm install --no-save playwright@1.58.2`, `npx playwright install chromium`을 실행한 뒤 쓰기 권한이 있는 GitHub 계정을 지정해 `FLIGHT_GH_ACCOUNT=<계정> scripts/run-local-collection.sh`를 실행합니다. 수집기는 별도 checkout을 사용하며 결과를 `main`에 합쳐 게시합니다. 실행 결과는 `.local-run/latest-results.json`과 `.local-run/collection.log`에서 확인할 수 있습니다. PC 화면이 잠겨 있거나 컴퓨터가 잠자기 상태면 실행되지 않을 수 있습니다. 모바일은 공개 페이지의 **게시 데이터 새로고침**으로 PC가 마지막으로 올린 결과를 다시 읽습니다.

@@ -7,7 +7,7 @@ import { chromium } from 'playwright';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 const data = JSON.parse(await readFile('data/prices.json','utf8'));
 await mkdir('diagnostics',{recursive:true});
-const browser = await chromium.launch({headless:true});
+const browser = await chromium.launch({headless:process.env.FLIGHT_BROWSER_HEADLESS !== 'false'});
 const results = [];
 // Ordinary browser access only: no stealth, CAPTCHA solving, proxy rotation or retries on blocks.
 const supported = new Set(['naver','trip','google','skyscanner','expedia']);
@@ -126,7 +126,7 @@ for (const route of data.routes) for (const provider of route.providers) {
         item.failure && /flight-api\.naver\.com\/(flight\/international\/searchFlights|graphql)/.test(item.url));
       status=botPattern.test(visible)?'blocked':failedFareApi?'fare-api-unavailable':'content-not-detected';
       detail=failedFareApi
-        ? 'Naver search was clicked, but its flight search API requests failed in the Actions browser; no fare results rendered'
+        ? 'Naver search was clicked, but its flight search API requests failed in this browser; no fare results rendered'
         : (status==='blocked'?'Bot verification page: ':'Flight content not detected: ')+visible.slice(0,180);
       throw waitError;
     }
