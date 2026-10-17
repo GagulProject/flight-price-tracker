@@ -63,10 +63,26 @@ for (const route of data.routes) for (const provider of route.providers) {
       throw new Error(detail);
     }
     try {
-      await page.waitForFunction(() => {
-        const text=document.body?.innerText || '';
-        return text.length>400 && /항공|항공편|flight|검색|원|₩/i.test(text);
-      },null,{timeout:provider.id==='skyscanner'?30000:60000,polling:1000});
+      if (provider.id === 'google') {
+        for (let retry = 0; retry < 3; retry++) {
+          await page.waitForFunction(() => document.querySelector('[role="link"][aria-label^="왕복 총 가격은"]') ||
+            /반환된 결과가 없습니다|죄송합니다\. 오류가 발생했습니다/.test(document.body?.innerText || ''),
+          null, { timeout: 45000, polling: 1000 });
+          const searchError = await page.locator('body').innerText().then(text =>
+            /반환된 결과가 없습니다|죄송합니다\. 오류가 발생했습니다/.test(text));
+          if (!searchError || retry === 2) break;
+          const refresh = page.getByRole('button', { name: '새로고침' });
+          if (!await refresh.isVisible()) break;
+          await refresh.click();
+          await page.waitForFunction(() => !/죄송합니다\. 오류가 발생했습니다/.test(document.body?.innerText || ''),
+            null, { timeout: 10000, polling: 500 }).catch(() => {});
+        }
+      } else {
+        await page.waitForFunction(() => {
+          const text=document.body?.innerText || '';
+          return text.length>400 && /항공|항공편|flight|검색|원|₩/i.test(text);
+        },null,{timeout:provider.id==='skyscanner'?30000:60000,polling:1000});
+      }
     } catch (waitError) {
       // Preserve the rendered page for inspection even when the heuristic fails.
       const visible=(await page.locator('body').innerText().catch(()=>'' )).slice(0,500);
