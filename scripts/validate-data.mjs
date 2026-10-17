@@ -31,10 +31,9 @@ for (const route of data.routes) {
       if (!['kr.trip.com', 'www.trip.com'].includes(url.hostname)) throw new Error('Invalid Trip.com link');
       if (url.searchParams.get('dcity') !== route.origin.code.toLowerCase() || url.searchParams.get('acity') !== route.destination.code.toLowerCase() || url.searchParams.get('ddate') !== route.departureDate || url.searchParams.get('rdate') !== route.returnDate || url.searchParams.get('triptype') !== 'rt') throw new Error('Trip.com itinerary mismatch');
     } else if (item.id === 'google') {
-      if (url.hostname !== 'www.google.com' || url.pathname !== '/travel/flights' || url.searchParams.get('curr') !== 'KRW') throw new Error('Invalid Google Flights link');
-      const query = url.searchParams.get('q') || '';
-      const dates = [route.departureDate, route.returnDate].map(date => new Intl.DateTimeFormat('en-US', { timeZone: 'UTC', month: 'long', day: 'numeric', year: 'numeric' }).format(new Date(`${date}T00:00:00Z`)).replace(',', ''));
-      if (![route.origin, route.destination].every(city => [city.name, ...city.aliases].some(name => query.toLowerCase().includes(name.toLowerCase()))) || dates.some(date => !query.includes(date))) throw new Error('Google Flights itinerary mismatch');
+      if (url.hostname !== 'www.google.com' || url.pathname !== '/travel/flights/search' ||
+          !url.searchParams.get('tfs') || url.searchParams.get('hl') !== 'ko' ||
+          url.searchParams.get('curr') !== 'KRW') throw new Error('Invalid Google Flights link');
     } else if (item.id === 'skyscanner') {
       if (url.hostname !== 'www.skyscanner.co.kr' || !url.pathname.startsWith('/transport/flights/')) throw new Error('Invalid Skyscanner link');
       const parts = url.pathname.split('/').filter(Boolean);

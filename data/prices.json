@@ -114,7 +114,7 @@
               }
             }
           ],
-          "url": "https://www.google.com/travel/flights?q=Flights%20from%20Seoul%20to%20Tokyo%20on%20December%2030%202026%20through%20January%201%202027&hl=ko&curr=KRW",
+          "url": "https://www.google.com/travel/flights/search?tfs=CBwQAhooEgoyMDI2LTEyLTMwagwIAhIIL20vMGhzcWZyDAgDEggvbS8wN2RmaxooEgoyMDI3LTAxLTAxagwIAxIIL20vMDdkZmtyDAgCEggvbS8waHNxZkABSAFwAYIBCwj___________8BmAEB&hl=ko&curr=KRW",
           "lastAttemptAt": "2026-10-17T05:55:24.941Z",
           "note": "Search results page returned no results or an error",
           "collectionStatus": "search-error",
