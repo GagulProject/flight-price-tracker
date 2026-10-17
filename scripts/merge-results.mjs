@@ -37,7 +37,9 @@ export function mergePrices(remote, collected) {
         provider.verification = verified?.observedAt === latestSample.checkedAt ? verified : undefined;
         provider.status = latestAttempt.collectionStatus === 'verified' && provider.verification ? 'checked' : 'stale';
         provider.fareNote = provider.verification ?
-          (provider.status === 'checked' ? '검증된 왕복 총액 · 성인 1명 · 일반석 · KRW' : '마지막 검증 가격 · 이번 수집 실패') :
+          (provider.status === 'checked'
+            ? `검증된 왕복 총액 · 성인 1명 · 일반석 · KRW${provider.verification.paymentMethod ? ` · ${provider.verification.paymentMethod}` : ''}`
+            : '마지막 검증 가격 · 이번 수집 실패') :
           '과거 기록 · 검증 근거 없음';
       } else {
         provider.priceKrw = null;

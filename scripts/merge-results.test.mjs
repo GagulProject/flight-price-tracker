@@ -41,6 +41,16 @@ test('newer failure preserves verified price and its timestamp', () => {
   assert.equal(merged.history.length, 1);
 });
 
+test('published fare note keeps a payment condition on a verified Trip quote', () => {
+  const current = snapshot('2026-10-17T05:15:00Z', 399300);
+  const item = current.routes[0].providers[0];
+  item.id = 'trip';
+  item.verification.paymentMethod = '내통장결제';
+  item.verification.evidence.provider = 'trip';
+  const merged = mergePrices(current, current).routes[0].providers[0];
+  assert.match(merged.fareNote, /내통장결제/);
+});
+
 test('diagnostics select newest attempt for each provider', () => {
   const old = { provider: 'google', origin: 'SEL', destination: 'TYO', departureDate: route.departureDate,
     returnDate: route.returnDate, attemptedAt: '2026-10-17T05:00:00Z' };
