@@ -9,7 +9,6 @@ export async function readNaverSnapshot(page) {
       .filter(element => element.children.length === 0 && element.textContent?.trim() === '성인/모든 결제수단')
       .map(element => element.textContent.trim()).slice(0, 1)[0] || '',
     sellerRows: [...document.querySelectorAll('[class*="detail_row"]')]
-      .filter(element => element.querySelector('[class*="detail_num"]'))
       .map(element => element.innerText.trim()).slice(0, 40)
   }));
 }

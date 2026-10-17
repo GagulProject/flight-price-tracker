@@ -11,7 +11,7 @@ export function validQuote(route, quote, attemptedAt) {
   const age = Date.parse(attemptedAt) - Date.parse(quote.observedAt);
   return Number.isInteger(quote.priceKrw) && quote.priceKrw > 0 && Number.isFinite(age) && age >= 0 && age < 15 * 60 * 1000
     && ((quote.evidence?.source === 'authorized-live-api' && quote.evidence?.provider === 'skyscanner') ||
-      (quote.evidence?.source === 'visible-search-result' && ['google', 'naver', 'skyscanner'].includes(quote.evidence?.provider))) &&
+      (quote.evidence?.source === 'visible-search-result' && ['google', 'naver', 'skyscanner', 'trip'].includes(quote.evidence?.provider))) &&
     typeof quote.evidence?.offerId === 'string' && quote.evidence.offerId.length > 0;
 }
 
@@ -28,7 +28,7 @@ export function applyAttempt(route, provider, result) {
     provider.checkedAt = q.observedAt;
     provider.verification = q;
     provider.collectionStatus = 'verified';
-    provider.fareNote = '검증된 왕복 총액 · 성인 1명 · 일반석 · KRW';
+    provider.fareNote = `검증된 왕복 총액 · 성인 1명 · 일반석 · KRW${q.paymentMethod ? ` · ${q.paymentMethod}` : ''}`;
   } else {
     // Keep the last price and all history, including legacy records without evidence.
     provider.status = provider.priceKrw === null ? 'unavailable' : 'stale';

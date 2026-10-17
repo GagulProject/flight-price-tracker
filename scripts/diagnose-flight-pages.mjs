@@ -3,14 +3,16 @@ import { collectSkyscanner } from './skyscanner-live.mjs';
 import { readGoogleSnapshot, googleQuoteFromSnapshot } from './google-flights.mjs';
 import { readNaverSnapshot, naverQuoteFromSnapshot } from './naver-flights.mjs';
 import { readSkyscannerSnapshot, skyscannerPageQuoteFromSnapshot } from './skyscanner-page.mjs';
+import { readTripSnapshot, tripQuoteFromSnapshot } from './trip-flights.mjs';
 import { chromium } from 'playwright';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 const data = JSON.parse(await readFile('data/prices.json','utf8'));
 await mkdir('diagnostics',{recursive:true});
-const browser = await chromium.launch({headless:process.env.FLIGHT_BROWSER_HEADLESS !== 'false'});
+const headless = process.env.FLIGHT_BROWSER_HEADLESS !== 'false';
+const browser = await chromium.launch(headless ? { headless: true } : { headless: false, channel: 'chrome' });
 const results = [];
 // Ordinary browser access only: no stealth, CAPTCHA solving, proxy rotation or retries on blocks.
-const supported = new Set(['naver','trip','google','skyscanner','expedia']);
+const supported = new Set(['naver','trip','google','skyscanner']);
 const retryableHttp = new Set([408,500,502,503,504]);
 const botPattern=/captcha|robot|로봇이 아닙니다|접근이 제한|access denied|are you a person|verify you are human/i;
 for (const route of data.routes) for (const provider of route.providers) {
@@ -65,7 +67,17 @@ for (const route of data.routes) for (const provider of route.providers) {
       throw new Error(detail);
     }
     try {
-      if (provider.id === 'naver') {
+      if (provider.id === 'trip') {
+        // The first page lists outbound flights. Its fare is not a selected two-leg booking.
+        await page.getByRole('button', { name: '이 운임 선택' }).first()
+          .waitFor({ state: 'visible', timeout: 60000 });
+        await page.getByRole('button', { name: '이 운임 선택' }).first().click();
+        await page.getByRole('button', { name: '이 항공편 선택' }).first()
+          .waitFor({ state: 'visible', timeout: 60000 });
+        await page.getByRole('button', { name: '이 항공편 선택' }).first().click();
+        await page.locator('.ift-drawer__content [data-total-price]').first()
+          .waitFor({ state: 'visible', timeout: 30000 });
+      } else if (provider.id === 'naver') {
         // Naver's deep link initially renders a search shell; its Search button starts the actual fare request.
         const search = page.getByRole('button', { name: '검색', exact: true });
         if (await search.isVisible()) await search.click();
@@ -85,8 +97,9 @@ for (const route of data.routes) for (const provider of route.providers) {
         }
         if (!selected) throw new Error('No ordinary all-payment round-trip card available');
         await page.locator('[class*="international_selected_flights"]').waitFor({ state: 'visible', timeout: 30000 });
-        await page.locator('[class*="detail_row"] [class*="detail_num"]').first()
-          .waitFor({ state: 'visible', timeout: 30000 });
+        await page.waitForFunction(() => [...document.querySelectorAll('[class*="detail_row"]')]
+          .some(element => /해외업체|국내업체/.test(element.innerText) && /[0-9,]+\s*원/.test(element.innerText)),
+        null, { timeout: 30000, polling: 500 });
       } else if (provider.id === 'google') {
         for (let retry = 0; retry < 3; retry++) {
           await page.waitForFunction(() => document.querySelector('[role="link"][aria-label^="왕복 총 가격은"]') ||
@@ -121,13 +134,15 @@ for (const route of data.routes) for (const provider of route.providers) {
       }
     } catch (waitError) {
       // Preserve the rendered page for inspection even when the heuristic fails.
-      const visible=(await page.locator('body').innerText().catch(()=>'' )).slice(0,500);
-      const failedFareApi = provider.id === 'naver' && network.some(item =>
+      const visible=(await page.locator('body').innerText().catch(()=>'' )).slice(0,12000);
+      const hasSellerFare = provider.id === 'naver' && /항공권 판매사 선택[\s\S]*성인\/모든 결제수단[\s\S]*[0-9,]+\s*원/.test(visible);
+      const hasResultCards = provider.id === 'naver' && /왕복 항공편 선택[\s\S]*성인\/모든 결제수단/.test(visible);
+      const failedFareApi = provider.id === 'naver' && !hasSellerFare && !hasResultCards && network.some(item =>
         item.failure && /flight-api\.naver\.com\/(flight\/international\/searchFlights|graphql)/.test(item.url));
       status=botPattern.test(visible)?'blocked':failedFareApi?'fare-api-unavailable':'content-not-detected';
       detail=failedFareApi
         ? 'Naver search was clicked, but its flight search API requests failed in this browser; no fare results rendered'
-        : (status==='blocked'?'Bot verification page: ':'Flight content not detected: ')+visible.slice(0,180);
+        : (status==='blocked'?'Bot verification page: ':'Flight content not detected: ')+String(waitError).slice(0,180)+'; '+visible.slice(0,100);
       throw waitError;
     }
     // A shell page is not a loaded search result. Wait for a fare or a clear terminal state.
@@ -138,7 +153,11 @@ for (const route of data.routes) for (const provider of route.providers) {
           && !/항공권 가격 변동 그래프 로딩 중/.test(t);
       },null,{timeout:45000,polling:1500}).catch(()=>{});
     }
-    if (provider.id === 'google') {
+    if (provider.id === 'trip') {
+      const snapshot = await readTripSnapshot(page);
+      quote = tripQuoteFromSnapshot(route, snapshot, new Date().toISOString());
+      await writeFile('diagnostics/trip-snapshot.json', JSON.stringify(snapshot, null, 2) + '\n');
+    } else if (provider.id === 'google') {
       await page.waitForFunction(() => document.querySelector('[role="link"][aria-label^="왕복 총 가격은"]') ||
         /반환된 결과가 없습니다|죄송합니다\. 오류가 발생했습니다/.test(document.body?.innerText || ''),
       null, { timeout: 45000, polling: 1000 }).catch(() => {});

@@ -18,8 +18,10 @@ Skyscanner의 공식 Flights Live Prices API를 사용하려면 제휴 승인 �
 
 Google 항공편은 공개 검색 결과가 정상 표시될 때 화면에서 선택된 왕복·성인 1명·일반석·두 날짜·도시·KRW와 각 결과의 `왕복 총 가격` 표시를 함께 확인합니다. 결과가 로딩 중이거나 오류 화면이면 후보 금액을 새 가격으로 저장하지 않습니다.
 
+트립닷컴은 가는편과 오는편을 실제로 선택한 뒤 열린 운임 화면에서 두 날짜·공항·성인 1명·일반석·KRW 왕복 총액을 확인합니다. 특정 결제수단 가격이면 그 결제수단을 가격 설명에 함께 표시합니다. 익스피디아는 로봇 확인 화면으로 인해 수집·표시 대상에서 제외했습니다.
+
 ## PC 브라우저 수집
 
-PC에서 화면 Chromium으로 한 번 수집하려면 `npm install --no-save playwright@1.58.2`, `npx playwright install chromium`을 실행한 뒤 쓰기 권한이 있는 GitHub 계정을 지정해 `FLIGHT_GH_ACCOUNT=<계정> scripts/run-local-collection.sh`를 실행합니다. 수집기는 별도 checkout을 사용하며 결과를 `main`에 합쳐 게시합니다. 실행 결과는 `.local-run/latest-results.json`과 `.local-run/collection.log`에서 확인할 수 있습니다. PC 화면이 잠겨 있거나 컴퓨터가 잠자기 상태면 실행되지 않을 수 있습니다. 모바일은 공개 페이지의 **게시 데이터 새로고침**으로 PC가 마지막으로 올린 결과를 다시 읽습니다.
+PC에서 화면 Chrome으로 한 번 수집하려면 Chrome과 `npm install --no-save playwright@1.58.2`가 필요합니다. 쓰기 권한이 있는 GitHub 계정을 지정해 `FLIGHT_GH_ACCOUNT=<계정> scripts/run-local-collection.sh`를 실행합니다. 수집기는 별도 checkout을 사용하며 결과를 `main`에 합쳐 게시합니다. 실행 결과는 `.local-run/latest-results.json`과 `.local-run/collection.log`에서 확인할 수 있습니다. PC 화면이 잠겨 있거나 컴퓨터가 잠자기 상태면 실행되지 않을 수 있습니다. 모바일은 공개 페이지의 **게시 데이터 새로고침**으로 PC가 마지막으로 올린 결과를 다시 읽습니다.
 
 PC·모바일의 **새 가격 수집 요청**은 GitHub 로그인 후 요청 Issue를 제출합니다. 다음 PC 수집 실행은 시작 전에 제출된 요청을 가격 게시 후 처리 완료로 표시합니다. 요청은 PC를 즉시 깨우지 않으며, PC가 꺼져 있으면 열린 상태로 남습니다. 요청을 제출한 시각 이후 시작한 수집만 해당 요청을 완료 처리합니다.
