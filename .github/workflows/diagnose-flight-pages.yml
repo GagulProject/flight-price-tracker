@@ -1,6 +1,11 @@
 name: Diagnose flight search loading
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/diagnose-flight-pages.mjs'
+      - '.github/workflows/diagnose-flight-pages.yml'
   schedule:
     - cron: '17 */6 * * *'
 permissions:
