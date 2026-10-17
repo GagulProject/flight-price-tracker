@@ -5,10 +5,10 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T06:27:28.836Z",
-    "elapsedMs": 62211,
-    "status": "content-not-detected",
-    "detail": "Flight content not detected: Naver\n사용자 링크\n로그인\n서비스 더보기\n여행상품\n여행정보\n0\n로그인 후 등급확인\n마이페이지\n여행핫딜\n항공\n호텔\n패키지\nFor U\n77\n왕복\n편도\n다구간\n서울\nICN, GMP\n(모든 공항)\n도쿄\nNRT, HND\n(모든 공항)\n12.30.수\n01.01.금\n성인 1명\n일반석\n직항만\n검색\n트래블클럽\n로그인 후 등급확인 하세",
+    "attemptedAt": "2026-10-17T06:31:00.690Z",
+    "elapsedMs": 62189,
+    "status": "fare-api-unavailable",
+    "detail": "Naver search was clicked, but its flight search API requests failed in the Actions browser; no fare results rendered",
     "fareCandidates": [],
     "pagePreview": "Naver\n사용자 링크\n로그인\n서비스 더보기\n여행상품\n여행정보\n0\n로그인 후 등급확인\n마이페이지\n여행핫딜\n항공\n호텔\n패키지\nFor U\n77\n왕복\n편도\n다구간\n서울\nICN, GMP\n(모든 공항)\n도쿄\nNRT, HND\n(모든 공항)\n12.30.수\n01.01.금\n성인 1명\n일반석\n직항만\n검색\n트래블클럽\n로그인 후 등급확인 하세요\n항공권 가격 변동 그래프 로딩 중\n왕복 동시 선택\n왕복 개별 선택\n가는편·오는편을 한 번에 선택해요\n카드혜택\n가격 낮은 순\n개인정보처리방침\n이용약관\n사업자정보 공개\n고객센터\n로그인\n전체서비스\n사업자등록번호\n220-81-62517\n통신판매번호\n2006-경기성남-0692\n대표이사\n최수연\n전화번호\n1588-3820\n이메일\nccnaver@naver.com\n주소\n경기도 성남시 분당구 정자일로 95 NAVER 1784, 13561\n호스팅 서비스 제공\nNAVER Cloud\n\n네이버 항공권은 제휴사에서 제공하는 항공권 스케줄 및 가격정보를 비교, 중개하는 서비스로서 네이버㈜는 통신판매의 당사자가 아니며, 항공권 검색 결과, 구매 및 환불 등과 관련한 의무와 책임은 각 판매자에게 있습니다.\n\nNAVER",
     "network": [
@@ -21,15 +21,15 @@
         "failure": "net::ERR_FAILED"
       },
       {
+        "url": "https://flight-api.naver.com/graphql",
+        "failure": "net::ERR_FAILED"
+      },
+      {
         "url": "https://flight-api.naver.com/flight/international/searchFlights",
         "failure": "net::ERR_FAILED"
       },
       {
-        "url": "https://flight-api.naver.com/graphql",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/graphql",
+        "url": "https://flight-api.naver.com/flight/international/searchFlights",
         "failure": "net::ERR_FAILED"
       },
       {
@@ -180,8 +180,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T06:27:29.429Z",
-    "elapsedMs": 546,
+    "attemptedAt": "2026-10-17T06:31:01.264Z",
+    "elapsedMs": 527,
     "status": "blocked",
     "detail": "HTTP 432; no automated bypass attempted",
     "fareCandidates": [],
@@ -199,8 +199,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T06:27:31.695Z",
-    "elapsedMs": 2235,
+    "attemptedAt": "2026-10-17T06:31:25.367Z",
+    "elapsedMs": 24072,
     "status": "verified",
     "detail": "Exact round-trip total verified from visible google seller result",
     "quote": {
@@ -213,7 +213,7 @@
       "cabin": "economy",
       "currency": "KRW",
       "priceKrw": 388001,
-      "observedAt": "2026-10-17T06:27:31.490Z",
+      "observedAt": "2026-10-17T06:31:25.044Z",
       "evidence": {
         "source": "visible-search-result",
         "provider": "google",
@@ -323,7 +323,12 @@
       }
     ],
     "pagePreview": "주요 콘텐츠로 이동\n접근성 관련 의견 보내기\n살펴보기\n항공편\n호텔\n공유숙박\n테마 변경\n로그인\n결과 로드 중\n항공편 검색\n왕복\n1\n이코노미\n서울특별시\n도쿄도\n필터\n모든 필터\n경유\n항공사\n수하물\n가격\n시간대\n탄소 배출량\n경유 공항\n이동 시간\n검색 결과\n결과 53개가 반환되었습니다.\n추천\n최저가\n결과를 가져오는 중\n ₩388,001부터\n인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩388,001\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩403,501\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩425,101\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n가격을 확인할 수 없습니다.\n숙박료 정보\n최저가 예약 기간은 일반적으로 지금부터 11월 1일까지입니다.\n가격이 현재 보통입니다.\n가격 변동 내역 보기\n가격 추적\n2026-12-30 서울특별시에서 출발하여 2027-01-01 도쿄도에 도착하는 항공편 가격 추적\n2026년 12월 30일~2027년 1월 1일\n서울특별시에서 출발하여 도쿄도에 도착하는 항공편 가격 추적 - 모든 날짜\n모든 날짜\n날짜 표\n가격 그래프\n기타 출발 항공편\n오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩411,501\n왕복\n오전 8:05\n – \n오전 10:45\n진에어\n2시간 40분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n₩425,001\n왕복\n오전 8:1",
-    "network": []
+    "network": [
+      {
+        "url": "https://www.google.com/log",
+        "failure": "net::ERR_ABORTED"
+      }
+    ]
   },
   {
     "provider": "skyscanner",
@@ -331,12 +336,13 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T06:27:33.183Z",
-    "elapsedMs": 1450,
+    "attemptedAt": "2026-10-17T06:31:26.054Z",
+    "elapsedMs": 644,
     "status": "blocked",
-    "detail": "Bot verification page detected before waiting for flight results",
+    "detail": "Bot verification or access restriction detected",
+    "quote": null,
     "fareCandidates": [],
-    "pagePreview": "Are you a person or a robot?\nPlease don’t take this personally - some scripts and bots are remarkably lifelike these days!\nStill having problems accessing the page? Try checking you have JavaScript and cookies turned on and that your browser isn’t blocking them from loading.\nd5d7419e-c9f3-11f1-9fed-254a5742bfbb",
+    "pagePreview": "Are you a person or a robot?\nPlease don’t take this personally - some scripts and bots are remarkably lifelike these days!\nStill having problems accessing the page? Try checking you have JavaScript and cookies turned on and that your browser isn’t blocking them from loading.\n60bc7bb4-c9f4-11f1-aa89-050319623856",
     "network": []
   },
   {
@@ -345,12 +351,12 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T06:27:34.396Z",
-    "elapsedMs": 1178,
+    "attemptedAt": "2026-10-17T06:31:27.357Z",
+    "elapsedMs": 1267,
     "status": "blocked",
     "detail": "HTTP 429; no automated bypass attempted",
     "fareCandidates": [],
-    "pagePreview": "인증해 주세요...\n\n로봇이 아닌지 인증이 필요합니다.\n\n240a27e1-ca4b-4c61-b97f-cfb161868029",
+    "pagePreview": "인증해 주세요...\n\n로봇이 아닌지 인증이 필요합니다.\n\nca742ceb-c462-439d-bb3b-291723822949",
     "network": [
       {
         "url": "https://www.expedia.co.kr/Flights-Search",
