@@ -21,14 +21,14 @@
       "tripType": "round-trip",
       "adults": 1,
       "cabin": "economy",
-      "lastAttemptAt": "2026-10-17T02:44:35.071Z",
+      "lastAttemptAt": "2026-10-17T02:48:27.974Z",
       "providers": [
         {
           "id": "naver",
           "name": "네이버 항공권",
-          "status": "unavailable",
-          "priceKrw": null,
-          "checkedAt": null,
+          "status": "checked",
+          "priceKrw": 392671,
+          "checkedAt": "2026-10-17T02:10:34Z",
           "history": [
             {
               "checkedAt": "2026-10-17T02:10:34Z",
@@ -36,14 +36,15 @@
             }
           ],
           "url": "https://flight.naver.com/flights/international/SEL:city-TYO:city-20261230/TYO:city-SEL:city-20270101?adult=1&isDirect=false&fareType=Y",
-          "note": "현재 실행 환경에서 해당 날짜·도시·성인 1명·일반석의 실시간 검색 결과 가격을 확인할 수 없음 (접근/동적 결과 조회 제한). 가격 미추정."
+          "note": "최신 조회 시도에서 동적 검색 결과를 검증하지 못함. 표시 금액은 마지막으로 확인한 과거 가격이며 현재 가격이 아님.",
+          "fareNote": "마지막 확인 가격 (현재 실시간 조회 실패)"
         },
         {
           "id": "trip",
           "name": "트립닷컴",
-          "status": "unavailable",
-          "priceKrw": null,
-          "checkedAt": null,
+          "status": "checked",
+          "priceKrw": 429300,
+          "checkedAt": "2026-10-17T02:18:48Z",
           "history": [
             {
               "checkedAt": "2026-10-17T02:18:48Z",
@@ -51,7 +52,8 @@
             }
           ],
           "url": "https://kr.trip.com/flights/showfarefirst?dcity=sel&acity=tyo&dcityid=274&acityid=228&ddate=2026-12-30&rdate=2027-01-01&triptype=rt&class=y&lowpricesource=searchform&quantity=1&searchboxarg=t&nonstoponly=off&locale=ko-KR&curr=KRW",
-          "note": "현재 실행 환경에서 해당 날짜·도시·성인 1명·일반석의 실시간 검색 결과 가격을 확인할 수 없음 (접근/동적 결과 조회 제한). 가격 미추정."
+          "note": "최신 조회 시도에서 동적 검색 결과를 검증하지 못함. 표시 금액은 마지막으로 확인한 과거 가격이며 현재 가격이 아님.",
+          "fareNote": "마지막 확인 가격 (현재 실시간 조회 실패)"
         },
         {
           "id": "google",
