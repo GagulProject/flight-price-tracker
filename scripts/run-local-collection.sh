@@ -27,6 +27,7 @@ ln -s "$repository/node_modules" "$checkout/node_modules"
 cd "$checkout"
 
 export FLIGHT_BROWSER_HEADLESS=false
+collection_started_at="$(date -u '+%Y-%m-%dT%H:%M:%SZ')"
 collection_status=0
 node scripts/diagnose-flight-pages.mjs > "$runtime/collection.log" 2>&1 || collection_status=$?
 if (( collection_status != 0 && collection_status != 2 )); then
@@ -37,16 +38,18 @@ node scripts/validate-data.mjs
 
 # The credential helper reads the token from this process only; it is never written into the clone.
 export FLIGHT_GITHUB_TOKEN="$(gh auth token -u "$FLIGHT_GH_ACCOUNT")"
+export GH_TOKEN="$FLIGHT_GITHUB_TOKEN"
 export GIT_CONFIG_COUNT=2
 export GIT_CONFIG_KEY_0=credential.helper
 export GIT_CONFIG_VALUE_0=''
 export GIT_CONFIG_KEY_1=credential.helper
 export GIT_CONFIG_VALUE_1='!f() { echo username=x-access-token; echo password=$FLIGHT_GITHUB_TOKEN; }; f'
 node scripts/persist-results.mjs > "$runtime/publish.log" 2>&1
-unset FLIGHT_GITHUB_TOKEN GIT_CONFIG_COUNT GIT_CONFIG_KEY_0 GIT_CONFIG_VALUE_0 GIT_CONFIG_KEY_1 GIT_CONFIG_VALUE_1
 
 cp diagnostics/results.json "$runtime/latest-results.json"
 cp diagnostics/collection-summary.json "$runtime/latest-summary.json"
+node scripts/refresh-requests.mjs "$collection_started_at" "$runtime/latest-results.json"
+unset FLIGHT_GITHUB_TOKEN GH_TOKEN GIT_CONFIG_COUNT GIT_CONFIG_KEY_0 GIT_CONFIG_VALUE_0 GIT_CONFIG_KEY_1 GIT_CONFIG_VALUE_1
 node -e 'const s=require(process.argv[1]);console.log(JSON.stringify(s.map(x=>({provider:x.provider,status:x.status,priceKrw:x.quote?.priceKrw||null})),null,2))' "$runtime/latest-results.json"
 if (( collection_status == 2 )); then
   echo 'No newly verified quote in this run; prior price history was preserved.' >&2

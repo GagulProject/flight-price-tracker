@@ -3,6 +3,10 @@ const dateTime = new Intl.DateTimeFormat('ko-KR', { timeZone: 'Asia/Seoul', year
 const providers = { naver: { name: '네이버 항공권', mark: 'N', className: 'naver', color: '#03a84e' }, trip: { name: '트립닷컴', mark: 'T', className: 'trip', color: '#2874e8' }, google: { name: 'Google 항공편', mark: 'G', className: 'google', color: '#d75b47' }, skyscanner: { name: '스카이스캐너', mark: 'S', className: 'skyscanner', color: '#0770e3' }, expedia: { name: '익스피디아', mark: 'E', className: 'expedia', color: '#f3a000' } };
 const form = document.getElementById('route-form');
 const results = document.getElementById('results');
+const refreshRequest = new URL('https://github.com/GagulProject/flight-price-tracker/issues/new');
+refreshRequest.searchParams.set('title', '항공권 가격 새 수집 요청');
+refreshRequest.searchParams.set('body', 'flight-refresh:v1\nSEL → TYO\n2026-12-30 → 2027-01-01\n왕복 · 성인 1명 · 일반석 · KRW\n\nPC 브라우저에서 새 가격 수집을 요청합니다.');
+document.getElementById('request-refresh').href = refreshRequest.href;
 let routes = [];
 let currentQuery = null;
 

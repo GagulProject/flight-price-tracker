@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#f5f8fc" />
   <meta name="description" content="도시와 왕복 날짜를 입력해 항공권 가격 추적 일정을 찾아보거나 추가합니다." />
   <title>Flight Watch · 항공권 가격 추적</title>
-  <link rel="stylesheet" href="./styles.css?v=4" />
-  <script src="./app.js?v=7" defer></script>
+  <link rel="stylesheet" href="./styles.css?v=5" />
+  <script src="./app.js?v=8" defer></script>
 </head>
 <body>
 <div class="page-shell">
@@ -19,7 +19,7 @@
       <p class="hero-copy">왕복 일정으로 추적 중인 가격을 찾아보세요. 새 일정을 요청하면 다음 갱신부터 확인합니다.</p>
     </section>
     <section class="search-panel" aria-labelledby="search-title">
-      <div class="section-top"><div><p class="section-kicker">FIND A FLIGHT</p><h2 id="search-title">여정 조회</h2></div><div class="refresh-actions"><span class="refresh-label" id="refresh-label">가격 정보를 불러오는 중</span><button id="refresh-data" class="refresh-button" type="button">↻ 게시 데이터 새로고침</button></div></div>
+      <div class="section-top"><div><p class="section-kicker">FIND A FLIGHT</p><h2 id="search-title">여정 조회</h2></div><div class="refresh-actions"><span class="refresh-label" id="refresh-label">가격 정보를 불러오는 중</span><a id="request-refresh" class="refresh-button" href="#" target="_blank" rel="noopener noreferrer">새 가격 수집 요청 ↗</a><button id="refresh-data" class="refresh-button" type="button">↻ 게시 데이터 새로고침</button></div></div>
       <form id="route-form" class="route-form">
         <label>출발 도시 또는 공항 <input id="origin" name="origin" required maxlength="60" placeholder="예: 서울 또는 SEL" value="서울" autocomplete="off" /></label>
         <label>도착 도시 또는 공항 <input id="destination" name="destination" required maxlength="60" placeholder="예: 도쿄 또는 TYO" value="도쿄" autocomplete="off" /></label>
@@ -27,7 +27,7 @@
         <label>오는 날 <input id="return-date" name="returnDate" type="date" required value="2027-01-01" /></label>
         <button type="submit">추적 일정 조회</button>
       </form>
-      <p class="form-hint">왕복 · 성인 1명 · 일반석 기준입니다. 새 일정 요청은 GitHub 로그인 후 제출할 수 있습니다. 새로고침은 게시된 데이터만 다시 읽으며 항공권 사이트를 즉시 조회하지 않습니다.</p>
+      <p class="form-hint">왕복 · 성인 1명 · 일반석 기준입니다. 새 가격 수집 요청은 GitHub 로그인 후 제출하며, PC가 켜진 상태에서 다음 실행 때 처리됩니다. 게시 데이터 새로고침은 이미 저장된 결과만 다시 읽습니다.</p>
       <p id="form-error" class="form-error" role="alert" hidden></p>
     </section>
     <section class="tracker" aria-labelledby="tracker-title">
