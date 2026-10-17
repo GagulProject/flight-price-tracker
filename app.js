@@ -67,7 +67,7 @@ function makeRouteCard(route) {
 function requestLink(query) {
   const title = `[항공권 추적 요청] ${query.origin} → ${query.destination} ${query.departureDate}~${query.returnDate}`;
   const body = `출발 도시 또는 공항: ${query.origin}\n도착 도시 또는 공항: ${query.destination}\n가는 날: ${query.departureDate}\n오는 날: ${query.returnDate}\n여정: 왕복\n인원: 성인 1명\n좌석: 일반석\n\n네이버 항공권과 트립닷컴 가격을 6시간마다 추적해 주세요.`;
-  const url = new URL('https://github.com/horace-velmont/flight-price-tracker/issues/new');
+  const url = new URL('https://github.com/GagulProject/flight-price-tracker/issues/new');
   url.searchParams.set('title', title);
   url.searchParams.set('body', body);
   return url.href;
