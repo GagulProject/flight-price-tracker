@@ -31,6 +31,7 @@ for (const route of data.routes) for (const provider of route.providers) {
     await page.screenshot({path:'diagnostics/'+name+'.png',fullPage:false,timeout:15000}).catch(()=>{});
   } catch (error) {
     status=/Timeout/i.test(String(error))?'timeout':'error';
+    await page.screenshot({path:'diagnostics/'+provider.id+'-'+route.departureDate+'-'+route.returnDate+'-error.png',fullPage:false,timeout:10000}).catch(()=>{});
     detail=String(error).slice(0,300);
   } finally {
     elapsedMs=Date.now()-started;
