@@ -21,7 +21,7 @@
       "tripType": "round-trip",
       "adults": 1,
       "cabin": "economy",
-      "lastAttemptAt": "2026-10-17T05:51:43.485Z",
+      "lastAttemptAt": "2026-10-17T05:55:26.750Z",
       "providers": [
         {
           "id": "naver",
@@ -38,7 +38,7 @@
           "url": "https://flight.naver.com/flights/international/SEL:city-TYO:city-20261230/TYO:city-SEL:city-20270101?adult=1&isDirect=false&fareType=Y",
           "note": "Search shell rendered but fare results did not load",
           "fareNote": "과거 기록 · 검증 근거 없음",
-          "lastAttemptAt": "2026-10-17T05:50:49.126Z",
+          "lastAttemptAt": "2026-10-17T05:55:02.385Z",
           "collectionStatus": "results-loading"
         },
         {
@@ -56,7 +56,7 @@
           "url": "https://kr.trip.com/flights/showfarefirst?dcity=sel&acity=tyo&dcityid=274&acityid=228&ddate=2026-12-30&rdate=2027-01-01&triptype=rt&class=y&lowpricesource=searchform&quantity=1&searchboxarg=t&nonstoponly=off&locale=ko-KR&curr=KRW",
           "note": "HTTP 432; no automated bypass attempted",
           "fareNote": "과거 기록 · 검증 근거 없음",
-          "lastAttemptAt": "2026-10-17T05:50:49.836Z",
+          "lastAttemptAt": "2026-10-17T05:55:02.713Z",
           "collectionStatus": "blocked"
         },
         {
@@ -115,7 +115,7 @@
             }
           ],
           "url": "https://www.google.com/travel/flights?q=Flights%20from%20Seoul%20to%20Tokyo%20on%20December%2030%202026%20through%20January%201%202027&hl=ko&curr=KRW",
-          "lastAttemptAt": "2026-10-17T05:51:11.681Z",
+          "lastAttemptAt": "2026-10-17T05:55:24.941Z",
           "note": "Search results page returned no results or an error",
           "collectionStatus": "search-error",
           "verification": {
@@ -150,8 +150,8 @@
             }
           ],
           "url": "https://www.skyscanner.co.kr/transport/flights/sel/tyoa/261230/270101/?adultsv2=1&cabinclass=economy&rtn=1",
-          "lastAttemptAt": "2026-10-17T05:51:42.217Z",
-          "note": "Bot verification page: Are you a person or a robot?\nPlease don’t take this personally - some scripts and bots are remarkably lifelike these days!\nStill having problems accessing the page? Try checking yo",
+          "lastAttemptAt": "2026-10-17T05:55:25.824Z",
+          "note": "Bot verification page detected before waiting for flight results",
           "collectionStatus": "blocked"
         },
         {
@@ -163,7 +163,7 @@
           "note": "HTTP 429; no automated bypass attempted",
           "history": [],
           "url": "https://www.expedia.co.kr/Flights-Search?trip=roundtrip&leg1=from%3ASEL%2Cto%3ATYO%2Cdeparture%3A12%2F30%2F2026TANYT&leg2=from%3ATYO%2Cto%3ASEL%2Cdeparture%3A01%2F01%2F2027TANYT&passengers=adults%3A1&options=cabinclass%3Aeconomy&currency=KRW",
-          "lastAttemptAt": "2026-10-17T05:51:43.485Z",
+          "lastAttemptAt": "2026-10-17T05:55:26.750Z",
           "collectionStatus": "blocked",
           "fareNote": "과거 기록 · 검증 근거 없음"
         }
