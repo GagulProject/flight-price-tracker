@@ -2,6 +2,7 @@ import { candidateAmounts, applyAttempt } from './quote-state.mjs';
 import { collectSkyscanner } from './skyscanner-live.mjs';
 import { readGoogleSnapshot, googleQuoteFromSnapshot } from './google-flights.mjs';
 import { readNaverSnapshot, naverQuoteFromSnapshot } from './naver-flights.mjs';
+import { readSkyscannerSnapshot, skyscannerPageQuoteFromSnapshot } from './skyscanner-page.mjs';
 import { chromium } from 'playwright';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 const data = JSON.parse(await readFile('data/prices.json','utf8'));
@@ -109,6 +110,9 @@ for (const route of data.routes) for (const provider of route.providers) {
             /반환된 결과가 없습니다|죄송합니다\. 오류가 발생했습니다/.test(document.body?.innerText || ''),
           null, { timeout: 45000, polling: 1000 });
         }
+      } else if (provider.id === 'skyscanner') {
+        await page.waitForFunction(() => [...document.querySelectorAll('[role="listitem"]')].some(element => element.innerText.includes('항공편 옵션 설정')) ||
+          /로봇|robot|captcha/i.test(document.body?.innerText || ''), null, { timeout: 45000, polling: 1000 });
       } else {
         await page.waitForFunction(() => {
           const text=document.body?.innerText || '';
@@ -118,8 +122,12 @@ for (const route of data.routes) for (const provider of route.providers) {
     } catch (waitError) {
       // Preserve the rendered page for inspection even when the heuristic fails.
       const visible=(await page.locator('body').innerText().catch(()=>'' )).slice(0,500);
-      status=botPattern.test(visible)?'blocked':'content-not-detected';
-      detail=(status==='blocked'?'Bot verification page: ':'Flight content not detected: ')+visible.slice(0,180);
+      const failedFareApi = provider.id === 'naver' && network.some(item =>
+        item.failure && /flight-api\.naver\.com\/(flight\/international\/searchFlights|graphql)/.test(item.url));
+      status=botPattern.test(visible)?'blocked':failedFareApi?'fare-api-unavailable':'content-not-detected';
+      detail=failedFareApi
+        ? 'Naver search was clicked, but its flight search API requests failed in the Actions browser; no fare results rendered'
+        : (status==='blocked'?'Bot verification page: ':'Flight content not detected: ')+visible.slice(0,180);
       throw waitError;
     }
     // A shell page is not a loaded search result. Wait for a fare or a clear terminal state.
@@ -141,6 +149,10 @@ for (const route of data.routes) for (const provider of route.providers) {
       const snapshot = await readNaverSnapshot(page);
       quote = naverQuoteFromSnapshot(route, snapshot, new Date().toISOString());
       await writeFile('diagnostics/naver-snapshot.json', JSON.stringify(snapshot, null, 2) + '\n');
+    } else if (provider.id === 'skyscanner') {
+      const snapshot = await readSkyscannerSnapshot(page);
+      quote = skyscannerPageQuoteFromSnapshot(route, snapshot, new Date().toISOString());
+      await writeFile('diagnostics/skyscanner-snapshot.json', JSON.stringify(snapshot, null, 2) + '\n');
     }
     const text=(await page.locator('body').innerText()).slice(0,12000);
     // Collect candidate fares for debugging. Never treat arbitrary prices as a
