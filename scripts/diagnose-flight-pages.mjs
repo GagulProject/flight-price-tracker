@@ -79,8 +79,8 @@ for (const route of data.routes) for (const provider of route.providers) {
         }
         if (!/\/flights\/ShowFareNext/i.test(page.url()))
           throw new Error('Trip outbound fare did not open the return-flight list');
-        await page.waitForFunction(() => document.body.innerText.includes('2. 서울 오는편'),
-          null, { timeout: 60000, polling: 500 });
+        await page.getByRole('button', { name: /^(자세히 보기|이 항공편 선택)$/ }).first()
+          .waitFor({ state: 'visible', timeout: 60000 });
         const returnSelect = page.getByRole('button', { name: '이 항공편 선택' }).first();
         if (!await returnSelect.isVisible()) {
           await page.getByRole('button', { name: '자세히 보기' }).first().click();
