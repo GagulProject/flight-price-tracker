@@ -44,16 +44,7 @@ jobs:
       - name: Validate preserved and collected data
         run: npm run check
       - name: Persist attempts and preserve price history
-        run: |
-          cp diagnostics/results.json data/diagnostics.json
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/prices.json data/diagnostics.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Record flight collection attempts and verified prices"
-            git pull --rebase origin main
-            git push
-          fi
+        run: node scripts/persist-results.mjs
       - name: Prepare Pages files
         run: |
           mkdir -p public/data
