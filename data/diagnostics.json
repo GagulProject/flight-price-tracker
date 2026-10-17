@@ -5,11 +5,29 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T04:51:43.687Z",
-    "elapsedMs": 2237,
+    "attemptedAt": "2026-10-17T04:53:31.736Z",
+    "elapsedMs": 2221,
     "status": "rendered-unverified",
-    "detail": "Page rendered; 0 candidate fares captured. Round-trip total and exact dates not yet independently verified.",
-    "fareCandidates": []
+    "detail": "Page rendered; 4 candidate fares captured. Round-trip total and exact dates not yet independently verified.",
+    "fareCandidates": [
+      {
+        "amount": 62517,
+        "context": "대표이사최수연주소경기도 성남시 분당구 정자일로 95\nNAVER 1784, 13561전화번호1588-3820 (대표전화/고객센터)이메일ccnaver@naver.com사업자등록번호220-81-62517통신판매번호2006-경기성남-0692호스팅 서비스 제공NAVER Cloud"
+      },
+      {
+        "amount": 62517,
+        "context": "대표이사최수연주소경기도 성남시 분당구 정자일로 95\nNAVER 1784, 13561전화번호1588-3820 (대표전화/고객센터)이메일ccnaver@naver.com사업자등록번호220-81-62517통신판매번호2006-경기성남-0692호스팅 서비스 제공NAVER Cloud"
+      },
+      {
+        "amount": 62517,
+        "context": "사업자등록번호\n220-81-62517\n통신판매번호\n2006-경기성남-0692\n대표이사\n최수연\n전화번호\n1588-3820\n이메일\nccnaver@naver.com\n주소\n경기도 성남시 분당구 정자일로 95 NAVER 1784, 13561\n호스팅 서비스 제공\nNAVER Cloud"
+      },
+      {
+        "amount": 62517,
+        "context": "사업자등록번호\n220-81-62517\n통신판매번호\n2006-경기성남-0692\n대표이사\n최수연\n전화번호\n1588-3820\n이메일\nccnaver@naver.com"
+      }
+    ],
+    "pagePreview": "Naver\n사용자 링크\n로그인\n서비스 더보기\n여행상품\n여행정보\n0\n로그인 후 등급확인\n마이페이지\n여행핫딜\n항공\n호텔\n패키지\nFor U\n17\n왕복\n편도\n다구간\n서울\nICN, GMP\n(모든 공항)\n도쿄\nNRT, HND\n(모든 공항)\n12.30.수\n01.01.금\n성인 1명\n일반석\n직항만\n검색\n트래블클럽\n로그인 후 등급확인 하세요\n항공권 가격 변동 그래프 로딩 중\n왕복 동시 선택\n왕복 개별 선택\n가는편·오는편을 한 번에 선택해요\n카드혜택\n가격 낮은 순\n개인정보처리방침\n이용약관\n사업자정보 공개\n고객센터\n로그인\n전체서비스\n사업자등록번호\n220-81-62517\n통신판매번호\n2006-경기성남-0692\n대표이사\n최수연\n전화번호\n1588-3820\n이메일\nccnaver@naver.com\n주소\n경기도 성남시 분당구 정자일로 95 NAVER 1784, 13561\n호스팅 서비스 제공\nNAVER Cloud\n\n네이버 항공권은 제휴사에서 제공하는 항공권 스케줄 및 가격정보를 비교, 중개하는 서비스로서 네이버㈜는 통신판매의 당사자가 아니며, 항공권 검색 결과, 구매 및 환불 등과 관련한 의무와 책임은 각 판매자에게 있습니다.\n\nNAVER"
   },
   {
     "provider": "trip",
@@ -17,11 +35,12 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T04:51:44.647Z",
-    "elapsedMs": 923,
+    "attemptedAt": "2026-10-17T04:53:32.890Z",
+    "elapsedMs": 1118,
     "status": "blocked",
     "detail": "HTTP 432; no automated bypass attempted",
-    "fareCandidates": []
+    "fareCandidates": [],
+    "pagePreview": "whaleguard block\n"
   },
   {
     "provider": "google",
@@ -29,11 +48,12 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T04:51:46.574Z",
-    "elapsedMs": 1899,
-    "status": "rendered-unverified",
-    "detail": "Page rendered; 0 candidate fares captured. Round-trip total and exact dates not yet independently verified.",
-    "fareCandidates": []
+    "attemptedAt": "2026-10-17T04:54:33.787Z",
+    "elapsedMs": 60868,
+    "status": "content-not-detected",
+    "detail": "Flight content not detected: 주요 콘텐츠로 이동\n접근성 관련 의견 보내기\n살펴보기\n항공편\n호텔\n공유숙박\n테마 변경\n로그인\n결과 로드 중\n항공편 검색\n왕복\n1\n이코노미\n서울특별시\n도쿄도\n필터\n모든 필터\n경유\n항공사\n수하물\n가격\n시간대\n탄소 배출량\n경유 공항\n이동 시간\n검색 결과\n반환된 결과가 없습니다.\n\n죄송합니다. 오류가 발생했습니다.\n\n새로고침\n\n",
+    "fareCandidates": [],
+    "pagePreview": "주요 콘텐츠로 이동\n접근성 관련 의견 보내기\n살펴보기\n항공편\n호텔\n공유숙박\n테마 변경\n로그인\n결과 로드 중\n항공편 검색\n왕복\n1\n이코노미\n서울특별시\n도쿄도\n필터\n모든 필터\n경유\n항공사\n수하물\n가격\n시간대\n탄소 배출량\n경유 공항\n이동 시간\n검색 결과\n반환된 결과가 없습니다.\n\n죄송합니다. 오류가 발생했습니다.\n\n새로고침\n\n언어​한국어\n위치​미국\n통화KRW\n정보\n개인정보처리방침\n서비스 약관\n의견\n고객센터\n\n표시된 통화가 항공편 구매 시 사용하는 통화와 다를 수 있습니다. 자세히 알아보기"
   },
   {
     "provider": "skyscanner",
@@ -41,11 +61,12 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T04:52:17.340Z",
-    "elapsedMs": 30734,
-    "status": "content-not-detected",
-    "detail": "Page loaded but flight content heuristic failed: Are you a person or a robot?\nPlease don’t take this personally - some scripts and bots are remarkably lifelike these days!\nStill having problems accessing the page? Try checking yo",
-    "fareCandidates": []
+    "attemptedAt": "2026-10-17T04:54:34.732Z",
+    "elapsedMs": 906,
+    "status": "blocked",
+    "detail": "Bot verification page detected before waiting for flight results",
+    "fareCandidates": [],
+    "pagePreview": "Are you a person or a robot?\nPlease don’t take this personally - some scripts and bots are remarkably lifelike these days!\nStill having problems accessing the page? Try checking you have JavaScript and cookies turned on and that your browser isn’t blocking them from loading.\nd8d95179-c9e6-11f1-bfb1-5cbfe394e482"
   },
   {
     "provider": "expedia",
@@ -53,10 +74,11 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T04:52:21.581Z",
-    "elapsedMs": 4209,
+    "attemptedAt": "2026-10-17T04:54:36.112Z",
+    "elapsedMs": 1351,
     "status": "blocked",
     "detail": "HTTP 429; no automated bypass attempted",
-    "fareCandidates": []
+    "fareCandidates": [],
+    "pagePreview": "Show us your human side...\n\nWe can't tell if you're a human or a bot.\n\n58c9d36b-86a5-4b95-b097-0fa0d28ee2e0"
   }
 ]
