@@ -79,11 +79,12 @@ for (const route of data.routes) for (const provider of route.providers) {
         }
         if (!/\/flights\/ShowFareNext/i.test(page.url()))
           throw new Error('Trip outbound fare did not open the return-flight list');
-        await page.getByRole('button', { name: /^(자세히 보기|이 항공편 선택)$/ }).first()
-          .waitFor({ state: 'visible', timeout: 60000 });
+        await page.getByText('자세히 보기', { exact: true }).first()
+          .or(page.getByRole('button', { name: '이 항공편 선택' }).first())
+          .first().waitFor({ state: 'visible', timeout: 60000 });
         const returnSelect = page.getByRole('button', { name: '이 항공편 선택' }).first();
         if (!await returnSelect.isVisible()) {
-          await page.getByRole('button', { name: '자세히 보기' }).first().click();
+          await page.getByText('자세히 보기', { exact: true }).first().click();
         }
         await returnSelect.waitFor({ state: 'visible', timeout: 30000 });
         await returnSelect.click();
