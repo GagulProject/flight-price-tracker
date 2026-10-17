@@ -47,6 +47,14 @@ for (const route of data.routes) for (const provider of route.providers) {
       detail=(status==='blocked'?'Bot verification page: ':'Flight content not detected: ')+visible.slice(0,180);
       throw waitError;
     }
+    // A shell page is not a loaded search result. Wait for a fare or a clear terminal state.
+    if (provider.id==='naver' || provider.id==='google') {
+      await page.waitForFunction(() => {
+        const t=document.body?.innerText||'';
+        return /(?:₩\\s*|KRW\\s*|[0-9,]+\\s*원)|반환된 결과가 없습니다|오류가 발생했습니다|검색 결과가 없습니다|검색 결과 없음|whaleguard block/i.test(t)
+          && !/항공권 가격 변동 그래프 로딩 중/.test(t);
+      },null,{timeout:45000,polling:1500}).catch(()=>{});
+    }
     const text=(await page.locator('body').innerText()).slice(0,12000);
     // Collect candidate fares for debugging. Never treat arbitrary prices as a
     // verified round-trip quote without confirming dates and itinerary.
@@ -54,14 +62,15 @@ for (const route of data.routes) for (const provider of route.providers) {
       fareCandidates = await page.evaluate(() => {
         const pricePattern=/(?:₩\s*|KRW\s*|)([1-9]\d{1,2}(?:,\d{3})+|[1-9]\d{4,6})\s*원?/g;
         const candidates=[];
-        for (const el of document.querySelectorAll('body *')) {
+        for (const el of document.querySelectorAll('main *, [role="main"] *, [class*="flight"] *, [class*="result"] *')) {
           if (el.children.length > 2) continue;
           const value=(el.innerText||'').trim();
-          if (value.length>90 || value.length<5) continue;
+          if (value.length>90 || value.length<5 || /사업자등록|통신판매|고객센터|전화번호|이메일|개인정보/.test(value)) continue;
           for (const match of value.matchAll(pricePattern)) {
             const amount=Number(match[1].replaceAll(',',''));
-            if (amount>=50000 && amount<=3000000) {
+            if (amount>=50000 && amount<=3000000 && /₩|KRW|원/.test(value)) {
               const context=(el.parentElement?.parentElement?.innerText||'').slice(0,400);
+              if (/사업자등록|통신판매|고객센터|전화번호/.test(context)) continue;
               candidates.push({amount,context});
             }
           }
@@ -70,7 +79,11 @@ for (const route of data.routes) for (const provider of route.providers) {
         return candidates;
       });
     }
-    if (botPattern.test(text)) {
+    if (/반환된 결과가 없습니다|오류가 발생했습니다/.test(text)) {
+      status='search-error'; detail='Search results page returned no results or an error';
+    } else if (/항공권 가격 변동 그래프 로딩 중/.test(text) && fareCandidates.length===0) {
+      status='results-loading'; detail='Search shell rendered but fare results did not load';
+    } else if (botPattern.test(text)) {
       status='blocked'; detail='Bot verification or access restriction detected';
     } else {
       status='rendered-unverified';
