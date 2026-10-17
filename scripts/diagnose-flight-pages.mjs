@@ -71,7 +71,14 @@ for (const route of data.routes) for (const provider of route.providers) {
         // The first page lists outbound flights. Its fare is not a selected two-leg booking.
         await page.getByRole('button', { name: '이 운임 선택' }).first()
           .waitFor({ state: 'visible', timeout: 60000 });
-        await page.getByRole('button', { name: '이 운임 선택' }).first().click();
+        for (let clickAttempt = 0; clickAttempt < 2; clickAttempt++) {
+          await page.getByRole('button', { name: '이 운임 선택' }).first().click();
+          const opened = await page.waitForURL(/\/flights\/ShowFareNext/i, { timeout: 10000 })
+            .then(() => true).catch(() => false);
+          if (opened) break;
+        }
+        if (!/\/flights\/ShowFareNext/i.test(page.url()))
+          throw new Error('Trip outbound fare did not open the return-flight list');
         await page.getByRole('button', { name: '이 항공편 선택' }).first()
           .waitFor({ state: 'visible', timeout: 60000 });
         await page.getByRole('button', { name: '이 항공편 선택' }).first().click();
@@ -91,11 +98,19 @@ for (const route of data.routes) for (const provider of route.providers) {
           if (!await summary.count()) continue;
           const label = await summary.innerText();
           if (!/성인\/모든 결제수단[\s\S]*왕복[\s\S]*[0-9,]+\s*원/.test(label)) continue;
-          await card.locator('[class*="combination_select_schedule"]').click();
+          const selectFare = card.locator('[class*="combination_select_schedule"]');
+          for (let clickAttempt = 0; clickAttempt < 2; clickAttempt++) {
+            await selectFare.click();
+            const opened = await page.waitForURL(/\/flights\/international\/detail\//, { timeout: 10000 })
+              .then(() => true).catch(() => false);
+            if (opened) break;
+          }
           selected = true;
           break;
         }
         if (!selected) throw new Error('No ordinary all-payment round-trip card available');
+        if (!page.url().includes('/flights/international/detail/'))
+          throw new Error('Naver result card did not open its selected itinerary');
         await page.locator('[class*="international_selected_flights"]').waitFor({ state: 'visible', timeout: 30000 });
         await page.waitForFunction(() => [...document.querySelectorAll('[class*="detail_row"]')]
           .some(element => /해외업체|국내업체/.test(element.innerText) && /[0-9,]+\s*원/.test(element.innerText)),
