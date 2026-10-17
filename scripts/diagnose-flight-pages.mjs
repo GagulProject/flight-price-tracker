@@ -77,6 +77,15 @@ for (const route of data.routes) for (const provider of route.providers) {
           await page.waitForFunction(() => !/죄송합니다\. 오류가 발생했습니다/.test(document.body?.innerText || ''),
             null, { timeout: 10000, polling: 500 }).catch(() => {});
         }
+        const afterRefresh = await page.locator('body').innerText();
+        if (/반환된 결과가 없습니다|죄송합니다\. 오류가 발생했습니다/.test(afterRefresh) &&
+            !botPattern.test(afterRefresh)) {
+          // A fresh page load can recover a transient search error that the page's refresh button did not clear.
+          await page.reload({ waitUntil: 'domcontentloaded', timeout: 60000 });
+          await page.waitForFunction(() => document.querySelector('[role="link"][aria-label^="왕복 총 가격은"]') ||
+            /반환된 결과가 없습니다|죄송합니다\. 오류가 발생했습니다/.test(document.body?.innerText || ''),
+          null, { timeout: 45000, polling: 1000 });
+        }
       } else {
         await page.waitForFunction(() => {
           const text=document.body?.innerText || '';
