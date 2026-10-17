@@ -14,4 +14,4 @@ flowchart LR
 
 ## 검증
 
-`npm run check`로 날짜·사이트 링크·가격 상태를 확인합니다. GitHub Actions 배포 결과와 공개 URL에서 렌더링을 확인합니다. 예약된 Codex 작업을 한 번 실행해 데이터 갱신과 게시 시각을 확인합니다.
+`npm run check`로 날짜·사이트 링크·가격 상태를 확인합니다. GitHub Pages의 `main` branch 게시 결과와 공개 URL에서 렌더링을 확인합니다. 예약된 Codex 작업을 한 번 실행해 데이터 갱신과 게시 시각을 확인합니다.
