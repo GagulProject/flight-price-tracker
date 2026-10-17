@@ -84,6 +84,16 @@
             }
           ],
           "url": "https://www.skyscanner.co.kr/transport/flights/sel/tyoa/261230/270101/?adultsv2=1&cabinclass=economy&rtn=1"
+        },
+        {
+          "id": "expedia",
+          "name": "익스피디아",
+          "status": "unavailable",
+          "priceKrw": null,
+          "checkedAt": null,
+          "note": "해당 여행 날짜의 실시간 가격은 아직 검증되지 않았습니다. 검색 페이지에서 날짜를 확인하세요.",
+          "history": [],
+          "url": "https://www.expedia.co.kr/en/lp/flights/sel/tyo/%EC%84%9C%EC%9A%B8-to-%EB%8F%84%EC%BF%84?flightType=ROUND_TRIP"
         }
       ]
     }
