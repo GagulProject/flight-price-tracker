@@ -21,7 +21,7 @@
       "tripType": "round-trip",
       "adults": 1,
       "cabin": "economy",
-      "lastAttemptAt": "2026-10-17T05:15:06.397Z",
+      "lastAttemptAt": "2026-10-17T05:27:22.639Z",
       "providers": [
         {
           "id": "naver",
@@ -38,7 +38,7 @@
           "url": "https://flight.naver.com/flights/international/SEL:city-TYO:city-20261230/TYO:city-SEL:city-20270101?adult=1&isDirect=false&fareType=Y",
           "note": "Search shell rendered but fare results did not load",
           "fareNote": "과거 기록 · 검증 근거 없음",
-          "lastAttemptAt": "2026-10-17T05:14:02.688Z",
+          "lastAttemptAt": "2026-10-17T05:27:17.772Z",
           "collectionStatus": "results-loading"
         },
         {
@@ -56,7 +56,7 @@
           "url": "https://kr.trip.com/flights/showfarefirst?dcity=sel&acity=tyo&dcityid=274&acityid=228&ddate=2026-12-30&rdate=2027-01-01&triptype=rt&class=y&lowpricesource=searchform&quantity=1&searchboxarg=t&nonstoponly=off&locale=ko-KR&curr=KRW",
           "note": "HTTP 432; no automated bypass attempted",
           "fareNote": "과거 기록 · 검증 근거 없음",
-          "lastAttemptAt": "2026-10-17T05:14:03.267Z",
+          "lastAttemptAt": "2026-10-17T05:27:18.317Z",
           "collectionStatus": "blocked"
         },
         {
@@ -73,9 +73,9 @@
             }
           ],
           "url": "https://www.google.com/travel/flights?q=Flights%20from%20Seoul%20to%20Tokyo%20on%20December%2030%202026%20through%20January%201%202027&hl=ko&curr=KRW",
-          "lastAttemptAt": "2026-10-17T05:15:04.210Z",
-          "note": "Flight content not detected: 주요 콘텐츠로 이동\n접근성 관련 의견 보내기\n살펴보기\n항공편\n호텔\n공유숙박\n테마 변경\n로그인\n결과 로드 중\n항공편 검색\n왕복\n1\n이코노미\n서울특별시\n도쿄도\n필터\n모든 필터\n경유\n항공사\n수하물\n가격\n시간대\n탄소 배출량\n경유 공항\n이동 시간\n검색 결과\n반환된 결과가 없습니다.\n\n죄송합니다. 오류가 발생했습니다.\n\n새로고침\n\n",
-          "collectionStatus": "content-not-detected"
+          "lastAttemptAt": "2026-10-17T05:27:20.602Z",
+          "note": "Page rendered; 25 candidate fares captured. Round-trip total and exact dates not yet independently verified.",
+          "collectionStatus": "rendered-unverified"
         },
         {
           "id": "skyscanner",
@@ -91,7 +91,7 @@
             }
           ],
           "url": "https://www.skyscanner.co.kr/transport/flights/sel/tyoa/261230/270101/?adultsv2=1&cabinclass=economy&rtn=1",
-          "lastAttemptAt": "2026-10-17T05:15:05.130Z",
+          "lastAttemptAt": "2026-10-17T05:27:21.666Z",
           "note": "Bot verification page detected before waiting for flight results",
           "collectionStatus": "blocked"
         },
@@ -104,7 +104,7 @@
           "note": "HTTP 429; no automated bypass attempted",
           "history": [],
           "url": "https://www.expedia.co.kr/Flights-Search?trip=roundtrip&leg1=from%3ASEL%2Cto%3ATYO%2Cdeparture%3A12%2F30%2F2026TANYT&leg2=from%3ATYO%2Cto%3ASEL%2Cdeparture%3A01%2F01%2F2027TANYT&passengers=adults%3A1&options=cabinclass%3Aeconomy&currency=KRW",
-          "lastAttemptAt": "2026-10-17T05:15:06.397Z",
+          "lastAttemptAt": "2026-10-17T05:27:22.639Z",
           "collectionStatus": "blocked",
           "fareNote": "과거 기록 · 검증 근거 없음"
         }
