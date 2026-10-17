@@ -4,6 +4,7 @@ const data = JSON.parse(await readFile('data/prices.json','utf8'));
 await mkdir('diagnostics',{recursive:true});
 const browser = await chromium.launch({headless:true});
 const results = [];
+// Trigger a fresh diagnostic run after adding fare-candidate capture.
 const supported = new Set(['naver','trip','google','skyscanner','expedia']);
 for (const route of data.routes) for (const provider of route.providers) {
   if (!supported.has(provider.id)) continue;
