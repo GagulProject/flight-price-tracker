@@ -6,12 +6,13 @@ const browser = await chromium.launch({headless:true});
 const results = [];
 // Trigger a fresh diagnostic run after adding fare-candidate capture.
 const supported = new Set(['naver','trip','google','skyscanner','expedia']);
-const retryableHttp = new Set([408,429,500,502,503,504]);
+const retryableHttp = new Set([408,500,502,503,504]);
+const botPattern=/captcha|robot|로봇이 아닙니다|접근이 제한|access denied|are you a person|verify you are human/i;
 for (const route of data.routes) for (const provider of route.providers) {
   if (!supported.has(provider.id)) continue;
   const context = await browser.newContext({locale:'ko-KR',timezoneId:'Asia/Seoul',viewport:{width:1365,height:900}});
   const page = await context.newPage();
-  let status='unverified', detail='', elapsedMs=0, fareCandidates=[];
+  let status='unverified', detail='', elapsedMs=0, fareCandidates=[], pagePreview='';
   const started=Date.now();
   try {
     let response;
@@ -28,6 +29,12 @@ for (const route of data.routes) for (const provider of route.providers) {
     }
     // Wait for the dynamically rendered page, not a fixed sleep or networkidle.
     await page.locator('body').waitFor({state:'visible',timeout:30000});
+    const initialText=(await page.locator('body').innerText().catch(()=>'' )).slice(0,12000);
+    if (botPattern.test(initialText)) {
+      status='blocked';
+      detail='Bot verification page detected before waiting for flight results';
+      throw new Error(detail);
+    }
     try {
       await page.waitForFunction(() => {
         const text=document.body?.innerText || '';
@@ -36,8 +43,8 @@ for (const route of data.routes) for (const provider of route.providers) {
     } catch (waitError) {
       // Preserve the rendered page for inspection even when the heuristic fails.
       const visible=(await page.locator('body').innerText().catch(()=>'' )).slice(0,500);
-      status='content-not-detected';
-      detail='Page loaded but flight content heuristic failed: '+visible.slice(0,180);
+      status=botPattern.test(visible)?'blocked':'content-not-detected';
+      detail=(status==='blocked'?'Bot verification page: ':'Flight content not detected: ')+visible.slice(0,180);
       throw waitError;
     }
     const text=(await page.locator('body').innerText()).slice(0,12000);
@@ -47,7 +54,7 @@ for (const route of data.routes) for (const provider of route.providers) {
       fareCandidates = await page.evaluate(() => {
         const pricePattern=/(?:₩\\s*|KRW\\s*|)([1-9]\\d{1,2}(?:,\\d{3})+|[1-9]\\d{4,6})\\s*원?/g;
         const candidates=[];
-        for (const el of document.querySelectorAll('main *, [role="main"] *')) {
+        for (const el of document.querySelectorAll('body *')) {
           if (el.children.length > 2) continue;
           const value=(el.innerText||'').trim();
           if (value.length>90 || value.length<5) continue;
@@ -63,7 +70,7 @@ for (const route of data.routes) for (const provider of route.providers) {
         return candidates;
       });
     }
-    if (/captcha|robot|로봇이 아닙니다|접근이 제한|access denied/i.test(text)) {
+    if (botPattern.test(text)) {
       status='blocked'; detail='Bot verification or access restriction detected';
     } else {
       status='rendered-unverified';
@@ -78,8 +85,9 @@ for (const route of data.routes) for (const provider of route.providers) {
   } finally {
     await writeFile('diagnostics/'+provider.id+'-'+route.departureDate+'-'+route.returnDate+'.txt',
       (await page.locator('body').innerText().catch(()=>'' )).slice(0,12000)).catch(()=>{});
+    pagePreview=(await page.locator('body').innerText().catch(()=>'' )).slice(0,1000);
     elapsedMs=Date.now()-started;
-    results.push({provider:provider.id,origin:route.origin.code,destination:route.destination.code,departureDate:route.departureDate,returnDate:route.returnDate,attemptedAt:new Date().toISOString(),elapsedMs,status,detail,fareCandidates});
+    results.push({provider:provider.id,origin:route.origin.code,destination:route.destination.code,departureDate:route.departureDate,returnDate:route.returnDate,attemptedAt:new Date().toISOString(),elapsedMs,status,detail,fareCandidates,pagePreview});
     await context.close();
   }
 }
