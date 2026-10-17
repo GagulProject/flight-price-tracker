@@ -1,4 +1,5 @@
 import { candidateAmounts, applyAttempt } from './quote-state.mjs';
+import { collectSkyscanner } from './skyscanner-live.mjs';
 import { chromium } from 'playwright';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 const data = JSON.parse(await readFile('data/prices.json','utf8'));
@@ -11,6 +12,23 @@ const retryableHttp = new Set([408,500,502,503,504]);
 const botPattern=/captcha|robot|로봇이 아닙니다|접근이 제한|access denied|are you a person|verify you are human/i;
 for (const route of data.routes) for (const provider of route.providers) {
   if (!supported.has(provider.id)) continue;
+  if (provider.id === 'skyscanner' && process.env.SKYSCANNER_API_KEY) {
+    const started = Date.now();
+    let result;
+    try {
+      result = await collectSkyscanner(route, process.env.SKYSCANNER_API_KEY);
+    } catch (error) {
+      result = { status: 'api-error', detail: String(error).slice(0, 300) };
+    }
+    result = { provider: provider.id, origin: route.origin.code, destination: route.destination.code,
+      departureDate: route.departureDate, returnDate: route.returnDate,
+      attemptedAt: new Date().toISOString(), elapsedMs: Date.now() - started, ...result };
+    results.push(result);
+    applyAttempt(route, provider, result);
+    await writeFile('data/prices.json', JSON.stringify(data, null, 2) + '\n');
+    await writeFile('diagnostics/results.json', JSON.stringify(results, null, 2) + '\n');
+    continue;
+  }
   const context = await browser.newContext({locale:'ko-KR',timezoneId:'Asia/Seoul',viewport:{width:1365,height:900}});
   const page = await context.newPage();
   const network = [];
