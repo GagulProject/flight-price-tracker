@@ -1,0 +1,25 @@
+name: Diagnose flight search loading
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save playwright@1.58.2
+      - run: npx playwright install --with-deps chromium
+      - run: node scripts/diagnose-flight-pages.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: flight-search-diagnostics
+          path: diagnostics/
+          retention-days: 7
