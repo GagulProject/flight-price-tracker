@@ -5,8 +5,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T06:09:23.459Z",
-    "elapsedMs": 47143,
+    "attemptedAt": "2026-10-17T06:12:24.659Z",
+    "elapsedMs": 47611,
     "status": "results-loading",
     "detail": "Search shell rendered but fare results did not load",
     "fareCandidates": [],
@@ -180,8 +180,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T06:09:24.155Z",
-    "elapsedMs": 656,
+    "attemptedAt": "2026-10-17T06:12:25.320Z",
+    "elapsedMs": 620,
     "status": "blocked",
     "detail": "HTTP 432; no automated bypass attempted",
     "fareCandidates": [],
@@ -199,13 +199,130 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T06:09:46.181Z",
-    "elapsedMs": 21997,
-    "status": "search-error",
-    "detail": "Search results page returned no results or an error",
-    "quote": null,
-    "fareCandidates": [],
-    "pagePreview": "주요 콘텐츠로 이동\n접근성 관련 의견 보내기\n살펴보기\n항공편\n호텔\n공유숙박\n테마 변경\n로그인\n결과 로드 중\n항공편 검색\n왕복\n1\n이코노미\n서울특별시\n도쿄도\n필터\n모든 필터\n경유\n항공사\n수하물\n가격\n시간대\n탄소 배출량\n경유 공항\n이동 시간\n검색 결과\n반환된 결과가 없습니다.\n\n죄송합니다. 오류가 발생했습니다.\n\n새로고침\n\n언어​한국어\n위치​미국\n통화KRW\n정보\n개인정보처리방침\n서비스 약관\n의견\n고객센터\n\n표시된 통화가 항공편 구매 시 사용하는 통화와 다를 수 있습니다. 자세히 알아보기",
+    "attemptedAt": "2026-10-17T06:12:27.501Z",
+    "elapsedMs": 2153,
+    "status": "verified",
+    "detail": "Exact round-trip total verified from visible Google Flights search result",
+    "quote": {
+      "kind": "live-round-trip-total",
+      "origin": "SEL",
+      "destination": "TYO",
+      "departureDate": "2026-12-30",
+      "returnDate": "2027-01-01",
+      "adults": 1,
+      "cabin": "economy",
+      "currency": "KRW",
+      "priceKrw": 388001,
+      "observedAt": "2026-10-17T06:12:27.113Z",
+      "evidence": {
+        "source": "visible-search-result",
+        "provider": "google",
+        "offerId": "9bdd1bea05ee8e171d541e87"
+      }
+    },
+    "fareCandidates": [
+      {
+        "amount": 388001,
+        "context": "추천\n최저가\n결과를 가져오는 중\n ₩388,001부터\n인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩388,001\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩403,501\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩425,101\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n가격을 확인할 수 없습니다.\n숙박료 정보\n최저가 예약 기간은 일반적으로 지금부터 11월 1일까지입니다.\n가격이 현재 보통입니다.\n가격 변동 내역 보기\n가격 추적\n2026-12-30 서울특별시에서 출발하여 2027-01-01 도쿄도에 도착하는 항공편 가격 추적\n2026년"
+      },
+      {
+        "amount": 388001,
+        "context": "추천\n최저가\n결과를 가져오는 중\n ₩388,001부터\n인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩388,001\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩403,501\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩425,101\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n가격을 확인할 수 없습니다.\n숙박료 정보\n최저가 예약 기간은 일반적으로 지금부터 11월 1일까지입니다.\n가격이 현재 보통입니다.\n가격 변동 내역 보기\n가격 추적\n2026-12-30 서울특별시에서 출발하여 2027-01-01 도쿄도에 도착하는 항공편 가격 추적\n2026년"
+      },
+      {
+        "amount": 388001,
+        "context": "추천\n최저가\n결과를 가져오는 중\n ₩388,001부터"
+      },
+      {
+        "amount": 388001,
+        "context": "최저가\n결과를 가져오는 중\n ₩388,001부터"
+      },
+      {
+        "amount": 388001,
+        "context": "최저가\n결과를 가져오는 중\n ₩388,001부터"
+      },
+      {
+        "amount": 388001,
+        "context": "결과를 가져오는 중\n ₩388,001부터"
+      },
+      {
+        "amount": 388001,
+        "context": "결과를 가져오는 중\n ₩388,001부터"
+      },
+      {
+        "amount": 388001,
+        "context": "결과를 가져오는 중\n ₩388,001부터"
+      },
+      {
+        "amount": 388001,
+        "context": "인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩388,001\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩403,501\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩425,101\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n가격을 확인할 수 없습니다."
+      },
+      {
+        "amount": 388001,
+        "context": "오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩388,001\n왕복"
+      },
+      {
+        "amount": 388001,
+        "context": "오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩388,001\n왕복"
+      },
+      {
+        "amount": 388001,
+        "context": "오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩388,001\n왕복"
+      },
+      {
+        "amount": 388001,
+        "context": "오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩388,001\n왕복"
+      },
+      {
+        "amount": 388001,
+        "context": "₩388,001\n왕복"
+      },
+      {
+        "amount": 388001,
+        "context": "₩388,001"
+      },
+      {
+        "amount": 388001,
+        "context": "오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩388,001\n왕복"
+      },
+      {
+        "amount": 388001,
+        "context": "출발12월 30일 (수)CO2e 149kg+27% 배출+27% 배출항공편 선택₩388,001왕복"
+      },
+      {
+        "amount": 388001,
+        "context": "₩388,001왕복"
+      },
+      {
+        "amount": 388001,
+        "context": "₩388,001"
+      },
+      {
+        "amount": 388001,
+        "context": "오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩388,001\n왕복"
+      },
+      {
+        "amount": 388001,
+        "context": "오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩388,001\n왕복"
+      },
+      {
+        "amount": 388001,
+        "context": "₩388,001"
+      },
+      {
+        "amount": 403501,
+        "context": "인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩388,001\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩403,501\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩425,101\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n가격을 확인할 수 없습니다."
+      },
+      {
+        "amount": 403501,
+        "context": "오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩403,501\n왕복"
+      },
+      {
+        "amount": 403501,
+        "context": "오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩403,501\n왕복"
+      }
+    ],
+    "pagePreview": "주요 콘텐츠로 이동\n접근성 관련 의견 보내기\n살펴보기\n항공편\n호텔\n공유숙박\n테마 변경\n로그인\n결과 로드 중\n항공편 검색\n왕복\n1\n이코노미\n서울특별시\n도쿄도\n필터\n모든 필터\n경유\n항공사\n수하물\n가격\n시간대\n탄소 배출량\n경유 공항\n이동 시간\n검색 결과\n결과 53개가 반환되었습니다.\n추천\n최저가\n₩388,001부터\n인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩388,001\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩403,501\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩425,101\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n가격을 확인할 수 없습니다.\n숙박료 정보\n최저가 예약 기간은 일반적으로 지금부터 11월 1일까지입니다.\n가격이 현재 보통입니다.\n가격 변동 내역 보기\n가격 추적\n2026-12-30 서울특별시에서 출발하여 2027-01-01 도쿄도에 도착하는 항공편 가격 추적\n2026년 12월 30일~2027년 1월 1일\n서울특별시에서 출발하여 도쿄도에 도착하는 항공편 가격 추적 - 모든 날짜\n모든 날짜\n날짜 표\n가격 그래프\n기타 출발 항공편\n오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩411,501\n왕복\n오전 8:05\n – \n오전 10:45\n진에어\n2시간 40분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n₩425,001\n왕복\n오전 8:10\n – \n오전 10:",
     "network": []
   },
   {
@@ -214,12 +331,12 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T06:09:46.932Z",
-    "elapsedMs": 721,
+    "attemptedAt": "2026-10-17T06:12:58.135Z",
+    "elapsedMs": 30601,
     "status": "blocked",
-    "detail": "Bot verification page detected before waiting for flight results",
+    "detail": "Bot verification page: Are you a person or a robot?\nPlease don’t take this personally - some scripts and bots are remarkably lifelike these days!\nStill having problems accessing the page? Try checking yo",
     "fareCandidates": [],
-    "pagePreview": "Are you a person or a robot?\nPlease don’t take this personally - some scripts and bots are remarkably lifelike these days!\nStill having problems accessing the page? Try checking you have JavaScript and cookies turned on and that your browser isn’t blocking them from loading.\n5a574431-c9f1-11f1-b058-254a5742bfbb",
+    "pagePreview": "Are you a person or a robot?\nPlease don’t take this personally - some scripts and bots are remarkably lifelike these days!\nStill having problems accessing the page? Try checking you have JavaScript and cookies turned on and that your browser isn’t blocking them from loading.\nba81f7a8-c9f1-11f1-98f4-fe83d9ffe455",
     "network": []
   },
   {
@@ -228,12 +345,12 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-17T06:09:47.826Z",
-    "elapsedMs": 860,
+    "attemptedAt": "2026-10-17T06:12:59.455Z",
+    "elapsedMs": 1287,
     "status": "blocked",
     "detail": "HTTP 429; no automated bypass attempted",
     "fareCandidates": [],
-    "pagePreview": "인증해 주세요...\n\n로봇이 아닌지 인증이 필요합니다.\n\n6938edc5-d3d1-4d9f-818f-39d4280ad060",
+    "pagePreview": "인증해 주세요...\n\n로봇이 아닌지 인증이 필요합니다.\n\n2295efdc-fe30-4e20-b191-6634d5971fc5",
     "network": [
       {
         "url": "https://www.expedia.co.kr/Flights-Search",
