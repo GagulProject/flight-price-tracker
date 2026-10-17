@@ -21,7 +21,7 @@
       "tripType": "round-trip",
       "adults": 1,
       "cabin": "economy",
-      "lastAttemptAt": "2026-10-17T02:48:27.974Z",
+      "lastAttemptAt": "2026-10-17T03:05:08.180Z",
       "providers": [
         {
           "id": "naver",
@@ -36,8 +36,9 @@
             }
           ],
           "url": "https://flight.naver.com/flights/international/SEL:city-TYO:city-20261230/TYO:city-SEL:city-20270101?adult=1&isDirect=false&fareType=Y",
-          "note": "최신 조회 시도에서 동적 검색 결과를 검증하지 못함. 표시 금액은 마지막으로 확인한 과거 가격이며 현재 가격이 아님.",
-          "fareNote": "마지막 확인 가격 (현재 실시간 조회 실패)"
+          "note": "이번 갱신에서 해당 여정의 실시간 검색 결과 가격을 검증하지 못했습니다. 표시 가격은 마지막으로 확인한 과거 기록이며 현재 가격이 아닙니다.",
+          "fareNote": "마지막 확인 가격 · 실시간 미검증",
+          "lastAttemptAt": "2026-10-17T03:05:08.180Z"
         },
         {
           "id": "trip",
@@ -52,8 +53,9 @@
             }
           ],
           "url": "https://kr.trip.com/flights/showfarefirst?dcity=sel&acity=tyo&dcityid=274&acityid=228&ddate=2026-12-30&rdate=2027-01-01&triptype=rt&class=y&lowpricesource=searchform&quantity=1&searchboxarg=t&nonstoponly=off&locale=ko-KR&curr=KRW",
-          "note": "최신 조회 시도에서 동적 검색 결과를 검증하지 못함. 표시 금액은 마지막으로 확인한 과거 가격이며 현재 가격이 아님.",
-          "fareNote": "마지막 확인 가격 (현재 실시간 조회 실패)"
+          "note": "이번 갱신에서 해당 여정의 실시간 검색 결과 가격을 검증하지 못했습니다. 표시 가격은 마지막으로 확인한 과거 기록이며 현재 가격이 아닙니다.",
+          "fareNote": "마지막 확인 가격 · 실시간 미검증",
+          "lastAttemptAt": "2026-10-17T03:05:08.180Z"
         },
         {
           "id": "google",
@@ -61,14 +63,16 @@
           "status": "checked",
           "priceKrw": 388081,
           "checkedAt": "2026-10-17T02:14:24Z",
-          "fareNote": "왕복 총 가격",
+          "fareNote": "마지막 확인 가격 · 실시간 미검증",
           "history": [
             {
               "checkedAt": "2026-10-17T02:14:24Z",
               "priceKrw": 388081
             }
           ],
-          "url": "https://www.google.com/travel/flights?q=Flights%20from%20Seoul%20to%20Tokyo%20on%20December%2030%202026%20through%20January%201%202027&hl=ko&curr=KRW"
+          "url": "https://www.google.com/travel/flights?q=Flights%20from%20Seoul%20to%20Tokyo%20on%20December%2030%202026%20through%20January%201%202027&hl=ko&curr=KRW",
+          "lastAttemptAt": "2026-10-17T03:05:08.180Z",
+          "note": "이번 갱신에서 해당 여정의 실시간 검색 결과 가격을 검증하지 못했습니다. 표시 가격은 마지막으로 확인한 과거 기록이며 현재 가격이 아닙니다."
         },
         {
           "id": "skyscanner",
@@ -76,14 +80,16 @@
           "status": "checked",
           "priceKrw": 403100,
           "checkedAt": "2026-10-17T02:14:24Z",
-          "fareNote": "검색 결과 최저가",
+          "fareNote": "마지막 확인 가격 · 실시간 미검증",
           "history": [
             {
               "checkedAt": "2026-10-17T02:14:24Z",
               "priceKrw": 403100
             }
           ],
-          "url": "https://www.skyscanner.co.kr/transport/flights/sel/tyoa/261230/270101/?adultsv2=1&cabinclass=economy&rtn=1"
+          "url": "https://www.skyscanner.co.kr/transport/flights/sel/tyoa/261230/270101/?adultsv2=1&cabinclass=economy&rtn=1",
+          "lastAttemptAt": "2026-10-17T03:05:08.180Z",
+          "note": "이번 갱신에서 해당 여정의 실시간 검색 결과 가격을 검증하지 못했습니다. 표시 가격은 마지막으로 확인한 과거 기록이며 현재 가격이 아닙니다."
         },
         {
           "id": "expedia",
@@ -91,9 +97,10 @@
           "status": "unavailable",
           "priceKrw": null,
           "checkedAt": null,
-          "note": "해당 여행 날짜의 실시간 가격은 아직 검증되지 않았습니다. 검색 페이지에서 날짜를 확인하세요.",
+          "note": "이번 갱신에서 해당 여정의 실시간 검색 결과 가격을 검증하지 못했습니다. 표시 가격은 마지막으로 확인한 과거 기록이며 현재 가격이 아닙니다.",
           "history": [],
-          "url": "https://www.expedia.co.kr/en/lp/flights/sel/tyo/%EC%84%9C%EC%9A%B8-to-%EB%8F%84%EC%BF%84?flightType=ROUND_TRIP"
+          "url": "https://www.expedia.co.kr/en/lp/flights/sel/tyo/%EC%84%9C%EC%9A%B8-to-%EB%8F%84%EC%BF%84?flightType=ROUND_TRIP",
+          "lastAttemptAt": "2026-10-17T03:05:08.180Z"
         }
       ]
     }
