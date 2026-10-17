@@ -4,6 +4,7 @@ const providers = { naver: { name: '네이버 항공권', mark: 'N', className: 
 const form = document.getElementById('route-form');
 const results = document.getElementById('results');
 let routes = [];
+let currentQuery = null;
 
 function checkedPrice(item) {
   return Number.isInteger(item.priceKrw) && item.priceKrw > 0 && Number.isFinite(Date.parse(item.checkedAt)) && item.status === 'checked';
@@ -73,6 +74,7 @@ function requestLink(query) {
 }
 
 function showRoutes(items, query) {
+  currentQuery = query || null;
   results.replaceChildren();
   document.getElementById('result-count').textContent = `TRACKED ROUTES / ${String(items.length).padStart(2, '0')}`;
   document.getElementById('show-all').hidden = !query;
@@ -111,18 +113,29 @@ form.addEventListener('submit', event => {
 document.getElementById('show-all').addEventListener('click', () => showRoutes(routes));
 
 async function loadPrices() {
+  const button = document.getElementById('refresh-data');
+  button.disabled = true;
+  button.textContent = '불러오는 중…';
   try {
     const response = await fetch(`./data/prices.json?t=${Date.now()}`, { cache: 'no-store' });
     if (!response.ok) throw new Error('가격 정보를 읽지 못했습니다.');
     const data = await response.json();
     routes = data.routes;
-    showRoutes(routes);
+    if (currentQuery) {
+      const query = currentQuery;
+      const matches = routes.filter(route => cityMatches(query.origin, route.origin) && cityMatches(query.destination, route.destination) && route.departureDate === query.departureDate && route.returnDate === query.returnDate);
+      showRoutes(matches, query);
+    } else showRoutes(routes);
     const latest = routes.map(route => route.lastAttemptAt).filter(Boolean).sort().at(-1);
     document.getElementById('refresh-label').textContent = latest ? `최근 조회 ${dateTime.format(new Date(latest))} KST` : '첫 조회 대기';
   } catch {
     document.getElementById('refresh-label').textContent = '가격 정보를 불러오지 못했습니다';
     results.textContent = '잠시 후 새로고침해 주세요.';
+  } finally {
+    button.disabled = false;
+    button.textContent = '↻ 게시 데이터 새로고침';
   }
 }
 
+document.getElementById('refresh-data').addEventListener('click', loadPrices);
 loadPrices();
