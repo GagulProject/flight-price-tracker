@@ -5,161 +5,58 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T11:11:48.116Z",
-    "elapsedMs": 35800,
-    "status": "verified",
-    "detail": "Exact round-trip total verified from visible naver seller result",
-    "finalUrl": "https://flight.naver.com/flights/international/detail/SEL:city-TYO:city-20261230/TYO:city-SEL:city-20270101?adult=1&isDirect=false&fareType=Y&selectType=concurrent&selectedFlight=1%3A20261230ICNNRTZE0609%3AA01%3AHK%3AZE%3A%2C2%3A20270101NRTICNZG0045%3AA01%3AHK%3AZE%3A",
-    "quote": {
-      "kind": "live-round-trip-total",
-      "origin": "SEL",
-      "destination": "TYO",
-      "departureDate": "2026-12-30",
-      "returnDate": "2027-01-01",
-      "adults": 1,
-      "cabin": "economy",
-      "currency": "KRW",
-      "priceKrw": 403268,
-      "observedAt": "2026-10-18T11:11:48.035Z",
-      "evidence": {
-        "source": "visible-search-result",
-        "provider": "naver",
-        "seller": "부킹닷컴",
-        "offerId": "7dbf7530ed060412b76eb460"
-      }
-    },
-    "fareCandidates": [
-      {
-        "amount": 403268,
-        "context": "성인/모든 결제수단\n부킹닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n403,268\n원\neDreams\n해외업체\n위탁수하물 포함여부 확인필요\n419,142\n원\nmytrip\n해외업체\n위탁수하물 포함여부 확인필요\n422,869\n원\nGotogate\n해외업체\n위탁수하물 포함여부 확인필요\n430,825\n원\nKiwi.com\n해외업체\n위탁수하물 포함여부 확인필요\n432,928\n원"
-      },
-      {
-        "amount": 403268,
-        "context": "부킹닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n403,268\n원\neDreams\n해외업체\n위탁수하물 포함여부 확인필요\n419,142\n원\nmytrip\n해외업체\n위탁수하물 포함여부 확인필요\n422,869\n원\nGotogate\n해외업체\n위탁수하물 포함여부 확인필요\n430,825\n원\nKiwi.com\n해외업체\n위탁수하물 포함여부 확인필요\n432,928\n원"
-      },
-      {
-        "amount": 403268,
-        "context": "부킹닷컴해외업체403,268원위탁수하물 포함여부 확인필요"
-      },
-      {
-        "amount": 403268,
-        "context": "부킹닷컴해외업체403,268원"
-      },
-      {
-        "amount": 403268,
-        "context": "부킹닷컴해외업체403,268원"
-      },
-      {
-        "amount": 403268,
-        "context": "403,268원"
-      },
-      {
-        "amount": 403268,
-        "context": "부킹닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n403,268\n원\neDreams\n해외업체\n위탁수하물 포함여부 확인필요\n419,142\n원\nmytrip\n해외업체\n위탁수하물 포함여부 확인필요\n422,869\n원\nGotogate\n해외업체\n위탁수하물 포함여부 확인필요\n430,825\n원\nKiwi.com\n해외업체\n위탁수하물 포함여부 확인필요\n432,928\n원"
-      },
-      {
-        "amount": 403268,
-        "context": "부킹닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n403,268\n원"
-      },
-      {
-        "amount": 403268,
-        "context": "부킹닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n403,268\n원"
-      },
-      {
-        "amount": 403268,
-        "context": "부킹닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n403,268\n원"
-      },
-      {
-        "amount": 403268,
-        "context": "403,268\n원"
-      },
-      {
-        "amount": 403268,
-        "context": "403,268\n원"
-      },
-      {
-        "amount": 419142,
-        "context": "성인/모든 결제수단\n부킹닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n403,268\n원\neDreams\n해외업체\n위탁수하물 포함여부 확인필요\n419,142\n원\nmytrip\n해외업체\n위탁수하물 포함여부 확인필요\n422,869\n원\nGotogate\n해외업체\n위탁수하물 포함여부 확인필요\n430,825\n원\nKiwi.com\n해외업체\n위탁수하물 포함여부 확인필요\n432,928\n원"
-      },
-      {
-        "amount": 419142,
-        "context": "부킹닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n403,268\n원\neDreams\n해외업체\n위탁수하물 포함여부 확인필요\n419,142\n원\nmytrip\n해외업체\n위탁수하물 포함여부 확인필요\n422,869\n원\nGotogate\n해외업체\n위탁수하물 포함여부 확인필요\n430,825\n원\nKiwi.com\n해외업체\n위탁수하물 포함여부 확인필요\n432,928\n원"
-      },
-      {
-        "amount": 419142,
-        "context": "eDreams해외업체419,142원위탁수하물 포함여부 확인필요"
-      },
-      {
-        "amount": 419142,
-        "context": "eDreams해외업체419,142원"
-      },
-      {
-        "amount": 419142,
-        "context": "eDreams해외업체419,142원"
-      },
-      {
-        "amount": 419142,
-        "context": "419,142원"
-      },
-      {
-        "amount": 419142,
-        "context": "부킹닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n403,268\n원\neDreams\n해외업체\n위탁수하물 포함여부 확인필요\n419,142\n원\nmytrip\n해외업체\n위탁수하물 포함여부 확인필요\n422,869\n원\nGotogate\n해외업체\n위탁수하물 포함여부 확인필요\n430,825\n원\nKiwi.com\n해외업체\n위탁수하물 포함여부 확인필요\n432,928\n원"
-      },
-      {
-        "amount": 419142,
-        "context": "eDreams\n해외업체\n위탁수하물 포함여부 확인필요\n419,142\n원"
-      },
-      {
-        "amount": 419142,
-        "context": "eDreams\n해외업체\n위탁수하물 포함여부 확인필요\n419,142\n원"
-      },
-      {
-        "amount": 419142,
-        "context": "eDreams\n해외업체\n위탁수하물 포함여부 확인필요\n419,142\n원"
-      },
-      {
-        "amount": 419142,
-        "context": "419,142\n원"
-      },
-      {
-        "amount": 419142,
-        "context": "419,142\n원"
-      },
-      {
-        "amount": 422869,
-        "context": "성인/모든 결제수단\n부킹닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n403,268\n원\neDreams\n해외업체\n위탁수하물 포함여부 확인필요\n419,142\n원\nmytrip\n해외업체\n위탁수하물 포함여부 확인필요\n422,869\n원\nGotogate\n해외업체\n위탁수하물 포함여부 확인필요\n430,825\n원\nKiwi.com\n해외업체\n위탁수하물 포함여부 확인필요\n432,928\n원"
-      }
-    ],
-    "pagePreview": "Naver\n사용자 링크\n로그인\n서비스 더보기\n여행상품\n여행정보\n0\n로그인 후 등급확인\n마이페이지\n여행핫딜\n항공\n호텔\n패키지\nFor U\n항공권 예약\n선택한 항공권\n찜\n공유\n가는편\n상세보기\n삭제\n인천\nICN\n도쿄\nNRT\n12.30.(수) 07:00~10:00직항03시간 00분\n이스타항공\n오는편\n상세보기\n도쿄\nNRT\n인천\nICN\n1.1.(금) 08:55~11:35직항02시간 40분\n집에어\n이 항공권 가격 알림받기\n47\n트래블클럽\n로그인 후 등급확인 하세요\n항공권 판매사 선택\n판매사 선택하기\n성인/모든 결제수단\n부킹닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n403,268\n원\neDreams\n해외업체\n위탁수하물 포함여부 확인필요\n419,142\n원\nmytrip\n해외업체\n위탁수하물 포함여부 확인필요\n422,869\n원\nGotogate\n해외업체\n위탁수하물 포함여부 확인필요\n430,825\n원\nKiwi.com\n해외업체\n위탁수하물 포함여부 확인필요\n432,928\n원\n\n좌석상태 및 요금(유류할증료, 제세공과금 등 포함) 등의 정보는 각 여행사에서 제공한 정보이며, 예약현황, 유가, 환율 등에 따라 실시간 변동되므로 네이버 검색결과와 여행사 홈페이지 정보에 차이가 있을 수 있습니다.\n\n항공권 예약 및 예약한 항공권의 확인, 결제, 발권은 선택하신 여행사의 홈페이지에서 확인 가능하며, 예약전 요금규정(수하물, 환불, 마일리지 등)을 반드시 확인하시기 바랍니다.\n\n네이버는 항공권 검색 결과 및 구매에 대한 별도의 책임을 지지 않으며, 항공권 예약, 결제, 발권, 취소 등에 대한 사항은 해당 여행사로 문의하시기 바랍니다.\n\n개인정보처리방침\n이용약관\n사업자정보 공개\n고객센터\n로그인\n전체서비스\n사업자등록번호\n220-81-62517\n통신판매번호\n2006-경기성남-0692\n대표이사\n최수연\n전화번호\n1588-3820\n이메일\nccnaver@naver.com\n주소\n경기도 성남시 분당구 정자일로 95 NAVER 1784, 13561\n호스팅 서비스 제공\nNAVER Cloud\n\n네이버 항공권은 제휴사에서 제공",
+    "attemptedAt": "2026-10-18T11:27:02.675Z",
+    "elapsedMs": 49327,
+    "status": "content-not-detected",
+    "detail": "Flight content not detected: TimeoutError: locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[class*=\"combination_ConcurrentItemContainer\"]').first().locator('[class*=\"combination; Naver\n사용자 링크\n로그인\n서비스 더보기\n여행상품\n여행정보\n0\n로그인 후 등급확인\n마이페이지\n여행핫딜\n항공\n호텔\n패키지\nFor U\n47\n왕복\n편도\n다구간\n서울\nICN, GMP\n",
+    "finalUrl": "https://flight.naver.com/flights/international/SEL:city-TYO:city-20261230/TYO:city-SEL:city-20270101?adult=1&isDirect=false&fareType=Y",
+    "fareCandidates": [],
+    "pagePreview": "Naver\n사용자 링크\n로그인\n서비스 더보기\n여행상품\n여행정보\n0\n로그인 후 등급확인\n마이페이지\n여행핫딜\n항공\n호텔\n패키지\nFor U\n47\n왕복\n편도\n다구간\n서울\nICN, GMP\n(모든 공항)\n도쿄\nNRT, HND\n(모든 공항)\n12.30.수\n01.01.금\n성인 1명\n일반석\n직항만\n알림받기\n검색\n공항\n직항/경유 \n요금조건 \n항공사 \n시각/가격 \n트래블클럽\nCO2 배출량 적음\n트래블클럽\n로그인 후 등급확인 하세요\n항공권 가격 변동 그래프\n평균보다 4%\n왕복 동시 선택\n왕복 개별 선택\n가는편·오는편을 한 번에 선택해요\n카드혜택\n가격 낮은 순\n인기 항공편\n모두 접기\n검색한 항공편 중 가격, 비행시간, 유저 선호도 등 다양한 요소를 고려한 네이버 항공 추천 항공편입니다.\n예약 많은\n많이 찾는\nCO2 72%\n파라타항공\n이벤트혜택\n09:50ICN\n12:05NRT\n직항, 02시간 15분\n13:25NRT\n16:15ICN\n직항, 02시간 50분\n성인/KB국민카드\n604,700원~\n5천원 할인\n왕복\n599,700\n원~\n최대 5,000원 적립\n로그인 후 특가확인\n예약 많은\n많이 찾는\nCO2 평균배출\n전일본공수\n이벤트혜택\n07:45GMP\n09:45HND\n직항, 02시간 00분\n20:00HND\n22:30GMP\n직항, 02시간 30분\n성인/삼성 iD GLOBAL 카드\n802,600원~\n5천원 할인\n왕복\n797,600\n원~\n최대 5,000원 적립\n5개 인기 항공편 더보기\n인기 항공편 보기\n항공권 5,000원 할인 + 5,000원 적립\n- 이벤트 상품 한정\n왕복 항공편 선택\n최저가\n에어부산\n07:35ICN\n10:15NRT\n직항, 02시간 40분\nCO2 -\n집에어\n08:55NRT\n11:35ICN\n직항, 02시간 40분\n성인/모든 결제수단\n왕복\n397,800\n원~\n이스타항공\n07:00ICN\n10:00NRT\n직항, 03시간 00분\nCO2 -\n집에어\n08:55NRT\n11:35ICN\n직항, 02시간 40분\n성인/모든 결제수단\n왕복\n403,268\n원~\n제주항공\n08:10ICN\n10:35NRT\n직항,",
     "network": [
       {
         "url": "https://flight-api.naver.com/flight/international/searchFlights",
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://nam.veta.naver.com/gfp/v1",
+        "url": "https://tivan.naver.com/g/100_200/6xHoz0eKPW8aPa5iSaa-jTX_KmkMrTuysrbzkfaTqzacp_-oNih4ieDnlNL_H3raZbXwTVJWcx9_5-GGMVAHvTyrPcKPDvNakOhYH_eSGBboiPc8IVTu34kjVKOmHdEwU0w-r5jZ-Psmcl_N8UXP1mBH6K3sfpySzSGpRKnnSN9us0iDSJzXfCs27QLewI_S5Y7IeHJbHWAQylpblF1YzlvMCPEIGtc04SMnHCRniQl2i51FWvAQlaxbEqVHpe-QVBV4ncmmDquyq2Oyc10BKsDhFFcb9XheFQkcmYMdsg6g7ZgeRgWop-0SOG_s9m9nCAhF9vkkWorAmJ_1sT-kwfKsPz2bK9plkls5TSzxyHsl4UYdDfRAkaf49UwdQUNCeX3GKVxTPDZ7Joplu7QFbwUU9qsbiAeDoNKGOj0PlM5z_UMJS8geqEkFslGPwC5U46nJQO6wxOXygzddzhkSy5239Xv2jurNICa7n47ypvAb_zUF0zlczqtm0THGPJxw9hQn5DoY9TA87C4I7YaaoLEB0-7ByUWx85QX-aqP7hj18fyiPEQyki_9rrT__DrGtc6wyanZaxZk1o_aExazb2gU36Txm5U0B3HZveyHyDK0PulZAeNOCThQt-78qOZpvfqMAM7eFD8ygCGRSUIt3hgtbfiNgP__lMUykeNoVC_WLAPR7eLEj_YR5XlYZYq18mBR9dfhPpG-mMD1zvZT6MqtfbesAIa8iMASA0LI9UvpRQ2VfRNVSjlv4qXRl_f_G4fZhlP-IEwO4pGxTjY6HgbP2MdL_xryGBwAn4QrZbpXXnDZ3ic44FjDYPB9JpncbwWlShPnOicuYDluluKUPXZiZVp5qQgbKYEzoFND2LEww92ko5j2vGeJ8I5TZ4OFY3L7gWeWDjkAFHyPIKA3-QPqYM-ivRPaHkEw8sg8Y2A/NE",
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://tivan.naver.com/g/100_200/3FItqxf81FthdJFxGTxKWBO4_9EVZyjnMl80j5fpG2ym3r--uXlqlnVDt-jeBwCFMWZi9QfHBzlufDrJvS8gwiXS9RpuIHl7TieUene3qDcpfKh2MIZfPAaKKae_uffPOsat3NEX36mCPQQtgmwk2B9QTSMvs6wNqmZZfzQBc_WeltGYeW2TBbRwlYgqVI39X7z09xzWvs2F9PvjFE4P5hrV42TDsNsesQlphabv51yEvQxzDeiYW3tkaOG9MJfaKDD6gasNODQv2FYEx-y28lHo3hoF3i267lpxNK4bJ_e38KuEMPF2QNf9YaReF93QWERVrVB_w1TGkR_WLXxRsRHjLNJEbdX_9MSOjNgxHydQs8GC-BDf0OzTMlTm9UVMorg0I815nuk4Xb6VFTBLC4AxKxzZQvatWa0b3AeDkwpDmPhuec0qTBiIOzMUHz4OBv7UUfYmC8hUaHoR-B281g9j1ea6PjfWDrUj8aGLTNIXuvV2oJI8athp50lDINqY-RdcmDNWmwAijdR3ghf9EzbHNamjQreQXX8CxAbchld8uYgplL6jAc_qUNtEuSKLN1Ox6wRz8AO7695imBPwAJuK4EvvFOKtssUgrPa-yaNqAgMhzzfaeyefsaOhf5iF5NHqvN8hOU2uw7XNFr78_lfQn8xKmu1bfozbh9YxVRVE4S-vQbA8uw5ZtiRE-O361jTtdk1HqQB2sW4sEUr1r41Kv9BktbCiVbTXJfA9kFGJJRiMIy1ItPExEv8K8J6XvCmQJbNWAV2kpESADbH_hJ8s2Y5TzWiPTEXxaC5MWJOkgalDAy4eBp-2MuB9oyNHpSBXV2NyI-pjCXsfP5HU1duJSCSdmN3KT9i57Birm06lBKxbZZljaDFsKzZq8NXKlqvvP3m8cp9FHAq5aj5BAA/NE",
+        "url": "https://tivan.naver.com/g/100_200/ifLjZHytGob6uPgjY5j574lFJG2msv3HAW91JiTscriGf4yF228BvvV2d7qWlJWjnvsAPQxMp4IPeJS5aJVG5Isj8n9vHRpY7fGmQ0voPpb9iQtHXN_fU_ka_D4kb_7mvhK5lNr1CttdxsXYgiP8tbCb-V7M7NHj3vv9OqF_V0_qiFsN-GoZRxwiFw-j3n84SzQj2qwRU2gutFj32FSvU0m-pQTji9CTIz296vyNcyr2tOEv7JAjUbAGu86yjeax5b5ZPnBR0bJ42fQKJ2gmkA9l6amPelBw_jxtem3r0vfD4f2jtMaKnaUqCyxSniAHvrQ6v__ThjnsSy0dKvq_J1gOkwbEJeeVR3O4kJfH26pRkWU2YHdEh5V307J7jIn8KllBe0O9SVG0k7Zdwz7wqONXLGZ7rOBJ3Ke0jbn0Fse-LFVUpEUS2hf02b6gx7nQmS9XhhJUsB2OUHWcivkJ2C5vjaFM3ogvRg27OZYX1fEfqAmnRqHiCYigAmLr9cR7PUckU7fbpjAlQUKIpui-uAqfynJJO2Bo8ju5r3A7Pj8WEj45xU10WBLL0K5dS5Ir25ujHhvfF-VkNFaRTRzaK-KtZlmU2qfXpNaSqw7hzLtFNExR1plcoyPZUMyOuCYuy66sjsdy1e_kJz4wc0DRmSKvzW_ciVsyfTLzo5-WtkWfLoImG3aloYCAIYct9U060BeupNnipYkd2PxwNcj8cJo_U-DSoKKWPxuBgoOySS8i2SvyIBp6ljh2UQPbQ1LA7VjsGlTwSorKm2EFPQKVkqYg3AfX0_BzUqw5nDXPpLVseCwO8kRLuowmMQWNTArJjUBJUGdzgQ0SsPeBJnKJvetfZwrqsZYSr2mtwjEILuBK53kOFwcRi8Ca2kn7ZANhyeygWAkM1ow0W2dNYgIcwg/NE",
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://tivan.naver.com/g/100_200/ifLjZHytGob6uPgjY5j574iWWCdeXgFehPXRH1xyIIIUIq90cnfvoxPmDmA79B26AS1WM3aRJTRhIRY5NmqCpJki4yyq1BO5QhCi-f3R4JAWQ-z2qQBILlHhLptbtZojXDGow8vFAAkAFlaXG6CF5-L4bP2GnMHCgsQoR05T67pps068gVmn9wGNV-Ci3URAZ1w9AdJmhPqPwkCossZXYSJq1QTmJHNRjlTcOMwXdVqtMySsgk5qrBc-5Gwon7GAoEofqhbT34JpQiio52vpxKEyXE1hn1L4IlN-OSEzYy2j27zODsktovXjY2Cu1uqZK87pnQ8XoMleCoxZwY7EJ_E8OEwJX-heptpiduZYS2d4pgKS49ejpWL-odOFRXPeanHtAMMESSClOb7MxBR78m_uqNnezhgLVeuBAebWoMazU7q_NO9OtUNmBjZYiw7h3aejlgb-ScAJxLQuerI4wpevXF3su0iiocpvCyOWUusiNU-y2FjNH8QLXMB8YyrMZlBM3PYQB6DeUQdPgqrGME9IiDfX9H5b7t7862IixniqQ_Nk2WiRaK0bjheyNPeXR1CqS5UCMaDYTSrCT1wRfp2ArKkKj8_iQNJOakzmwqlrh1b-KKxW8X51Hu9BNl801kWVJxPUUA17ER0fuXh7m7l5_T8eZOeC0h_Dpis2yz0Q3d4H970to8FVqaZFQH8zgkOKzGa1EdaSHHqpYUpOUVqeBdu3LvOSu37cSOyHdg_m5snhS_F7O7gblmIk6zTJ_PXWJ83jkmTRiI-vBi-Iem0Gxtnj3E4EpBTNAqCkhOCzbbUBJFIT-BfTYHiYv1tABz6GTqi4M-HIHdfZFfgcnd3DcwIfmcx-wNvvJIoLdWH7swBv_UdrvDJvnd9rQVkz5MtNRhsHVSb3twaAblIv6Q/NE",
+        "url": "https://tivan.naver.com/g/100_200/tD2WwReRP3l6iF9gVWayVVmS9I1veFbcJDzFUn4ItqIgbEPh__zRARUqTt-f9Uo9pPso39NjPO0gDV62uMJpVcmWIDYK0My1lxG3daXHmYTat3GLYw-t2u8-vOz0otd6vYsdQAUsveq0KJ5_KE87tqLjbmiANFbeqfu69TLFIH1M0yVMSMOeTjEQpURMkr86PY0pG8nOTvnWPZqrS0EZJSsgCaG7STFOZE79VdJA5xh0uB34dMOMLIb9O_mMSu-OD9xfU_9n2tG2eQSq-Fc9PTKfwPHInYstPeRKh6sqaDpqD4C4BHoQxvwAkOorYNPbCsD_Q5_HuzrwngbAYz5oorZSPiNSxlhNRkjtah84KzcOg50UkGzJsWNQcJAP7F9ocQLM0gKo0dPQQqcZ1yD9Z80hWHX0W4LbPozW09kq4hTPldWmRPPsM5GuG_iL6VmE8d4foIESpvACNuapm_w0Z6ye7AsBoV4M5nxurswtEcv84TyNCQ8eDlnS21SQfqpLXP9AhwvrGAqfD3yKROmgWH62mzv9SQkS_HzJdZpNI33tGJ2hdsUY1fUGbUmiNNqCrmXXEZZzk6O_KMOy6LMKpjKp_1VsspzFiNB9SkMKnldMlf-3gQE8hcWapGc2v4_7FsMV9aaI_ko2C201n0iQnw3V4X4uStannA0KFpVpBRoTFg66L2kOXRpxTSt-IugQYOPHScnpqZESNpEqbR9v5v2qte0Yd9ZqBpU8_bz4GYuql30ZYnzvh-iFfvb4oTNP9_mE32ebf6c8L6pW8oo-HZE1xQquESp1Oh6dD5sn38XCW4usnMv7bB3Rk7I5KN5vb7zh03vEtoggnhVoXsDVaxO0dGyeJUYJmioWeBr5eLZGdiRAVOS6Msm8FFg4DvL0NgMey6lcyBqXaWVdhs5MRA/NE",
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://tivan.naver.com/g/100_200/ifLjZHytGob6uPgjY5j57_r8mQA8H-6iDr1Shr6_URheLhO6Bii_mOKYHD19F21Ffe25yTAYAEOgmjNJOKUj5NafbbBMMOXQFNZljYQromnrtWCW0mOew-wUftE32ZgLdX2yslD8AI4VYZtIuxPIpiWVD6DnQLCcqqY-XaOf4z3SYNoVrmWPMy0tGaXZiyIQDDt67PVQufvlw5O8I2z37o1dmuh50KphINWiJNKUMnGQj6d0o022I99zutkAiTN7aXRCzdiq6Sono5aXHAEe06LDp6NbofKOkPsWt2scGR7ulRSe7P0rNwflOO61HxOWZBYVoPv8rVUl5JjOs3pfyT2SWNSMZbOgnxsf6opeVjqEVqXVzBr-_PiPN1AhUqPtVWS6mVLYKUiaf-PU20ssMeN0Epb5ZQULkaoBlQB2HBFF1ZHrkue4Sb7tT4GyQ-2SwDbpI5MClAAAGxOgXDN9DLPR4810pT3SicuvW-aeCGcnzTJ7YnhjDPFZtaC99BVmpgcpxA0uNll4IBTDbJyi6sR0xFoFzkaDKegxQj_UzkPQjuXiK-SfK0ZIrVRhXbfd7HhGDDdW4G8SJ6WlRcxC6XPA6iLcolq0eeuF_s45Anzi6JRBBNkPQ2-dgPhMaJd1yDsugWLhHAX8sBmNUy0ZB23D_l65sAp7FSI7pmApc7CwbSzy_ZjxcyN797q1eLRJkOoTGgLYEPy96wNJ66ysGy80S0R7FdPjuhFPwJKLNQrwzq9GfmEF13QHeSsVg9i73WwB62OXxzIZVejdqV7xOKAzxX5ayxsmNp_LxqW7Qtzji6FPIY716SwiNXkvolPlndGHSQJ19XsZucEF92MWxmWTq4N_5zYD9tBPWUJacw4rUq-ie48_UNBjb_wti2uenIcoi4oDdV3rx5vm5onbOg/NE",
+        "url": "https://tivan.naver.com/g/100_200/RzD32etksR5OnFnamgmfik-RaekFvkefsl4OZxjTFBrjXttjgv4cyjadZFBHDdlJhOoJOzwnd-iMxDhUGPka9Wnxo_DaqkKmrWasTSaWo9eL4qKIh6rU1AwCXE43AyWbNk_fNgcl38AiR1RZrizIH-mrvF6Vj4dq0ffxkQeOHsw8GbKHceE755kNWhlDWozB5UDXXBQ91ABwLFZnF2uBWUKDaTY5nEhMVMTHW2M_8utqoCUxfqp60Op2Lcmdq98jRHzTbvMgBedXCF03jV59f4AOQGvrmCKNdH7J0-k54HBpLkj6tzFHaODox2pzuElDtCKAma1doWNAJXTWdGiSYZddGzgfC_klr7XOW1AcCeOLdxbPbpt9wjjIPVCf217CzZF9aK4ogVE_Z2snDZ4I1FTXcPSsjEtGCOGAtXnrtBVXqzZacO248IRGvP3NcNY9Ac_-4TOCjdQdLhdQbHtBlfFwcIRDc_aIrKcQu4GDhOeOu-n0lPY2jIzTQpikzqxuGtAZBISDaT7d40ZLRP3OMu4HVqAJnVI2FAykJJzS_79li_4RsWd6R0plhMpcWCsFFg79Jtk536KiZ_vg2eID5L9ZuOUjk8i9hMzMDr_dqjfHUB0DdoQcIUl9IrDe09hL2giTbRZyw2QQR4fcqjKD0cYLMQgQhQU7uQjI8A4xJxl6mnAQ1RNq72dh8b0tkQiYinpmE7OhzQWG1pEIpmFQGkcte7pfVC4O-MjMwqhkTkgH_ZF5rBN-4DLMzlZsZ50d7mbnlwFLROocD8eAejcRpl9zxL4rq29TK1WoHf7Xj3184iazBwzaGSgEN9yCOn-tpCwNQ3NYaUYZP8FAaEg3CzTGb5ifbsXHKuBcskEcADpsNGb5eO0ST6tLYHH0oVwK0POUvJCPUJH-4w9VWWwgNQ/NE",
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
+        "url": "https://tivan.naver.com/g/100_200/xapQZXPd76k9TIN2kEbsDepWKsu42O1T6wtLMGKfLuIVFqAuooiEE2cwq-Gk7JhN0KkIBytVAMZRdCjbDL5Kz56whkHkiXc1qMzrnFjKUtjyq7ZzQtCfZSEH69PJ2kskAze7ma19QWOK-pjTWWrSaEYuAN23afeKanr63S07W0wP-BTDR6AUlrFxxfeaF8aA1jY_1Tdo9E1S0p1frUVYBzEsbHVY_zBUoP8nI5xJgmtAg4KSFj6ozN7dQc_cBDkXAbHlhzYaSANITuqEpVx3wUxhGhy9ExMPellTKIEBQvTdJAVz09bZeoiP8bOYVcNRPxPCMk974bpBFV4TGvt2R27PqG9vQ9EFYB1_w3Eae6Q2RPEyBZ5v2Hj8gG8NEvNMKxHthTFjDs8Fie-JL4Va7Hctv1rEcIY_34dirQqEAAO85iEkoEk_g8CvHzP2th8h6BeFdaCKxcsGXqjprxio9Rqo7173mCadi5eSSLfw7aUlmNaouvXlaPI64DOYIBDZegirA-iI-GI2Bloz8VbIhK5dGQVK0qeGq-BthY8HaiuxRHu9ZBZJi3myoocSjuqawQA40tmZaiG88NYOj_Ei0QuGAUWP3oRVUuGk2XBbllotbsvoT4qHUHDHE5-XsfriDmM_csaGSOS4Wkva6EZc6aiJbuudRQxC_Q41HprIqE8uoTXA-UbqOD6tsYgIcKrTCIIbwvg1audCWG9ok9fgjmFedw4giTXA_VUReaemfzztVKafCONAnT5UOVwiHAkwXXu90l2xf7aGhzB5W939cfnS0h-Nfs5ixCMNnEUeASnLpsKNkfMWPM-GhaciR9mwwskrL3JUNl66CTXa08onITnOL-gd-nrF0CGHE4_hhJ29gCWciAPDwf9RUViRhDLrebBYKu7keQCzW9X__8-06w/NE",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://tivan.naver.com/g/100_200/DU75hheKt0eiIxKxiK9XkiPYIWfIVK5TQQKxHw8Y2I8QfVevf2nisLIyGy347dUI44zZ-LwSTEY3pYhGvHTovwl6DjwhrHMoiETYJ4ky5cZiFNjpTeI_RNl0VWxmlyh1smmhJobz3ysIbI9f8ImgYu_iFhUSdHuA5qnkvgP72bNdTdv8b--_BaYHR-g0pbCBncDDiONYaIQn1SEBe_puDAPG8IKhWPD8AEx3agZIxVYHFf33HF-s6gK6gNM9Loeolyow6uToAjcVXYKOW3blgfmPrXf4AVOqQ68_HTlRztvbVW3_BnDLPiRda2GLvVDvSZzIzoOKfbNNKaYEKJ32pRMKDR-w-dYccBSH2hrMxSnko12TeBeNJj300y9p5_C_2netHxesDKkEIfEHqye1KMvgk-tP4OQ2GX-YQZP7yZVU5ilgrzUAiR-kDudbyGFbBnCIzlDvrUrq5y9bN-DHt5FPBRi57kNWRY-SCTaSeTE9tUSujJRIRsSKe5zwsYDys557XjWZ5dhQDni-msj95s9O55XfcqA5FxKSvdp5UNzyMu_5auQdpf6bSm0rT1zudm2XNHwnVvlNYdHf4qRqajAOJl2BESHpDoMBuwU48Hbtc8OYs9E0tjxg2PJ_FAHXhqan4LL3y3b-wP2eUqQejhD6Xr0njl2iquH47UPwoKcbNEipiuC1nF8e3lfqRJWpaWXduuNu-IR6VMMaMPJkvZfZzeMOzQ2mc-46vqv3mNKX7AOAlRPMr9BcT2oY7kIMZGqN2-LJOPMCBlTL4hmufkOoyzzjAhEU2yGmec4EQxW9LuxWz3Ab29l1228a0hzDlKj7UGxfNVQ4F51DrzGwl69I7wf9NTCfQIPGg4VjTl1Br8383JOSENkV8XVjWJQfNxm_d7x6r7uSrC9hrAqEPA/NE",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://tivan.naver.com/g/100_200/xfPO6aFDZxExEHuc7bU2_JDtiPbzWQIWWz8c0ZHlt6z2DfhCgET55AxFjVvqHSzM5Abh3flfR-2qgklo3P0s4xsWx58o-7SBFBPBqDtUJcWOmN1nN0jpCnesZGKgqz9vXV5N3y0q5wfKSOQ53ay2soIN2t7qBfRTvIYUQeSIv-2EWk_YqeTYESHXJNdqohI8cJvCouafoVI2G7KcXY6cYQ77GBHN01kUgGZHhvC8A-zHrQsPUoqTrY4dy9ilgFXZaLayloYCFJPivalF5QYEdjtVlGH7fZsLH4J6uDrna9OZcVQwO3tWs7NQ_Esb_cZfxDQPJyjPgl6nBaYOpwOHAqQGz4cMB-EuMVLXLjuynEHMQeithyukwjBvrrA3IP4DoFHu46cCuDG_2XAz0CL-rJUY2ty2Ps0q7m3O1ZnGJtUp_iPRIbAFFDv3QnsH09LfVxNSHoaitL44z3q9yu-Q9ycedlB0r6wiE_vsvdP67hF1XPxdJcgDGtWEh9I05oPvYJB_X1eTusBWUzSqnLL5ZFTAt7F2prIC1zEstQ4T8GQTG7o_yaN7QscfuRhelxPVjCzTVzxLe2RBvtfWDVIRYGdtKff5ezrhRpsTxC7WIAxeTrjamteQ-tf-R057JHwkpowf3LjCxNiQhodwiunVk6SUCLxhj7WPmf2sHt3jIdTgi1DGW7rq6G_LX_OFcHQTAF5hK3S1XeVkzitv78_DxvGj_Gcqr7j2DSjMCKWGApWuXnw3JDsZ1Cpe7tms1YgMFg0fBE2pUSMLlrdGFVRqDZx-71ukBZENGKcfUBwa-Ggilisqsxnxj7XgHmSwknyebdCgmmVDRYdGG2CLm5iFc18nl5EwtsUmVvIrqqS7LTnLhielyoIfe3FR7jfil5tC/NE",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://tivan.naver.com/g/100_200/lo1jtyfOguZnE_qb2ItgJNhUVGl6wk14uOG2mDRg0Cn38BR9TPxqMKuR_FUlnYPCnrKxnJ_vPo1TCzG1FpBNi8Ps6Hnky7zSy69xNy97tJV9LraCA9VSBNc0w9u6kKWyTHGscZZSrctkly-GMgOoxVLeb-7EAONo2ZUh3TW5fmjAB8A328cWwlctYlcHYGgPrdXCG2afF3l4Is89-iGS8Wd6IcelpR-Xc4k08DMS8zIRoOwv02AFn-Wq1JWvVN3AzUgHzdrsCY9YbgIjUZE3IRr7ZZC3zrGW3mZGXRH7U70TqzRGjUDA6qAeJMj88HbAOzjB5kcsHe_2FN_YSAfhNFvEmnA_4v0hA2eDFjOkJnCqvG9LFYIxqf6KqCVmOa-QeFxe0ABLtfPRXjKoBBhQ0H1EkziTpQV79-z-5Extb1laNJJI-ew4MCTIzl9LFZoGbtYHQuEXvDcWJkvmYFe258PeHPDGFuoBSD9ca22ahJH1sky00mnS2fMy4voOQf7EkZ5WMT5NrJ0C1gKf_ixVPYojhmJJP4itxkAh_Q1vB_WMj2oB89KgJaTT2w8K1QfRuzFAgDbrzHfGdn7HrSqRHWH9l_FrXiRFzPzNQW53uBN9jKcNO-dGMfB8evfK2tOniKsh8HPNfy06xRU2diQHNQeepdXDIMyBICsMj93ADPwX_0yCMAMYkhtELDsj6TPN4SSsyW4jRbxqqfaRwjoCM7cXLTqnCJmVEXTu1x4_LwsdBd6TvP9mUSXTc8jr0cYS7YsfXJtN9F5AJUdz7b_eqV8xd8MiTx8Fcmgcqojgjvxkxogb5DoedIHs3UZNNYwMhZjKBm_Zd3Q7sy_x6AZXN0boEsiVpryEbfVfrO7h4SbCP28t8N5ajl7DS_IPSw92ggNM2hXZt6jHwGsfiamTHA/NE",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://tivan.naver.com/g/100_200/xxq4CPfQmNT0zsK573yANBostiV8uwUn8RmwVnCTT_Sbw5g5_wjxIXY7TltcNN77rLQOKKyq90hStSCsU9PPvO6n4k53sBFW547QBuAvFeO9v2lflOZjs3r1q85XLMsNBCiWDPT_L61uRBkEt2wrJHBdMwCaxVXuZSLSCD4xVxUvWffOFKNV8Bghd1kZ3sJOgqQHGX6Fi5co05hlvbiDt4C-ozbMRb8IsjglY3BU3L5whtIQsdNidCjNGsE7ynLvsip-guve_sJULsODkcoJ2T-2hcB21ZmU09X0Koq4qKJBCxdKSsk55WzloCxskD_mIUF_qXbeBCy7h8pu45fk2ClCbJV4xAH3Nh8jMHUOInc-dFQp_28aSaXvUCtAZ-Myu5NzGqrLirRsv9ve2KHCIhgLgTZSdm6D0Bv4CN8hbZAmB8XTwPUAU1n0xb3p1mFjmgjGardGm3DF7lVV9eCKCUdGD2MFtppgrDkAF86RPkiChuhG-UYF0joDneEXX7ykbwhmeDDA6QDbQ3H0hPOuzsAEaLSWNl-Pn1B7Vi_7i8H3i0a9qzpcLgI2Uld7bjr1pPhyd6qDMJHEPEtxUU1cUJHVeKc78C5vLQAVy2q3FwBFAXi2QZXJcUHxuO25PAkABtIuwD-Mt77B4tZ8wfi1_-RA_njGVvzzNzP2e0zDzS8RcXdxsMb7P0MUVP2yo4_b6tPo1XWa1B_wMdeHwcUhn4SpGUw1jZn26DYo4Bzx1i053MVEKyS8uxrr2Vta7KY91m_8qBY-h7j6mVWP65uTzBDTe0SnFyz2EqGu_xm6y08bU4BmQvC-SgzD5lDNxjuDXHtwDBJAewY4sMsp1BSa0rq6rvskXcgQHukGErS28UzTnxs-2fr_HrGLFdgCoH2ZMGQCpUzUjQ8pe0Llrqq63pEV9zSNrU2TtaAF7o4fMi4/NE",
         "failure": "net::ERR_ABORTED"
       }
     ],
     "browserErrors": [],
     "openPages": [
-      "https://flight.naver.com/flights/international/detail/SEL:city-TYO:city-20261230/TYO:city-SEL:city-20270101"
+      "https://flight.naver.com/flights/international/SEL:city-TYO:city-20261230/TYO:city-SEL:city-20270101"
     ]
   },
   {
@@ -168,26 +65,14 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T11:13:50.593Z",
-    "elapsedMs": 122376,
+    "attemptedAt": "2026-10-18T11:29:04.954Z",
+    "elapsedMs": 122174,
     "status": "content-not-detected",
     "detail": "Flight content not detected: TimeoutError: page.waitForFunction: Timeout 120000ms exceeded.; 메인 콘텐츠로 이동\nTheme Detection\n숙소\n항공권\n투어&티켓\n항공 + 호텔\n기차표\n렌터카·공항픽업\n여행자 보험\n앱\nKRW\n고객센터\n예약 검색\n로그인/회원가입\n서울 출발 ",
     "finalUrl": "https://kr.trip.com/flights/showfarefirst?dcity=sel&acity=tyo&dcityid=274&acityid=228&ddate=2026-12-30&rdate=2027-01-01&triptype=rt&class=y&lowpricesource=searchform&quantity=1&searchboxarg=t&nonstoponly=off&locale=ko-KR&curr=KRW",
     "fareCandidates": [],
-    "pagePreview": "메인 콘텐츠로 이동\nTheme Detection\n숙소\n항공권\n투어&티켓\n항공 + 호텔\n기차표\n렌터카·공항픽업\n여행자 보험\n앱\nKRW\n고객센터\n예약 검색\n로그인/회원가입\n서울 출발 도쿄 도착 저렴한 항공권 | kr.trip.com\n왕복\n편도\n다구간\n직항\n서울\n·\n모든 공항\n도쿄\n·\n모든 공항\n성인 1명 · 일반석\n검색\n12월 23일–12월 25일\n429,800원\n12월 24일–12월 26일\n535,500원\n12월 25일–12월 27일\n540,900원\n12월 26일–12월 28일\n488,500원\n12월 27일–12월 29일\n506,900원\n12월 28일–12월 30일\n490,200원\n12월 29일–12월 31일\n427,800원\n12월 30일–1월 1일\n430,100원\n12월 31일–1월 2일\n520,100원\n1월 1일–1월 3일\n540,100원\n1월 2일–1월 4일\n427,000원\n1월 3일–1월 5일\n478,000원\n1월 4일–1월 6일\n387,100원\n1월 5일–1월 7일\n317,000원\n1월 6일–1월 8일\n412,000원\n가격표\n무료 플러그인\n추천\n 직항\n 위탁 수하물 포함\n 저가 항공사 숨기기\n 휴대 수하물 포함\n 공동운항편 숨기기\n더 보기\n얼라이언스\n스타얼라이언스\n464,800원\n스카이팀\n601,200원\n원월드\n639,200원\n항공사\n동일 항공사 조합만 보기\n항공사 전체 선택\nJAL (95)\n639,200원\n대한항공 (57)\n601,200원\n아시아나항공 (43)\n509,900원\n전일본공수 (28)\n611,700원\n제주항공 (7)\n439,500원\n더 보기\n얼라이언스\n스타얼라이언스\n464,800원\n스카이팀\n601,200원\n원월드\n639,200원\n시간대\n출발시간\n00:00–24:00\n00:00\n24:00\n도착시간\n00:00–24:00\n00:00\n24:00\n소요시간\n무관\n경유시간\n1시간–22시간\n1시간\n22시간\n총 비행시간\n1시간 30분–25시간 30분\n1시간 30분\n25시간 30분\n경유\n경유 1회 이하\n430,100원\n경유지\n무관\n후쿠오카\n641,800원\n오",
+    "pagePreview": "메인 콘텐츠로 이동\nTheme Detection\n숙소\n항공권\n투어&티켓\n항공 + 호텔\n기차표\n렌터카·공항픽업\n여행자 보험\n앱\nKRW\n고객센터\n예약 검색\n로그인/회원가입\n서울 출발 도쿄 도착 저렴한 항공권 | kr.trip.com\n왕복\n편도\n다구간\n직항\n서울\n·\n모든 공항\n도쿄\n·\n모든 공항\n성인 1명 · 일반석\n검색\n12월 23일–12월 25일\n429,800원\n12월 24일–12월 26일\n535,500원\n12월 25일–12월 27일\n540,900원\n12월 26일–12월 28일\n488,500원\n12월 27일–12월 29일\n506,900원\n12월 28일–12월 30일\n490,200원\n12월 29일–12월 31일\n427,800원\n12월 30일–1월 1일\n430,100원\n12월 31일–1월 2일\n520,100원\n1월 1일–1월 3일\n540,100원\n1월 2일–1월 4일\n427,000원\n1월 3일–1월 5일\n478,000원\n1월 4일–1월 6일\n387,100원\n1월 5일–1월 7일\n317,000원\n1월 6일–1월 8일\n412,000원\n가격표\n무료 플러그인\n추천\n 직항\n 위탁 수하물 포함\n 저가 항공사 숨기기\n 휴대 수하물 포함\n 공동운항편 숨기기\n더 보기\n얼라이언스\n스타얼라이언스\n464,800원\n스카이팀\n601,200원\n원월드\n639,200원\n항공사\n동일 항공사 조합만 보기\n항공사 전체 선택\nJAL (96)\n639,200원\n대한항공 (60)\n601,200원\n아시아나항공 (43)\n509,900원\n전일본공수 (29)\n611,700원\n제주항공 (7)\n439,500원\n더 보기\n얼라이언스\n스타얼라이언스\n464,800원\n스카이팀\n601,200원\n원월드\n639,200원\n시간대\n출발시간\n00:00–24:00\n00:00\n24:00\n도착시간\n00:00–24:00\n00:00\n24:00\n소요시간\n무관\n경유시간\n1시간–22시간\n1시간\n22시간\n총 비행시간\n1시간 30분–25시간 30분\n1시간 30분\n25시간 30분\n경유\n경유 1회 이하\n430,100원\n경유지\n무관\n후쿠오카\n641,800원\n오",
     "network": [
-      {
-        "url": "https://www.facebook.com/x/oauth/status",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://mpc-prod-28-1053047382554.us-central1.run.app/events",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://mpc-prod-28-1053047382554.us-central1.run.app/events",
-        "failure": "net::ERR_ABORTED"
-      },
       {
         "url": "https://www.google.com/rmkt/collect/789926500/",
         "failure": "net::ERR_ABORTED"
@@ -205,7 +90,15 @@
         "failure": "net::ERR_ABORTED"
       },
       {
+        "url": "https://www.facebook.com/x/oauth/status",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
         "url": "https://kr.trip.com/gtm/ag/g/c",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://www.google.com/measurement/1p-conversion/",
         "failure": "net::ERR_ABORTED"
       },
       {
@@ -213,7 +106,11 @@
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://www.google.com/measurement/1p-conversion/",
+        "url": "https://mpc-prod-28-1053047382554.us-central1.run.app/events",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://mpc-prod-28-1053047382554.us-central1.run.app/events",
         "failure": "net::ERR_ABORTED"
       },
       {
@@ -253,8 +150,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T11:13:53.668Z",
-    "elapsedMs": 2752,
+    "attemptedAt": "2026-10-18T11:29:07.899Z",
+    "elapsedMs": 2836,
     "status": "verified",
     "detail": "Exact round-trip total verified from visible google seller result",
     "finalUrl": "https://www.google.com/travel/flights/search?tfs=CBwQAhooEgoyMDI2LTEyLTMwagwIAhIIL20vMGhzcWZyDAgDEggvbS8wN2RmaxooEgoyMDI3LTAxLTAxagwIAxIIL20vMDdkZmtyDAgCEggvbS8waHNxZkABSAFwAYIBCwj___________8BmAEB&hl=ko&curr=KRW&gl=KR",
@@ -268,7 +165,7 @@
       "cabin": "economy",
       "currency": "KRW",
       "priceKrw": 388024,
-      "observedAt": "2026-10-18T11:13:53.454Z",
+      "observedAt": "2026-10-18T11:29:07.802Z",
       "evidence": {
         "source": "visible-search-result",
         "provider": "google",
@@ -390,8 +287,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T11:13:58.323Z",
-    "elapsedMs": 4557,
+    "attemptedAt": "2026-10-18T11:29:12.921Z",
+    "elapsedMs": 4926,
     "status": "verified",
     "detail": "Exact round-trip total verified from visible skyscanner seller result",
     "finalUrl": "https://www.skyscanner.co.kr/transport/flights/sel/tyoa/261230/270101/?adultsv2=1&cabinclass=economy&rtn=1",
@@ -404,16 +301,16 @@
       "adults": 1,
       "cabin": "economy",
       "currency": "KRW",
-      "priceKrw": 427500,
-      "observedAt": "2026-10-18T11:13:58.272Z",
+      "priceKrw": 434800,
+      "observedAt": "2026-10-18T11:29:12.865Z",
       "evidence": {
         "source": "visible-search-result",
         "provider": "skyscanner",
-        "offerId": "70b82b317b369e7bb0e9f66b"
+        "offerId": "7bf65af7e878eac4127d01c6"
       }
     },
     "fareCandidates": [],
-    "pagePreview": "Skyscanner\n검색 결과로 가기\n도움말\n한국어\n대한민국\n₩ KRW\n로그인\n항공권\n숙소\n렌터카\n서울 (모두)\n - \n도쿄 (모두)\n성인 1명, 일반석\n가는 날\n12월 30일 (수)\n•\n오는 날\n1월 1일 (금)\n항공권 검색 결과\n여행 계획\n가격 변동 알림 받기\n모든 필터\n경유\n직항\n\n₩427,500부터\n\n1회 경유\n\n없음\n\n2번 이상 경유\n\n없음\n\n출발 시간대 설정\n가는날 출발시간\n\n오전 12:00 - 오후 11:59\n\n오는편\n\n오전 12:00 - 오후 11:59\n\n총 소요시간\n\n2.5시간 - 3.0시간\n\n항공사\n모두 선택\n모두 지우기\n스타 얼라이언스\n에티오피아 항공사\n\n₩469,737부터\n\n이 항목만\n이스타항공\n\n₩435,100부터\n\n이 항목만\n제주항공\n\n₩434,800부터\n\n이 항목만\n항공사 조합\n\n₩427,500부터\n\n이 항목만\n항공편 탄소배출량\n이산화탄소 환산량이 상대적으로 낮은 항공편만 표시\n항공편\n결과 로드 중...\n(39 판매사 34 확인 완료)\n온라인투어에서 가격 확인 중…\n달력/차트 보기\n검색 결과 표시 기준\n항공편 여행 일정표 정렬\n\n추천순\n\n₩434,800\n2시간 43분 평균\n\n2시간 43분 평균\n\n최저가\n\n₩427,500\n2시간 28분 평균\n\n2시간 28분 평균\n\n최단여행시간\n\n₩427,500\n2시간 28분 평균\n\n2시간 28분 평균\n\n정렬\n추천순\n최저가순\n최단여행시간순\n출국: 출발 시간\n오는 편: 출발 시간\n\n제주항공\n\n항공편 옵션 설정1: 총 금액 ₩434,800.\n출국 항공편: 제주항공.\n출발지: 인천 국제 출발 시간: 오전 8:35, 도착지: 도쿄 나리타 도착 시간: 오전 11:05\n진항 항공 소요 시간 2시간 30분\n귀국 항공편: 제주항공.\n출발지: 도쿄 나리타 출발 시간: 오전 11:35, 도착지: 인천 국제 도착 시간: 오후 2:30\n진항 항공 소요 시간 2시간 55분\n세금과 수수료 포함 가격\n오전 8:35\nICN\n2시간 30분\n직항\n \n오전 11:05\nNRT\n오전 11:35\nNRT\n2시간 55분\n직항\n \n오후 2:30\nI",
+    "pagePreview": "Skyscanner\n검색 결과로 가기\n도움말\n한국어\n대한민국\n₩ KRW\n로그인\n항공권\n숙소\n렌터카\n서울 (모두)\n - \n도쿄 (모두)\n성인 1명, 일반석\n가는 날\n12월 30일 (수)\n•\n오는 날\n1월 1일 (금)\n항공권 검색 결과\n여행 계획\n가격 변동 알림 받기\n모든 필터\n경유\n직항\n\n₩427,500부터\n\n1회 경유\n\n없음\n\n2번 이상 경유\n\n없음\n\n출발 시간대 설정\n가는날 출발시간\n\n오전 12:00 - 오후 11:59\n\n오는편\n\n오전 12:00 - 오후 11:59\n\n총 소요시간\n\n2.5시간 - 3.0시간\n\n항공사\n모두 선택\n모두 지우기\n스타 얼라이언스\n에티오피아 항공사\n\n₩469,737부터\n\n이 항목만\n이스타항공\n\n₩435,100부터\n\n이 항목만\n제주항공\n\n₩434,800부터\n\n이 항목만\n항공사 조합\n\n₩427,500부터\n\n이 항목만\n항공편 탄소배출량\n이산화탄소 환산량이 상대적으로 낮은 항공편만 표시\n총 3단계 중 1단계: 출발편 항공권 선택\n선호하는 서울 출발 항공편을 선택하세요\n항공편\n결과 로드 중...\n(39 판매사 33 확인 완료)\n마이리얼트립에서 가격 확인 중…\n달력/차트 보기\n검색 결과 표시 기준\n항공편 여행 일정표 정렬\n\n추천순\n\n₩434,800\n2시간 43분 평균\n\n2시간 43분 평균\n\n최저가\n\n₩427,500\n2시간 28분 평균\n\n2시간 28분 평균\n\n최단여행시간\n\n₩427,500\n2시간 28분 평균\n\n2시간 28분 평균\n\n정렬\n추천순\n최저가순\n최단여행시간순\n출국: 출발 시간\n오는 편: 출발 시간\n\n제주항공\n\n항공편 옵션 설정1: 총 금액 ₩434,800.\n출국 항공편: 제주항공.\n출발지: 인천 국제 출발 시간: 오전 8:35, 도착지: 도쿄 나리타 도착 시간: 오전 11:05\n진항 항공 소요 시간 2시간 30분\n귀국 항공편: 제주항공.\n출발지: 도쿄 나리타 출발 시간: 오전 11:35, 도착지: 인천 국제 도착 시간: 오후 2:30\n진항 항공 소요 시간 2시간 55분\n세금과 수수료 포함 가격\n오전 8:35\nICN\n2시간 30분\n직항\n \n오",
     "network": [
       {
         "url": "https://pagead2.googlesyndication.com/ccm/collect",
