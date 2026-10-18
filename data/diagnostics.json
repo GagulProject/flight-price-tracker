@@ -5,8 +5,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T03:46:41.821Z",
-    "elapsedMs": 61902,
+    "attemptedAt": "2026-10-18T03:57:37.839Z",
+    "elapsedMs": 62089,
     "status": "fare-api-unavailable",
     "detail": "Naver search was clicked, but its flight search API requests failed in this browser; no fare results rendered",
     "fareCandidates": [],
@@ -17,10 +17,6 @@
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
         "url": "https://flight-api.naver.com/graphql",
         "failure": "net::ERR_FAILED"
       },
@@ -30,6 +26,10 @@
       },
       {
         "url": "https://flight-api.naver.com/flight/international/searchFlights",
+        "failure": "net::ERR_FAILED"
+      },
+      {
+        "url": "https://flight-api.naver.com/graphql",
         "failure": "net::ERR_FAILED"
       },
       {
@@ -180,8 +180,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T03:46:42.272Z",
-    "elapsedMs": 412,
+    "attemptedAt": "2026-10-18T03:57:38.509Z",
+    "elapsedMs": 622,
     "status": "blocked",
     "detail": "HTTP 432; no automated bypass attempted",
     "fareCandidates": [],
@@ -199,8 +199,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T03:46:44.949Z",
-    "elapsedMs": 2645,
+    "attemptedAt": "2026-10-18T03:57:41.459Z",
+    "elapsedMs": 2913,
     "status": "verified",
     "detail": "Exact round-trip total verified from visible google seller result",
     "quote": {
@@ -213,7 +213,7 @@
       "cabin": "economy",
       "currency": "KRW",
       "priceKrw": 388024,
-      "observedAt": "2026-10-18T03:46:44.736Z",
+      "observedAt": "2026-10-18T03:57:41.212Z",
       "evidence": {
         "source": "visible-search-result",
         "provider": "google",
@@ -331,13 +331,13 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T03:46:45.660Z",
-    "elapsedMs": 672,
+    "attemptedAt": "2026-10-18T03:57:42.403Z",
+    "elapsedMs": 901,
     "status": "blocked",
     "detail": "Bot verification or access restriction detected",
     "quote": null,
     "fareCandidates": [],
-    "pagePreview": "Are you a person or a robot?\nPlease don’t take this personally - some scripts and bots are remarkably lifelike these days!\nStill having problems accessing the page? Try checking you have JavaScript and cookies turned on and that your browser isn’t blocking them from loading.\n89ecc98c-caa6-11f1-8176-254a5742bfbb",
+    "pagePreview": "Are you a person or a robot?\nPlease don’t take this personally - some scripts and bots are remarkably lifelike these days!\nStill having problems accessing the page? Try checking you have JavaScript and cookies turned on and that your browser isn’t blocking them from loading.\n113da04c-caa8-11f1-bb0a-254a5742bfbb",
     "network": []
   },
   {
