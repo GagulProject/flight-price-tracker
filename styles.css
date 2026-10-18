@@ -42,3 +42,5 @@
   .collection-status{font-size:10px;padding:4px 7px}
   .price-summary strong{font-size:32px}
 }
+
+@media(max-width:700px){.provider-price.unavailable{font-size:clamp(18px,6.2vw,27px)}}
