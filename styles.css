@@ -3,3 +3,42 @@
 .refresh-actions{display:flex;align-items:center;gap:14px}.refresh-button{display:inline-flex;align-items:center;border:1px solid #c6d9f0;border-radius:9px;background:#f2f7fe;color:#2162b7;font:inherit;font-size:12px;font-weight:700;padding:10px 12px;cursor:pointer;white-space:nowrap;text-decoration:none}.refresh-button:hover{background:#e7f1fe}.refresh-button:disabled{opacity:.55;cursor:wait}@media(max-width:700px){.refresh-actions{flex-direction:column;align-items:flex-end;gap:8px}.refresh-button{font-size:11px;padding:8px}}
 .provider-logo.google{background:#4285f4}.provider-logo.skyscanner{background:#0770e3}
 .trend{margin-top:28px;padding-top:24px;border-top:1px solid #e3ebf5}.trend h3{margin:0 0 14px;font-family:Outfit,sans-serif;font-size:19px;color:#1b416b}.trend svg{display:block;width:100%;height:auto;max-height:300px;overflow:visible}.trend-grid-line{stroke:#e6edf5;stroke-width:1}.trend-axis-label{fill:#8196ad;font-size:11px;font-family:'DM Sans',sans-serif}.trend-legend{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:10px;color:#536c87;font-size:12px}.trend-legend span{display:inline-flex;align-items:center;gap:6px}.trend-swatch{display:inline-block;width:9px;height:9px;border-radius:50%}.trend-note{margin:11px 0 0;color:#8196ad;font-size:12px;line-height:1.6}
+
+/* Price-first cards and compact mobile layout. */
+.price-summary{display:grid;grid-template-columns:minmax(0,1fr);gap:5px;align-items:start;margin-top:24px}
+.price-summary>span{font-size:12px;color:#6a829d}
+.price-summary strong{display:block;white-space:nowrap;font-size:38px;line-height:1.2;letter-spacing:-.04em}
+.price-summary small{font-size:12px}
+.provider-card{min-width:0;min-height:0;padding:22px;transition:none}
+.provider-card:hover{transform:none;box-shadow:none}
+.provider-top{gap:12px;align-items:center;margin-bottom:22px}
+.provider-name{min-width:0;font-size:15px;gap:9px}
+.provider-logo{flex-shrink:0;width:30px;height:30px;border-radius:9px}
+.provider-logo.expedia{background:#d49a00}
+.collection-status{flex-shrink:0;display:inline-block;font-size:11px;font-weight:600;line-height:1.4;border-radius:20px;padding:5px 9px;margin:0}
+.collection-status.is-verified{color:#17734b;background:#e9f6ef}
+.collection-status.is-pending{color:#64758b;background:#edf1f6}
+.provider-price{white-space:nowrap;font-size:30px;line-height:1.25;margin:0}
+.provider-price.unavailable{font-size:27px;font-weight:600}
+.price-caption{font-size:12px;color:#71839a;line-height:1.6;margin:6px 0 0}
+.provider-verified{font-size:11px;line-height:1.6;color:#8191a5;margin:12px 0 0}
+.provider-bottom{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;border-top:1px solid #e8edf4;margin-top:18px;padding-top:13px}
+.collection-details{min-width:0;flex:1;font-size:12px;color:#71839a}
+.collection-details summary{cursor:pointer;width:fit-content;line-height:1.7}
+.collection-details p{line-height:1.6;margin:10px 0 0;overflow-wrap:anywhere}
+.technical-detail{font-size:11px}
+.provider-search{flex-shrink:0;color:#2869bd;text-decoration:none;font-size:12px;line-height:1.7;font-weight:600}
+.provider-search:hover{text-decoration:underline}
+@media(max-width:700px){
+  .price-summary strong{font-size:36px}
+  .provider-card{padding:20px}
+  .provider-top{margin-bottom:18px}
+  .itinerary-path{font-size:18px;gap:8px}
+  .route-updated{font-size:11px;line-height:1.6;margin-top:8px}
+}
+@media(max-width:360px){
+  .provider-card{padding:16px}
+  .provider-name{font-size:13px}
+  .collection-status{font-size:10px;padding:4px 7px}
+  .price-summary strong{font-size:32px}
+}
