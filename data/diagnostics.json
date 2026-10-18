@@ -5,191 +5,55 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T05:13:08.586Z",
-    "elapsedMs": 304730,
-    "status": "fare-api-unavailable",
-    "detail": "Naver search returned no fare results after a 180-second wait, one ordinary reload and a further 120-second wait; flight API failures observed",
+    "attemptedAt": "2026-10-18T05:14:14.143Z",
+    "elapsedMs": 125781,
+    "status": "content-not-detected",
+    "detail": "Flight content not detected: TimeoutError: page.waitForURL: Timeout 120000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n=========================; Naver\n사용자 링크\n로그인\n서비스 더보기\n여행상품\n여행정보\n0\n로그인 후 등급확인\n마이페이지\n여행핫딜\n항공\n호텔\n패키지\nFor U\n77\n왕복\n편도\n다구간\n서울\nICN, GMP\n",
     "fareCandidates": [],
-    "pagePreview": "Naver\n사용자 링크\n로그인\n서비스 더보기\n여행상품\n여행정보\n0\n로그인 후 등급확인\n마이페이지\n여행핫딜\n항공\n호텔\n패키지\nFor U\n67\n왕복\n편도\n다구간\n서울\nICN, GMP\n(모든 공항)\n도쿄\nNRT, HND\n(모든 공항)\n12.30.수\n01.01.금\n성인 1명\n일반석\n직항만\n검색\n트래블클럽\n로그인 후 등급확인 하세요\n항공권 가격 변동 그래프 로딩 중\n왕복 동시 선택\n왕복 개별 선택\n가는편·오는편을 한 번에 선택해요\n카드혜택\n가격 낮은 순\n개인정보처리방침\n이용약관\n사업자정보 공개\n고객센터\n로그인\n전체서비스\n사업자등록번호\n220-81-62517\n통신판매번호\n2006-경기성남-0692\n대표이사\n최수연\n전화번호\n1588-3820\n이메일\nccnaver@naver.com\n주소\n경기도 성남시 분당구 정자일로 95 NAVER 1784, 13561\n호스팅 서비스 제공\nNAVER Cloud\n\n네이버 항공권은 제휴사에서 제공하는 항공권 스케줄 및 가격정보를 비교, 중개하는 서비스로서 네이버㈜는 통신판매의 당사자가 아니며, 항공권 검색 결과, 구매 및 환불 등과 관련한 의무와 책임은 각 판매자에게 있습니다.\n\nNAVER",
+    "pagePreview": "Naver\n사용자 링크\n로그인\n서비스 더보기\n여행상품\n여행정보\n0\n로그인 후 등급확인\n마이페이지\n여행핫딜\n항공\n호텔\n패키지\nFor U\n77\n왕복\n편도\n다구간\n서울\nICN, GMP\n(모든 공항)\n도쿄\nNRT, HND\n(모든 공항)\n12.30.수\n01.01.금\n성인 1명\n일반석\n직항만\n알림받기\n검색\n공항\n직항/경유 \n요금조건 \n항공사 \n시각/가격 \n트래블클럽\nCO2 배출량 적음\n트래블클럽\n로그인 후 등급확인 하세요\n항공권 가격 변동 그래프\n평균보다 5%\n왕복 동시 선택\n왕복 개별 선택\n가는편·오는편을 한 번에 선택해요\n카드혜택\n가격 낮은 순\n인기 항공편\n모두 접기\n검색한 항공편 중 가격, 비행시간, 유저 선호도 등 다양한 요소를 고려한 네이버 항공 추천 항공편입니다.\n예약 많은\n많이 찾는\nCO2 72%\n파라타항공\n이벤트혜택\n09:50ICN\n12:05NRT\n직항, 02시간 15분\n13:25NRT\n16:15ICN\n직항, 02시간 50분\n성인/KB국민카드\n604,700원~\n5천원 할인\n왕복\n599,700\n원~\n최대 5,000원 적립\n로그인 후 특가확인\n예약 많은\n많이 찾는\nCO2 평균배출\n전일본공수\n이벤트혜택\n07:45GMP\n09:45HND\n직항, 02시간 00분\n20:00HND\n22:30GMP\n직항, 02시간 30분\n성인/삼성 iD GLOBAL 카드\n803,000원~\n5천원 할인\n왕복\n798,000\n원~\n최대 5,000원 적립\n5개 인기 항공편 더보기\n인기 항공편 보기\n항공권 5,000원 할인 + 5,000원 적립\n- 이벤트 상품 한정\n왕복 항공편 선택\n최저가\n에어부산\n07:35ICN\n10:15NRT\n직항, 02시간 40분\nCO2 평균배출\n집에어\n08:55NRT\n11:35ICN\n직항, 02시간 40분\n성인/모든 결제수단\n왕복\n398,800\n원~\n이스타항공\n07:00ICN\n10:00NRT\n직항, 03시간 00분\nCO2 14%\n집에어\n08:55NRT\n11:35ICN\n직항, 02시간 40분\n성인/모든 결제수단\n왕복\n403,268\n원~\n제주항공\n08:10ICN\n10:35NR",
     "network": [
       {
         "url": "https://flight-api.naver.com/flight/international/searchFlights",
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://flight-api.naver.com/graphql",
-        "failure": "net::ERR_FAILED"
+        "url": "https://gfd-phinf.pstatic.net/20260222_207/177171629586464U1I_PNG/c4919938065e73c2bbf7c8d99fcb631e.png",
+        "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
+        "url": "https://tivan.naver.com/g/100_200/4bD5EHRrlhpWqKd9QYI9nVI2Nefi1Y2Vu7fhhLNkFBlanXV3O1uto_n3htWJowbUR2fTa2o1HCfaC526HFdBxiiplGAvbLqnyF0gzhPhaoVeTxFDvF3XodOBXqZx--btXQ1h1CJp7VEDakQjg59r4jJoiNzctpFFVwaKAUEHJUXXPJrO5HjMdBN8SbgT7T_VgngKBR-38gqSr1FVGgewlMMWrQZ7cATr7QKAiVFX-QiIWy3UY8BaRzg5oE_zLeGb4eRunpfOa02GWohd4Rd9DLkM9oFnaMM2NPvX6dOGtyLWiU6k93MBnDW4QzglzZAz-DzoerPQ3baTYXU4TRMJix2RE7-eYTQm4hiqNw320h58vEuFfmXo6CVToJFeUE02flGuEEgkPDwDKUX4A5mubeqJ9IwWCpRH79SKO83CfPekRhdzHH6lBQVYiDT9-mndajkTW3cyUvCFWYmkAXbpkEc8eGQeqt-oPtD0sl0X7cRSMbWYW4nDbBq-sETDEktVEbV07FkCt6pBTyHtqbWLr6OGwQRFYISRh-zqTeVsBi5ItM7wdJWtTAYZP_4nqeB9iE517qwyhMtdkzKnjhdrhct6lLQCT0QlS7NfUk4Kz2y00PUKjoKBLlJTp3UNpR-1EGLXw-nEqA3xSrU8CTX1xIOZTGMjdr--nWyjRyAYMix6XnVDw1ENuiRbgcCMJ1cb4_7rKkovEHzVZajCldiQtkkp4jyKPS48gAT-2ly62PGQU_3Bei9FnVXKfjgoAZxtX4UidyMXWwfpdvW48gP4qKYYx1PSchIjKBH__Xhc82MSV9k9YA5evuS0atCFPAQt2RVB2iGyCOQ_HukT1PrIkUbfLfgQpAjMeOMJhxmudGrk2CTW3fJMVBKcJZLXSq8i35QXEGbkqq9Hm8xn6OSJJw/NE",
+        "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://flight-api.naver.com/graphql",
-        "failure": "net::ERR_FAILED"
+        "url": "https://tivan.naver.com/g/100_200/T9LAin35PMoMEw1faP8c70BtjvRxzx_-UppIdrWQVf0TntLfzwjOzA1pepBqBBIaDGmMUMtnetXdBcFz2KBcAxKjvstJlr6goA7rQIhhodPWCVjhdzJLfc0F_oAglseHhLhwMZhL6oUU92o5SzK8NrGwFBq3du0TC-rc6FSj0IyWTU4S1AEmDQ9shFh7f4kGsTiYqFsq8GirS25JNUcuuPePd5uGNe8QxyiJLVIEAQsCB3Ulx2sBC7tbLo_KG1O7Ce-DRkhG2diePp61Uwjhslg_33ZOsFN2UiqjXlkYSJ45BXB4K_Rl_ZrRqyQQocFdJSooJX9m_uYKtVF3OCCJMYvXhzdY8RNpvspEZ6hJGpTS98uk0bGm3UxFOLGH2qneeB-9P-p2rI54o5Z44jUndbd8DunIB0Mwsu1vVUplhJTiHJnn3Od8Q6zXUTHK0PiWWgMF-7V9G87319nGoezOpTcuV_SJjsbtESH1UFXCFsqAFxEMXBSf_o_XYMvbv6VrtBZq7sE_hF3W8qvU3vYgI86aH307p38IkPvqvKcqGa8zw6H9_BC5BCuUTqbiavbC78s2aK8foyusGdD-mUrQf9Fu3ox5d-133yVp98XYQCVmt5SwDiiiQ21iT4OQ_s_Q__bxUkR4xq00A6OoU_Y3ed7Jh4UVa-osC3_-HalmJTvLIXTAml_wRmUjvBGie8i66xbqxWFCOeIXsLp05JXAOVLPCrPsi9fyrPcN5Ln5i9ZcKOx2PSXvR4x1tJEjVBY_BiMyzSUSO0C5NtDFGBiQWq7cmleeONXNpUvsGQGiyGxnRiF5pNS59NFEWAPTpFBcYKDex1SX3x5o9FHHoZmzCasSc9aJPWJwDkXoF6u3W0wDy9_AH3bSwPU6yVasz7S7SanuGiCVmDpSVr4FK7HFHQ/NE",
+        "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
+        "url": "https://tivan.naver.com/g/100_200/jNImco04DkvWgDyk1p6sSiPMNtxmn18XLNz2MZy9uE5hgGOL9qlbazUbT6ZiL6gBMM4mvE8UljMozxapc3zCKUoJQPNae51kcBMKLgWjFVuzcsHqe4rhUfCb3ivA1Sxz-JtKSYOw7ee3ed3q0Mdv5IKuJrPUBhbpALoiRnscUT7vUMntbSDLA-nsCkX6SHIGLfekIcyhBPr0vp1s73hG12MZJsG4SCJbEw4F3Y4vUdD7u3yg3sAoGe44WlI78w7_EbGU4CaQ1Aldph9YagY_kzEn6xFAMVnm8mnSkTLJHYDSeqE-0Wk4tUwlglc0zBkUSZysZrQEfLAfRpqbDbHScnvk-qX5O1KxlDW2XhgNTzK_dPa_AbJLk_5_gC3L4UdemfItyFJNgGojFEW1C1qxm-NQXBLq9y64Z5ZRjqEDo9_qcBaV3qhmrA20r4wQDLwiHmi8y9W1tmhNCs4ObKaanCZXJKziT2pvn73sSHWDNYUfGCzat-GnPF-h8mWJjaFIUj_AwZfeclQjLGwRY8xAcTmHA813AGbDANo7XYvAeypuZp2G7MSwHwftYDZNoQoHAv-wQfCtHqKd6ZlPh81MCD0Kdo-RDYIKuJgIVsmM_7g_L0l4zBCKQC9KzkGpNP-eDFxI7GwqEyz0CYWxpXPgAGu-kzvEaezGKPHIAeNBV74uSoyXyeVSn7vLr2hIpVCKKpmttt39AnfJVOCGGvRCFCBxeEAUX8QUN79-B5bS8QjPEZF7r9vUYUjYVoI4iWRTgFGXWQuN0Ywp6KQpGDwW6ctTZGMyzdBiscJ-ydvxOY-DLSQUqpOMubpisUaVLEe3PTYtsyeIraH6kd9lhmTH7s_JiQxgxL3dQ5abk_T8O6VvTykgiCM5CH3igmt3h3d4IGVFlxbYC0G-41PwEH2nPQ/NE",
+        "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
+        "url": "https://tivan.naver.com/g/100_200/515QFCXuMnKrnvULNoNLj8g3jn3ZycsiaHA0aF7I-i7TGSJdaSJxi5yeaxsdkyE-UHEzbwFS24_Rl7jyiWqoP3EzFms_w7j2fC5xJneDdVqx7CAJaQ_kZJu5c8CHrHx6iV0KFncxXPQ3xMa9bDMUsZlKo4C_JriCkJkkpXC_A_FY8DskcFu5eCszx_sEG2zRnws94LYgG9OMSL535ER6qsV2hjzKamk77wggRS-MPq-SObv8GM6jSrZ516wS9DJRuke8aRUfOMrjTSGE2MLN_eUymALisU4mOL4kpZioDEmjvfpdI4Sd7bRXT0AMG6o6ZqQt-TeB_jp3UcO9kRGoyx4Gk5t4x1fqoAyzev43emxdQr2sQqOQlGdVgv8hq666SlzxPDnombvmkiCh0GFO5Hh4NODEkHLvDvR3pgHOOuhhnAS9MxIavokDfr6T3lIcRgoTKkLlQRsLxC19-O8b3OJ1BR6UHA5h8rShxTLAvLiB9AwMzwvogNC9zRVOeN8TinQMM1u-6UuqqpUXbALR-J99N_oQqEGTCHPsPds1EnY8RoEmFN9lkS9QU20gN_7h2vwXnf7nddLJsunPLXTXDoM9aUCisT2WiVoKCYQxPJwlN4J09yG_lpUuarT8SW52eIckyrlkWk6ks50F9RMDG7aBQWUkxBnA22T4lxTAXUxTi_TcbMwnXbSy5qtt-l5YteaUPYEqZ5aN9cf6mHd5cRMTW-z9q1LgAQWQs_i-agoaFGcvUX-tv0I26tMliQ8TrCYqjntqkc3Uo5CBMRdnmrR1yUEioyYyzRfEXAMxP4PiqK5GfboA5_PHE-bxEG568wPgd404LkPFcknYE0k-pSNuzmWRURwV0g97F8NPmZ0kE5scE_ndgGCc_T_G9mFm7fk2d9MlQS3ZJ8yDCr4atg/NE",
+        "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
+        "url": "https://tivan.naver.com/g/100_200/cMSNesoAiqkfGVYbrohTVFkeRT_O5khkptjweq-x_2ICPMbUX6rd5V3rFoYYkNIs1IFkg-BjDQHTxOIu8wjmRyjtv0-WFXZjudJrZ8TW3pg3Zn6Sg1uSRvTDOLCJe_9S_HP-E_rTokf90yDbmRJ3WULXqE2ZIKuNhI3hkWelj2hJ4jDiO4fRceAFkf8qc8bBAuRr8gY8ysh04pGzbDUCYH83McEnh2LqRLpGNklQMHZowJngnlHvRhZ0rv8IY2KvurMaeXq-9VNGe3Y-jed41UfDsE3ZTLpZk0IqKGVUxcBfk85vqkYlKBAsLWgxwRYHw_7Wzv9IRCzUXucOuco-66X5V3M0CzRSR5BcGSCnxhndyNvoNtssrGV7QCbkhiP6F7gvbA8w6fgLNEZbpdBBNjUrGTmf167cmAwEnqzw4JhNCcsCRdzd4lhMr6YWLWPLzBsPfIu7kFO8xJQnq58ZKaMC0SMvdOlCZsomj3rtkDqVCIycIy87Nftwkhy1fk3ZHjBCg2PWByK7hf3Hk79rajwsM6s3-NCjs2NyHAd3ugR5FA1L1ruNMOsUDn75KelYxPQjAvkz45f88-Q9lYOZkcZl43RWgJZjX2KGG8THUWIlDgqqCMQ88YS5H_IXPXivBAr_hSrdKaXOgxb8ZgxP7wIbzthnM7nQhpGWHH6peAX7z453Mlk8-DZpxHjoO0YtypkK2Sf5TquoZQICPeLg70wwnlXq9ZbuTGaDCGd61IHUsnhWGJyXhhSJzTuU3EEjPjpxVIHpUWM02I6h2RKtDKXI0rikv2vzlzia7d-cYOolElX9mceHzBe1j9tztWSCYLggENLnz03giLsfsMq6rAjW4OXjrHXn2wS3EMfb0KCvXlmLIihcHM2L4j3bOpEl/NE",
+        "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
+        "url": "https://tivan.naver.com/g/100_200/515QFCXuMnKrnvULNoNLj4837e1JXVDOfV8Ejh6LcMtgoE_WCbZ2BeslsW_LqFrhDMtZ0hyc0QGXSLh2KblaTTxVOkBhPT6MgTshzght90HhSwd-qQGthD7G_dp8ncyzOrIuo1O6lJJOuR16k43xatE6JTDkeD8YElS_rOKaYIT0bfKYl9w4PjoqKwhISsMX3hfngiGW9Rx-BCSyahpXUk88QL79AkAVtQM-_QmXQQX0iRoStyHIILD2AWEhs8Y4LjrmugrJyZrfbe7DXqAmmWwIxa1BacavDvRRiYi9ECtW-bzs0otoS1-lbWaVyFDvHbLhMZKbSolBGs2OxIq5oY1CD7eY5yb2c1G9JcAaTHDM25zLE6Mz1ndYUlT7tjaRU-lRFn_RVsewUV-miugzwYCbJJWCher0uq--C0KFNv-NfP9EgGSPT5vkNtX88CM1StKlGUAxwzxzqBS9CLHoJkx1EgP7nmsPpoghvBbwdNbjDfRlZqMLENpdLw0vZ190Vp9cxlnSbmvMVHJFkxM4Eh1Gx9G_SahWxgtdbPvEHU-vk8dsAgb6yGJRW3zJsr0NTs2SuGAW6-bHkbktEgixHne6-W4jou9Yd2eA1kC9B4wcd4Lyy3i9lZT7KSMgJYgqT68tWMU46AfBAEPCIU2ALcDtqJhQ8M26jCys65jggtiju1fm9Ql2S92lO5KCK0_m7Ez2dIQTiqwvjnRlYIkZIibJcA-SZd9Ta9QoqLrwMP0R1E3s9Xu5swB2Fjfye1Z10r2o3XOPf9VLxjkfzckciOqicDt6mwSB6CMX-78ubSJTLZDYnpmG0Kx7krNKYyBFYlmViwx3DCApS1MCopoqFkDgeJxeqsj9kgyocnqCyPEcGXFkVItqloweiX_6YudpGZvyxIlShHu_bd9utWF41Q/NE",
+        "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
+        "url": "https://tivan.naver.com/g/100_200/mq9xh5iw1r6YgMw4JM8DJgRYulhnojHlkGd_TqkCvZPAcXRTZroTnWRfv9K14aivzpHP0C2EaeoLTtuh-8iD4Jy4Nz-1nXj5bOCKCWe2CPgqB1NfdlJ0oODsUA10F2cBFWB5Row9ExIlrpkhqbmRCyPthrzZ32HnFg1uBFFD90RfIaj866tc8SCnqa-dEHyhV6sByJbI0RD4eZ3zI6Kz9F167wARq1AVXMddkLjqiFMm5NZrzwWKn2jC3hQjwg8P5itLdGZ-LbsUdJGMeHonk2-_binXSnxspUDgesWw5V9xLHmQ-mqoI_j5Ct5p8WqLAXVTn0RB9bCl_SA6qngA1v28fS7o3Cqe9MCGmp2FEePNy7Gw8kEzPCBsvnDNxJbFw-eufX9B5111uuzCJ63jxnoppmAVsDChqi4GHzn7qDlGtLcGi8akUm-XrVxTo0E-QSk72HmT0Uew-RPepCQoLSL5XWyUaqluEgHBc4B58K2z7u3vTzNOUQ-6ACizhmoV4cuqaYypnKiq4LO-ozIAmS3LFB5KQ-l8ClOd4csblbe5t5QMekWj6913GKBKzVGDvvRushMhQ_ZRM1EuutWKjolRLNbdbKrfA8l8lKLHWpgU5CS4_qDDz_566p7TDValTBXsYCHHwK7S9HbXsTWMu4DKe8j8Ku5lT0bdxS4vr77G3S75aGlRMfmDrt946_2Xag5AfxS6m6TPPu1QLntmDc81mJ7cGNejDe9XxmlKpXIDe63tkqjwi_J_ZsLhMkM2ekn_OjnueNNbBK4TBQLVRphT2v055UZXEyZPv_vfAKPAKAzt1uGD_r_Hi4N3XA019Hcyva4xpsIYRecRB4F3JetbVQGTwD_vtKUFP8LMqoFrWjLf89V0-mf6hhvcWvzGWZO9hr-l2nVDZfUCjP6tQQ/NE",
+        "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
+        "url": "https://tivan.naver.com/g/100_200/udyrX_F6yj-FE2qqhKpvFGJBHmtr5dD_jk8QztOr6Eu96IRQw9uTojPQTpkmuEKJ60ljcZyZLhUVbk8tM6qDs36p8TOT4TJRsqGZx7OqogoXQn7EH4L55I55oyk4Utb6li-IaDUH9ijRFIfNvyPCcsU0yUfWSZxVDyzaKictD3vYarBgrSLt19bx6wuAr92tnbl02VnXE2ALC4Alg9hfBFmS9YCMgExtvX_HHMckP_mahqeOtLzjiGsV_o2dXsFHtOhbfKvDGIQBWRX3TltJKU-rWlCAaKyj6_9o_zSpEuTL6D0OBHDJ2yquH6A57VXV9C7dV7n7b73qoNfwGXKe-3Vbu6AY7tcvjPCJdeWNjDS7DV_LLO_yIMyqJ-3Pu4KMBJvVicpT6SNHoV5D3cOuGd_43khtyfFwb1MPQUBNCjhZDqZZ7IgjM36LvJDeQJ7tB_E6OtLVrbJ7Rl_0RMLVQG4ygXye0Ixxix7XqUHz-9-z6VHHqnOqllQ5VIvr4s6HZCjM1WpZu2T5WVyWPW7Zuuj3LKbWMMGyShUDzaeZbCFmASZZjY4RJQfpdolJRacJtNrqEwb8le8jF92prJ-Y73IKQDsQyqvzLvet9chRqvm6Wb3SEZaK1sWmFaJehpmOIeMMTANttDo_evAzcIJ8v-WCadwkFpImj6KtAcspgixEX1v8Qe-a0K0XXRRJJOlRp9m87BJYuloBix_LTXvXbRhUHAsXHPk3HHshMli5tjvfygJDNJ9piYc2z00-Jr1qNl_MpCzsOCsYAe5RXy72GR_VQnaOgBUFVvHIv7Yz64Bn5bpM7ZS55NjPwG2beygNJk-bQjjTqXM6XbRRPF9xv-gNNxk470tCFusKRd128DKwvDrvXvfIp1P2wGA26OB3-okD66U1yyeRxYptMnr41g/NE",
+        "failure": "net::ERR_ABORTED"
       }
     ],
-    "browserErrors": [
-      "Access to fetch at 'https://flight-api.naver.com/graphql' from origin 'https://flight.naver.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
-      "Failed to load resource: net::ERR_FAILED",
-      "ApolloError: Failed to fetch",
-      "Access to fetch at 'https://flight-api.naver.com/flight/international/searchFlights' from origin 'https://flight.naver.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
-      "Failed to load resource: net::ERR_FAILED",
-      "Stream connection error: TypeError: Failed to fetch\n    at https://techminds.pstatic.net/flight/statics/vertical/f698d5ea2f2fc36d75e8628f8ed9831ed16272e3/_next/static/chunks/pages/_app-2b9ee8e8c7732143.js:1:1124000\n    at S (https://techminds.pstatic.net/flight/statics/vertical/f698d5ea2f2fc36d75e8628f8ed9831ed16272e3/_next/static/chunks/987-9dbfb14a8c15970a.js:1:25659)\n    at https://techminds.pstatic.net/flight/statics/vertical/f698d5ea2f2fc36d75e8628f8ed9831ed16272e3/_next/static/chunks/987-9dbfb14a8c15970a.js:1:26726\n    at new Promise (<anonymous>)\n    at l (https://techminds.pstatic.net/",
-      "Access to fetch at 'https://flight-api.naver.com/graphql' from origin 'https://flight.naver.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
-      "Failed to load resource: net::ERR_FAILED",
-      "Access to fetch at 'https://flight-api.naver.com/flight/international/searchFlights' from origin 'https://flight.naver.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
-      "Failed to load resource: net::ERR_FAILED",
-      "Access to fetch at 'https://flight-api.naver.com/flight/international/searchFlights' from origin 'https://flight.naver.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
-      "Failed to load resource: net::ERR_FAILED",
-      "Access to fetch at 'https://flight-api.naver.com/flight/international/searchFlights' from origin 'https://flight.naver.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
-      "Failed to load resource: net::ERR_FAILED",
-      "Access to fetch at 'https://flight-api.naver.com/flight/international/searchFlights' from origin 'https://flight.naver.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource."
-    ]
+    "browserErrors": []
   },
   {
     "provider": "trip",
@@ -197,20 +61,125 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T05:13:09.433Z",
-    "elapsedMs": 805,
-    "status": "blocked",
-    "detail": "HTTP 432; no automated bypass attempted",
+    "attemptedAt": "2026-10-18T05:14:39.495Z",
+    "elapsedMs": 24979,
+    "status": "verified",
+    "detail": "Exact round-trip total verified from visible trip seller result",
+    "quote": {
+      "kind": "live-round-trip-total",
+      "origin": "SEL",
+      "destination": "TYO",
+      "departureDate": "2026-12-30",
+      "returnDate": "2027-01-01",
+      "adults": 1,
+      "cabin": "economy",
+      "currency": "KRW",
+      "priceKrw": 399300,
+      "observedAt": "2026-10-18T05:14:39.406Z",
+      "paymentMethod": "내통장결제",
+      "evidence": {
+        "source": "visible-search-result",
+        "provider": "trip",
+        "offerId": "55a901a4b5a437836709688b"
+      }
+    },
     "fareCandidates": [],
-    "pagePreview": "whaleguard block\n",
+    "pagePreview": "메인 콘텐츠로 이동\nTheme Detection\n숙소\n항공권\n투어&티켓\n항공 + 호텔\n기차표\n렌터카·공항픽업\n여행자 보험\n앱\n고객센터\n예약 검색\n로그인/회원가입\n서울 출발 도쿄 도착 저렴한 항공권 | kr.trip.com\n왕복\n편도\n다구간\n직항\n서울\n모든 공항\n도쿄\n모든 공항\n성인 1명 · 일반석\n검색\n무료 플러그인\n추천\n 직항\n 위탁 수하물 포함\n 저가 항공사 숨기기\n 휴대 수하물 포함\n 공동운항편 숨기기\nCO₂e 탄소 저감 항공편\n더 보기\n얼라이언스\n스타얼라이언스\n507,100원\n스카이팀\n551,200원\n원월드\n1,198,500원\n항공사\n동일 항공사 조합만 보기\n항공사 전체 선택\n대한항공 (41)\n551,200원\nJAL (28)\n1,198,500원\n아시아나항공 (13)\n540,500원\n홍콩 익스프레스항공 (13)\n839,700원\n제주항공 (10)\n446,200원\n더 보기\n얼라이언스\n스타얼라이언스\n507,100원\n스카이팀\n551,200원\n원월드\n1,198,500원\n시간대\n출발시간\n00:00–24:00\n00:00\n24:00\n도착시간\n00:00–24:00\n00:00\n24:00\n소요시간\n무관\n경유시간\n1시간–24시간\n1시간\n24시간\n총 비행시간\n2시간–28시간\n2시간\n28시간\n경유\n경유 1회 이하\n399,300원\n경유지\n무관\n제주\n642,600원\n홍콩\n839,700원\n부산\n641,900원\n후쿠오카\n1,381,400원\n오사카\n966,900원\n상하이\n1,234,600원\n삿포로\n1,102,000원\n고마쓰\n1,311,000원\n나고야\n1,335,000원\n항저우\n759,200원\n하노이\n1,080,100원\n마닐라\n1,156,900원\n가고시마 현\n1,511,300원\n다롄\n1,532,000원\n공항\n모든 공항\n출발지 공항\nNRT\n나리타 국제공항\n399,300원\nHND\n도쿄 국제공항\n435,200원\n도착지 공항\nICN\n인천국제공항\n399,300원\nGMP\n김포국제공항\n641,900원\n항공기\n무관\n대형 기종\n399,300원\n중형 기종\n430,100원\n2. 서울 오는편\n137개 항공편 검",
     "network": [
       {
-        "url": "https://kr.trip.com/flights/showfarefirst",
-        "httpStatus": 432
+        "url": "https://www.google.com/ccm/collect",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://ad.doubleclick.net/ccm/s/collect",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://www.google.com/ccm/collect",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://www.google.com/rmkt/collect/789926500/",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://www.google.com/ccm/collect",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://kr.trip.com/gtm/ag/g/c",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://www.google.com/measurement/1p-conversion/",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://www.facebook.com/x/oauth/status",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://mpc-prod-28-1053047382554.us-central1.run.app/events",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://mpc-prod-28-1053047382554.us-central1.run.app/events",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "chrome-extension://invalid/",
+        "failure": "net::ERR_BLOCKED_BY_CLIENT"
+      },
+      {
+        "url": "chrome-extension://invalid/",
+        "failure": "net::ERR_BLOCKED_BY_CLIENT"
+      },
+      {
+        "url": "https://kr.trip.com/gtm/ag/g/c",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://www.google.com/measurement/1p-conversion/",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://mpc-prod-28-1053047382554.us-central1.run.app/events",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://mpc-prod-28-1053047382554.us-central1.run.app/events",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://kr.trip.com/gtm/ag/g/c",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://kr.trip.com/gtm/ag/g/c",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://kr.trip.com/gtm/ag/g/c",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://www.google.com/measurement/1p-conversion/",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://kr.trip.com/gtm/ag/g/c",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://mpc-prod-28-1053047382554.us-central1.run.app/events",
+        "failure": "net::ERR_ABORTED"
       }
     ],
     "browserErrors": [
-      "Failed to load resource: the server responded with a status of 432 ()"
+      "Provider's accounts list is empty.",
+      "[GSI_LOGGER]: FedCM get() rejects with NetworkError: Error retrieving a token.",
+      "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT",
+      "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT"
     ]
   },
   {
@@ -219,8 +188,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T05:13:13.064Z",
-    "elapsedMs": 3600,
+    "attemptedAt": "2026-10-18T05:14:43.388Z",
+    "elapsedMs": 3729,
     "status": "verified",
     "detail": "Exact round-trip total verified from visible google seller result",
     "quote": {
@@ -233,7 +202,7 @@
       "cabin": "economy",
       "currency": "KRW",
       "priceKrw": 388024,
-      "observedAt": "2026-10-18T05:13:12.916Z",
+      "observedAt": "2026-10-18T05:14:43.289Z",
       "evidence": {
         "source": "visible-search-result",
         "provider": "google",
@@ -243,11 +212,11 @@
     "fareCandidates": [
       {
         "amount": 388024,
-        "context": "추천\n최저가\n결과를 가져오는 중\n ₩388,024부터\n인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩388,024\n왕복\n오전 8:10\n – \n오전 10:35\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩401,524\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩403,524\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩425,124\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n가격을 확인할 수 없습니다.\n숙박료 정보\n최저가 예약 기간은 일반적으로 지금부터 11월 1일까지입니다.\n가격이 현재 보통입니다.\n가격 "
+        "context": "추천\n최저가\n결과를 가져오는 중\n ₩388,024부터\n인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩388,024\n왕복\n오전 8:35\n – \n오전 11:05\n제주항공\n2시간 30분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n₩401,524\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩403,524\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩425,124\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n가격을 확인할 수 없습니다.\n숙박료 정보\n최저가 예약 기간은 일반적으로 지금부터 11월 1일까지입니다.\n가격이 현재 보통입니다.\n가격 "
       },
       {
         "amount": 388024,
-        "context": "추천\n최저가\n결과를 가져오는 중\n ₩388,024부터\n인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩388,024\n왕복\n오전 8:10\n – \n오전 10:35\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩401,524\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩403,524\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩425,124\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n가격을 확인할 수 없습니다.\n숙박료 정보\n최저가 예약 기간은 일반적으로 지금부터 11월 1일까지입니다.\n가격이 현재 보통입니다.\n가격 "
+        "context": "추천\n최저가\n결과를 가져오는 중\n ₩388,024부터\n인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩388,024\n왕복\n오전 8:35\n – \n오전 11:05\n제주항공\n2시간 30분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n₩401,524\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩403,524\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩425,124\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n가격을 확인할 수 없습니다.\n숙박료 정보\n최저가 예약 기간은 일반적으로 지금부터 11월 1일까지입니다.\n가격이 현재 보통입니다.\n가격 "
       },
       {
         "amount": 388024,
@@ -275,7 +244,7 @@
       },
       {
         "amount": 388024,
-        "context": "인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩388,024\n왕복\n오전 8:10\n – \n오전 10:35\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩401,524\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩403,524\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩425,124\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n가격을 확인할 수 없습니다."
+        "context": "인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩388,024\n왕복\n오전 8:35\n – \n오전 11:05\n제주항공\n2시간 30분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n₩401,524\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩403,524\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩425,124\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n가격을 확인할 수 없습니다."
       },
       {
         "amount": 388024,
@@ -331,18 +300,18 @@
       },
       {
         "amount": 401524,
-        "context": "인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩388,024\n왕복\n오전 8:10\n – \n오전 10:35\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩401,524\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩403,524\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩425,124\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n가격을 확인할 수 없습니다."
+        "context": "인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩388,024\n왕복\n오전 8:35\n – \n오전 11:05\n제주항공\n2시간 30분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n₩401,524\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩403,524\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩425,124\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n가격을 확인할 수 없습니다."
       },
       {
         "amount": 401524,
-        "context": "오전 8:10\n – \n오전 10:35\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩401,524\n왕복"
+        "context": "오전 8:35\n – \n오전 11:05\n제주항공\n2시간 30분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n₩401,524\n왕복"
       },
       {
         "amount": 401524,
-        "context": "오전 8:10\n – \n오전 10:35\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩401,524\n왕복"
+        "context": "오전 8:35\n – \n오전 11:05\n제주항공\n2시간 30분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n₩401,524\n왕복"
       }
     ],
-    "pagePreview": "주요 콘텐츠로 이동\n접근성 관련 의견 보내기\n살펴보기\n항공편\n호텔\n공유숙박\n테마 변경\n로그인\n결과 로드 중\n항공편 검색\n왕복\n1\n이코노미\n서울특별시\n도쿄도\n필터\n모든 필터\n경유\n항공사\n수하물\n가격\n시간대\n탄소 배출량\n경유 공항\n이동 시간\n검색 결과\n결과 53개가 반환되었습니다.\n추천\n최저가\n결과를 가져오는 중\n ₩388,024부터\n인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩388,024\n왕복\n오전 8:10\n – \n오전 10:35\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩401,524\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩403,524\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩425,124\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n가격을 확인할 수 없습니다.\n숙박료 정보\n최저가 예약 기간은 일반적으로 지금부터 11월 1일까지입니다.\n가격이 현재 보통입니다.\n가격 변동 내역 보기\n가격 추적\n2026-12-30 서울특별시에서 출발하여 2027-01-01 도쿄도에 도착하는 항공편 가격 추적\n2026년 12월 30일~2027년 1월 1일\n서울특별시에서 출발하여 도쿄도에 도착하는 항공편 가격 추적 - 모든 날짜\n모든 날짜\n날짜 표\n가격 그래프\n기타 출발 항공편\n오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩411,524\n왕복\n오전 8:",
+    "pagePreview": "주요 콘텐츠로 이동\n접근성 관련 의견 보내기\n살펴보기\n항공편\n호텔\n공유숙박\n테마 변경\n로그인\n결과 로드 중\n항공편 검색\n왕복\n1\n이코노미\n서울특별시\n도쿄도\n필터\n모든 필터\n경유\n항공사\n수하물\n가격\n시간대\n탄소 배출량\n경유 공항\n이동 시간\n검색 결과\n결과 53개가 반환되었습니다.\n추천\n최저가\n결과를 가져오는 중\n ₩388,024부터\n인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩388,024\n왕복\n오전 8:35\n – \n오전 11:05\n제주항공\n2시간 30분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n₩401,524\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩403,524\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩425,124\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n가격을 확인할 수 없습니다.\n숙박료 정보\n최저가 예약 기간은 일반적으로 지금부터 11월 1일까지입니다.\n가격이 현재 보통입니다.\n가격 변동 내역 보기\n가격 추적\n2026-12-30 서울특별시에서 출발하여 2027-01-01 도쿄도에 도착하는 항공편 가격 추적\n2026년 12월 30일~2027년 1월 1일\n서울특별시에서 출발하여 도쿄도에 도착하는 항공편 가격 추적 - 모든 날짜\n모든 날짜\n날짜 표\n가격 그래프\n기타 출발 항공편\n오전 8:10\n – \n오전 10:35\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩401,524\n왕복\n오전 7",
     "network": [],
     "browserErrors": []
   },
@@ -352,14 +321,35 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T05:13:13.659Z",
-    "elapsedMs": 559,
-    "status": "blocked",
-    "detail": "Bot verification or access restriction detected",
-    "quote": null,
+    "attemptedAt": "2026-10-18T05:14:48.637Z",
+    "elapsedMs": 5125,
+    "status": "verified",
+    "detail": "Exact round-trip total verified from visible skyscanner seller result",
+    "quote": {
+      "kind": "live-round-trip-total",
+      "origin": "SEL",
+      "destination": "TYO",
+      "departureDate": "2026-12-30",
+      "returnDate": "2027-01-01",
+      "adults": 1,
+      "cabin": "economy",
+      "currency": "KRW",
+      "priceKrw": 427500,
+      "observedAt": "2026-10-18T05:14:48.513Z",
+      "evidence": {
+        "source": "visible-search-result",
+        "provider": "skyscanner",
+        "offerId": "5989bb5c5915211e307e8488"
+      }
+    },
     "fareCandidates": [],
-    "pagePreview": "Are you a person or a robot?\nPlease don’t take this personally - some scripts and bots are remarkably lifelike these days!\nStill having problems accessing the page? Try checking you have JavaScript and cookies turned on and that your browser isn’t blocking them from loading.\n9e4dc394-cab2-11f1-b486-254a5742bfbb",
-    "network": [],
+    "pagePreview": "Skyscanner\n검색 결과로 가기\n도움말\n한국어\n대한민국\n₩ KRW\n로그인\n항공권\n숙소\n렌터카\n서울 (모두)\n - \n도쿄 (모두)\n성인 1명, 일반석\n가는 날\n12월 30일 (수)\n•\n오는 날\n1월 1일 (금)\n항공권 검색 결과\n여행 계획\n가격 변동 알림 받기\n모든 필터\n경유\n직항\n\n₩427,500부터\n\n1회 경유\n\n없음\n\n2번 이상 경유\n\n없음\n\n출발 시간대 설정\n가는날 출발시간\n\n오전 12:00 - 오후 11:59\n\n오는편\n\n오전 12:00 - 오후 11:59\n\n총 소요시간\n\n2.5시간 - 3.0시간\n\n항공사\n모두 선택\n모두 지우기\n스타 얼라이언스\n에티오피아 항공사\n\n₩471,237부터\n\n이 항목만\n제주항공\n\n₩434,800부터\n\n이 항목만\n항공사 조합\n\n₩427,500부터\n\n이 항목만\n항공편 탄소배출량\n이산화탄소 환산량이 상대적으로 낮은 항공편만 표시\n항공편\n결과 로드 중...\n(39 판매사 25 확인 완료)\n웹투어에서 가격 확인 중…\n달력/차트 보기\n검색 결과 표시 기준\n항공편 여행 일정표 정렬\n\n추천순\n\n₩434,800\n2시간 40분 평균\n\n2시간 40분 평균\n\n최저가\n\n₩427,500\n2시간 28분 평균\n\n2시간 28분 평균\n\n최단여행시간\n\n₩427,500\n2시간 28분 평균\n\n2시간 28분 평균\n\n정렬\n추천순\n최저가순\n최단여행시간순\n출국: 출발 시간\n오는 편: 출발 시간\n\n제주항공\n\n항공편 옵션 설정1: 총 금액 ₩434,800.\n출국 항공편: 제주항공.\n출발지: 인천 국제 출발 시간: 오전 9:50, 도착지: 도쿄 나리타 도착 시간: 오후 12:15\n진항 항공 소요 시간 2시간 25분\n귀국 항공편: 제주항공.\n출발지: 도쿄 나리타 출발 시간: 오전 11:35, 도착지: 인천 국제 도착 시간: 오후 2:30\n진항 항공 소요 시간 2시간 55분\n세금과 수수료 포함 가격\n오전 9:50\nICN\n2시간 25분\n직항\n \n오후 12:15\nNRT\n오전 11:35\nNRT\n2시간 55분\n직항\n \n오후 2:30\nICN\n상품 1개\n₩434,800\n선택하기\n\n이 항",
+    "network": [
+      {
+        "url": "https://pagead2.googlesyndication.com/ccm/collect",
+        "failure": "net::ERR_ABORTED"
+      }
+    ],
     "browserErrors": []
   },
   {
