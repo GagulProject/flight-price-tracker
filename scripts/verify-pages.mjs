@@ -19,10 +19,11 @@ try {
   assert.deepEqual(actual,expected,'Published JSON must match this collection run');
   await page.goto(base+'?verify='+Date.now(),{waitUntil:'networkidle'});
   await page.locator('.provider-card').first().waitFor();
-  assert.equal(await page.locator('.provider-card').count(),expected.routes.reduce((n,r)=>n+r.providers.length,0));
-  assert.equal(await page.locator('.provider-attempt').count(),5);
-  assert.equal(await page.locator('.provider-verified').count(),5);
-  assert.equal(await page.locator('.collection-status').count(),5);
+  const providerCount=expected.routes.reduce((n,r)=>n+r.providers.length,0);
+  assert.equal(await page.locator('.provider-card').count(),providerCount);
+  assert.equal(await page.locator('.provider-attempt').count(),providerCount);
+  assert.equal(await page.locator('.provider-verified').count(),providerCount);
+  assert.equal(await page.locator('.collection-status').count(),providerCount);
   const text=await page.locator('#results').innerText();
   const verifiedSamples=expected.routes.flatMap(route=>route.providers.flatMap(item=>(item.history||[]).filter(sample=>sample.evidence?.kind==='live-round-trip-total')));
   assert.equal(await page.locator('.trend circle').count(),verifiedSamples.length,'Trend points must match verified history');
@@ -39,6 +40,6 @@ try {
   }
   assert.deepEqual(errors,[]);
   await page.screenshot({path:'diagnostics/published-pages.png',fullPage:true});
-  await writeFile('diagnostics/pages-verification.json',JSON.stringify({url:base,checkedAt:new Date().toISOString(),jsonMatches:true,providerCards:5,errors},null,2));
-  console.log('PAGES_VERIFIED: published JSON, five provider cards, timestamps, statuses and preserved history');
+  await writeFile('diagnostics/pages-verification.json',JSON.stringify({url:base,checkedAt:new Date().toISOString(),jsonMatches:true,providerCards:providerCount,errors},null,2));
+  console.log('PAGES_VERIFIED: published JSON, provider cards, timestamps, statuses and preserved history');
 } finally { await browser.close(); }
