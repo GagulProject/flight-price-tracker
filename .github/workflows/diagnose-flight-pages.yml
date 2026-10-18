@@ -41,7 +41,8 @@ jobs:
         continue-on-error: true
         env:
           SKYSCANNER_API_KEY: ${{ secrets.SKYSCANNER_API_KEY }}
-        run: node scripts/diagnose-flight-pages.mjs
+          FLIGHT_BROWSER_HEADLESS: 'false'
+        run: xvfb-run --auto-servernum node scripts/diagnose-flight-pages.mjs
       - name: Validate preserved and collected data
         run: npm run check
       - name: Persist attempts and preserve price history
