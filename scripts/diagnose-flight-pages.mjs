@@ -75,9 +75,10 @@ for (const route of data.routes) for (const provider of route.providers) {
         // The first page lists outbound flights. Its fare is not a selected two-leg booking.
         await page.waitForFunction(() => /\d+개 항공편 검색됨/.test(document.body?.innerText || ''),
           null, { timeout: 120000, polling: 1000 });
-        await page.getByRole('button', { name: '이 운임 선택' }).first()
+        const outboundSelect = page.locator('button:not([disabled]):has-text("이 운임 선택")').first();
+        await outboundSelect
           .waitFor({ state: 'visible', timeout: 120000 });
-        await page.getByRole('button', { name: '이 운임 선택' }).first().click({ timeout: 120000 });
+        await outboundSelect.click({ timeout: 120000 });
         await page.waitForFunction(() => /\/flights\/ShowFareNext/i.test(location.pathname),
           null, { timeout: 120000, polling: 500 });
         await page.waitForFunction(() => /\d+개 항공편 검색됨/.test(document.body?.innerText || ''),
@@ -254,7 +255,7 @@ for (const route of data.routes) for (const provider of route.providers) {
       (await page.locator('body').innerText().catch(()=>'' )).slice(0,12000)).catch(()=>{});
     pagePreview=(await page.locator('body').innerText().catch(()=>'' )).slice(0,1000);
     elapsedMs=Date.now()-started;
-    results.push({provider:provider.id,origin:route.origin.code,destination:route.destination.code,departureDate:route.departureDate,returnDate:route.returnDate,attemptedAt:new Date().toISOString(),elapsedMs,status,detail,quote,fareCandidates,pagePreview,network,browserErrors});
+    results.push({provider:provider.id,origin:route.origin.code,destination:route.destination.code,departureDate:route.departureDate,returnDate:route.returnDate,attemptedAt:new Date().toISOString(),elapsedMs,status,detail,finalUrl:page.url(),quote,fareCandidates,pagePreview,network,browserErrors});
     applyAttempt(route,provider,results.at(-1));
     await writeFile('data/prices.json',JSON.stringify(data,null,2)+'\n');
     await writeFile('diagnostics/results.json',JSON.stringify(results,null,2)+'\n');
