@@ -5,8 +5,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T13:27:01.012Z",
-    "elapsedMs": 17768,
+    "attemptedAt": "2026-10-18T13:41:58.677Z",
+    "elapsedMs": 16480,
     "status": "verified",
     "detail": "Exact round-trip total verified from visible naver seller result",
     "finalUrl": "https://flight.naver.com/flights/international/detail/SEL:city-TYO:city-20261230/TYO:city-SEL:city-20270101?adult=1&isDirect=false&fareType=Y&selectType=concurrent&selectedFlight=1%3A20261230ICNNRTBX0223%3AA01%3AHK%3ABX%3A%2C2%3A20270101NRTICNZE0610%3AA01%3AHK%3ABX%3A",
@@ -20,7 +20,7 @@
       "cabin": "economy",
       "currency": "KRW",
       "priceKrw": 425800,
-      "observedAt": "2026-10-18T13:27:00.935Z",
+      "observedAt": "2026-10-18T13:41:58.603Z",
       "evidence": {
         "source": "visible-search-result",
         "provider": "naver",
@@ -137,7 +137,11 @@
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://gfd-phinf.pstatic.net/20260222_207/177171629586464U1I_PNG/c4919938065e73c2bbf7c8d99fcb631e.png",
+        "url": "https://nam.veta.naver.com/gfp/v1",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://tivan.naver.com/g/100_200/isZ8v4tZG-cNXbbaG6HWzLM8JDDqxspLDJRSU4sEzaG0N81d9PdRwXs34pFqD0J4FNXnS5B2zTa21OvYhzDQkqwoIX_z0dWDFfaR3x6TIGMXgblv86dllxNe6ZfuY1LPB1AGqqp7HgoN54J6Ibrj7e__9Qbl6Uc3UFwmsUjfsaUmTXPhNxSKMrAKA-cZlxnHI7Bcb9JbyTc7SaV1fzGfbEcCwWCVt23IiVQuwTYwndaDuq658KhiMlg9kJgZJ9gRpJrVS9NGfs6ZfAOxaF0EN8C5da0TLwHksAjms-yWVyiqIW8CBviqxBpzxRqLVh-VU-392z-67lGeEKq-0sLmqyOufVimMJknIQKOQZx1zfS14prh84fh9lHfMFaFHd45BiJ5IwPKUpfLOGYC959FvoTGBXJMFu4TGXSgIIxE-Wk-WAwm6Sr8WtKDr6O7rB0guTg2rSJ97_-pebPMbTQQIzK0bDhycpA7dgT86-hqCsVZl-Yp9O11DxtFOY9z0uCJEFjeBlfmIp2ZXxzLy6B61oXOCn2-FDmGOvf2q4sGxx29Wh2ZM7omOh8m64KPVt7zKvLDNYlI4wqyZ0tKGXDDmZCTnHEPHskPhQ82_22V7V7Y4WoYfj6sskRJrUh_O_lfQZ47vtp_W9I2UemSmfb2rqT7x9Xe9bio9qYtQSbCUf7EnPjoG6DpzWYhbKTHxAYJDRoaQYCxYFMhwf0zu_dV3THQbCDMe3BbTeAHPdAtHrI6SYdbP850JauUDXm997-vQN6RZIfZQnwtIbKECdQQcnr3LVw4MKTGhE5XGdXBDlhcm_EVY7HIqcMHAoTktBslNrWE_cnVyX2NsNVRZsCUro-YNh8LGZ-sHMCA6OMDFSf_UFov2Y4KEnco8QNynq3ldYdpAzwRg9I-rW2fCBqXNw/NE",
         "failure": "net::ERR_ABORTED"
       },
       {
@@ -156,28 +160,20 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T13:29:14.494Z",
-    "elapsedMs": 133381,
+    "attemptedAt": "2026-10-18T13:44:00.313Z",
+    "elapsedMs": 121533,
     "status": "blocked",
-    "detail": "Bot verification page: TimeoutError: locator.click: Timeout 120000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('선택', { exact: true }).first()\u001b[22m\n\u001b[2m    - locator resolved to <span data-testid=; 메인 콘텐츠로 이동\nTheme Detection\n숙소\n항공권\n투어&티켓\n항공 + 호텔\n기차표\n렌터카·공항픽업\n여행자 보험\n앱\nKRW\n고객센터\n예약 검색\n로그인/회원가입\n서울 출발 ",
+    "detail": "Bot verification page: TimeoutError: page.waitForFunction: Timeout 120000ms exceeded.; 메인 콘텐츠로 이동\nTheme Detection\n숙소\n항공권\n투어&티켓\n항공 + 호텔\n기차표\n렌터카·공항픽업\n여행자 보험\n앱\nKRW\n고객센터\n예약 검색\n로그인/회원가입\n서울 출발 ",
     "finalUrl": "https://kr.trip.com/flights/showfarefirst?dcity=sel&acity=tyo&dcityid=274&acityid=228&ddate=2026-12-30&rdate=2027-01-01&triptype=rt&class=y&lowpricesource=searchform&quantity=1&searchboxarg=t&nonstoponly=off&locale=ko-KR&curr=KRW",
     "fareCandidates": [],
-    "pagePreview": "메인 콘텐츠로 이동\nTheme Detection\n숙소\n항공권\n투어&티켓\n항공 + 호텔\n기차표\n렌터카·공항픽업\n여행자 보험\n앱\nKRW\n고객센터\n예약 검색\n로그인/회원가입\n서울 출발 도쿄 도착 저렴한 항공권 | kr.trip.com\n서울도쿄\n변경\n성인 1명\n일반석\n2026년 12월 30일 – 2027년 1월 1일\n12월 26일–12월 28일\n488,500원\n12월 27일–12월 29일\n506,900원\n12월 28일–12월 30일\n490,200원\n12월 29일–12월 31일\n427,800원\n12월 30일–1월 1일\n461,200원\n12월 31일–1월 2일\n517,100원\n1월 1일–1월 3일\n552,100원\n1월 2일–1월 4일\n427,600원\n12월 23일–12월 25일\n429,400원\n12월 24일–12월 26일\n540,700원\n12월 25일–12월 27일\n540,900원\n12월 26일–12월 28일\n488,500원\n12월 27일–12월 29일\n506,900원\n12월 28일–12월 30일\n490,200원\n12월 29일–12월 31일\n427,800원\n12월 30일–1월 1일\n461,200원\n12월 31일–1월 2일\n517,100원\n1월 1일–1월 3일\n552,100원\n1월 2일–1월 4일\n427,600원\n1월 3일–1월 5일\n478,000원\n1월 4일–1월 6일\n387,100원\n1월 5일–1월 7일\n317,000원\n1월 6일–1월 8일\n428,400원\n가격표\n항공편 예약 시 호텔 최대 25% 할인\n추천\n 직항\n 위탁 수하물 포함\n 저가 항공사 숨기기\n 휴대 수하물 포함\n 공동운항편 숨기기\n더 보기\n얼라이언스\n스타얼라이언스\n477,400원\n스카이팀\n611,600원\n원월드\n672,100원\n항공사\n동일 항공사 조합만 보기\n항공사 전체 선택\n대한항공 (21)\n611,600원\n아시아나항공 (18)\n525,500원\nJAL (12)\n672,100원\n전일본공수 (8)\n644,000원\n제주항공 (7)\n461,200원\n더 보기\n얼라이언스\n스타얼라이언스\n477,400원\n스카이팀\n61",
+    "pagePreview": "메인 콘텐츠로 이동\nTheme Detection\n숙소\n항공권\n투어&티켓\n항공 + 호텔\n기차표\n렌터카·공항픽업\n여행자 보험\n앱\nKRW\n고객센터\n예약 검색\n로그인/회원가입\n서울 출발 도쿄 도착 저렴한 항공권 | kr.trip.com\n왕복\n편도\n다구간\n직항\n서울\n·\n모든 공항\n도쿄\n·\n모든 공항\n성인 1명 · 일반석\n검색\n12월 23일–12월 25일\n429,400원\n12월 24일–12월 26일\n540,700원\n12월 25일–12월 27일\n540,900원\n12월 26일–12월 28일\n488,500원\n12월 27일–12월 29일\n506,900원\n12월 28일–12월 30일\n490,200원\n12월 29일–12월 31일\n427,800원\n12월 30일–1월 1일\n463,400원\n12월 31일–1월 2일\n520,100원\n1월 1일–1월 3일\n552,100원\n1월 2일–1월 4일\n427,600원\n1월 3일–1월 5일\n478,000원\n1월 4일–1월 6일\n386,900원\n1월 5일–1월 7일\n317,000원\n1월 6일–1월 8일\n428,400원\n가격표\n무료 플러그인\n추천\n 직항\n 위탁 수하물 포함\n 저가 항공사 숨기기\n 휴대 수하물 포함\n 공동운항편 숨기기\n더 보기\n얼라이언스\n스타얼라이언스\n477,400원\n스카이팀\n612,900원\n원월드\n668,900원\n항공사\n동일 항공사 조합만 보기\n항공사 전체 선택\n대한항공 (21)\n612,900원\n아시아나항공 (18)\n525,500원\nJAL (12)\n668,900원\n전일본공수 (8)\n635,600원\n제주항공 (7)\n463,400원\n더 보기\n얼라이언스\n스타얼라이언스\n477,400원\n스카이팀\n612,900원\n원월드\n668,900원\n시간대\n출발시간\n00:00–24:00\n00:00\n24:00\n도착시간\n00:00–24:00\n00:00\n24:00\n소요시간\n무관\n경유시간\n1시간–13시간 30분\n1시간\n13시간 30분\n총 비행시간\n1시간 30분–23시간\n1시간 30분\n23시간\n경유\n경유 1회 이하\n463,400원\n경유지\n무관\n부산\n738,300원\n후쿠오카",
     "network": [
       {
-        "url": "https://www.google.com/ccm/collect",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://www.google.com/ccm/collect",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://ad.doubleclick.net/ccm/s/collect",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
         "url": "https://www.facebook.com/x/oauth/status",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://kr.trip.com/gtm/ag/g/c",
         "failure": "net::ERR_ABORTED"
       },
       {
@@ -189,11 +185,19 @@
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://kr.trip.com/gtm/ag/g/c",
+        "url": "https://www.google.com/ccm/collect",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://www.google.com/ccm/collect",
         "failure": "net::ERR_ABORTED"
       },
       {
         "url": "https://www.google.com/measurement/1p-conversion/",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://ad.doubleclick.net/ccm/s/collect",
         "failure": "net::ERR_ABORTED"
       },
       {
@@ -205,11 +209,27 @@
         "failure": "net::ERR_ABORTED"
       },
       {
+        "url": "https://chloro.trip.com/v4/d",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "chrome-extension://invalid/",
+        "failure": "net::ERR_BLOCKED_BY_CLIENT"
+      },
+      {
+        "url": "chrome-extension://invalid/",
+        "failure": "net::ERR_BLOCKED_BY_CLIENT"
+      },
+      {
+        "url": "https://www.google.com/measurement/1p-conversion/",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
         "url": "https://kr.trip.com/gtm/ag/g/c",
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://www.google.com/measurement/1p-conversion/",
+        "url": "https://kr.trip.com/air/event/exception",
         "failure": "net::ERR_ABORTED"
       },
       {
@@ -219,6 +239,8 @@
     ],
     "browserErrors": [
       "Provider's accounts list is empty.",
+      "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT",
+      "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT",
       "[GSI_LOGGER]: FedCM get() rejects with NetworkError: Error retrieving a token."
     ],
     "openPages": [
@@ -231,8 +253,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T13:29:17.711Z",
-    "elapsedMs": 3113,
+    "attemptedAt": "2026-10-18T13:44:03.081Z",
+    "elapsedMs": 2664,
     "status": "verified",
     "detail": "Exact round-trip total verified from visible google seller result",
     "finalUrl": "https://www.google.com/travel/flights/search?tfs=CBwQAhooEgoyMDI2LTEyLTMwagwIAhIIL20vMGhzcWZyDAgDEggvbS8wN2RmaxooEgoyMDI3LTAxLTAxagwIAxIIL20vMDdkZmtyDAgCEggvbS8waHNxZkABSAFwAYIBCwj___________8BmAEB&hl=ko&curr=KRW&gl=KR",
@@ -246,7 +268,7 @@
       "cabin": "economy",
       "currency": "KRW",
       "priceKrw": 433285,
-      "observedAt": "2026-10-18T13:29:17.619Z",
+      "observedAt": "2026-10-18T13:44:02.981Z",
       "evidence": {
         "source": "visible-search-result",
         "provider": "google",
@@ -368,8 +390,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T13:29:23.247Z",
-    "elapsedMs": 5444,
+    "attemptedAt": "2026-10-18T13:44:07.710Z",
+    "elapsedMs": 4539,
     "status": "verified",
     "detail": "Exact round-trip total verified from visible skyscanner seller result",
     "finalUrl": "https://www.skyscanner.co.kr/transport/flights/sel/tyoa/261230/270101/?adultsv2=1&cabinclass=economy&rtn=1",
@@ -383,15 +405,15 @@
       "cabin": "economy",
       "currency": "KRW",
       "priceKrw": 426300,
-      "observedAt": "2026-10-18T13:29:23.172Z",
+      "observedAt": "2026-10-18T13:44:07.626Z",
       "evidence": {
         "source": "visible-search-result",
         "provider": "skyscanner",
-        "offerId": "08b25ad6e51a9f6a4fed2df5"
+        "offerId": "8ae35f7be20963cfe7710b44"
       }
     },
     "fareCandidates": [],
-    "pagePreview": "Skyscanner\n검색 결과로 가기\n도움말\n한국어\n대한민국\n₩ KRW\n로그인\n항공권\n숙소\n렌터카\n서울 (모두)\n - \n도쿄 (모두)\n성인 1명, 일반석\n가는 날\n12월 30일 (수)\n•\n오는 날\n1월 1일 (금)\n항공권 검색 결과\n여행 계획\n가격 변동 알림 받기\n모든 필터\n경유\n직항\n\n₩426,300부터\n\n1회 경유\n\n없음\n\n2번 이상 경유\n\n없음\n\n출발 시간대 설정\n가는날 출발시간\n\n오전 12:00 - 오후 11:59\n\n오는편\n\n오전 12:00 - 오후 11:59\n\n총 소요시간\n\n2.5시간 - 3.0시간\n\n항공사\n모두 선택\n모두 지우기\n스타 얼라이언스\n에티오피아 항공사\n\n₩469,737부터\n\n이 항목만\n이스타항공\n\n₩435,100부터\n\n이 항목만\n제주항공\n\n₩434,800부터\n\n이 항목만\n항공사 조합\n\n₩426,300부터\n\n이 항목만\n항공편 탄소배출량\n이산화탄소 환산량이 상대적으로 낮은 항공편만 표시\n총 3단계 중 1단계: 출발편 항공권 선택\n선호하는 서울 출발 항공편을 선택하세요\n항공편\n결과 로드 중...\n(39 판매사 32 확인 완료)\nskyticket에서 가격 확인 중…\n달력/차트 보기\n검색 결과 표시 기준\n항공편 여행 일정표 정렬\n\n추천순\n\n₩434,800\n2시간 43분 평균\n\n2시간 43분 평균\n\n최저가\n\n₩426,300\n2시간 35분 평균\n\n2시간 35분 평균\n\n최단여행시간\n\n₩427,500\n2시간 30분 평균\n\n2시간 30분 평균\n\n정렬\n추천순\n최저가순\n최단여행시간순\n출국: 출발 시간\n오는 편: 출발 시간\n\n제주항공\n\n항공편 옵션 설정1: 총 금액 ₩434,800.\n출국 항공편: 제주항공.\n출발지: 인천 국제 출발 시간: 오전 8:35, 도착지: 도쿄 나리타 도착 시간: 오전 11:05\n진항 항공 소요 시간 2시간 30분\n귀국 항공편: 제주항공.\n출발지: 도쿄 나리타 출발 시간: 오전 11:35, 도착지: 인천 국제 도착 시간: 오후 2:30\n진항 항공 소요 시간 2시간 55분\n세금과 수수료 포함 가격\n오전 8:35\nICN\n2시간 30분\n직항\n",
+    "pagePreview": "Skyscanner\n검색 결과로 가기\n도움말\n한국어\n대한민국\n₩ KRW\n로그인\n항공권\n숙소\n렌터카\n서울 (모두)\n - \n도쿄 (모두)\n성인 1명, 일반석\n가는 날\n12월 30일 (수)\n•\n오는 날\n1월 1일 (금)\n항공권 검색 결과\n여행 계획\n가격 변동 알림 받기\n모든 필터\n경유\n직항\n\n₩426,300부터\n\n1회 경유\n\n없음\n\n2번 이상 경유\n\n없음\n\n출발 시간대 설정\n가는날 출발시간\n\n오전 12:00 - 오후 11:59\n\n오는편\n\n오전 12:00 - 오후 11:59\n\n총 소요시간\n\n2.5시간 - 3.0시간\n\n항공사\n모두 선택\n모두 지우기\n스타 얼라이언스\n에티오피아 항공사\n\n₩469,737부터\n\n이 항목만\n이스타항공\n\n₩435,100부터\n\n이 항목만\n제주항공\n\n₩434,800부터\n\n이 항목만\n항공사 조합\n\n₩426,300부터\n\n이 항목만\n항공편 탄소배출량\n이산화탄소 환산량이 상대적으로 낮은 항공편만 표시\n총 3단계 중 1단계: 출발편 항공권 선택\n선호하는 서울 출발 항공편을 선택하세요\n항공편\n결과 로드 중...\n(39 판매사 34 확인 완료)\nTeaFlight에서 가격 확인 중…\n달력/차트 보기\n검색 결과 표시 기준\n항공편 여행 일정표 정렬\n\n추천순\n\n₩434,800\n2시간 43분 평균\n\n2시간 43분 평균\n\n최저가\n\n₩426,300\n2시간 35분 평균\n\n2시간 35분 평균\n\n최단여행시간\n\n₩427,500\n2시간 30분 평균\n\n2시간 30분 평균\n\n정렬\n추천순\n최저가순\n최단여행시간순\n출국: 출발 시간\n오는 편: 출발 시간\n\n제주항공\n\n항공편 옵션 설정1: 총 금액 ₩434,800.\n출국 항공편: 제주항공.\n출발지: 인천 국제 출발 시간: 오전 8:35, 도착지: 도쿄 나리타 도착 시간: 오전 11:05\n진항 항공 소요 시간 2시간 30분\n귀국 항공편: 제주항공.\n출발지: 도쿄 나리타 출발 시간: 오전 11:35, 도착지: 인천 국제 도착 시간: 오후 2:30\n진항 항공 소요 시간 2시간 55분\n세금과 수수료 포함 가격\n오전 8:35\nICN\n2시간 30분\n직항\n",
     "network": [
       {
         "url": "https://pagead2.googlesyndication.com/ccm/collect",
