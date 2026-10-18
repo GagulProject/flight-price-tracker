@@ -5,8 +5,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T04:01:24.502Z",
-    "elapsedMs": 62203,
+    "attemptedAt": "2026-10-18T04:43:43.045Z",
+    "elapsedMs": 61945,
     "status": "fare-api-unavailable",
     "detail": "Naver search was clicked, but its flight search API requests failed in this browser; no fare results rendered",
     "fareCandidates": [],
@@ -21,15 +21,15 @@
         "failure": "net::ERR_FAILED"
       },
       {
+        "url": "https://flight-api.naver.com/flight/international/searchFlights",
+        "failure": "net::ERR_FAILED"
+      },
+      {
         "url": "https://flight-api.naver.com/graphql",
         "failure": "net::ERR_FAILED"
       },
       {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_FAILED"
-      },
-      {
-        "url": "https://flight-api.naver.com/flight/international/searchFlights",
+        "url": "https://flight-api.naver.com/graphql",
         "failure": "net::ERR_FAILED"
       },
       {
@@ -180,8 +180,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T04:01:25.377Z",
-    "elapsedMs": 824,
+    "attemptedAt": "2026-10-18T04:43:43.614Z",
+    "elapsedMs": 525,
     "status": "blocked",
     "detail": "HTTP 432; no automated bypass attempted",
     "fareCandidates": [],
@@ -199,8 +199,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T04:01:27.896Z",
-    "elapsedMs": 2484,
+    "attemptedAt": "2026-10-18T04:43:47.854Z",
+    "elapsedMs": 4210,
     "status": "verified",
     "detail": "Exact round-trip total verified from visible google seller result",
     "quote": {
@@ -213,7 +213,7 @@
       "cabin": "economy",
       "currency": "KRW",
       "priceKrw": 388024,
-      "observedAt": "2026-10-18T04:01:27.648Z",
+      "observedAt": "2026-10-18T04:43:47.641Z",
       "evidence": {
         "source": "visible-search-result",
         "provider": "google",
@@ -331,13 +331,12 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T04:01:28.864Z",
-    "elapsedMs": 928,
+    "attemptedAt": "2026-10-18T04:43:48.645Z",
+    "elapsedMs": 753,
     "status": "blocked",
-    "detail": "Bot verification or access restriction detected",
-    "quote": null,
+    "detail": "Bot verification page detected before waiting for flight results",
     "fareCandidates": [],
-    "pagePreview": "Are you a person or a robot?\nPlease don’t take this personally - some scripts and bots are remarkably lifelike these days!\nStill having problems accessing the page? Try checking you have JavaScript and cookies turned on and that your browser isn’t blocking them from loading.\n9847f110-caa8-11f1-8b74-fe83d9ffe455",
+    "pagePreview": "Are you a person or a robot?\nPlease don’t take this personally - some scripts and bots are remarkably lifelike these days!\nStill having problems accessing the page? Try checking you have JavaScript and cookies turned on and that your browser isn’t blocking them from loading.\n821e0019-caae-11f1-8285-88628e6d06ef",
     "network": []
   },
   {
@@ -346,12 +345,12 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T04:01:30.177Z",
-    "elapsedMs": 1276,
+    "attemptedAt": "2026-10-18T04:43:50.006Z",
+    "elapsedMs": 1329,
     "status": "blocked",
     "detail": "HTTP 429; no automated bypass attempted",
     "fareCandidates": [],
-    "pagePreview": "인증해 주세요...\n\n로봇이 아닌지 인증이 필요합니다.\n\nb571bb4f-97bd-4d53-9fd6-eddf89c80a9d",
+    "pagePreview": "인증해 주세요...\n\n로봇이 아닌지 인증이 필요합니다.\n\n9012436f-4b53-4a01-920c-675a20ff1289",
     "network": [
       {
         "url": "https://www.expedia.co.kr/Flights-Search",
