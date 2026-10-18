@@ -78,7 +78,8 @@ for (const route of data.routes) for (const provider of route.providers) {
         await page.getByRole('button', { name: '이 운임 선택' }).first()
           .waitFor({ state: 'visible', timeout: 120000 });
         await page.getByRole('button', { name: '이 운임 선택' }).first().click({ timeout: 120000 });
-        await page.waitForURL(/\/flights\/ShowFareNext/i, { timeout: 120000 });
+        await page.waitForFunction(() => /\/flights\/ShowFareNext/i.test(location.pathname),
+          null, { timeout: 120000, polling: 500 });
         await page.waitForFunction(() => /\d+개 항공편 검색됨/.test(document.body?.innerText || ''),
           null, { timeout: 120000, polling: 1000 });
         await page.getByText('자세히 보기', { exact: true }).first()
@@ -131,7 +132,9 @@ for (const route of data.routes) for (const provider of route.providers) {
           if (!/성인\/모든 결제수단[\s\S]*왕복[\s\S]*[0-9,]+\s*원/.test(label)) continue;
           const selectFare = card.locator('[class*="combination_select_schedule"]');
           await selectFare.click({ timeout: 120000 });
-          await page.waitForURL(/\/flights\/international\/detail\//, { timeout: 120000 });
+          await page.waitForFunction(() => location.pathname.includes('/flights/international/detail/') &&
+            !!document.querySelector('[class*="international_selected_flights"]'),
+          null, { timeout: 120000, polling: 500 });
           selected = true;
           break;
         }
