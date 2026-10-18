@@ -40,7 +40,7 @@ function makeProviderCard(item) {
   card.dataset.status = item.collectionStatus || 'unverified';
   const current = checkedPrice(item);
   const hasPrice = Number.isInteger(item.priceKrw) && item.priceKrw > 0;
-  const labels = { verified: '가격 확인 완료', blocked: '접근 제한', 'fare-api-unavailable': '조회 지연', 'results-loading': '조회 지연', 'search-error': '조회 실패', 'content-not-detected': '조회 실패', timeout: '조회 지연', 'rendered-unverified': '가격 확인 대기', 'api-error': '조회 실패', 'http-error': '조회 실패', error: '조회 실패' };
+  const labels = { verified: '가격 확인 완료', blocked: '접근 제한', 'fare-api-unavailable': '최근 수집 실패', 'results-loading': '조회 지연', 'search-error': '조회 실패', 'content-not-detected': '조회 실패', timeout: '조회 지연', 'rendered-unverified': '가격 확인 대기', 'api-error': '조회 실패', 'http-error': '조회 실패', error: '조회 실패' };
   const top = makeElement('div', 'provider-top');
   const name = makeElement('div', 'provider-name');
   name.append(makeElement('span', `provider-logo ${provider.className}`, provider.mark), document.createTextNode(provider.name));
