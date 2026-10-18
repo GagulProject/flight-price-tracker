@@ -37,6 +37,9 @@ for (const route of data.routes) for (const provider of route.providers) {
   const context = await browser.newContext({locale:'ko-KR',timezoneId:'Asia/Seoul',viewport:{width:1365,height:900}});
   const page = await context.newPage();
   const network = [];
+  const browserErrors = [];
+  page.on('console', message => { if (message.type()==='error' && browserErrors.length<15) browserErrors.push(message.text().slice(0,600)); });
+  page.on('pageerror', error => { if(browserErrors.length<15) browserErrors.push(String(error).slice(0,600)); });
   page.on('requestfailed', request => {
     if (network.length < 40) network.push({url:request.url().split('?')[0],failure:request.failure()?.errorText});
   });
@@ -92,10 +95,33 @@ for (const route of data.routes) for (const provider of route.providers) {
           .waitFor({ state: 'visible', timeout: 30000 });
       } else if (provider.id === 'naver') {
         // Naver's deep link initially renders a search shell; its Search button starts the actual fare request.
-        const search = page.getByRole('button', { name: '검색', exact: true });
-        if (await search.isVisible()) await search.click();
-        await page.locator('[class*="combination_ConcurrentItemContainer"] [class*="defaultSummary"]')
-          .first().waitFor({ state: 'visible', timeout: 60000 });
+        const waitForNaverResults = async (timeout) => {
+          const search = page.getByRole('button', { name: '검색', exact: true });
+          await search.waitFor({state:'visible',timeout:30000});
+          await search.click();
+          // Observe the live results for a full three minutes. Footer numbers never finish this wait.
+          await page.waitForFunction(() => {
+            const text=document.body?.innerText || '';
+            return document.querySelector('[class*="combination_ConcurrentItemContainer"] [class*="defaultSummary"]')
+              || /captcha|verify you are human|접근이 제한|로봇이 아닙니다/i.test(text);
+          },null,{timeout,polling:1000});
+          const text=await page.locator('body').innerText();
+          if (botPattern.test(text)) { status='blocked'; throw new Error('Naver access verification detected; stopped without bypass'); }
+          await page.locator('[class*="combination_ConcurrentItemContainer"] [class*="defaultSummary"]')
+            .first().waitFor({state:'visible',timeout:10000});
+        };
+        try {
+          await waitForNaverResults(180000);
+        } catch (firstError) {
+          if(status==='blocked' || network.some(n=>[403,429,432].includes(n.httpStatus))) throw firstError;
+          console.log('Naver: no results after 180 seconds; one ordinary reload and 120-second wait');
+          const reloaded=await page.reload({waitUntil:'domcontentloaded',timeout:60000});
+          if(reloaded && reloaded.status()>=400) {
+            status=[403,429,432].includes(reloaded.status())?'blocked':'http-error';
+            throw new Error('Naver reload HTTP '+reloaded.status());
+          }
+          await waitForNaverResults(120000);
+        }
         const cards = page.locator('[class*="combination_ConcurrentItemContainer"]');
         let selected = false;
         for (let index = 0, count = await cards.count(); index < count; index++) {
@@ -162,7 +188,7 @@ for (const route of data.routes) for (const provider of route.providers) {
         item.failure && /flight-api\.naver\.com\/(flight\/international\/searchFlights|graphql)/.test(item.url));
       status=botPattern.test(visible)?'blocked':failedFareApi?'fare-api-unavailable':'content-not-detected';
       detail=failedFareApi
-        ? 'Naver search was clicked, but its flight search API requests failed in this browser; no fare results rendered'
+        ? 'Naver search returned no fare results after a 180-second wait, one ordinary reload and a further 120-second wait; flight API failures observed'
         : (status==='blocked'?'Bot verification page: ':'Flight content not detected: ')+String(waitError).slice(0,180)+'; '+visible.slice(0,100);
       throw waitError;
     }
@@ -234,7 +260,7 @@ for (const route of data.routes) for (const provider of route.providers) {
       (await page.locator('body').innerText().catch(()=>'' )).slice(0,12000)).catch(()=>{});
     pagePreview=(await page.locator('body').innerText().catch(()=>'' )).slice(0,1000);
     elapsedMs=Date.now()-started;
-    results.push({provider:provider.id,origin:route.origin.code,destination:route.destination.code,departureDate:route.departureDate,returnDate:route.returnDate,attemptedAt:new Date().toISOString(),elapsedMs,status,detail,quote,fareCandidates,pagePreview,network});
+    results.push({provider:provider.id,origin:route.origin.code,destination:route.destination.code,departureDate:route.departureDate,returnDate:route.returnDate,attemptedAt:new Date().toISOString(),elapsedMs,status,detail,quote,fareCandidates,pagePreview,network,browserErrors});
     applyAttempt(route,provider,results.at(-1));
     await writeFile('data/prices.json',JSON.stringify(data,null,2)+'\n');
     await writeFile('diagnostics/results.json',JSON.stringify(results,null,2)+'\n');
