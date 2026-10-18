@@ -44,6 +44,11 @@ jobs:
         run: npm run check
       - name: Persist attempts and preserve price history
         run: node scripts/persist-results.mjs
+      - name: Notify verified threshold crossing
+        continue-on-error: true
+        env:
+          FLIGHT_ALERT_WEBHOOK_URL: ${{ secrets.FLIGHT_ALERT_WEBHOOK_URL }}
+        run: node scripts/notify.mjs
       - name: Prepare Pages files
         run: |
           mkdir -p public/data
@@ -60,7 +65,7 @@ jobs:
       - name: Collection summary
         if: always()
         run: |
-          node -e 'const fs=require("fs"); const p="diagnostics/collection-summary.json"; fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,"## Flight collection\n"+(fs.existsSync(p)?fs.readFileSync(p,"utf8"):"Collection did not complete")+"\nAlert integration: no existing sender was found in this repository. No unverified or historical-price alert is sent.\n")'
+          node -e 'const fs=require("fs"); const p="diagnostics/collection-summary.json"; fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,"## Flight collection\n"+(fs.existsSync(p)?fs.readFileSync(p,"utf8"):"Collection did not complete")+"\nAlert integration: see diagnostics/notification.json. FLIGHT_ALERT_WEBHOOK_URL is optional; historical prices never trigger alerts.\n")'
       - uses: actions/upload-artifact@v4
         if: always()
         with:
