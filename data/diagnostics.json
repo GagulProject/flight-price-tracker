@@ -5,38 +5,157 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T09:12:04.651Z",
-    "elapsedMs": 50262,
-    "status": "content-not-detected",
-    "detail": "Flight content not detected: Error: Naver result card did not open its selected itinerary; Naver\n사용자 링크\n로그인\n서비스 더보기\n여행상품\n여행정보\n0\n로그인 후 등급확인\n마이페이지\n여행핫딜\n항공\n호텔\n패키지\nFor U\n47\n왕복\n편도\n다구간\n서울\nICN, GMP\n",
-    "finalUrl": "https://flight.naver.com/flights/international/SEL:city-TYO:city-20261230/TYO:city-SEL:city-20270101?adult=1&isDirect=false&fareType=Y",
-    "fareCandidates": [],
-    "pagePreview": "Naver\n사용자 링크\n로그인\n서비스 더보기\n여행상품\n여행정보\n0\n로그인 후 등급확인\n마이페이지\n여행핫딜\n항공\n호텔\n패키지\nFor U\n47\n왕복\n편도\n다구간\n서울\nICN, GMP\n(모든 공항)\n도쿄\nNRT, HND\n(모든 공항)\n12.30.수\n01.01.금\n성인 1명\n일반석\n직항만\n알림받기\n검색\n공항\n직항/경유 \n요금조건 \n항공사 \n시각/가격 \n트래블클럽\nCO2 배출량 적음\n트래블클럽\n로그인 후 등급확인 하세요\n항공권 가격 변동 그래프\n평균보다 6%\n왕복 동시 선택\n왕복 개별 선택\n가는편·오는편을 한 번에 선택해요\n카드혜택\n가격 낮은 순\n인기 항공편\n모두 접기\n검색한 항공편 중 가격, 비행시간, 유저 선호도 등 다양한 요소를 고려한 네이버 항공 추천 항공편입니다.\n예약 많은\n많이 찾는\nCO2 72%\n파라타항공\n이벤트혜택\n09:50ICN\n12:05NRT\n직항, 02시간 15분\n13:25NRT\n16:15ICN\n직항, 02시간 50분\n성인/KB국민카드(이용실적 충족시)\n605,100원~\n5천원 할인\n왕복\n600,100\n원~\n최대 5,000원 적립\n예약 많은\n많이 찾는\nCO2 평균배출\n전일본공수\n이벤트혜택\n07:45GMP\n09:45HND\n직항, 02시간 00분\n20:00HND\n22:30GMP\n직항, 02시간 30분\n성인/삼성 iD GLOBAL 카드\n803,000원~\n5천원 할인\n왕복\n798,000\n원~\n최대 5,000원 적립\n5개 인기 항공편 더보기\n인기 항공편 보기\n항공권 5,000원 할인 + 5,000원 적립\n- 이벤트 상품 한정\n왕복 항공편 선택\n최저가\n이스타항공\n07:00ICN\n10:00NRT\n직항, 03시간 00분\nCO2 14%\n집에어\n08:55NRT\n11:35ICN\n직항, 02시간 40분\n성인/모든 결제수단\n왕복\n403,268\n원~\n제주항공\n08:10ICN\n10:35NRT\n직항, 02시간 25분\nCO2 20%\n집에어\n08:55NRT\n11:35ICN\n직항, 02시간 40분\n성인/모든 결제수단\n왕복\n403,782\n원~\n제주항공\n08:35ICN\n11:05NRT\n",
+    "attemptedAt": "2026-10-18T09:26:49.254Z",
+    "elapsedMs": 35749,
+    "status": "verified",
+    "detail": "Exact round-trip total verified from visible naver seller result",
+    "finalUrl": "https://flight.naver.com/flights/international/detail/SEL:city-TYO:city-20261230/TYO:city-SEL:city-20270101?adult=1&isDirect=false&fareType=Y&selectType=concurrent&selectedFlight=1%3A20261230ICNNRTBX0223%3AA01%3AHK%3ABX%3A%2C2%3A20270101NRTICNZG0045%3AA01%3AHK%3ABX%3A",
+    "quote": {
+      "kind": "live-round-trip-total",
+      "origin": "SEL",
+      "destination": "TYO",
+      "departureDate": "2026-12-30",
+      "returnDate": "2027-01-01",
+      "adults": 1,
+      "cabin": "economy",
+      "currency": "KRW",
+      "priceKrw": 397300,
+      "observedAt": "2026-10-18T09:26:49.170Z",
+      "evidence": {
+        "source": "visible-search-result",
+        "provider": "naver",
+        "seller": "트립닷컴",
+        "offerId": "a78b2a284d0c78ccc4d3b647"
+      }
+    },
+    "fareCandidates": [
+      {
+        "amount": 397300,
+        "context": "성인/모든 결제수단\n트립닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n397,300\n원\nKiwi.com\n해외업체\n위탁수하물 포함여부 확인필요\n414,374\n원\n부킹닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n421,628\n원\nGotogate\n해외업체\n위탁수하물 포함여부 확인필요\n426,980\n원\nmytrip\n해외업체\n위탁수하물 포함여부 확인필요\n429,325\n원"
+      },
+      {
+        "amount": 397300,
+        "context": "트립닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n397,300\n원\nKiwi.com\n해외업체\n위탁수하물 포함여부 확인필요\n414,374\n원\n부킹닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n421,628\n원\nGotogate\n해외업체\n위탁수하물 포함여부 확인필요\n426,980\n원\nmytrip\n해외업체\n위탁수하물 포함여부 확인필요\n429,325\n원"
+      },
+      {
+        "amount": 397300,
+        "context": "트립닷컴해외업체397,300원위탁수하물 포함여부 확인필요"
+      },
+      {
+        "amount": 397300,
+        "context": "트립닷컴해외업체397,300원"
+      },
+      {
+        "amount": 397300,
+        "context": "트립닷컴해외업체397,300원"
+      },
+      {
+        "amount": 397300,
+        "context": "397,300원"
+      },
+      {
+        "amount": 397300,
+        "context": "트립닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n397,300\n원\nKiwi.com\n해외업체\n위탁수하물 포함여부 확인필요\n414,374\n원\n부킹닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n421,628\n원\nGotogate\n해외업체\n위탁수하물 포함여부 확인필요\n426,980\n원\nmytrip\n해외업체\n위탁수하물 포함여부 확인필요\n429,325\n원"
+      },
+      {
+        "amount": 397300,
+        "context": "트립닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n397,300\n원"
+      },
+      {
+        "amount": 397300,
+        "context": "트립닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n397,300\n원"
+      },
+      {
+        "amount": 397300,
+        "context": "트립닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n397,300\n원"
+      },
+      {
+        "amount": 397300,
+        "context": "397,300\n원"
+      },
+      {
+        "amount": 397300,
+        "context": "397,300\n원"
+      },
+      {
+        "amount": 414374,
+        "context": "성인/모든 결제수단\n트립닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n397,300\n원\nKiwi.com\n해외업체\n위탁수하물 포함여부 확인필요\n414,374\n원\n부킹닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n421,628\n원\nGotogate\n해외업체\n위탁수하물 포함여부 확인필요\n426,980\n원\nmytrip\n해외업체\n위탁수하물 포함여부 확인필요\n429,325\n원"
+      },
+      {
+        "amount": 414374,
+        "context": "트립닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n397,300\n원\nKiwi.com\n해외업체\n위탁수하물 포함여부 확인필요\n414,374\n원\n부킹닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n421,628\n원\nGotogate\n해외업체\n위탁수하물 포함여부 확인필요\n426,980\n원\nmytrip\n해외업체\n위탁수하물 포함여부 확인필요\n429,325\n원"
+      },
+      {
+        "amount": 414374,
+        "context": "Kiwi.com해외업체414,374원위탁수하물 포함여부 확인필요"
+      },
+      {
+        "amount": 414374,
+        "context": "Kiwi.com해외업체414,374원"
+      },
+      {
+        "amount": 414374,
+        "context": "Kiwi.com해외업체414,374원"
+      },
+      {
+        "amount": 414374,
+        "context": "414,374원"
+      },
+      {
+        "amount": 414374,
+        "context": "트립닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n397,300\n원\nKiwi.com\n해외업체\n위탁수하물 포함여부 확인필요\n414,374\n원\n부킹닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n421,628\n원\nGotogate\n해외업체\n위탁수하물 포함여부 확인필요\n426,980\n원\nmytrip\n해외업체\n위탁수하물 포함여부 확인필요\n429,325\n원"
+      },
+      {
+        "amount": 414374,
+        "context": "Kiwi.com\n해외업체\n위탁수하물 포함여부 확인필요\n414,374\n원"
+      },
+      {
+        "amount": 414374,
+        "context": "Kiwi.com\n해외업체\n위탁수하물 포함여부 확인필요\n414,374\n원"
+      },
+      {
+        "amount": 414374,
+        "context": "Kiwi.com\n해외업체\n위탁수하물 포함여부 확인필요\n414,374\n원"
+      },
+      {
+        "amount": 414374,
+        "context": "414,374\n원"
+      },
+      {
+        "amount": 414374,
+        "context": "414,374\n원"
+      },
+      {
+        "amount": 421628,
+        "context": "성인/모든 결제수단\n트립닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n397,300\n원\nKiwi.com\n해외업체\n위탁수하물 포함여부 확인필요\n414,374\n원\n부킹닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n421,628\n원\nGotogate\n해외업체\n위탁수하물 포함여부 확인필요\n426,980\n원\nmytrip\n해외업체\n위탁수하물 포함여부 확인필요\n429,325\n원"
+      }
+    ],
+    "pagePreview": "Naver\n사용자 링크\n로그인\n서비스 더보기\n여행상품\n여행정보\n0\n로그인 후 등급확인\n마이페이지\n여행핫딜\n항공\n호텔\n패키지\nFor U\n항공권 예약\n선택한 항공권\n찜\n공유\n가는편\n상세보기\n삭제\n인천\nICN\n도쿄\nNRT\n12.30.(수) 07:35~10:15직항02시간 40분\n에어부산\n오는편\n상세보기\n도쿄\nNRT\n인천\nICN\n1.1.(금) 08:55~11:35직항02시간 40분\n집에어\n이 항공권 가격 알림받기\n27\n트래블클럽\n로그인 후 등급확인 하세요\n항공권 판매사 선택\n판매사 선택하기\n성인/모든 결제수단\n트립닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n397,300\n원\nKiwi.com\n해외업체\n위탁수하물 포함여부 확인필요\n414,374\n원\n부킹닷컴\n해외업체\n위탁수하물 포함여부 확인필요\n421,628\n원\nGotogate\n해외업체\n위탁수하물 포함여부 확인필요\n426,980\n원\nmytrip\n해외업체\n위탁수하물 포함여부 확인필요\n429,325\n원\n\n좌석상태 및 요금(유류할증료, 제세공과금 등 포함) 등의 정보는 각 여행사에서 제공한 정보이며, 예약현황, 유가, 환율 등에 따라 실시간 변동되므로 네이버 검색결과와 여행사 홈페이지 정보에 차이가 있을 수 있습니다.\n\n항공권 예약 및 예약한 항공권의 확인, 결제, 발권은 선택하신 여행사의 홈페이지에서 확인 가능하며, 예약전 요금규정(수하물, 환불, 마일리지 등)을 반드시 확인하시기 바랍니다.\n\n네이버는 항공권 검색 결과 및 구매에 대한 별도의 책임을 지지 않으며, 항공권 예약, 결제, 발권, 취소 등에 대한 사항은 해당 여행사로 문의하시기 바랍니다.\n\n개인정보처리방침\n이용약관\n사업자정보 공개\n고객센터\n로그인\n전체서비스\n사업자등록번호\n220-81-62517\n통신판매번호\n2006-경기성남-0692\n대표이사\n최수연\n전화번호\n1588-3820\n이메일\nccnaver@naver.com\n주소\n경기도 성남시 분당구 정자일로 95 NAVER 1784, 13561\n호스팅 서비스 제공\nNAVER Cloud\n\n네이버 항공권은 제휴사에서 제공하는 항",
     "network": [
       {
         "url": "https://flight-api.naver.com/flight/international/searchFlights",
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://nam.veta.naver.com/gfp/v1",
+        "url": "https://tivan.naver.com/g/100_200/ifLjZHytGob6uPgjY5j573YoF8qZXOrwMnoOz4OPW0873uPHNf9hBS0SktZEnMxcEAni-K9VAZAGEAKzeTc9TnOL-9izV0NrNN7aoAH-kjtoZPwH1U9FVoPM_sMR8ctOAGAdsVDS_sSsB4wMutSaendJ25LcWymPFndZiVdK2SYMsGVCaEBt1Wwk5vIPtiV_uYvPZ8mDlZDpGLeWOQFeJnOXfRZ99L79ldFKoaxQ_gof55tYTVPTtAS0yoTo3Er504AItAtvGZZ4ZtPRilMM4aQQGxLhftFebuIgQpjPjYQg5kYlVd4-3JYC4xWWYPoUeRTaMhutKm9c1oRfPYQk9Lc3UJp39QdA6PGCv7VfaFcZzYloYmZjdvumzMffSTzVKyMNBQnP2eUORaNdFJV77OEhVXgYZwyE6meInoWjx9b8Hci3qm0qsvsS8HBoMw_eHPyWXMUGmWYOhVqgxcqcZNh-jyLsUOuRuP56lov9JCtPOBQhIQpdE3QFxIiQraoPJFVxhhQIj-lddXHinGA1zvEVk18SV72rFO2jv1mAn8RRnnMrfIMsePaTBtKJb4MclFofq5seu0YL_0WqIKkLOwan-EbfZK-BfcrikRH8sACamZ2b8NllSd_naHi6_mbobnRzzBSTkYFrzJuilnQW_cHYMRTCER71kmixcf8KV7McQYf2sEhqUD-tM90voddbCSUj2dAggmMDoMs23v7glnj9uQ1raAR7BtQc-rILOUvDuQdeNXE59-r8zTR_CCR4RROCRTxusY9Q6en8ytW0nqD1Xag65PXTropibEi-CQjDpifYfFbY9VGu9SKoEcrtTtqh9V6r00QEiJajsohj7Kr2l7avE2JExrPua0JEx4g9k8BGm6Ei0n-kKxh1DvIL_qfO9uHPCXyBtOqOwXcVcw/NE",
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://tivan.naver.com/g/100_200/UozSeUyFaLVsLoL3MHkxeZ7_vXJanPsfgMe2XZ0aoZhz1Vyb9VN_ZTGXX6Hp6sKax-CscZTNkq4OVVEuDc30EdVBAKChWwNYsGAuK5TLBylJsobNOPXljH0Sxbzzq__plBHBTJikJ2VoxLu_rObUp553F0iJ3d0oli5x_KUalE6L4lzvodKRD_-siC7PIeWkP3kpOFhDTji7YKdRqz3rFdqOmTy5yj0TMjkXq2mfUdEc6YI2j540Kyzy6nc-FAo8wruXX-5XUPAMb0I8pPfbykkd2nIPr1AbpRabV5P4CA4bd6ddp1kQxH2V_VqOlcK2jnfYpD-eZSPckk105iXCRf0C2DazRgU3sESl56aEbzowgwh2YMNjS5FAOtVXVPYkn7Y0i7a_AehJQJaEEWWTHgH2BHYzNXKOiLZAKzAHNnw2IsmLsltvIXuyUIMwPyAvLl61l1BUX1ZCfkdqQeUKTDY_ZDBS4Hjf9Fa74QioF-lADj61NRMtyl87fALgl1Spe4SPFZKS_llWQmEI5rXMbUmoaD1rrCrJktuJIKCMM6EyOpBj7GZTCPZ5f8zesA6tv_WX3CrssIP7NOex604jhGJZVyJJosIxDNEBuE3h9Wb2XBzIE_ajCtPdz6RxvAD6NS5DXeS_RKoU4h0aL05XiUffokYHEMNVP3D-UigQK822MsAJfpsqDg-R1PmmKIYtATrHPFJCyd5yUqQ78sUNxs_lOZhlAdaqvdvWHZROI72CifXWzBdj13OHiEOJG4VQgQun07yiDUx_T3b9dX5ZmZSzbJ9LHBDgFN8l0Q5wHg9fegIGEI6DcDfWn0dvdgp1gR0hbk_pzxIEy64GogRsJwc2T6IgagU_0ZtIosTwEKo9ggSbiNMH2XiIUA9i8O37tTlbOYuOiaaI9h6vMCPB-NsB2ZiAQuxKASGtk9LwZOw/NE",
+        "url": "https://tivan.naver.com/g/100_200/sK05bW9Dup6b9HxNiMfyjwGkoHlByresddGtNk_6OCuYKzlEASJokiJd0GG-E2C0r-mZ0qEFNbH2EVesNKDVMnWyZJCvdMnE-HX-X3AenxR90EtF_c4WnlXJZWsKpLbmsCJwiOln9tqW-mEKIp67xPqI5lqjk1wjCl6VSjPuj5btkqDR9D-ZH_OE1XiTIPcaI9Q01YPUG-yoOWhyyqDkX3gtSlxBgI66o_J_Ofx07VVi9vF6Y-O1Mn6N0x10k3kD_z5FXfNQNpGRGlZWT2ALEtMT9orrVeuXml53fRh41J_VlrI4Ezk_I7a3rYLGJ8iPtzKq7zvP30yU9_i0_URTjv_nx3-cBiMTur7RoeAEvm94KQYESnMCf1s01zpSHA0gnG86BdStvLlyTnX8BJ-EvRvSMySE9Xqt3sOOpjpHslXQRB5v4NLVmiQXQ2GBMQHsnUrB_86xggDGrjkfnB2PkC9a5JAIQZYftisw30Qod6JFbtVmxzKLfEcKbHk4EMWpN5AxN8rxENB-gKxuK3djr2fDqzXjgZJAt3680KsNGyFmXl3NBYuGY3fzIrP5-_f8vOJXDCr3SJk5zc2fxY_nFx8m5ITrJ_jfw15BSm5fbpe1stRafIo0pHpL6Vz-WJILRKHEoDawcUQpsrR1t2TsCPDAwKacc5KvrCxP3xWjKGgey_PR6Nxe54eOtbcgFR2pKnj2dbdOFIokCyjOD_ELJ-R-4oyBw7mKgO7dONB3yDLZ7MOXZs5VDFybQjtm3BJa2rMBOrIw6zT87ARjVtOA2KXN5S-Ppk1vmNGFE978Lbmj2CWJUFQuobN83fpFO0t5CepcyCwQ1dA7DHp3-Nc3kFOzRbIiNvx0Qh2-yo3wSMAvuSkMecFkotmK-xx5mBy4SrGm_L5wkGcMosORt0OsFg/NE",
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://tivan.naver.com/g/100_200/1ZCJms58xmblBR5m-srPIluyw3ASP3pViND85PtL7amM_BZN_KqWofUsQbXtOx2Nj8cHN-1hlW7zVZgXuaVHD-lgVhWMTQfGBmW8exFASegNIdeRtNJ5fPJfWk3TNHYhP5N2UU0vE2ukZ0lmsEEeioddjslZ6gndTNTsWR_GG8jLwKGa7SbieHLgnDpYCEXuz_ugOCUC3zAGkKpZkLqHK47ly5MUlGKIEp73-HUVN07Iag0K6HdrcYqrd6jV8zwYwe-pnt-MlGIr8JSSRoC1AWd5SOuLsz4Af9iIEgz-fcxHGoJNtLdnwkwZ89-yn-bLu7QiVePQ1leN1o2IVHSVXU1wLSjhila6Br7P20sRIEGQ0YdBZ6mnJQ-pzC2xLCi65Gj0m6CBNLEy92p13XvfUyKcSv0bF8ZwsbO3ep1XJ05H2DHw6L1T1jiKG0l_Mkj_IVXX_JXlreMV_GwJfyBVlbOPR-lRu0HmHPsRIOGwJa5WwvPMurV45y8QQtAucyGK4YasMKh-k2BDQc07t2mn6LM_UUfLfWJTJP1D92djHCdYdw-8eMzyOmAMh0rsHuUQl5epIxwUipvjjts3Liu_olQbGSn2r_qSFaCMUhEyJhMYVBHlJp1zwgOrVFW46W4db9Yt4j5p0qQC8NDv9TTjEd3X7UqKWp7XOJgVqLTzB4ZAoEmmABMP1QU0n_qG-6UvzUe-G6C2pQDNeF9Yq4EN9Zx_NPSHR4zFDBP2Tx7QjJYc-MfNTAGSz23VZIQz3CPdokXsIpbP4uE3iD_htX7dsEg8lULHhwwDv7EkFkBkzXB2vooH3UIeAVQVOljSTowtvPp2UhPcxAJ4nV50xAgYmZWFnq00MsGImBmjfa1ElwKpNlN9WS2GDHidFUIcVdsEDqAbeLmKU3Y1sLYW7Z2LKg/NE",
+        "url": "https://flight-api.naver.com/flight/international/searchFlights",
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://tivan.naver.com/g/100_200/udyrX_F6yj-FE2qqhKpvFGEdwovuqJRIOJnyF7j2E4nY14LdUpDtwkHdI3fuVfR2MQqDntvjgUnTF9UpPtTaEVj5__swlp_MV51dcxd_JM36WWTiMnYXHQ8C1GOrIUYWzXiUBVzSDxYGD5_G6pTZ5WPVRYKsg-RrlEtytljGpjV76Jyg6CZvpbxAVRouGkqAYbKgVfH_FHWs9ekz19wccM2TLtHs5V1gi6B_tjfTpIXiXrNB7WfkmZLSUN95JHviCv4uEjvvuYMUoDO7lgRYrq33OdIIyVok-0En8HMWORUNj_J5upNFf2sw8eqY68C-sqO3I5Uk4TcdfSPlaOaBOvDqU64Lz_C854_-qe2j_OBBekqjG-1h2u0b2EnQfUcOoHXIPsdL0NMaZqhl8eWe_De70l_NXvSBVQZ764UTXKRtCkd1f3nDUzvfyg3DgVpM-6UhNdrTCUyBl3x4SOPasgnlzB_IVU7C04xXaoC4SBHiJhXXrs863VBhTzY9TJW_Izs48qxOyNsMbUiUOR_8sqNWtbqW5m-4V9BvhTW8p55fApSKbni94nPs8GykTxHh8AyKuACT5l_bfft3OOn4pmnFmYBPH2Bj4VgfNpYw7MX_qswSLUgo4fs_k9Y1E1QbiCXQiMVs2ezQrexztQx4IytLqLynG3dFlokWvuBPaFwycGWlQBtdVJmNS-MvC48sEDDzR6PqgDr2vhmBNH8NzrvJNVJJTuwExZFRUAagAxPh8fWk1-y3XH7txJDOFjXWpqoE6yFidUT1j2M_VfP6zrxhhjS3PJMVgHk3VXaufBJyutiGWhjlwuYNqq02yG43fYMxFX1GC6k2tdudu0WPKIvnP_lw_Y85AZhBni5SSg3nzzbSgXAju4QUBrohh2AEP4Oo1cJwV2BhyC09Y9anvA/NE",
+        "url": "https://flight-api.naver.com/graphql",
         "failure": "net::ERR_ABORTED"
       }
     ],
     "browserErrors": [],
     "openPages": [
-      "https://flight.naver.com/flights/international/SEL:city-TYO:city-20261230/TYO:city-SEL:city-20270101"
+      "https://flight.naver.com/flights/international/detail/SEL:city-TYO:city-20261230/TYO:city-SEL:city-20270101"
     ]
   },
   {
@@ -45,14 +164,22 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T09:14:06.125Z",
-    "elapsedMs": 121361,
-    "status": "content-not-detected",
-    "detail": "Flight content not detected: TimeoutError: page.waitForFunction: Timeout 120000ms exceeded.; 메인 콘텐츠로 이동\nTheme Detection\n숙소\n항공권\n투어&티켓\n항공 + 호텔\n기차표\n렌터카·공항픽업\n여행자 보험\n앱\nKRW\n고객센터\n예약 검색\n로그인/회원가입\n서울 출발 ",
+    "attemptedAt": "2026-10-18T09:29:03.196Z",
+    "elapsedMs": 133669,
+    "status": "blocked",
+    "detail": "Bot verification page: TimeoutError: locator.click: Timeout 120000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('선택', { exact: true }).first()\u001b[22m\n\u001b[2m    - locator resolved to <span data-testid=; 메인 콘텐츠로 이동\nTheme Detection\n숙소\n항공권\n투어&티켓\n항공 + 호텔\n기차표\n렌터카·공항픽업\n여행자 보험\n앱\nKRW\n고객센터\n예약 검색\n로그인/회원가입\n서울 출발 ",
     "finalUrl": "https://kr.trip.com/flights/showfarefirst?dcity=sel&acity=tyo&dcityid=274&acityid=228&ddate=2026-12-30&rdate=2027-01-01&triptype=rt&class=y&lowpricesource=searchform&quantity=1&searchboxarg=t&nonstoponly=off&locale=ko-KR&curr=KRW",
     "fareCandidates": [],
-    "pagePreview": "메인 콘텐츠로 이동\nTheme Detection\n숙소\n항공권\n투어&티켓\n항공 + 호텔\n기차표\n렌터카·공항픽업\n여행자 보험\n앱\nKRW\n고객센터\n예약 검색\n로그인/회원가입\n서울 출발 도쿄 도착 저렴한 항공권 | kr.trip.com\n왕복\n편도\n다구간\n직항\n서울\n·\n모든 공항\n도쿄\n·\n모든 공항\n성인 1명 · 일반석\n검색\n12월 23일–12월 25일\n429,000원\n12월 24일–12월 26일\n540,700원\n12월 25일–12월 27일\n540,900원\n12월 26일–12월 28일\n483,300원\n12월 27일–12월 29일\n501,700원\n12월 28일–12월 30일\n490,200원\n12월 29일–12월 31일\n427,800원\n12월 30일–1월 1일\n430,100원\n12월 31일–1월 2일\n520,100원\n1월 1일–1월 3일\n553,600원\n1월 2일–1월 4일\n427,000원\n1월 3일–1월 5일\n478,000원\n1월 4일–1월 6일\n387,100원\n1월 5일–1월 7일\n317,000원\n1월 6일–1월 8일\n412,000원\n가격표\n무료 플러그인\n추천\n 직항\n 위탁 수하물 포함\n 저가 항공사 숨기기\n 휴대 수하물 포함\n 공동운항편 숨기기\n더 보기\n얼라이언스\n스타얼라이언스\n464,800원\n스카이팀\n601,200원\n원월드\n639,200원\n항공사\n동일 항공사 조합만 보기\n항공사 전체 선택\nJAL (95)\n639,200원\n대한항공 (58)\n601,200원\n아시아나항공 (42)\n509,900원\n전일본공수 (28)\n611,700원\n제주항공 (7)\n439,500원\n더 보기\n얼라이언스\n스타얼라이언스\n464,800원\n스카이팀\n601,200원\n원월드\n639,200원\n시간대\n출발시간\n00:00–24:00\n00:00\n24:00\n도착시간\n00:00–24:00\n00:00\n24:00\n소요시간\n무관\n경유시간\n1시간–22시간\n1시간\n22시간\n총 비행시간\n1시간 30분–25시간 30분\n1시간 30분\n25시간 30분\n경유\n경유 1회 이하\n430,100원\n경유지\n무관\n후쿠오카\n641,800원\n오",
+    "pagePreview": "메인 콘텐츠로 이동\nTheme Detection\n숙소\n항공권\n투어&티켓\n항공 + 호텔\n기차표\n렌터카·공항픽업\n여행자 보험\n앱\nKRW\n고객센터\n예약 검색\n로그인/회원가입\n서울 출발 도쿄 도착 저렴한 항공권 | kr.trip.com\n서울도쿄\n변경\n성인 1명\n일반석\n2026년 12월 30일 – 2027년 1월 1일\n12월 26일–12월 28일\n483,300원\n12월 27일–12월 29일\n501,700원\n12월 28일–12월 30일\n490,200원\n12월 29일–12월 31일\n427,800원\n12월 30일–1월 1일\n461,200원\n12월 31일–1월 2일\n524,300원\n1월 1일–1월 3일\n553,600원\n1월 2일–1월 4일\n427,000원\n12월 23일–12월 25일\n430,000원\n12월 24일–12월 26일\n540,700원\n12월 25일–12월 27일\n540,900원\n12월 26일–12월 28일\n483,300원\n12월 27일–12월 29일\n501,700원\n12월 28일–12월 30일\n490,200원\n12월 29일–12월 31일\n427,800원\n12월 30일–1월 1일\n461,200원\n12월 31일–1월 2일\n524,300원\n1월 1일–1월 3일\n553,600원\n1월 2일–1월 4일\n427,000원\n1월 3일–1월 5일\n478,000원\n1월 4일–1월 6일\n387,100원\n1월 5일–1월 7일\n317,000원\n1월 6일–1월 8일\n412,000원\n가격표\n무료 플러그인\n추천\n 직항\n 위탁 수하물 포함\n 저가 항공사 숨기기\n 휴대 수하물 포함\n 공동운항편 숨기기\n더 보기\n얼라이언스\n스타얼라이언스\n477,400원\n스카이팀\n607,300원\n원월드\n669,700원\n항공사\n동일 항공사 조합만 보기\n항공사 전체 선택\n대한항공 (21)\n607,300원\n아시아나항공 (18)\n527,900원\nJAL (12)\n669,700원\n전일본공수 (8)\n631,400원\n제주항공 (7)\n461,200원\n더 보기\n얼라이언스\n스타얼라이언스\n477,400원\n스카이팀\n607,300원\n원월드\n669",
     "network": [
+      {
+        "url": "https://www.google.com/ccm/collect",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://ad.doubleclick.net/ccm/s/collect",
+        "failure": "net::ERR_ABORTED"
+      },
       {
         "url": "https://www.facebook.com/x/oauth/status",
         "failure": "net::ERR_ABORTED"
@@ -62,31 +189,15 @@
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://kr.trip.com/gtm/ag/g/c",
+        "url": "https://www.google.com/ccm/collect",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://www.google.com/ccm/collect",
         "failure": "net::ERR_ABORTED"
       },
       {
         "url": "https://mpc-prod-28-1053047382554.us-central1.run.app/events",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://www.google.com/ccm/collect",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://www.google.com/ccm/collect",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://www.google.com/ccm/collect",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://www.google.com/measurement/1p-conversion/",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://ad.doubleclick.net/ccm/s/collect",
         "failure": "net::ERR_ABORTED"
       },
       {
@@ -106,11 +217,15 @@
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://kr.trip.com/gtm/ag/g/c",
+        "url": "https://www.google.com/measurement/1p-conversion/",
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://kr.trip.com/gtm/ag/g/c",
+        "url": "https://analytics.google.com/g/collect",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://analytics.google.com/g/collect",
         "failure": "net::ERR_ABORTED"
       }
     ],
@@ -130,8 +245,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T09:14:09.421Z",
-    "elapsedMs": 2934,
+    "attemptedAt": "2026-10-18T09:29:17.582Z",
+    "elapsedMs": 14083,
     "status": "verified",
     "detail": "Exact round-trip total verified from visible google seller result",
     "finalUrl": "https://www.google.com/travel/flights/search?tfs=CBwQAhooEgoyMDI2LTEyLTMwagwIAhIIL20vMGhzcWZyDAgDEggvbS8wN2RmaxooEgoyMDI3LTAxLTAxagwIAxIIL20vMDdkZmtyDAgCEggvbS8waHNxZkABSAFwAYIBCwj___________8BmAEB&hl=ko&curr=KRW&gl=KR",
@@ -145,7 +260,7 @@
       "cabin": "economy",
       "currency": "KRW",
       "priceKrw": 388024,
-      "observedAt": "2026-10-18T09:14:09.213Z",
+      "observedAt": "2026-10-18T09:29:17.375Z",
       "evidence": {
         "source": "visible-search-result",
         "provider": "google",
@@ -267,8 +382,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T09:14:14.025Z",
-    "elapsedMs": 4499,
+    "attemptedAt": "2026-10-18T09:29:22.133Z",
+    "elapsedMs": 4443,
     "status": "verified",
     "detail": "Exact round-trip total verified from visible skyscanner seller result",
     "finalUrl": "https://www.skyscanner.co.kr/transport/flights/sel/tyoa/261230/270101/?adultsv2=1&cabinclass=economy&rtn=1",
@@ -282,7 +397,7 @@
       "cabin": "economy",
       "currency": "KRW",
       "priceKrw": 426300,
-      "observedAt": "2026-10-18T09:14:13.946Z",
+      "observedAt": "2026-10-18T09:29:22.077Z",
       "evidence": {
         "source": "visible-search-result",
         "provider": "skyscanner",
@@ -290,7 +405,7 @@
       }
     },
     "fareCandidates": [],
-    "pagePreview": "Skyscanner\n검색 결과로 가기\n도움말\n한국어\n대한민국\n₩ KRW\n로그인\n항공권\n숙소\n렌터카\n서울 (모두)\n - \n도쿄 (모두)\n성인 1명, 일반석\n가는 날\n12월 30일 (수)\n•\n오는 날\n1월 1일 (금)\n항공권 검색 결과\n여행 계획\n가격 변동 알림 받기\n모든 필터\n경유\n직항\n\n₩426,300부터\n\n1회 경유\n\n없음\n\n2번 이상 경유\n\n없음\n\n출발 시간대 설정\n가는날 출발시간\n\n오전 12:00 - 오후 11:59\n\n오는편\n\n오전 12:00 - 오후 11:59\n\n총 소요시간\n\n2.5시간 - 3.5시간\n\n항공사\n모두 선택\n모두 지우기\n스타 얼라이언스\n에티오피아 항공사\n\n₩469,737부터\n\n이 항목만\n제주항공\n\n₩434,800부터\n\n이 항목만\n항공사 조합\n\n₩426,300부터\n\n이 항목만\n항공편 탄소배출량\n이산화탄소 환산량이 상대적으로 낮은 항공편만 표시\n항공편\n결과 로드 중...\n(39 판매사 34 확인 완료)\n투어비스에서 가격 확인 중…\n달력/차트 보기\n검색 결과 표시 기준\n항공편 여행 일정표 정렬\n\n추천순\n\n₩434,800\n2시간 45분 평균\n\n2시간 45분 평균\n\n최저가\n\n₩426,300\n2시간 35분 평균\n\n2시간 35분 평균\n\n최단여행시간\n\n₩427,500\n2시간 28분 평균\n\n2시간 28분 평균\n\n정렬\n추천순\n최저가순\n최단여행시간순\n출국: 출발 시간\n오는 편: 출발 시간\n\n제주항공\n\n항공편 옵션 설정1: 총 금액 ₩434,800.\n출국 항공편: 제주항공.\n출발지: 인천 국제 출발 시간: 오전 8:10, 도착지: 도쿄 나리타 도착 시간: 오전 10:35\n진항 항공 소요 시간 2시간 25분\n귀국 항공편: 제주항공.\n출발지: 도쿄 나리타 출발 시간: 오후 12:05, 도착지: 인천 국제 도착 시간: 오후 3:10\n진항 항공 소요 시간 3시간 5분\n세금과 수수료 포함 가격\n오전 8:10\nICN\n2시간 25분\n직항\n \n오전 10:35\nNRT\n오후 12:05\nNRT\n3시간 05분\n직항\n \n오후 3:10\nICN\n상품 1개\n₩434,800\n선택하기\n\n이 항",
+    "pagePreview": "Skyscanner\n검색 결과로 가기\n도움말\n한국어\n대한민국\n₩ KRW\n로그인\n항공권\n숙소\n렌터카\n서울 (모두)\n - \n도쿄 (모두)\n성인 1명, 일반석\n가는 날\n12월 30일 (수)\n•\n오는 날\n1월 1일 (금)\n항공권 검색 결과\n여행 계획\n가격 변동 알림 받기\n모든 필터\n경유\n직항\n\n₩426,300부터\n\n1회 경유\n\n없음\n\n2번 이상 경유\n\n없음\n\n출발 시간대 설정\n가는날 출발시간\n\n오전 12:00 - 오후 11:59\n\n오는편\n\n오전 12:00 - 오후 11:59\n\n총 소요시간\n\n2.5시간 - 3.5시간\n\n항공사\n모두 선택\n모두 지우기\n스타 얼라이언스\n에티오피아 항공사\n\n₩469,737부터\n\n이 항목만\n제주항공\n\n₩434,800부터\n\n이 항목만\n항공사 조합\n\n₩426,300부터\n\n이 항목만\n항공편 탄소배출량\n이산화탄소 환산량이 상대적으로 낮은 항공편만 표시\n항공편\n결과 로드 중...\n(39 판매사 34 확인 완료)\n진에어에서 가격 확인 중…\n달력/차트 보기\n검색 결과 표시 기준\n항공편 여행 일정표 정렬\n\n추천순\n\n₩434,800\n2시간 45분 평균\n\n2시간 45분 평균\n\n최저가\n\n₩426,300\n2시간 35분 평균\n\n2시간 35분 평균\n\n최단여행시간\n\n₩427,500\n2시간 28분 평균\n\n2시간 28분 평균\n\n정렬\n추천순\n최저가순\n최단여행시간순\n출국: 출발 시간\n오는 편: 출발 시간\n\n제주항공\n\n항공편 옵션 설정1: 총 금액 ₩434,800.\n출국 항공편: 제주항공.\n출발지: 인천 국제 출발 시간: 오전 8:10, 도착지: 도쿄 나리타 도착 시간: 오전 10:35\n진항 항공 소요 시간 2시간 25분\n귀국 항공편: 제주항공.\n출발지: 도쿄 나리타 출발 시간: 오후 12:05, 도착지: 인천 국제 도착 시간: 오후 3:10\n진항 항공 소요 시간 3시간 5분\n세금과 수수료 포함 가격\n오전 8:10\nICN\n2시간 25분\n직항\n \n오전 10:35\nNRT\n오후 12:05\nNRT\n3시간 05분\n직항\n \n오후 3:10\nICN\n상품 1개\n₩434,800\n선택하기\n\n이 항공",
     "network": [
       {
         "url": "https://pagead2.googlesyndication.com/ccm/collect",
