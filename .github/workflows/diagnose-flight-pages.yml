@@ -2,6 +2,14 @@ name: Collect and verify flight prices
 # Refresh requested 2026-10-18 10:35 KST
 # Manual refresh requested 2026-10-17 22:50 KST
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/diagnose-flight-pages.yml'
+      - 'scripts/**'
+      - 'package.json'
+  schedule:
+    - cron: '*/15 * * * *'
   workflow_dispatch:
 permissions:
   contents: write
