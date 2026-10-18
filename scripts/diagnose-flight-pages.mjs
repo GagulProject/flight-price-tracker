@@ -75,6 +75,7 @@ for (const route of data.routes) for (const provider of route.providers) {
         // The first page lists outbound flights. Its fare is not a selected two-leg booking.
         await page.waitForFunction(() => /\d+개 항공편 검색됨/.test(document.body?.innerText || ''),
           null, { timeout: 120000, polling: 1000 });
+        await page.getByRole('button', { name: '선택', exact: true }).first().click({ timeout: 120000 });
         await page.waitForFunction(() => [...document.querySelectorAll('button')]
           .some(button => !button.disabled && /이 운임 선택/.test(button.innerText)) ||
           /시도 제한 횟수|밀어서 퍼즐 완성하기|captcha|access denied/i.test(document.body?.innerText || ''),
