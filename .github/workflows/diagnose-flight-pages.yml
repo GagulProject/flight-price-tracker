@@ -1,4 +1,5 @@
 name: Collect and verify flight prices
+# Refresh requested 2026-10-18 10:35 KST
 # Manual refresh requested 2026-10-17 22:50 KST
 on:
   workflow_dispatch:
