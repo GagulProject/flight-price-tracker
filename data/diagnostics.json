@@ -338,24 +338,5 @@
     "fareCandidates": [],
     "pagePreview": "Are you a person or a robot?\nPlease don’t take this personally - some scripts and bots are remarkably lifelike these days!\nStill having problems accessing the page? Try checking you have JavaScript and cookies turned on and that your browser isn’t blocking them from loading.\nc7b4df79-caae-11f1-9ee9-88628e6d06ef",
     "network": []
-  },
-  {
-    "provider": "expedia",
-    "origin": "SEL",
-    "destination": "TYO",
-    "departureDate": "2026-12-30",
-    "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-18T04:45:46.192Z",
-    "elapsedMs": 747,
-    "status": "blocked",
-    "detail": "HTTP 429; no automated bypass attempted",
-    "fareCandidates": [],
-    "pagePreview": "인증해 주세요...\n\n로봇이 아닌지 인증이 필요합니다.\n\nb1eb8269-279e-4851-82bc-b2e1d255e2e1",
-    "network": [
-      {
-        "url": "https://www.expedia.co.kr/Flights-Search",
-        "httpStatus": 429
-      }
-    ]
   }
 ]

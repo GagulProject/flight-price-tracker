@@ -18,7 +18,7 @@ for (const route of data.routes) {
   if (seen.has(key)) throw new Error(`Duplicate route: ${key}`);
   seen.add(key);
   const requiredProviders = ['naver', 'trip', 'google', 'skyscanner'];
-  if (!Array.isArray(route.providers) || ![requiredProviders.length,requiredProviders.length+1].includes(route.providers.length) || new Set(route.providers.map(x => x.id)).size !== route.providers.length || requiredProviders.some(id => !route.providers.some(item => item.id === id))) throw new Error('Expected required distinct providers and optional Expedia');
+  if (!Array.isArray(route.providers) || route.providers.length !== requiredProviders.length || new Set(route.providers.map(x => x.id)).size !== route.providers.length || requiredProviders.some(id => !route.providers.some(item => item.id === id))) throw new Error('Expected four distinct providers');
   for (const item of route.providers) {
     const url = new URL(item.url);
     if (url.protocol !== 'https:') throw new Error(`Invalid protocol: ${item.id}`);
@@ -40,10 +40,6 @@ for (const route of data.routes) {
       const dates = [route.departureDate, route.returnDate].map(date => date.slice(2).replaceAll('-', ''));
       const skyCode = code => code === 'TYO' ? 'tyoa' : code.toLowerCase();
       if (parts[2] !== skyCode(route.origin.code) || parts[3] !== skyCode(route.destination.code) || parts[4] !== dates[0] || parts[5] !== dates[1] || url.searchParams.get('adultsv2') !== '1' || url.searchParams.get('cabinclass') !== 'economy' || url.searchParams.get('rtn') !== '1') throw new Error('Skyscanner itinerary mismatch');
-    } else if (item.id === 'expedia') {
-      if (url.hostname !== 'www.expedia.co.kr' || url.pathname !== '/Flights-Search' || url.searchParams.get('trip') !== 'roundtrip' || url.searchParams.get('passengers') !== 'adults:1' || url.searchParams.get('options') !== 'cabinclass:economy' || url.searchParams.get('currency') !== 'KRW') throw new Error('Invalid Expedia itinerary');
-      const dates = [route.departureDate,route.returnDate].map(d=>d.slice(5,7)+'/'+d.slice(8,10)+'/'+d.slice(0,4));
-      if (!url.searchParams.get('leg1')?.includes('from:'+route.origin.code+',to:'+route.destination.code+',departure:'+dates[0]) || !url.searchParams.get('leg2')?.includes('from:'+route.destination.code+',to:'+route.origin.code+',departure:'+dates[1])) throw new Error('Expedia dates mismatch');
     } else throw new Error('Unknown provider');
     if (!Array.isArray(item.history)) throw new Error(`Missing price history: ${item.id}`);
     let previousTime = -Infinity;

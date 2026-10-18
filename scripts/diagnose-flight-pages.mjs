@@ -12,9 +12,10 @@ const headless = process.env.FLIGHT_BROWSER_HEADLESS !== 'false';
 const browser = await chromium.launch(headless ? { headless: true } : { headless: false, channel: 'chrome' });
 const results = [];
 // Ordinary browser access only: no stealth, CAPTCHA solving, proxy rotation or retries on blocks.
-const supported = new Set(['naver','trip','google','skyscanner','expedia']);
+const supported = new Set(['naver','trip','google','skyscanner']);
 const retryableHttp = new Set([408,500,502,503,504]);
 const botPattern=/captcha|robot|로봇이 아닙니다|접근이 제한|access denied|are you a person|verify you are human/i;
+const loadingPattern=/결과 로드 중|결과를 가져오는 중|특가를 불러오는 중|항공편.*검색 중/i;
 for (const route of data.routes) for (const provider of route.providers) {
   if (!supported.has(provider.id)) continue;
   if (provider.id === 'skyscanner' && process.env.SKYSCANNER_API_KEY) {
@@ -72,33 +73,31 @@ for (const route of data.routes) for (const provider of route.providers) {
     try {
       if (provider.id === 'trip') {
         // The first page lists outbound flights. Its fare is not a selected two-leg booking.
+        await page.waitForFunction(() => /\d+개 항공편 검색됨/.test(document.body?.innerText || ''),
+          null, { timeout: 120000, polling: 1000 });
         await page.getByRole('button', { name: '이 운임 선택' }).first()
-          .waitFor({ state: 'visible', timeout: 60000 });
-        for (let clickAttempt = 0; clickAttempt < 2; clickAttempt++) {
-          await page.getByRole('button', { name: '이 운임 선택' }).first().click();
-          const opened = await page.waitForURL(/\/flights\/ShowFareNext/i, { timeout: 10000 })
-            .then(() => true).catch(() => false);
-          if (opened) break;
-        }
-        if (!/\/flights\/ShowFareNext/i.test(page.url()))
-          throw new Error('Trip outbound fare did not open the return-flight list');
+          .waitFor({ state: 'visible', timeout: 120000 });
+        await page.getByRole('button', { name: '이 운임 선택' }).first().click({ timeout: 120000 });
+        await page.waitForURL(/\/flights\/ShowFareNext/i, { timeout: 120000 });
+        await page.waitForFunction(() => /\d+개 항공편 검색됨/.test(document.body?.innerText || ''),
+          null, { timeout: 120000, polling: 1000 });
         await page.getByText('자세히 보기', { exact: true }).first()
           .or(page.getByRole('button', { name: '이 항공편 선택' }).first())
-          .first().waitFor({ state: 'visible', timeout: 60000 });
+          .first().waitFor({ state: 'visible', timeout: 120000 });
         const returnSelect = page.getByRole('button', { name: '이 항공편 선택' }).first();
         if (!await returnSelect.isVisible()) {
-          await page.getByText('자세히 보기', { exact: true }).first().click();
+          await page.getByText('자세히 보기', { exact: true }).first().click({ timeout: 120000 });
         }
-        await returnSelect.waitFor({ state: 'visible', timeout: 30000 });
-        await returnSelect.click();
+        await returnSelect.waitFor({ state: 'visible', timeout: 120000 });
+        await returnSelect.click({ timeout: 120000 });
         await page.locator('.ift-drawer__content [data-total-price]').first()
-          .waitFor({ state: 'visible', timeout: 30000 });
+          .waitFor({ state: 'visible', timeout: 120000 });
       } else if (provider.id === 'naver') {
         // Naver's deep link initially renders a search shell; its Search button starts the actual fare request.
         const waitForNaverResults = async (timeout) => {
           const search = page.getByRole('button', { name: '검색', exact: true });
           await search.waitFor({state:'visible',timeout:30000});
-          await search.click();
+          await search.click({ timeout: 120000 });
           // Observe the live results for a full three minutes. Footer numbers never finish this wait.
           await page.waitForFunction(() => {
             const text=document.body?.innerText || '';
@@ -131,27 +130,22 @@ for (const route of data.routes) for (const provider of route.providers) {
           const label = await summary.innerText();
           if (!/성인\/모든 결제수단[\s\S]*왕복[\s\S]*[0-9,]+\s*원/.test(label)) continue;
           const selectFare = card.locator('[class*="combination_select_schedule"]');
-          for (let clickAttempt = 0; clickAttempt < 2; clickAttempt++) {
-            await selectFare.click();
-            const opened = await page.waitForURL(/\/flights\/international\/detail\//, { timeout: 10000 })
-              .then(() => true).catch(() => false);
-            if (opened) break;
-          }
+          await selectFare.click({ timeout: 120000 });
+          await page.waitForURL(/\/flights\/international\/detail\//, { timeout: 120000 });
           selected = true;
           break;
         }
         if (!selected) throw new Error('No ordinary all-payment round-trip card available');
         if (!page.url().includes('/flights/international/detail/'))
           throw new Error('Naver result card did not open its selected itinerary');
-        await page.locator('[class*="international_selected_flights"]').waitFor({ state: 'visible', timeout: 30000 });
+        await page.locator('[class*="international_selected_flights"]').waitFor({ state: 'visible', timeout: 120000 });
         await page.waitForFunction(() => [...document.querySelectorAll('[class*="detail_row"]')]
           .some(element => /해외업체|국내업체/.test(element.innerText) && /[0-9,]+\s*원/.test(element.innerText)),
-        null, { timeout: 30000, polling: 500 });
+        null, { timeout: 120000, polling: 500 });
       } else if (provider.id === 'google') {
         for (let retry = 0; retry < 3; retry++) {
-          await page.waitForFunction(() => document.querySelector('[role="link"][aria-label^="왕복 총 가격은"]') ||
-            /반환된 결과가 없습니다|죄송합니다\. 오류가 발생했습니다/.test(document.body?.innerText || ''),
-          null, { timeout: 45000, polling: 1000 });
+          await page.waitForFunction(() => /결과 \d+개가 반환되었습니다\.|반환된 결과가 없습니다|죄송합니다\. 오류가 발생했습니다/.test(document.body?.innerText || ''),
+          null, { timeout: 120000, polling: 1000 });
           const searchError = await page.locator('body').innerText().then(text =>
             /반환된 결과가 없습니다|죄송합니다\. 오류가 발생했습니다/.test(text));
           if (!searchError || retry === 2) break;
@@ -166,13 +160,12 @@ for (const route of data.routes) for (const provider of route.providers) {
             !botPattern.test(afterRefresh)) {
           // A fresh page load can recover a transient search error that the page's refresh button did not clear.
           await page.reload({ waitUntil: 'domcontentloaded', timeout: 60000 });
-          await page.waitForFunction(() => document.querySelector('[role="link"][aria-label^="왕복 총 가격은"]') ||
-            /반환된 결과가 없습니다|죄송합니다\. 오류가 발생했습니다/.test(document.body?.innerText || ''),
-          null, { timeout: 45000, polling: 1000 });
+          await page.waitForFunction(() => /결과 \d+개가 반환되었습니다\.|반환된 결과가 없습니다|죄송합니다\. 오류가 발생했습니다/.test(document.body?.innerText || ''),
+          null, { timeout: 120000, polling: 1000 });
         }
       } else if (provider.id === 'skyscanner') {
         await page.waitForFunction(() => [...document.querySelectorAll('[role="listitem"]')].some(element => element.innerText.includes('항공편 옵션 설정')) ||
-          /로봇|robot|captcha/i.test(document.body?.innerText || ''), null, { timeout: 45000, polling: 1000 });
+          /로봇|robot|captcha/i.test(document.body?.innerText || ''), null, { timeout: 120000, polling: 1000 });
       } else {
         await page.waitForFunction(() => {
           const text=document.body?.innerText || '';
@@ -186,10 +179,11 @@ for (const route of data.routes) for (const provider of route.providers) {
       const hasResultCards = provider.id === 'naver' && /왕복 항공편 선택[\s\S]*성인\/모든 결제수단/.test(visible);
       const failedFareApi = provider.id === 'naver' && !hasSellerFare && !hasResultCards && network.some(item =>
         item.failure && /flight-api\.naver\.com\/(flight\/international\/searchFlights|graphql)/.test(item.url));
-      status=botPattern.test(visible)?'blocked':failedFareApi?'fare-api-unavailable':'content-not-detected';
+      status=botPattern.test(visible)?'blocked':failedFareApi?'fare-api-unavailable':
+        /Timeout/i.test(String(waitError)) && loadingPattern.test(visible)?'results-loading':'content-not-detected';
       detail=failedFareApi
         ? 'Naver search returned no fare results after a 180-second wait, one ordinary reload and a further 120-second wait; flight API failures observed'
-        : (status==='blocked'?'Bot verification page: ':'Flight content not detected: ')+String(waitError).slice(0,180)+'; '+visible.slice(0,100);
+        : (status==='blocked'?'Bot verification page: ':status==='results-loading'?'Flight results still loading: ':'Flight content not detected: ')+String(waitError).slice(0,180)+'; '+visible.slice(0,100);
       throw waitError;
     }
     // A shell page is not a loaded search result. Wait for a fare or a clear terminal state.
@@ -205,9 +199,6 @@ for (const route of data.routes) for (const provider of route.providers) {
       quote = tripQuoteFromSnapshot(route, snapshot, new Date().toISOString());
       await writeFile('diagnostics/trip-snapshot.json', JSON.stringify(snapshot, null, 2) + '\n');
     } else if (provider.id === 'google') {
-      await page.waitForFunction(() => document.querySelector('[role="link"][aria-label^="왕복 총 가격은"]') ||
-        /반환된 결과가 없습니다|죄송합니다\. 오류가 발생했습니다/.test(document.body?.innerText || ''),
-      null, { timeout: 45000, polling: 1000 }).catch(() => {});
       const snapshot = await readGoogleSnapshot(page);
       quote = googleQuoteFromSnapshot(route, snapshot, new Date().toISOString());
       await writeFile('diagnostics/google-snapshot.json', JSON.stringify(snapshot, null, 2) + '\n');

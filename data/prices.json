@@ -1055,19 +1055,6 @@
               "offerId": "1d3191703d2655a266333822"
             }
           }
-        },
-        {
-          "id": "expedia",
-          "name": "익스피디아",
-          "status": "unavailable",
-          "priceKrw": null,
-          "checkedAt": null,
-          "lastAttemptAt": "2026-10-18T04:45:46.192Z",
-          "collectionStatus": "blocked",
-          "history": [],
-          "url": "https://www.expedia.co.kr/Flights-Search?trip=roundtrip&leg1=from%3ASEL%2Cto%3ATYO%2Cdeparture%3A12%2F30%2F2026TANYT&leg2=from%3ATYO%2Cto%3ASEL%2Cdeparture%3A01%2F01%2F2027TANYT&passengers=adults%3A1&options=cabinclass%3Aeconomy&currency=KRW",
-          "note": "HTTP 429; no automated bypass attempted",
-          "fareNote": "과거 기록 · 검증 근거 없음"
         }
       ]
     }

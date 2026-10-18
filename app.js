@@ -1,6 +1,6 @@
 const money = new Intl.NumberFormat('ko-KR');
 const dateTime = new Intl.DateTimeFormat('ko-KR', { timeZone: 'Asia/Seoul', year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' });
-const providers = { naver: { name: '네이버 항공권', mark: 'N', className: 'naver', color: '#03a84e' }, trip: { name: '트립닷컴', mark: 'T', className: 'trip', color: '#2874e8' }, google: { name: 'Google 항공편', mark: 'G', className: 'google', color: '#d75b47' }, skyscanner: { name: '스카이스캐너', mark: 'S', className: 'skyscanner', color: '#0770e3' }, expedia: { name: '익스피디아', mark: 'E', className: 'expedia', color: '#f3a000' } };
+const providers = { naver: { name: '네이버 항공권', mark: 'N', className: 'naver', color: '#03a84e' }, trip: { name: '트립닷컴', mark: 'T', className: 'trip', color: '#2874e8' }, google: { name: 'Google 항공편', mark: 'G', className: 'google', color: '#d75b47' }, skyscanner: { name: '스카이스캐너', mark: 'S', className: 'skyscanner', color: '#0770e3' } };
 const form = document.getElementById('route-form');
 const results = document.getElementById('results');
 const refreshRequest = new URL('https://github.com/GagulProject/flight-price-tracker/issues/new');
@@ -17,7 +17,7 @@ function checkedPrice(item) {
 function safeLink(item) {
   try {
     const url = new URL(item.url);
-    const allowed = { naver: ['flight.naver.com'], trip: ['kr.trip.com', 'www.trip.com'], google: ['www.google.com'], skyscanner: ['www.skyscanner.co.kr'], expedia: ['www.expedia.co.kr'] }[item.id] || [];
+    const allowed = { naver: ['flight.naver.com'], trip: ['kr.trip.com', 'www.trip.com'], google: ['www.google.com'], skyscanner: ['www.skyscanner.co.kr'] }[item.id] || [];
     return url.protocol === 'https:' && allowed.includes(url.hostname) ? url.href : '#';
   } catch { return '#'; }
 }
