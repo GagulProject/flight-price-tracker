@@ -8,6 +8,8 @@ on:
       - '.github/workflows/diagnose-flight-pages.yml'
       - 'scripts/**'
       - 'package.json'
+      - 'app.js'
+      - 'styles.css'
   schedule:
     - cron: '*/15 * * * *'
   workflow_dispatch:
