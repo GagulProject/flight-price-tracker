@@ -12,7 +12,7 @@ const headless = process.env.FLIGHT_BROWSER_HEADLESS !== 'false';
 const browser = await chromium.launch(headless ? { headless: true } : { headless: false, channel: 'chrome' });
 const results = [];
 // Ordinary browser access only: no stealth, CAPTCHA solving, proxy rotation or retries on blocks.
-const supported = new Set(['naver','trip','google','skyscanner']);
+const supported = new Set(['naver','trip','google','skyscanner','expedia']);
 const retryableHttp = new Set([408,500,502,503,504]);
 const botPattern=/captcha|robot|로봇이 아닙니다|접근이 제한|access denied|are you a person|verify you are human/i;
 for (const route of data.routes) for (const provider of route.providers) {
