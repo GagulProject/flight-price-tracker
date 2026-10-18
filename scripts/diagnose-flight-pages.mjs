@@ -36,7 +36,7 @@ for (const route of data.routes) for (const provider of route.providers) {
     continue;
   }
   const context = await browser.newContext({locale:'ko-KR',timezoneId:'Asia/Seoul',viewport:{width:1365,height:900}});
-  const page = await context.newPage();
+  let page = await context.newPage();
   const network = [];
   const browserErrors = [];
   page.on('console', message => { if (message.type()==='error' && browserErrors.length<15) browserErrors.push(message.text().slice(0,600)); });
@@ -141,10 +141,18 @@ for (const route of data.routes) for (const provider of route.providers) {
           const selectFare = card.locator('[class*="combination_select_schedule"]');
           for (let selectionAttempt=0;selectionAttempt<3;selectionAttempt++) {
             if(page.url().includes('/flights/international/detail/')) break;
+            const sourcePage=page;
+            // Naver may open the selected itinerary in another tab.
+            const popup=sourcePage.waitForEvent('popup',{timeout:10000}).then(async tab=>{
+              await tab.waitForURL(/\/flights\/international\/detail\//,{waitUntil:'domcontentloaded',timeout:15000});
+              return tab;
+            });
+            const sameTab=sourcePage.waitForFunction(()=>location.pathname.includes('/flights/international/detail/'),
+              null,{timeout:15000,polling:500}).then(()=>sourcePage);
+            const selectedTab=Promise.any([popup,sameTab]).catch(()=>null);
             await selectFare.click({timeout:30000});
-            const opened=await page.waitForFunction(() => location.pathname.includes('/flights/international/detail/'),
-              null,{timeout:10000,polling:500}).then(()=>true).catch(()=>false);
-            if(opened) break;
+            const opened=await selectedTab;
+            if(opened){page=opened;break;}
           }
           selected = true;
           break;
@@ -265,7 +273,7 @@ for (const route of data.routes) for (const provider of route.providers) {
       (await page.locator('body').innerText().catch(()=>'' )).slice(0,12000)).catch(()=>{});
     pagePreview=(await page.locator('body').innerText().catch(()=>'' )).slice(0,1000);
     elapsedMs=Date.now()-started;
-    results.push({provider:provider.id,origin:route.origin.code,destination:route.destination.code,departureDate:route.departureDate,returnDate:route.returnDate,attemptedAt:new Date().toISOString(),elapsedMs,status,detail,finalUrl:page.url(),quote,fareCandidates,pagePreview,network,browserErrors});
+    results.push({provider:provider.id,origin:route.origin.code,destination:route.destination.code,departureDate:route.departureDate,returnDate:route.returnDate,attemptedAt:new Date().toISOString(),elapsedMs,status,detail,finalUrl:page.url(),quote,fareCandidates,pagePreview,network,browserErrors,openPages:context.pages().map(tab=>tab.url().split('?')[0])});
     applyAttempt(route,provider,results.at(-1));
     await writeFile('data/prices.json',JSON.stringify(data,null,2)+'\n');
     await writeFile('diagnostics/results.json',JSON.stringify(results,null,2)+'\n');
