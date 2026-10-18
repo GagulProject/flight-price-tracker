@@ -36,23 +36,33 @@ function makeElement(tag, className, content) {
 
 function makeProviderCard(item) {
   const provider = providers[item.id];
-  const link = makeElement('a', 'provider-card');
-  link.href = safeLink(item);
-  link.target = '_blank';
-  link.rel = 'noopener noreferrer';
-  link.setAttribute('aria-label', `${provider.name} 검색 페이지 열기`);
+  const card = makeElement('article', 'provider-card');
+  card.dataset.status = item.collectionStatus || 'unverified';
+  const current = checkedPrice(item);
+  const hasPrice = Number.isInteger(item.priceKrw) && item.priceKrw > 0;
+  const labels = { verified: '가격 확인 완료', blocked: '접근 제한', 'fare-api-unavailable': '조회 지연', 'results-loading': '조회 지연', 'search-error': '조회 실패', 'content-not-detected': '조회 실패', timeout: '조회 지연', 'rendered-unverified': '가격 확인 대기', 'api-error': '조회 실패', 'http-error': '조회 실패', error: '조회 실패' };
   const top = makeElement('div', 'provider-top');
   const name = makeElement('div', 'provider-name');
   name.append(makeElement('span', `provider-logo ${provider.className}`, provider.mark), document.createTextNode(provider.name));
-  top.append(name, makeElement('span', 'arrow', '↗'));
-  const price = makeElement('div', `provider-price${checkedPrice(item) ? '' : ' unavailable'}`, checkedPrice(item) ? `${money.format(item.priceKrw)}원` : Number.isInteger(item.priceKrw) ? `${money.format(item.priceKrw)}원 · 과거 기록` : '검증 가격 없음');
-  const footer = makeElement('div', 'provider-footer', checkedPrice(item) ? `가격 확인 ${dateTime.format(new Date(item.checkedAt))} KST · ${item.fareNote || '왕복 최저가'}` : (item.note || '해당 날짜의 가격을 확인 중입니다.'));
-  const status = makeElement('p', 'collection-status', `수집 상태: ${item.collectionStatus || '미검증'} · ${item.note || ''}`);
-  const attempt = makeElement('p', 'provider-attempt', item.lastAttemptAt ? `최근 시도 ${dateTime.format(new Date(item.lastAttemptAt))} KST` : '최근 시도 없음');
-  const verified = makeElement('p', 'provider-verified', item.verification ? `마지막 검증 ${dateTime.format(new Date(item.checkedAt))} KST` : '마지막 검증: 없음 · 기존 기록은 검증 근거 없음');
-  link.append(status, attempt, verified);
-  link.append(top, makeElement('p', 'provider-kicker', 'ROUND TRIP · 1 ADULT'), price, footer, makeElement('span', 'provider-badge', '검색 결과 보기'));
-  return link;
+  const status = makeElement('span', `collection-status ${current ? 'is-verified' : 'is-pending'}`, labels[item.collectionStatus] || '확인 대기');
+  top.append(name, status);
+  const price = makeElement('div', `provider-price${current ? '' : ' unavailable'}`, hasPrice ? `${money.format(item.priceKrw)}원` : '확인된 가격 없음');
+  const caption = makeElement('p', 'price-caption', current ? '왕복 총액 · 성인 1명 · 일반석' : hasPrice ? '이전 확인 가격 · 현재 가격 미확인' : '가격을 확인하면 여기에 표시됩니다.');
+  const verified = makeElement('p', 'provider-verified', item.verification ? `마지막 검증 ${dateTime.format(new Date(item.checkedAt))} KST` : '아직 검증된 가격이 없습니다.');
+  const bottom = makeElement('div', 'provider-bottom');
+  const details = makeElement('details', 'collection-details');
+  details.append(makeElement('summary', '', '수집 상세'));
+  details.append(makeElement('p', 'provider-attempt', item.lastAttemptAt ? `최근 시도 ${dateTime.format(new Date(item.lastAttemptAt))} KST` : '최근 시도 없음'));
+  if (item.fareNote && item.verification?.paymentMethod) details.append(makeElement('p', '', `결제 조건: ${item.verification.paymentMethod}`));
+  details.append(makeElement('p', 'technical-detail', item.note || '상세 수집 기록이 없습니다.'));
+  const link = makeElement('a', 'provider-search', '검색 결과 보기 ↗');
+  link.href = safeLink(item);
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  link.setAttribute('aria-label', `${provider.name} 검색 결과 보기`);
+  bottom.append(details, link);
+  card.append(top, price, caption, verified, bottom);
+  return card;
 }
 
 function makeSvgElement(tag, attributes) {
@@ -140,7 +150,7 @@ function makeRouteCard(route) {
   heading.append(path, makeElement('span', 'dates', `${route.departureDate} → ${route.returnDate} · 왕복`));
   const valid = route.providers.filter(checkedPrice).sort((a, b) => a.priceKrw - b.priceKrw);
   const summary = makeElement('div', 'price-summary');
-  summary.append(makeElement('span', '', '이번 수집에서 검증된 최저가'), makeElement('strong', '', valid.length ? `${money.format(valid[0].priceKrw)}원` : '검증 가격 없음'));
+  summary.append(makeElement('span', '', '최근 확인한 최저가'), makeElement('strong', '', valid.length ? `${money.format(valid[0].priceKrw)}원` : '검증 가격 없음'));
   if (valid.length) summary.append(makeElement('small', '', `${providers[valid[0].id].name} 기준`));
   const update = makeElement('p', 'route-updated', route.lastAttemptAt ? `최근 조회 ${dateTime.format(new Date(route.lastAttemptAt))} KST` : '첫 조회 대기');
   const grid = makeElement('div', 'provider-grid');
