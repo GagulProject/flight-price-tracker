@@ -139,10 +139,13 @@ for (const route of data.routes) for (const provider of route.providers) {
           const label = await summary.innerText();
           if (!/성인\/모든 결제수단[\s\S]*왕복[\s\S]*[0-9,]+\s*원/.test(label)) continue;
           const selectFare = card.locator('[class*="combination_select_schedule"]');
-          await selectFare.click({ timeout: 120000 });
-          await page.waitForFunction(() => location.pathname.includes('/flights/international/detail/') &&
-            !!document.querySelector('[class*="international_selected_flights"]'),
-          null, { timeout: 120000, polling: 500 });
+          for (let selectionAttempt=0;selectionAttempt<3;selectionAttempt++) {
+            if(page.url().includes('/flights/international/detail/')) break;
+            await selectFare.click({timeout:30000});
+            const opened=await page.waitForFunction(() => location.pathname.includes('/flights/international/detail/'),
+              null,{timeout:10000,polling:500}).then(()=>true).catch(()=>false);
+            if(opened) break;
+          }
           selected = true;
           break;
         }
