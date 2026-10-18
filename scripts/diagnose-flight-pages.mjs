@@ -14,7 +14,7 @@ const results = [];
 // Ordinary browser access only: no stealth, CAPTCHA solving, proxy rotation or retries on blocks.
 const supported = new Set(['naver','trip','google','skyscanner']);
 const retryableHttp = new Set([408,500,502,503,504]);
-const botPattern=/captcha|robot|로봇이 아닙니다|접근이 제한|access denied|are you a person|verify you are human/i;
+const botPattern=/captcha|robot|로봇이 아닙니다|접근이 제한|시도 제한 횟수|밀어서 퍼즐 완성하기|access denied|are you a person|verify you are human/i;
 const loadingPattern=/결과 로드 중|결과를 가져오는 중|특가를 불러오는 중|항공편.*검색 중/i;
 for (const route of data.routes) for (const provider of route.providers) {
   if (!supported.has(provider.id)) continue;
@@ -75,9 +75,15 @@ for (const route of data.routes) for (const provider of route.providers) {
         // The first page lists outbound flights. Its fare is not a selected two-leg booking.
         await page.waitForFunction(() => /\d+개 항공편 검색됨/.test(document.body?.innerText || ''),
           null, { timeout: 120000, polling: 1000 });
+        await page.waitForFunction(() => [...document.querySelectorAll('button')]
+          .some(button => !button.disabled && /이 운임 선택/.test(button.innerText)) ||
+          /시도 제한 횟수|밀어서 퍼즐 완성하기|captcha|access denied/i.test(document.body?.innerText || ''),
+        null, { timeout: 120000, polling: 500 });
+        if (botPattern.test(await page.locator('body').innerText())) {
+          status = 'blocked';
+          throw new Error('Trip.com access verification detected; stopped without bypass');
+        }
         const outboundSelect = page.locator('button:not([disabled]):has-text("이 운임 선택")').first();
-        await outboundSelect
-          .waitFor({ state: 'visible', timeout: 120000 });
         await outboundSelect.click({ timeout: 120000 });
         await page.waitForFunction(() => /\/flights\/ShowFareNext/i.test(location.pathname),
           null, { timeout: 120000, polling: 500 });
