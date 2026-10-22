@@ -5,32 +5,16 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-22T10:39:27.473Z",
-    "elapsedMs": 41993,
-    "status": "content-not-detected",
-    "detail": "Flight content not detected: TimeoutError: locator.innerText: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('[class*=\"combination_ConcurrentItemContainer\"]').nth(158).locator('[class*=\"defaultSum; Naver\n사용자 링크\n로그인\n서비스 더보기\n여행상품\n여행정보\n0\n로그인 후 등급확인\n마이페이지\n여행핫딜\n항공\n호텔\n패키지\nFor U\n27\n왕복\n편도\n다구간\n서울\nICN, GMP\n",
+    "attemptedAt": "2026-10-22T15:39:23.947Z",
+    "elapsedMs": 11927,
+    "status": "fare-api-unavailable",
+    "detail": "Naver search returned no fare results after a 180-second wait, one ordinary reload and a further 120-second wait; flight API failures observed",
     "finalUrl": "https://flight.naver.com/flights/international/SEL:city-TYO:city-20261230/TYO:city-SEL:city-20270101?adult=1&isDirect=false&fareType=Y",
     "fareCandidates": [],
-    "pagePreview": "Naver\n사용자 링크\n로그인\n서비스 더보기\n여행상품\n여행정보\n0\n로그인 후 등급확인\n마이페이지\n여행핫딜\n항공\n호텔\n패키지\nFor U\n27\n왕복\n편도\n다구간\n서울\nICN, GMP\n(모든 공항)\n도쿄\nNRT, HND\n(모든 공항)\n12.30.수\n01.01.금\n성인 1명\n일반석\n직항만\n알림받기\n검색\n공항\n직항/경유 \n요금조건 \n항공사 \n시각/가격 \n트래블클럽\nCO2 배출량 적음\n트래블클럽\n로그인 후 등급확인 하세요\n항공권 가격 변동 그래프\n평균과 비슷\n왕복 동시 선택\n왕복 개별 선택\n가는편·오는편을 한 번에 선택해요\n카드혜택\n가격 낮은 순\n인기 항공편\n모두 접기\n검색한 항공편 중 가격, 비행시간, 유저 선호도 등 다양한 요소를 고려한 네이버 항공 추천 항공편입니다.\n예약 많은\n많이 찾는\nCO2 72%\n파라타항공\n이벤트혜택\n09:50ICN\n12:05NRT\n직항, 02시간 15분\n13:25NRT\n16:15ICN\n직항, 02시간 50분\n성인/KB국민카드(이용실적 충족시)\n599,200원~\n5천원 할인\n왕복\n594,200\n원~\n최대 5,000원 적립\n예약 많은\n많이 찾는\nCO2 평균배출\n전일본공수\n이벤트혜택\n07:45GMP\n09:45HND\n직항, 02시간 00분\n20:00HND\n22:30GMP\n직항, 02시간 30분\n성인/삼성 iD GLOBAL 카드\n776,900원~\n5천원 할인\n왕복\n771,900\n원~\n최대 5,000원 적립\n6개 인기 항공편 더보기\n인기 항공편 보기\n항공권 5,000원 할인 + 5,000원 적립\n- 이벤트 상품 한정\n왕복 항공편 선택\n최저가\n에어부산\n이벤트혜택\n07:35ICN\n10:15NRT\n직항, 02시간 40분\nCO2 19%\n이스타항공\n11:20NRT\n14:15ICN\n직항, 02시간 55분\n성인/KB국민카드(이용실적 충족시)\n385,900원~\n5천원 할인\n왕복\n380,900\n원~\n최대 5,000원 적립\n최저가\n에어부산\n이벤트혜택\n07:35ICN\n10:15NRT\n직항, 02시간 40분\nCO2 19%\n이스타항공\n11:50NRT\n14:45ICN\n직항, ",
+    "pagePreview": "Naver\n사용자 링크\n로그인\n서비스 더보기\n여행상품\n여행정보\n0\n로그인 후 등급확인\n마이페이지\n여행핫딜\n항공\n호텔\n패키지\nFor U\n37\n왕복\n편도\n다구간\n서울\nICN, GMP\n(모든 공항)\n도쿄\nNRT, HND\n(모든 공항)\n12.30.수\n01.01.금\n성인 1명\n일반석\n직항만\n알림받기\n검색\n트래블클럽\n로그인 후 등급확인 하세요\n항공권 가격 변동 그래프 로딩 중\n왕복 동시 선택\n왕복 개별 선택\n가는편·오는편을 한 번에 선택해요\n카드혜택\n가격 낮은 순\n인기 항공편\n검색한 항공편 중 가격, 비행시간, 유저 선호도 등 다양한 요소를 고려한 네이버 항공 추천 항공편입니다.\n항공권 5,000원 할인 + 5,000원 적립\n- 이벤트 상품 한정\n왕복 항공편 선택\n에어부산\n07:35ICN\n10:15NRT\n직항, 02시간 40분\n이스타항공\n11:20NRT\n14:15ICN\n직항, 02시간 55분\n성인/KB국민카드\n왕복\n393,200\n원~\n로그인 후 특가확인\n에어부산\n07:35ICN\n10:15NRT\n직항, 02시간 40분\n이스타항공\n11:50NRT\n14:45ICN\n직항, 02시간 55분\n성인/KB국민카드\n왕복\n393,200\n원~\n로그인 후 특가확인\n이스타항공\n이벤트혜택\n07:15ICN\n10:10NRT\n직항, 02시간 55분\n11:20NRT\n14:15ICN\n직항, 02시간 55분\n성인/하나카드(이용실적 충족시)\n409,300원~\n5천원 할인\n왕복\n404,300\n원~\n최대 5,000원 적립\n로그인 후 특가확인\n이스타항공\n이벤트혜택\n07:15ICN\n10:10NRT\n직항, 02시간 55분\n11:50NRT\n14:45ICN\n직항, 02시간 55분\n성인/하나카드(이용실적 충족시)\n409,300원~\n5천원 할인\n왕복\n404,300\n원~\n최대 5,000원 적립\n로그인 후 특가확인\n이스타항공\n이벤트혜택\n07:00ICN\n10:00NRT\n직항, 03시간 00분\n11:50NRT\n14:45ICN\n직항, 02시간 55분\n성인/하나카드(이용실적 충족시)\n409,300원~\n5천원 할인\n왕복\n404,300\n",
     "network": [
       {
         "url": "https://flight-api.naver.com/flight/international/searchFlights",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://nam.veta.naver.com/gfp/v1",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://gfd-phinf.pstatic.net/20260222_207/177171629586464U1I_PNG/c4919938065e73c2bbf7c8d99fcb631e.png",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://nam.veta.naver.com/gfp/v1",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://nam.veta.naver.com/gfp/v1",
         "failure": "net::ERR_ABORTED"
       }
     ],
@@ -45,36 +29,16 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-22T10:41:29.405Z",
-    "elapsedMs": 121767,
+    "attemptedAt": "2026-10-22T15:41:26.053Z",
+    "elapsedMs": 121872,
     "status": "content-not-detected",
     "detail": "Flight content not detected: TimeoutError: page.waitForFunction: Timeout 120000ms exceeded.; 메인 콘텐츠로 이동\nTheme Detection\n숙소\n항공권\n투어&티켓\n항공 + 호텔\n기차표\n렌터카·공항픽업\n앱\nKRW\n고객센터\n예약 검색\n로그인/회원가입\n서울 출발 도쿄 도착 저",
     "finalUrl": "https://kr.trip.com/flights/showfarefirst?dcity=sel&acity=tyo&dcityid=274&acityid=228&ddate=2026-12-30&rdate=2027-01-01&triptype=rt&class=y&lowpricesource=searchform&quantity=1&searchboxarg=t&nonstoponly=off&locale=ko-KR&curr=KRW",
     "fareCandidates": [],
-    "pagePreview": "메인 콘텐츠로 이동\nTheme Detection\n숙소\n항공권\n투어&티켓\n항공 + 호텔\n기차표\n렌터카·공항픽업\n앱\nKRW\n고객센터\n예약 검색\n로그인/회원가입\n서울 출발 도쿄 도착 저렴한 항공권 | kr.trip.com\n왕복\n편도\n다구간\n직항\n서울\n·\n모든 공항\n도쿄\n·\n모든 공항\n성인 1명 · 일반석\n검색\n12월 23일–12월 25일\n422,000원\n12월 24일–12월 26일\n533,300원\n12월 25일–12월 27일\n558,900원\n12월 26일–12월 28일\n493,500원\n12월 27일–12월 29일\n468,900원\n12월 28일–12월 30일\n462,200원\n12월 29일–12월 31일\n429,100원\n12월 30일–1월 1일\n403,100원\n12월 31일–1월 2일\n보기\n1월 1일–1월 3일\n546,000원\n1월 2일–1월 4일\n440,200원\n1월 3일–1월 5일\n463,600원\n1월 4일–1월 6일\n387,300원\n1월 5일–1월 7일\n378,000원\n1월 6일–1월 8일\n351,400원\n가격표\n무료 플러그인\n추천\n 직항\n 위탁 수하물 포함\n 저가 항공사 숨기기\n 휴대 수하물 포함\n 공동운항편 숨기기\nCO₂e 탄소 저감 항공편\n더 보기\n얼라이언스\n스타얼라이언스\n437,500원\n스카이팀\n550,700원\n원월드\n603,200원\n항공사\n동일 항공사 조합만 보기\n항공사 전체 선택\nJAL (91)\n603,200원\n대한항공 (50)\n550,700원\n아시아나항공 (41)\n525,800원\n전일본공수 (24)\n608,400원\n제주항공 (7)\n417,300원\n더 보기\n얼라이언스\n스타얼라이언스\n437,500원\n스카이팀\n550,700원\n원월드\n603,200원\n시간대\n출발시간\n00:00–24:00\n00:00\n24:00\n도착시간\n00:00–24:00\n00:00\n24:00\n소요시간\n무관\n경유시간\n1시간–22시간\n1시간\n22시간\n총 비행시간\n1시간 30분–30시간\n1시간 30분\n30시간\n경유\n경유 1회 이하\n403,100원\n경유지\n무관\n후쿠오카\n670,800원\n오사카\n701",
+    "pagePreview": "메인 콘텐츠로 이동\nTheme Detection\n숙소\n항공권\n투어&티켓\n항공 + 호텔\n기차표\n렌터카·공항픽업\n앱\nKRW\n고객센터\n예약 검색\n로그인/회원가입\n서울 출발 도쿄 도착 저렴한 항공권 | kr.trip.com\n왕복\n편도\n다구간\n직항\n서울\n·\n모든 공항\n도쿄\n·\n모든 공항\n성인 1명 · 일반석\n검색\n12월 23일–12월 25일\n417,900원\n12월 24일–12월 26일\n528,300원\n12월 25일–12월 27일\n560,200원\n12월 26일–12월 28일\n490,300원\n12월 27일–12월 29일\n489,500원\n12월 28일–12월 30일\n458,100원\n12월 29일–12월 31일\n425,700원\n12월 30일–1월 1일\n382,300원\n12월 31일–1월 2일\n480,100원\n1월 1일–1월 3일\n542,500원\n1월 2일–1월 4일\n434,200원\n1월 3일–1월 5일\n470,000원\n1월 4일–1월 6일\n384,000원\n1월 5일–1월 7일\n375,200원\n1월 6일–1월 8일\n354,800원\n가격표\n무료 플러그인\n추천\n 직항\n 위탁 수하물 포함\n 저가 항공사 숨기기\n 휴대 수하물 포함\n 공동운항편 숨기기\nCO₂e 탄소 저감 항공편\n더 보기\n얼라이언스\n스타얼라이언스\n457,500원\n스카이팀\n546,900원\n원월드\n603,800원\n항공사\n동일 항공사 조합만 보기\n항공사 전체 선택\nJAL (97)\n603,800원\n대한항공 (52)\n546,900원\n아시아나항공 (42)\n522,600원\n전일본공수 (22)\n603,100원\n제주항공 (7)\n413,500원\n더 보기\n얼라이언스\n스타얼라이언스\n457,500원\n스카이팀\n546,900원\n원월드\n603,800원\n시간대\n출발시간\n00:00–24:00\n00:00\n24:00\n도착시간\n00:00–24:00\n00:00\n24:00\n소요시간\n무관\n경유시간\n1시간–22시간\n1시간\n22시간\n총 비행시간\n1시간 30분–30시간\n1시간 30분\n30시간\n경유\n경유 1회 이하\n382,300원\n경유지\n무관\n후쿠오카\n666,200원\n오",
     "network": [
       {
-        "url": "https://mpc-prod-28-1053047382554.us-central1.run.app/events",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
         "url": "https://www.google.com/ccm/collect",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://www.google.com/ccm/collect",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://www.google.com/ccm/collect",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://www.google.com/rmkt/collect/789926500/",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://kr.trip.com/gtm/ag/g/c",
         "failure": "net::ERR_ABORTED"
       },
       {
@@ -86,15 +50,27 @@
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://www.facebook.com/x/oauth/status",
+        "url": "https://mpc-prod-28-1053047382554.us-central1.run.app/events",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://www.google.com/rmkt/collect/789926500/",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://www.google.com/ccm/collect",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://www.google.com/ccm/collect",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://kr.trip.com/gtm/ag/g/c",
         "failure": "net::ERR_ABORTED"
       },
       {
         "url": "https://www.google.com/measurement/1p-conversion/",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://kr.trip.com/air/event/exception",
         "failure": "net::ERR_ABORTED"
       },
       {
@@ -134,8 +110,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-22T10:41:31.816Z",
-    "elapsedMs": 2251,
+    "attemptedAt": "2026-10-22T15:41:28.489Z",
+    "elapsedMs": 2261,
     "status": "verified",
     "detail": "Exact round-trip total verified from visible google seller result",
     "finalUrl": "https://www.google.com/travel/flights/search?tfs=CBwQAhooEgoyMDI2LTEyLTMwagwIAhIIL20vMGhzcWZyDAgDEggvbS8wN2RmaxooEgoyMDI3LTAxLTAxagwIAxIIL20vMDdkZmtyDAgCEggvbS8waHNxZkABSAFwAYIBCwj___________8BmAEB&hl=ko&curr=KRW&gl=KR",
@@ -148,117 +124,117 @@
       "adults": 1,
       "cabin": "economy",
       "currency": "KRW",
-      "priceKrw": 421333,
-      "observedAt": "2026-10-22T10:41:31.507Z",
+      "priceKrw": 421854,
+      "observedAt": "2026-10-22T15:41:28.211Z",
       "evidence": {
         "source": "visible-search-result",
         "provider": "google",
-        "offerId": "9ff903a4394ab60f08d1fffe"
+        "offerId": "5e2078377ad2124c69f8e0a3"
       }
     },
     "fareCandidates": [
       {
-        "amount": 421333,
-        "context": "추천\n최저가\n결과를 가져오는 중\n ₩421,333부터\n인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩421,333\n왕복\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩428,833\n왕복\n오전 8:10\n – \n오전 10:25\n에어서울\n2시간 15분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩429,833\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩444,433\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩445,933\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n"
+        "amount": 421854,
+        "context": "추천\n최저가\n결과를 가져오는 중\n ₩421,854부터\n인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩421,854\n왕복\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩429,454\n왕복\n오전 8:10\n – \n오전 10:25\n에어서울\n2시간 15분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩430,454\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩445,054\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩446,554\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n"
       },
       {
-        "amount": 421333,
-        "context": "추천\n최저가\n결과를 가져오는 중\n ₩421,333부터\n인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩421,333\n왕복\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩428,833\n왕복\n오전 8:10\n – \n오전 10:25\n에어서울\n2시간 15분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩429,833\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩444,433\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩445,933\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n"
+        "amount": 421854,
+        "context": "추천\n최저가\n결과를 가져오는 중\n ₩421,854부터\n인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩421,854\n왕복\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩429,454\n왕복\n오전 8:10\n – \n오전 10:25\n에어서울\n2시간 15분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩430,454\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩445,054\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩446,554\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n"
       },
       {
-        "amount": 421333,
-        "context": "추천\n최저가\n결과를 가져오는 중\n ₩421,333부터"
+        "amount": 421854,
+        "context": "추천\n최저가\n결과를 가져오는 중\n ₩421,854부터"
       },
       {
-        "amount": 421333,
-        "context": "최저가\n결과를 가져오는 중\n ₩421,333부터"
+        "amount": 421854,
+        "context": "최저가\n결과를 가져오는 중\n ₩421,854부터"
       },
       {
-        "amount": 421333,
-        "context": "최저가\n결과를 가져오는 중\n ₩421,333부터"
+        "amount": 421854,
+        "context": "최저가\n결과를 가져오는 중\n ₩421,854부터"
       },
       {
-        "amount": 421333,
-        "context": "결과를 가져오는 중\n ₩421,333부터"
+        "amount": 421854,
+        "context": "결과를 가져오는 중\n ₩421,854부터"
       },
       {
-        "amount": 421333,
-        "context": "결과를 가져오는 중\n ₩421,333부터"
+        "amount": 421854,
+        "context": "결과를 가져오는 중\n ₩421,854부터"
       },
       {
-        "amount": 421333,
-        "context": "결과를 가져오는 중\n ₩421,333부터"
+        "amount": 421854,
+        "context": "결과를 가져오는 중\n ₩421,854부터"
       },
       {
-        "amount": 421333,
-        "context": "인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩421,333\n왕복\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩428,833\n왕복\n오전 8:10\n – \n오전 10:25\n에어서울\n2시간 15분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩429,833\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩444,433\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩445,933\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n가격을 확인할 수 없습니다."
+        "amount": 421854,
+        "context": "인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩421,854\n왕복\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩429,454\n왕복\n오전 8:10\n – \n오전 10:25\n에어서울\n2시간 15분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩430,454\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩445,054\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩446,554\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n가격을 확인할 수 없습니다."
       },
       {
-        "amount": 421333,
-        "context": "오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩421,333\n왕복"
+        "amount": 421854,
+        "context": "오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩421,854\n왕복"
       },
       {
-        "amount": 421333,
-        "context": "오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩421,333\n왕복"
+        "amount": 421854,
+        "context": "오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩421,854\n왕복"
       },
       {
-        "amount": 421333,
-        "context": "오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩421,333\n왕복"
+        "amount": 421854,
+        "context": "오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩421,854\n왕복"
       },
       {
-        "amount": 421333,
-        "context": "오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩421,333\n왕복"
+        "amount": 421854,
+        "context": "오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩421,854\n왕복"
       },
       {
-        "amount": 421333,
-        "context": "₩421,333\n왕복"
+        "amount": 421854,
+        "context": "₩421,854\n왕복"
       },
       {
-        "amount": 421333,
-        "context": "₩421,333"
+        "amount": 421854,
+        "context": "₩421,854"
       },
       {
-        "amount": 421333,
-        "context": "오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩421,333\n왕복"
+        "amount": 421854,
+        "context": "오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩421,854\n왕복"
       },
       {
-        "amount": 421333,
-        "context": "출발12월 30일 (수)CO2e 108kg-8% 배출-8% 배출항공편 선택₩421,333왕복"
+        "amount": 421854,
+        "context": "출발12월 30일 (수)CO2e 108kg-8% 배출-8% 배출항공편 선택₩421,854왕복"
       },
       {
-        "amount": 421333,
-        "context": "₩421,333왕복"
+        "amount": 421854,
+        "context": "₩421,854왕복"
       },
       {
-        "amount": 421333,
-        "context": "₩421,333"
+        "amount": 421854,
+        "context": "₩421,854"
       },
       {
-        "amount": 421333,
-        "context": "오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩421,333\n왕복"
+        "amount": 421854,
+        "context": "오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩421,854\n왕복"
       },
       {
-        "amount": 421333,
-        "context": "오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩421,333\n왕복"
+        "amount": 421854,
+        "context": "오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩421,854\n왕복"
       },
       {
-        "amount": 421333,
-        "context": "₩421,333"
+        "amount": 421854,
+        "context": "₩421,854"
       },
       {
-        "amount": 428833,
-        "context": "인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩421,333\n왕복\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩428,833\n왕복\n오전 8:10\n – \n오전 10:25\n에어서울\n2시간 15분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩429,833\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩444,433\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩445,933\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n가격을 확인할 수 없습니다."
+        "amount": 429454,
+        "context": "인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩421,854\n왕복\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩429,454\n왕복\n오전 8:10\n – \n오전 10:25\n에어서울\n2시간 15분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩430,454\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩445,054\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩446,554\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n가격을 확인할 수 없습니다."
       },
       {
-        "amount": 428833,
-        "context": "오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩428,833\n왕복"
+        "amount": 429454,
+        "context": "오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩429,454\n왕복"
       },
       {
-        "amount": 428833,
-        "context": "오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩428,833\n왕복"
+        "amount": 429454,
+        "context": "오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩429,454\n왕복"
       }
     ],
-    "pagePreview": "주요 콘텐츠로 이동\n접근성 관련 의견 보내기\n살펴보기\n항공편\n호텔\n공유숙박\n테마 변경\n로그인\n결과 로드 중\n항공편 검색\n왕복\n1\n이코노미\n서울특별시\n도쿄도\n필터\n모든 필터\n경유\n항공사\n수하물\n가격\n시간대\n탄소 배출량\n경유 공항\n이동 시간\n검색 결과\n결과 53개가 반환되었습니다.\n추천\n최저가\n결과를 가져오는 중\n ₩421,333부터\n인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩421,333\n왕복\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩428,833\n왕복\n오전 8:10\n – \n오전 10:25\n에어서울\n2시간 15분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩429,833\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩444,433\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩445,933\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n가격을 확인할 수 없습니다.\n숙박료 정보\n최저가 예약 기간은 일반적으로 지금부터 11월 1일까지입니다.\n가격이 현재 보통입니다.\n가격 변동 내역 보기\n가격 추적\n2026-12-30 서울특별시에서 출발하여 2027-01-01 도쿄도에 도착하는 항공편 가격 추적\n2026년 12월 30일~2027년 1월 1일\n서울특별시에서 출발하여 도쿄도에 도착하는 항공편 가격 추적 - 모든 날짜\n모든 날짜\n날짜 표\n가격 그래프\n기타 출발 항공편\n오전 7",
+    "pagePreview": "주요 콘텐츠로 이동\n접근성 관련 의견 보내기\n살펴보기\n항공편\n호텔\n공유숙박\n테마 변경\n로그인\n결과 로드 중\n항공편 검색\n왕복\n1\n이코노미\n서울특별시\n도쿄도\n필터\n모든 필터\n경유\n항공사\n수하물\n가격\n시간대\n탄소 배출량\n경유 공항\n이동 시간\n검색 결과\n결과 53개가 반환되었습니다.\n추천\n최저가\n결과를 가져오는 중\n ₩421,854부터\n인기 출발 항공편\n가격 및 편의성을 기준으로 한 순위가격에는 성인 1명의 필수 세금과 수수료가 포함됩니다. 선택적인 요금 및 수하물 요금이 부과될 수 있습니다. 승객 지원 정보를 알아보세요.\n인기 항공편순으로 정렬됨\n오전 7:15\n – \n오전 9:40\n제주항공\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩421,854\n왕복\n오전 7:35\n – \n오전 10:15\n에어부산\n2시간 40분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩429,454\n왕복\n오전 8:10\n – \n오전 10:25\n에어서울\n2시간 15분\nICN–NRT\n직항\nCO2e 149kg\n+27% 배출\n₩430,454\n왕복\n오전 8:45\n – \n오전 11:20\n에어프레미아\n2시간 35분\nICN–NRT\n직항\nCO2e 110kg\n-6% 배출\n₩445,054\n왕복\n오후 1:05\n – \n오후 3:30\nZIPAIR Tokyo\n2시간 25분\nICN–NRT\n직항\nCO2e 108kg\n-8% 배출\n₩446,554\n왕복\n오전 8:40\n – \n오전 10:55\n이스타항공\n2시간 15분\nICN–NRT\n직항\nCO2e 127kg\n+9% 배출\n가격을 확인할 수 없습니다.\n숙박료 정보\n최저가 예약 기간은 일반적으로 지금부터 11월 1일까지입니다.\n가격이 현재 보통입니다.\n가격 변동 내역 보기\n가격 추적\n2026-12-30 서울특별시에서 출발하여 2027-01-01 도쿄도에 도착하는 항공편 가격 추적\n2026년 12월 30일~2027년 1월 1일\n서울특별시에서 출발하여 도쿄도에 도착하는 항공편 가격 추적 - 모든 날짜\n모든 날짜\n날짜 표\n가격 그래프\n기타 출발 항공편\n오전 7",
     "network": [],
     "browserErrors": [],
     "openPages": [
@@ -271,13 +247,13 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-22T10:41:32.937Z",
-    "elapsedMs": 979,
+    "attemptedAt": "2026-10-22T15:41:29.569Z",
+    "elapsedMs": 929,
     "status": "blocked",
     "detail": "Bot verification page detected before waiting for flight results",
-    "finalUrl": "https://www.skyscanner.co.kr/sttc/px/captcha-v2/index.html?url=L3RyYW5zcG9ydC9mbGlnaHRzL3NlbC90eW9hLzI2MTIzMC8yNzAxMDEvP3J0bj0xJmFkdWx0c3YyPTEmY2FiaW5jbGFzcz1lY29ub215&uuid=2578cc0d-ce05-11f1-a8b7-3c116b93ddb2&vid=",
+    "finalUrl": "https://www.skyscanner.co.kr/sttc/px/captcha-v2/index.html?url=L3RyYW5zcG9ydC9mbGlnaHRzL3NlbC90eW9hLzI2MTIzMC8yNzAxMDEvP2NhYmluY2xhc3M9ZWNvbm9teSZydG49MSZhZHVsdHN2Mj0x&uuid=0c4c3205-ce2f-11f1-a294-43d76b0e0d22&vid=",
     "fareCandidates": [],
-    "pagePreview": "Are you a person or a robot?\nPlease don’t take this personally - some scripts and bots are remarkably lifelike these days!\nStill having problems accessing the page? Try checking you have JavaScript and cookies turned on and that your browser isn’t blocking them from loading.\n2578cc0d-ce05-11f1-a8b7-3c116b93ddb2",
+    "pagePreview": "Are you a person or a robot?\nPlease don’t take this personally - some scripts and bots are remarkably lifelike these days!\nStill having problems accessing the page? Try checking you have JavaScript and cookies turned on and that your browser isn’t blocking them from loading.\n0c4c3205-ce2f-11f1-a294-43d76b0e0d22",
     "network": [],
     "browserErrors": [],
     "openPages": [
