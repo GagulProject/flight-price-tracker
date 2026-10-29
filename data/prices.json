@@ -21,7 +21,7 @@
       "tripType": "round-trip",
       "adults": 1,
       "cabin": "economy",
-      "lastAttemptAt": "2026-10-29T16:09:11.387Z",
+      "lastAttemptAt": "2026-10-29T21:08:46.363Z",
       "providers": [
         {
           "id": "naver",
@@ -1180,10 +1180,10 @@
             }
           ],
           "url": "https://flight.naver.com/flights/international/SEL:city-TYO:city-20261230/TYO:city-SEL:city-20270101?adult=1&isDirect=false&fareType=Y",
-          "note": "Flight content not detected: TimeoutError: locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('[class*=\"combination_ConcurrentItemContainer\"]').nth(1).locator('[class*=\"combination_sele; Naver\n사용자 링크\n로그인\n서비스 더보기\n여행상품\n여행정보\n0\n로그인 후 등급확인\n마이페이지\n여행핫딜\n항공\n호텔\n패키지\nFor U\n56\n왕복\n편도\n다구간\n서울\nICN, GMP\n",
+          "note": "Naver search returned no fare results after a 180-second wait, one ordinary reload and a further 120-second wait; flight API failures observed",
           "fareNote": "마지막 검증 가격 · 이번 수집 실패",
-          "lastAttemptAt": "2026-10-29T16:06:43.527Z",
-          "collectionStatus": "content-not-detected",
+          "lastAttemptAt": "2026-10-29T21:06:12.498Z",
+          "collectionStatus": "fare-api-unavailable",
           "verification": {
             "kind": "live-round-trip-total",
             "origin": "SEL",
@@ -1348,9 +1348,9 @@
             }
           ],
           "url": "https://kr.trip.com/flights/showfarefirst?dcity=sel&acity=tyo&dcityid=274&acityid=228&ddate=2026-12-30&rdate=2027-01-01&triptype=rt&class=y&lowpricesource=searchform&quantity=1&searchboxarg=t&nonstoponly=off&locale=ko-KR&curr=KRW",
-          "note": "Flight content not detected: TimeoutError: page.waitForFunction: Timeout 120000ms exceeded.; 메인 콘텐츠로 이동\nTheme Detection\n숙소\n항공권\n투어&티켓\n항공 + 호텔\n기차표\n렌터카·공항픽업\n앱\n고객센터\n예약 검색\n로그인/회원가입\n서울 출발 도쿄 도착 저렴한 항",
+          "note": "Flight content not detected: TimeoutError: page.waitForFunction: Timeout 120000ms exceeded.; 메인 콘텐츠로 이동\nTheme Detection\n숙소\n항공권\n투어&티켓\n항공 + 호텔\n기차표\n렌터카·공항픽업\n앱\nKRW\n고객센터\n예약 검색\n로그인/회원가입\n서울 출발 도쿄 도착 저",
           "fareNote": "마지막 검증 가격 · 이번 수집 실패",
-          "lastAttemptAt": "2026-10-29T16:09:05.339Z",
+          "lastAttemptAt": "2026-10-29T21:08:14.807Z",
           "collectionStatus": "content-not-detected",
           "verification": {
             "kind": "live-round-trip-total",
@@ -1374,10 +1374,10 @@
         {
           "id": "google",
           "name": "Google 항공편",
-          "status": "checked",
+          "status": "stale",
           "priceKrw": 419280,
           "checkedAt": "2026-10-29T16:09:10.131Z",
-          "fareNote": "검증된 왕복 총액 · 성인 1명 · 일반석 · KRW",
+          "fareNote": "마지막 검증 가격 · 이번 수집 실패",
           "history": [
             {
               "checkedAt": "2026-10-17T02:14:24Z",
@@ -4178,9 +4178,9 @@
             }
           ],
           "url": "https://www.google.com/travel/flights/search?tfs=CBwQAhooEgoyMDI2LTEyLTMwagwIAhIIL20vMGhzcWZyDAgDEggvbS8wN2RmaxooEgoyMDI3LTAxLTAxagwIAxIIL20vMDdkZmtyDAgCEggvbS8waHNxZkABSAFwAYIBCwj___________8BmAEB&hl=ko&curr=KRW&gl=KR",
-          "lastAttemptAt": "2026-10-29T16:09:10.373Z",
-          "note": "Exact round-trip total verified from visible google seller result",
-          "collectionStatus": "verified",
+          "lastAttemptAt": "2026-10-29T21:08:38.810Z",
+          "note": "Search results page returned no results or an error",
+          "collectionStatus": "search-error",
           "verification": {
             "kind": "live-round-trip-total",
             "origin": "SEL",
@@ -4202,10 +4202,10 @@
         {
           "id": "skyscanner",
           "name": "스카이스캐너",
-          "status": "stale",
-          "priceKrw": 408400,
-          "checkedAt": "2026-10-25T21:47:56.136Z",
-          "fareNote": "마지막 검증 가격 · 이번 수집 실패",
+          "status": "checked",
+          "priceKrw": 362900,
+          "checkedAt": "2026-10-29T21:08:46.189Z",
+          "fareNote": "검증된 왕복 총액 · 성인 1명 · 일반석 · KRW",
           "history": [
             {
               "checkedAt": "2026-10-17T02:14:24Z",
@@ -5365,12 +5365,33 @@
                   "offerId": "002c9093299648b46741ca78"
                 }
               }
+            },
+            {
+              "checkedAt": "2026-10-29T21:08:46.189Z",
+              "priceKrw": 362900,
+              "evidence": {
+                "kind": "live-round-trip-total",
+                "origin": "SEL",
+                "destination": "TYO",
+                "departureDate": "2026-12-30",
+                "returnDate": "2027-01-01",
+                "adults": 1,
+                "cabin": "economy",
+                "currency": "KRW",
+                "priceKrw": 362900,
+                "observedAt": "2026-10-29T21:08:46.189Z",
+                "evidence": {
+                  "source": "visible-search-result",
+                  "provider": "skyscanner",
+                  "offerId": "2fbc918b37f109816b6abfaa"
+                }
+              }
             }
           ],
           "url": "https://www.skyscanner.co.kr/transport/flights/sel/tyoa/261230/270101/?adultsv2=1&cabinclass=economy&rtn=1",
-          "lastAttemptAt": "2026-10-29T16:09:11.387Z",
-          "note": "Bot verification page detected before waiting for flight results",
-          "collectionStatus": "blocked",
+          "lastAttemptAt": "2026-10-29T21:08:46.363Z",
+          "note": "Exact round-trip total verified from visible skyscanner seller result",
+          "collectionStatus": "verified",
           "verification": {
             "kind": "live-round-trip-total",
             "origin": "SEL",
@@ -5380,12 +5401,12 @@
             "adults": 1,
             "cabin": "economy",
             "currency": "KRW",
-            "priceKrw": 408400,
-            "observedAt": "2026-10-25T21:47:56.136Z",
+            "priceKrw": 362900,
+            "observedAt": "2026-10-29T21:08:46.189Z",
             "evidence": {
               "source": "visible-search-result",
               "provider": "skyscanner",
-              "offerId": "002c9093299648b46741ca78"
+              "offerId": "2fbc918b37f109816b6abfaa"
             }
           }
         }
