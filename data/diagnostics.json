@@ -5,13 +5,13 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-31T21:51:55.330Z",
-    "elapsedMs": 11975,
+    "attemptedAt": "2026-11-01T00:33:44.130Z",
+    "elapsedMs": 11778,
     "status": "fare-api-unavailable",
     "detail": "Naver search returned no fare results after a 180-second wait, one ordinary reload and a further 120-second wait; flight API failures observed",
     "finalUrl": "https://flight.naver.com/flights/international/SEL:city-TYO:city-20261230/TYO:city-SEL:city-20270101?adult=1&isDirect=false&fareType=Y",
     "fareCandidates": [],
-    "pagePreview": "Naver\n사용자 링크\n로그인\n서비스 더보기\n여행상품\n여행정보\n0\n로그인 후 등급확인\n마이페이지\n여행핫딜\n항공\n호텔\n패키지\nFor U\n35\n왕복\n편도\n다구간\n서울\nICN, GMP\n(모든 공항)\n도쿄\nNRT, HND\n(모든 공항)\n12.30.수\n01.01.금\n성인 1명\n일반석\n직항만\n알림받기\n검색\n트래블클럽\n로그인 후 등급확인 하세요\n항공권 가격 변동 그래프 로딩 중\n왕복 동시 선택\n왕복 개별 선택\n가는편·오는편을 한 번에 선택해요\n카드혜택\n가격 낮은 순\n인기 항공편\n검색한 항공편 중 가격, 비행시간, 유저 선호도 등 다양한 요소를 고려한 네이버 항공 추천 항공편입니다.\n왕복 항공편 선택\n이스타항공\n07:00ICN\n10:00NRT\n직항, 03시간 00분\n11:20NRT\n14:15ICN\n직항, 02시간 55분\n성인/KB국민카드(이용실적 충족시)\n왕복\n374,000\n원~\n이스타항공\n07:00ICN\n10:00NRT\n직항, 03시간 00분\n제주항공\n11:35NRT\n14:30ICN\n직항, 02시간 55분\n성인/KB국민카드(이용실적 충족시)\n왕복\n378,000\n원~\n이스타항공\n07:00ICN\n10:00NRT\n직항, 03시간 00분\n제주항공\n12:05NRT\n15:10ICN\n직항, 03시간 05분\n성인/KB국민카드(이용실적 충족시)\n왕복\n378,000\n원~\n이스타항공\n08:40ICN\n10:55NRT\n직항, 02시간 15분\n11:20NRT\n14:15ICN\n직항, 02시간 55분\n성인/KB국민카드(이용실적 충족시)\n왕복\n383,200\n원~\n이스타항공\n07:15ICN\n10:10NRT\n직항, 02시간 55분\n11:20NRT\n14:15ICN\n직항, 02시간 55분\n성인/KB국민카드(이용실적 충족시)\n왕복\n383,200\n원~\n이스타항공\n07:00ICN\n10:00NRT\n직항, 03시간 00분\n11:00NRT\n13:30ICN\n직항, 02시간 30분\n성인/삼성카드\n왕복\n386,200\n원~\n이스타항공\n08:40ICN\n10:55NRT\n직항, 02시간 15분\n제주항공\n11:35NRT\n14:30IC",
+    "pagePreview": "Naver\n사용자 링크\n로그인\n서비스 더보기\n여행상품\n여행정보\n0\n로그인 후 등급확인\n마이페이지\n여행핫딜\n항공\n호텔\n패키지\nFor U\n35\n왕복\n편도\n다구간\n서울\nICN, GMP\n(모든 공항)\n도쿄\nNRT, HND\n(모든 공항)\n12.30.수\n01.01.금\n성인 1명\n일반석\n직항만\n알림받기\n검색\n트래블클럽\n로그인 후 등급확인 하세요\n항공권 가격 변동 그래프 로딩 중\n왕복 동시 선택\n왕복 개별 선택\n가는편·오는편을 한 번에 선택해요\n카드혜택\n가격 낮은 순\n인기 항공편\n검색한 항공편 중 가격, 비행시간, 유저 선호도 등 다양한 요소를 고려한 네이버 항공 추천 항공편입니다.\n왕복 항공편 선택\n이스타항공\n07:00ICN\n10:00NRT\n직항, 03시간 00분\n11:00NRT\n13:30ICN\n직항, 02시간 30분\n성인/KB국민카드(이용실적 충족시)\n왕복\n374,000\n원~\n이스타항공\n07:00ICN\n10:00NRT\n직항, 03시간 00분\n11:20NRT\n14:15ICN\n직항, 02시간 55분\n성인/KB국민카드(이용실적 충족시)\n왕복\n374,000\n원~\n이스타항공\n07:00ICN\n10:00NRT\n직항, 03시간 00분\n제주항공\n11:35NRT\n14:30ICN\n직항, 02시간 55분\n성인/KB국민카드(이용실적 충족시)\n왕복\n377,100\n원~\n이스타항공\n07:00ICN\n10:00NRT\n직항, 03시간 00분\n제주항공\n12:05NRT\n15:10ICN\n직항, 03시간 05분\n성인/KB국민카드(이용실적 충족시)\n왕복\n377,100\n원~\n이스타항공\n08:40ICN\n10:55NRT\n직항, 02시간 15분\n11:00NRT\n13:30ICN\n직항, 02시간 30분\n성인/KB국민카드(이용실적 충족시)\n왕복\n383,200\n원~\n이스타항공\n08:40ICN\n10:55NRT\n직항, 02시간 15분\n11:20NRT\n14:15ICN\n직항, 02시간 55분\n성인/KB국민카드(이용실적 충족시)\n왕복\n383,200\n원~\n이스타항공\n07:15ICN\n10:10NRT\n직항, 02시간 55분\n11:00NRT\n",
     "network": [
       {
         "url": "https://flight-api.naver.com/flight/international/searchFlights",
@@ -29,13 +29,13 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-31T21:53:58.097Z",
-    "elapsedMs": 122591,
+    "attemptedAt": "2026-11-01T00:35:55.984Z",
+    "elapsedMs": 131685,
     "status": "content-not-detected",
-    "detail": "Flight content not detected: TimeoutError: page.waitForFunction: Timeout 120000ms exceeded.; 메인 콘텐츠로 이동\nTheme Detection\n숙소\n항공권\n투어&티켓\n항공 + 호텔\n기차표\n렌터카·공항픽업\n앱\nKRW\n고객센터\n예약 검색\n로그인/회원가입\n서울 출발 도쿄 도착 저",
-    "finalUrl": "https://kr.trip.com/flights/showfarefirst?dcity=sel&acity=tyo&dcityid=274&acityid=228&ddate=2026-12-30&rdate=2027-01-01&triptype=rt&class=y&lowpricesource=searchform&quantity=1&searchboxarg=t&nonstoponly=off&locale=ko-KR&curr=KRW",
+    "detail": "Flight content not detected: TimeoutError: page.waitForFunction: Timeout 120000ms exceeded.; 메인 콘텐츠로 이동\nTheme Detection\n숙소\n항공권\n투어&티켓\n항공 + 호텔\n기차표\n렌터카·공항픽업\n앱\n고객센터\n예약 검색\n로그인/회원가입\n서울 출발 도쿄 도착 저렴한 항",
+    "finalUrl": "https://kr.trip.com/flights/ShowFareNext?pagesource=list&triptype=RT&class=Y&quantity=1&childqty=0&babyqty=0&jumptype=GoToNextJournay&dcity=sel&acity=tyo&ddate=2026-12-30&dcityid=274&acityid=228&dcityName=Seoul&acityName=Tokyo&rdate=2027-01-01&currentseqno=2&criteriaToken=SGP_SGP-NOR_PIDReduce-BR1iqveN20261101003352%5EZMEJRc1gRr47Gp2s&shoppingid=SGP_SGP-NOR_PIDReduce-BR1iqveN20261101003352%5EList-4RqJ1s&groupKey=SGP_SGP-NOR_PIDReduce-BR1iqveN20261101003352%5EList-4RqJ1s&airline=&locale=ko-KR&curr=KRW",
     "fareCandidates": [],
-    "pagePreview": "메인 콘텐츠로 이동\nTheme Detection\n숙소\n항공권\n투어&티켓\n항공 + 호텔\n기차표\n렌터카·공항픽업\n앱\nKRW\n고객센터\n예약 검색\n로그인/회원가입\n서울 출발 도쿄 도착 저렴한 항공권 | kr.trip.com\n왕복\n편도\n다구간\n직항\n서울\n·\n모든 공항\n도쿄\n·\n모든 공항\n성인 1명 · 일반석\n검색\n12월 23일–12월 25일\n405,600원\n12월 24일–12월 26일\n529,000원\n12월 25일–12월 27일\n508,800원\n12월 26일–12월 28일\n481,100원\n12월 27일–12월 29일\n463,900원\n12월 28일–12월 30일\n426,600원\n12월 29일–12월 31일\n376,900원\n12월 30일–1월 1일\n343,700원\n12월 31일–1월 2일\n451,900원\n1월 1일–1월 3일\n544,900원\n1월 2일–1월 4일\n428,600원\n1월 3일–1월 5일\n451,300원\n1월 4일–1월 6일\n425,800원\n1월 5일–1월 7일\n381,100원\n1월 6일–1월 8일\n380,300원\n가격표\n항공편 예약 시 호텔 최대 25% 할인\n추천\n 직항\n 위탁 수하물 포함\n 저가 항공사 숨기기\n 휴대 수하물 포함\n 공동운항편 숨기기\nCO₂e 탄소 저감 항공편\n더 보기\n얼라이언스\n스타얼라이언스\n459,300원\n스카이팀\n535,300원\n원월드\n567,500원\n항공사\n동일 항공사 조합만 보기\n항공사 전체 선택\nJAL (96)\n567,500원\n대한항공 (52)\n535,300원\n아시아나항공 (25)\n542,600원\n제주항공 (7)\n373,000원\n홍콩 익스프레스항공 (7)\n806,100원\n더 보기\n얼라이언스\n스타얼라이언스\n459,300원\n스카이팀\n535,300원\n원월드\n567,500원\n시간대\n출발시간\n00:00–24:00\n00:00\n24:00\n도착시간\n00:00–24:00\n00:00\n24:00\n소요시간\n무관\n경유시간\n1시간–22시간\n1시간\n22시간\n총 비행시간\n1시간 30분–25시간 30분\n1시간 30분\n25시간 30분\n경유\n경유 1회 이하\n343,7",
+    "pagePreview": "메인 콘텐츠로 이동\nTheme Detection\n숙소\n항공권\n투어&티켓\n항공 + 호텔\n기차표\n렌터카·공항픽업\n앱\n고객센터\n예약 검색\n로그인/회원가입\n서울 출발 도쿄 도착 저렴한 항공권 | kr.trip.com\n왕복\n편도\n다구간\n직항\n서울\n모든 공항\n도쿄\n모든 공항\n성인 1명 · 일반석\n검색\n무료 플러그인\n필터(오는편)\n132개 항공편 검색됨\n경유\n직항\n343,700원\n경유 최대 1회\n343,700원\n항공사\n동일 항공사 조합만 보기\n모두 선택\n모두 선택 해제\n스타얼라이언스\n스카이팀\n원월드\n대한항공 (31)\n510,800원\nJAL (27)\n1,147,000원\n아시아나항공 (13)\n529,500원\n홍콩 익스프레스항공 (12)\n800,000원\n제주항공 (8)\n390,100원\n더 보기\n수하물\n 휴대 수하물\n343,700원\n 위탁수하물\n377,800원\n시간대\n출발\n00:00\n23:59\n도착\n00:00\n23:59\n소요시간\n스탑오버\n1시간\n21시간\n총\n2시간\n27시간 30분\n경유지\n모두 선택\n모두 선택 해제\n가고시마 현\n1,809,100원\n고마쓰\n1,541,300원\n광저우\n770,800원\n나고야\n1,572,100원\n다롄\n1,144,200원\n더 보기\n공항\n출발\n도쿄(NRT)\n343,700원\n도쿄(HND)\n455,200원\n도착\n서울(ICN)\n343,700원\n서울(GMP)\n599,100원\n항공기\n대형 기종\n377,800원\n중형 기종\n343,700원\n기타\n 저가 항공사 숨기기\n 공동운항편 숨기기\nCO₂e 탄소 저감 항공편\n1\n서울(ICN)도쿄(NRT)\n12월 30일(수)\n07:00 – 10:00(직항)\n항공편 변경\n2. 도쿄서울\n직항편 우선\n343,700원\n추천\n343,700원\n최저가\n343,700원\n정렬 기준\n가격 알리미 설정하기\n최저가\nCO₂e 22% 저감\n피치항공\n저비용 항공사\n08:30\nNRT\nT1\n3시간 20분\n직항\n11:50\nICN\nT1\n343,700원\n왕복\n자세히 보기\n9석 미만 남음\n위탁 수하물 포함\nCO₂e 18% 저감\n에어프레미아\n12:30\nNRT\nT2\n2시간 5",
     "network": [
       {
         "url": "https://www.google.com/ccm/collect",
@@ -50,15 +50,51 @@
         "failure": "net::ERR_ABORTED"
       },
       {
+        "url": "https://www.google.com/ccm/collect",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://kr.trip.com/gtm/ag/g/c",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://mpc-prod-28-1053047382554.us-central1.run.app/events",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://www.google.com/measurement/1p-conversion/",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://www.facebook.com/x/oauth/status",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://www.google.com/ccm/collect",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
         "url": "https://www.google.com/rmkt/collect/789926500/",
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://www.google.com/ccm/collect",
+        "url": "https://kr.trip.com/gtm/ag/g/c",
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://www.google.com/ccm/collect",
+        "url": "https://www.google.com/measurement/1p-conversion/",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "chrome-extension://invalid/",
+        "failure": "net::ERR_BLOCKED_BY_CLIENT"
+      },
+      {
+        "url": "chrome-extension://invalid/",
+        "failure": "net::ERR_BLOCKED_BY_CLIENT"
+      },
+      {
+        "url": "https://mpc-prod-28-1053047382554.us-central1.run.app/events",
         "failure": "net::ERR_ABORTED"
       },
       {
@@ -70,7 +106,11 @@
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://www.google.com/measurement/1p-conversion/",
+        "url": "https://kr.trip.com/gtm/ag/g/c",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://kr.trip.com/gtm/ag/g/c",
         "failure": "net::ERR_ABORTED"
       },
       {
@@ -88,10 +128,12 @@
     ],
     "browserErrors": [
       "Provider's accounts list is empty.",
-      "[GSI_LOGGER]: FedCM get() rejects with NetworkError: Error retrieving a token."
+      "[GSI_LOGGER]: FedCM get() rejects with NetworkError: Error retrieving a token.",
+      "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT",
+      "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT"
     ],
     "openPages": [
-      "https://kr.trip.com/flights/showfarefirst"
+      "https://kr.trip.com/flights/ShowFareNext"
     ]
   },
   {
@@ -100,8 +142,8 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-31T21:54:00.620Z",
-    "elapsedMs": 2344,
+    "attemptedAt": "2026-11-01T00:35:58.512Z",
+    "elapsedMs": 2343,
     "status": "verified",
     "detail": "Exact round-trip total verified from visible google seller result",
     "finalUrl": "https://www.google.com/travel/flights/search?tfs=CBwQAhooEgoyMDI2LTEyLTMwagwIAhIIL20vMGhzcWZyDAgDEggvbS8wN2RmaxooEgoyMDI3LTAxLTAxagwIAxIIL20vMDdkZmtyDAgCEggvbS8waHNxZkABSAFwAYIBCwj___________8BmAEB&hl=ko&curr=KRW&gl=KR",
@@ -115,7 +157,7 @@
       "cabin": "economy",
       "currency": "KRW",
       "priceKrw": 366562,
-      "observedAt": "2026-10-31T21:54:00.391Z",
+      "observedAt": "2026-11-01T00:35:58.291Z",
       "evidence": {
         "source": "visible-search-result",
         "provider": "google",
@@ -237,11 +279,11 @@
     "destination": "TYO",
     "departureDate": "2026-12-30",
     "returnDate": "2027-01-01",
-    "attemptedAt": "2026-10-31T21:54:08.978Z",
-    "elapsedMs": 8194,
+    "attemptedAt": "2026-11-01T00:36:04.490Z",
+    "elapsedMs": 5831,
     "status": "verified",
     "detail": "Exact round-trip total verified from visible skyscanner seller result",
-    "finalUrl": "https://www.skyscanner.co.kr/sttc/px/captcha-v2/index.html?url=Lw==&uuid=9529f1c0-d575-11f1-895f-f39332a377e9",
+    "finalUrl": "https://www.skyscanner.co.kr/sttc/px/captcha-v2/index.html?url=Lw==&uuid=356c3e20-d58c-11f1-820a-616401e5d175",
     "quote": {
       "kind": "live-round-trip-total",
       "origin": "SEL",
@@ -251,16 +293,16 @@
       "adults": 1,
       "cabin": "economy",
       "currency": "KRW",
-      "priceKrw": 375000,
-      "observedAt": "2026-10-31T21:54:08.263Z",
+      "priceKrw": 379200,
+      "observedAt": "2026-11-01T00:36:03.690Z",
       "evidence": {
         "source": "visible-search-result",
         "provider": "skyscanner",
-        "offerId": "a416df7ba1ea1688c0b0febb"
+        "offerId": "d77534c6d7ebf73604c1a420"
       }
     },
     "fareCandidates": [],
-    "pagePreview": "귀하는 사람인가요, 로봇인가요?\n기분 나쁘게 생각하지 말아 주세요. 요즘 스크립트와 로봇은 놀라울 정도로 사람 같답니다!\n아직도 페이지 접속에 문제가 있나요? JavaScript와 쿠키가 활성화되어 있고, 브라우저에서 로딩을 차단하지 않았는지 확인해 주세요.\n9529f1c0-d575-11f1-895f-f39332a377e9",
+    "pagePreview": "356c3e20-d58c-11f1-820a-616401e5d175",
     "network": [
       {
         "url": "https://pagead2.googlesyndication.com/ccm/collect",
@@ -271,6 +313,10 @@
         "httpStatus": 403
       },
       {
+        "url": "https://ad.doubleclick.net/ccm/s/collect",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
         "url": "https://www.google.com/ccm/collect",
         "failure": "net::ERR_ABORTED"
       },
@@ -279,14 +325,6 @@
         "httpStatus": 403
       },
       {
-        "url": "https://ad.doubleclick.net/ccm/s/collect",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://www.skyscanner.co.kr/g/tagging/g/collect",
-        "httpStatus": 403
-      },
-      {
         "url": "https://www.skyscanner.co.kr/g/tagging/g/collect",
         "httpStatus": 403
       },
@@ -296,6 +334,10 @@
       },
       {
         "url": "https://www.skyscanner.co.kr/g/purpose-scoped-id-service/identifiers/refresh",
+        "httpStatus": 403
+      },
+      {
+        "url": "https://www.skyscanner.co.kr/g/tagging/g/collect",
         "httpStatus": 403
       },
       {
@@ -303,91 +345,15 @@
         "httpStatus": 403
       },
       {
-        "url": "https://www.skyscanner.co.kr/g/radar/api/v2/web-unified-search/KLUv_SDGBQUAkgslH7C5AQxOQ-4VGMCAW9k9ljjZC8nu7s0aKs0psLcOCAvNEhz0a25uP1NcZ-d3X7t82_H-pDFSKIqkhACGR5tz0EI8q-wWH-3P9DWGXhs36N8Uh7CEOUEIkgHFmyirugb7ymzus3NTtn37HX2-dndlQ3cVxysRIxisP0enP5wY98yNtqz3teJfu0Xa8G0VYQxzCEB4WAIAdxXGgxcKDQ%3D%3D",
+        "url": "https://www.skyscanner.co.kr/g/radar/api/v2/web-unified-search/KLUv_SDG7QQAkkskHbDrDMPIwQ1hYKZOsraLw55mEtlS1ITOUkV8BWBxkBMcVYzU8ruMwkitJnz9plj75aq393RdWEIAQze_Hbti3leny9fokpWbjzrl_I6tIC95kCCE-ICCs03jumFhM035XHwqClc2OpdmrbhZXV5GSpeIEQyLtfg-P_-_WtMp9bisVHRXBTakqsjIe15EAIL0AgIAUQj8wQslBQ%3D%3D",
         "httpStatus": 403
       },
       {
-        "url": "https://bam.nr-data.net/jserrors/1/NRJS-8ee30fb60b5d38aac95",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://o.clarity.ms/collect",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
         "url": "https://www.skyscanner.co.kr/g/tagging/g/collect",
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://onetag-sys.com/prebid-request",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://bam.nr-data.net/jserrors/1/NRJS-8ee30fb60b5d38aac95",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://www.skyscanner.co.kr/g/purpose-scoped-id-service/identifiers/refresh",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://bam.nr-data.net/events/1/NRJS-8ee30fb60b5d38aac95",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://grid-bidder.criteo.com/openrtb_2_5/pbjs/auction/request",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://prebid.trustedstack.com/rtb/trustedstack",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://bam.nr-data.net/ins/1/NRJS-8ee30fb60b5d38aac95",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://prebid.media.net/rtb/prebid",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://bam.nr-data.net/events/1/NRJS-8ee30fb60b5d38aac95",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://api.w.inmobi.com/openrtb/bidder/prebidjs",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://www.skyscanner.co.kr/rf8vapwA/xhr/api/v2/collector",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://rtb.openx.net/openrtbb/prebidjs",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
         "url": "https://www.skyscanner.co.kr/g/tagging/g/collect",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://htlb.casalemedia.com/openrtb/pbjs",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://hb.openwebmp.com/hb-multi",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://mp.4dex.io/prebid",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://o.clarity.ms/collect",
-        "failure": "net::ERR_ABORTED"
-      },
-      {
-        "url": "https://bcp.crwdcntrl.net/6/map",
         "failure": "net::ERR_ABORTED"
       },
       {
@@ -399,7 +365,51 @@
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://direct.adsrvr.org/bid/bidder/direct56x8hqdg",
+        "url": "https://www.skyscanner.co.kr/g/tagging/g/collect",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://rtb.openx.net/esp",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://bam.nr-data.net/jserrors/1/NRJS-8ee30fb60b5d38aac95",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://bam.nr-data.net/events/1/NRJS-8ee30fb60b5d38aac95",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://www.skyscanner.co.kr/g/tagging/g/collect",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://www.skyscanner.co.kr/g/purpose-scoped-id-service/identifiers/refresh",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://bam.nr-data.net/ins/1/NRJS-8ee30fb60b5d38aac95",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://bam.nr-data.net/jserrors/1/NRJS-8ee30fb60b5d38aac95",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://www.skyscanner.co.kr/g/ars/public/api/v2/request",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://www.skyscanner.co.kr/g/tagging/g/collect",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://sslwidget.criteo.com/event",
+        "failure": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://www.skyscanner.co.kr/g/purpose-scoped-id-service/identifiers/refresh",
         "failure": "net::ERR_ABORTED"
       },
       {
@@ -407,19 +417,19 @@
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://hb-api.omnitagjs.com/hb-api/prebid/v1",
+        "url": "https://bat.bing.com/actionp/0",
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://fastlane.rubiconproject.com/a/api/fastlane.json",
+        "url": "https://bam.nr-data.net/events/1/NRJS-8ee30fb60b5d38aac95",
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://hbopenbid.pubmatic.com/translator",
+        "url": "https://www.skyscanner.co.kr/rf8vapwA/xhr/api/v2/collector",
         "failure": "net::ERR_ABORTED"
       },
       {
-        "url": "https://www.skyscanner.co.kr/g/tagging/g/collect",
+        "url": "https://i.clarity.ms/collect",
         "failure": "net::ERR_ABORTED"
       }
     ],
